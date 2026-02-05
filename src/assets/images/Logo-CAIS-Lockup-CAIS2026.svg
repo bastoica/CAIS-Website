@@ -68,7 +68,7 @@
         <path class="st6" d="M736.04,1005.43h-87.67c-3.18,0-5.76,2.58-5.76,5.76v87.67c0,3.18,2.58,5.76,5.76,5.76h25.54c5.34,0,9.67,4.33,9.67,9.67v41.33c0,5.34-4.33,9.67-9.67,9.67h-38.45c-5.34,0-9.67-4.33-9.67-9.67v-28.86c0-3.18-2.58-5.76-5.76-5.76h-87.67c-3.18,0-5.76,2.58-5.76,5.76v87.67c0,3.18,2.58,5.76,5.76,5.76h203.68c3.18,0,5.76-2.58,5.76-5.76v-87.67c0-.62-.12-1.21-.31-1.77h.31v-113.79c0-3.18-2.58-5.76-5.76-5.76h0Z"/>
       </g>
       <g class="st7">
-        <text class="st5" transform="translate(503.99 1522.58)"><tspan x="0" y="0">Conference on </tspan></text>
+        <text class="st5" transform="translate(503.99 1522.58)"><tspan x="0" y="0">ACM Conference on </tspan></text>
         <text class="st5" transform="translate(503.99 1657.84)"><tspan x="0" y="0">Agentic and AI Systems</tspan></text>
       </g>
       <g class="st7">
@@ -84,7 +84,7 @@
       <rect class="st1" x="94.73" y="1236.56" width="99.18" height="99.18" rx="2.34" ry="2.34"/>
       <path class="st1" d="M304.16,1005.43h-87.67c-3.18,0-5.76,2.58-5.76,5.76v87.67c0,3.18,2.58,5.76,5.76,5.76h25.54c5.34,0,9.67,4.33,9.67,9.67v41.33c0,5.34-4.33,9.67-9.67,9.67h-38.45c-5.34,0-9.67-4.33-9.67-9.67v-28.86c0-3.18-2.58-5.76-5.76-5.76h-87.67c-3.18,0-5.76,2.58-5.76,5.76v87.67c0,3.18,2.58,5.76,5.76,5.76h203.68c3.18,0,5.76-2.58,5.76-5.76v-87.67c0-.62-.12-1.21-.31-1.77h.31v-113.79c0-3.18-2.58-5.76-5.76-5.76h0Z"/>
     </g>
-    <text class="st3" transform="translate(496.9 1132.16)"><tspan x="0" y="0">Conference on </tspan><tspan x="0" y="159">Agentic &amp; AI Systems</tspan></text>
+    <text class="st3" transform="translate(496.9 1132.16)"><tspan x="0" y="0">ACM Conference on </tspan><tspan x="0" y="159">Agentic &amp; AI Systems</tspan></text>
   </g>
   <g id="Layer_2">
     <g>
