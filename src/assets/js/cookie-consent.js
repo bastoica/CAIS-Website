@@ -1,5 +1,5 @@
 /**
- * CAIS 2026 - Cookie Consent Manager
+ * ACM CAIS 2026 - Cookie Consent Manager
  * GDPR-compliant consent for Google Analytics
  */
 

@@ -1,5 +1,5 @@
 /**
- * CAIS Development Password Gate
+ * ACM CAIS Development Password Gate
  * 
  * TO REMOVE AT LAUNCH:
  * Delete the <script src="...dev-gate.js"></script> line from each HTML file:
