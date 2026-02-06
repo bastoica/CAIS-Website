@@ -89,6 +89,13 @@
       "bio": "Assistant Professor at Carnegie Mellon and VP at Two Sigma. Recipient of the Dahl-Nygaard Prize and ACM SIGPLAN Software Award for her work on Scala. Her research bridges distributed systems and AI infrastructure, including work on DSPy and the Language Model System Interface Model."
     },
     {
+      "name": "Avi Sil",
+      "affiliation": "Oracle",
+      "photo": "Sil_Avi.jpg",
+      "role": "Program Co-Chair",
+      "bio": "Senior Director of AI & Applied Science at Oracle. Former Principal Research Scientist and Manager at IBM Research, where he led foundational work in natural language processing, multilingual question answering, and enterprise AI systems. His teams built state-of-the-art QA systems that ranked at the top of NIST and other benchmark evaluations, and contributed widely used open-source frameworks such as PrimeQA. Avi's research spans retrieval-augmented generation, AI agents, uncertainty-aware NLP, and large-scale LLM evaluation, with publications at ACL, EMNLP, NAACL, and related venues, and 20+ U.S. patents. He currently leads Oracle's efforts on enterprise-grade AI agents and applied LLM research, bridging academic advances with real-world deployment at scale."
+    },
+    {
       "name": "Deepti Raghavan",
       "affiliation": "Brown University",
       "photo": "Raghavan_Deepti.png",
