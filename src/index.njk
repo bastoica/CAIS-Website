@@ -25,8 +25,11 @@ showSponsorshipCallout: false
                     <span class="fs-4 fw-bold" style="color: var(--cais-accent);"><i class="bi bi-clock me-2" aria-hidden="true"></i>Paper Submission Deadline: {{ site.deadlines.paperSubmission.display }}</span>
                 </div>
                 <div class="d-flex flex-wrap gap-2">
-                    <a href="{{ site.forms.subscribe }}" target="_blank" rel="noopener" class="btn btn-primary btn-lg px-4" style="background:var(--cais-accent); border:none; color:var(--seasalt);">
-                        <i class="bi bi-envelope me-2"></i>Subscribe for CFP Updates
+                    <a href="https://acm-cais26.hotcrp.com/" target="_blank" rel="noopener" class="btn btn-primary btn-lg px-4" style="background:var(--cais-accent); border:none; color:var(--seasalt);">
+                        <i class="bi bi-box-arrow-up-right me-2"></i>Submit Paper
+                    </a>
+                    <a href="{{ site.forms.subscribe }}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-lg px-4">
+                        <i class="bi bi-envelope me-2"></i>Subscribe for Updates
                     </a>
                 </div>
             </div>
@@ -121,7 +124,10 @@ showSponsorshipCallout: false
                         <div>
                             <h3 class="h5 fw-bold mb-2">Research Track</h3>
                             <p class="mb-3">Peer-reviewed papers on architectural patterns, optimization, engineering, and evaluation of agentic AI systems. Includes keynotes, plenaries, and poster sessions.</p>
-                            <a href="{{ site.forms.subscribe }}" target="_blank" rel="noopener" class="btn btn-outline-primary">Get CFP Updates</a>
+                            <a href="https://acm-cais26.hotcrp.com/" target="_blank" rel="noopener" class="btn btn-outline-primary" style="background:var(--cais-accent); border-color:var(--cais-accent); color:#fff;">
+                                <i class="bi bi-box-arrow-up-right me-2"></i>Submit Paper
+                            </a>
+                            <a href="{{ site.forms.subscribe }}" target="_blank" rel="noopener" class="btn btn-outline-primary">Get CAIS Updates</a>
                         </div>
                     </div>
                 </div>
@@ -169,9 +175,12 @@ showSponsorshipCallout: false
                 <h2 class="h3 fw-bold mb-1">Be part of the inaugural ACM CAIS</h2>
                 <p class="mb-0">Submission timeline and important dates available in the Call for Papers.</p>
             </div>
-            <div>
-                <a class="btn btn-light btn-lg text-dark px-4" href="{{ site.forms.subscribe }}" target="_blank" rel="noopener">
-                    <i class="bi bi-envelope me-2"></i>Subscribe for CFP Updates
+            <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-light btn-lg text-dark px-4" href="https://acm-cais26.hotcrp.com/" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-2"></i>Submit Paper
+                </a>
+                <a class="btn btn-outline-light btn-lg px-4" href="{{ site.forms.subscribe }}" target="_blank" rel="noopener">
+                    <i class="bi bi-envelope me-2"></i>Updates
                 </a>
             </div>
         </div>
