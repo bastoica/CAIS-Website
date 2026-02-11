@@ -20,6 +20,10 @@
       "label": "Call for Papers",
       "href": "/pages/cfp/",
       "disabled": false
+    },
+    {
+      "label": "Sponsors",
+      "href": "/pages/sponsors/"
     }
   ],
   "cta": {
