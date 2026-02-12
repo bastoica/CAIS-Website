@@ -37,6 +37,21 @@
     </style>
     {% endif %}
 
+    <!-- Google Analytics (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.googleAnalyticsId }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      // Default consent to denied until cookie consent is given
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied'
+      });
+      gtag('config', '{{ site.analytics.googleAnalyticsId }}', {
+        'anonymize_ip': true
+      });
+    </script>
+
     {% if showJsonLd %}
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -121,6 +136,9 @@
         }));
     })();
 </script>
+
+<!-- Cookie Consent (GDPR-compliant, manages GA consent) -->
+<script src="/assets/js/cookie-consent.js" defer></script>
 
 {% if extraScripts %}
 {{ extraScripts | safe }}
