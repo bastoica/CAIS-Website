@@ -64,6 +64,10 @@
       "label": "ACM Code of Ethics",
       "href": "https://www.acm.org/code-of-ethics",
       "external": true
+    },
+    {
+      "label": "Privacy Policy",
+      "href": "/pages/privacy/"
     }
   ]
 }

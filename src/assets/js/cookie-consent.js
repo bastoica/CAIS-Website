@@ -197,13 +197,9 @@
     document.getElementById('cookie-decline').addEventListener('click', declineCookies);
   }
 
-  // Get correct path to privacy policy based on current page location
+  // Get correct path to privacy policy
   function getPrivacyPolicyPath() {
-    const path = window.location.pathname;
-    if (path.includes('/pages/')) {
-      return './privacy.html';
-    }
-    return './pages/privacy.html';
+    return '/pages/privacy/';
   }
 
   // Initialize on DOM ready
