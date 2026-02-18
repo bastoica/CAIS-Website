@@ -3,6 +3,48 @@ layout: base.njk
 title: Workshops & Tutorials
 description: ACM CAIS 2026 workshops and tutorials. Deep dives into practical methods and frameworks for building compound AI systems.
 permalink: /pages/workshops/
+extraStyles: |
+  /* Workshops-specific styles */
+  .section-title {
+    font-weight: 700;
+    letter-spacing: .2px;
+    margin-top: 0;
+    color: var(--eerie-black);
+  }
+
+  .anchor {
+    scroll-margin-top: 84px;
+  }
+
+  .card-quiet {
+    border: 1px solid var(--silver);
+    border-radius: 4px;
+    padding: 1.5rem;
+    background: var(--seasalt);
+    transition: border-color 200ms linear;
+  }
+
+  .card-quiet:hover {
+    border-color: var(--olive-moss);
+  }
+
+  .highlight-box {
+    background: rgba(149, 108, 88, 0.05);
+    padding: 1.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--platinum);
+  }
+
+  .dates-card {
+    border: 2px solid var(--terracotta-deep);
+    border-radius: 4px;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 3rem 0;
+    }
+  }
 ---
 
 <header class="hero">
@@ -162,28 +204,69 @@ permalink: /pages/workshops/
 
             <!-- Sidebar -->
             <div class="col-lg-4">
-                <div class="dates-card p-4 mb-4">
-                    <h3 class="h5 fw-bold mb-3"><i class="bi bi-calendar-event me-2" style="color: var(--cais-accent);"></i>Key Dates</h3>
-                    <p class="mb-2"><strong>Application Opens:</strong><br>February 16, 2026</p>
-                    <p class="mb-2"><strong>Deadline:</strong><br>March 9, 2026</p>
-                    <p class="mb-2"><strong>Notification:</strong><br>March 23, 2026</p>
-                    <p class="mb-0"><strong>Workshops Day:</strong><br>May 26, 2026</p>
-                    <hr>
-                    <p class="small text-muted mb-0"><i class="bi bi-info-circle me-1"></i>Dates subject to change</p>
-                </div>
+                <aside>
+                    <!-- Key Dates -->
+                    <div class="card dates-card mb-4">
+                        <div class="card-body">
+                            <h3 class="h6 fw-bold mb-3"><i class="bi bi-calendar-event me-2"></i>Key Dates</h3>
 
-                <div class="highlight-box mb-4">
-                    <h3 class="h6 fw-bold mb-3">Stay Updated</h3>
-                    <p class="small mb-3">Get notified when workshop applications open and when deadlines approach.</p>
-                    <a href="{{ site.forms.subscribe }}" target="_blank" rel="noopener" class="btn btn-primary btn-sm w-100">
-                        <i class="bi bi-envelope me-2"></i>Subscribe for Updates
-                    </a>
-                </div>
+                            <div class="mb-3">
+                                <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--terracotta-deep) !important;">
+                                    <div class="fw-bold small">Application Opens</div>
+                                    <div class="small">Mon, February 16, 2026</div>
+                                </div>
+                                <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--terracotta-deep) !important;">
+                                    <div class="fw-bold small">Application Deadline</div>
+                                    <div class="small">Mon, March 9, 2026</div>
+                                    <div class="text-muted small">11:59 PM AoE</div>
+                                </div>
+                                <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--terracotta-deep) !important;">
+                                    <div class="fw-bold small">Acceptance Notification</div>
+                                    <div class="small">Mon, March 23, 2026</div>
+                                </div>
+                                <div class="border-start ps-3" style="border-left-width: 3px !important; border-color: var(--terracotta-deep) !important;">
+                                    <div class="fw-bold small">Workshops &amp; Tutorials Day</div>
+                                    <div class="small">Tue, May 26, 2026</div>
+                                </div>
+                            </div>
 
-                <div class="highlight-box">
-                    <h3 class="h6 fw-bold mb-3">Questions?</h3>
-                    <p class="small mb-0">Contact us at <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></p>
-                </div>
+                            <p class="text-muted small mb-0"><i class="bi bi-info-circle me-1"></i>Dates subject to change</p>
+                        </div>
+                    </div>
+
+                    <!-- Stay Updated -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="h6 fw-bold mb-3">Stay Updated</h3>
+                            <p class="small mb-3">Get notified when workshop applications open and when deadlines approach.</p>
+                            <a href="{{ site.forms.subscribe }}" target="_blank" rel="noopener" class="btn btn-primary btn-sm w-100" style="background:var(--cais-accent); border:none; color:#fff;">
+                                <i class="bi bi-envelope me-2"></i>Subscribe for Updates
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="h6 fw-bold mb-3"><i class="bi bi-link-45deg me-2"></i>Quick Links</h3>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="#overview">Overview</a></li>
+                                <li class="mb-2"><a href="#timeline">Important Dates</a></li>
+                                <li class="mb-2"><a href="#format">Proposal Format</a></li>
+                                <li class="mb-2"><a href="#content">Proposal Content</a></li>
+                                <li class="mb-2"><a href="#criteria">Selection Criteria</a></li>
+                                <li class="mb-2"><a href="#support">Organizer Support</a></li>
+                                <li class="mb-2"><a href="#chairs">Workshop Chairs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Questions -->
+                    <div class="highlight-box">
+                        <h3 class="h6 fw-bold mb-3">Questions?</h3>
+                        <p class="small mb-0">Contact us at <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></p>
+                    </div>
+                </aside>
             </div>
 
         </div>
