@@ -96,6 +96,13 @@
       "bio": "Senior Director of AI & Applied Science at Oracle. Former Principal Research Scientist and Manager at IBM Research, where he led foundational work in natural language processing, multilingual question answering, and enterprise AI systems. He currently leads Oracle's efforts on enterprise-grade AI agents and applied LLM research, bridging academic advances with real-world deployment at scale."
     },
     {
+      "name": "Omar Khattab",
+      "affiliation": "MIT EECS & CSAIL",
+      "photo": "khattab_omar.png",
+      "role": "Program Co-Chair",
+      "bio": "Assistant Professor at MIT EECS and CSAIL. Creator of DSPy, the leading framework for programming and optimizing compound AI systems, and ColBERT, which revolutionized neural information retrieval. PhD from Stanford advised by Matei Zaharia and Christopher Potts. Co-author of \"The Shift from Models to Compound AI Systems.\" Apple Scholars in AI/ML Fellow. Winner of SIGIR 2025 Best Paper Award. 15,000+ citations."
+    },
+    {
       "name": "Deepti Raghavan",
       "affiliation": "Brown University",
       "photo": "Raghavan_Deepti.png",
