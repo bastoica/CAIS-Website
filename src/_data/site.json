@@ -56,7 +56,9 @@
   "contact": {
     "email": "contact@caisconf.org",
     "sponsorship": "heather.miller@cs.cmu.edu",
-    "conduct": "conduct@caisconf.org"
+    "conduct": "conduct@caisconf.org",
+    "programChairs": "program-chairs@caisconf.org",
+    "workshopChairs": "workshop-chairs@caisconf.org"
   },
   "social": {
     "twitter": "https://x.com/CAISConf",
