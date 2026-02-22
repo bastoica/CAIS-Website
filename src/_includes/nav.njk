@@ -10,6 +10,26 @@
         <div id="navMain" class="collapse navbar-collapse">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
                 {% for item in navigation.main %}
+                {% if item.children %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navDropdown{{ loop.index }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ item.label }}
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navDropdown{{ loop.index }}">
+                        {% for child in item.children %}
+                        <li>
+                            {% if child.disabled %}
+                            <span class="dropdown-item disabled" aria-disabled="true">{{ child.label }}</span>
+                            {% elif page.url == child.href or (child.href != "/" and page.url.startsWith(child.href)) %}
+                            <a class="dropdown-item active" aria-current="page" href="{{ child.href }}">{{ child.label }}</a>
+                            {% else %}
+                            <a class="dropdown-item" href="{{ child.href }}">{{ child.label }}</a>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                {% else %}
                 <li class="nav-item">
                     {% if item.disabled %}
                     <a class="nav-link disabled" href="{{ item.href }}" aria-disabled="true">{{ item.label }}</a>
@@ -19,6 +39,7 @@
                     <a class="nav-link" href="{{ item.href }}">{{ item.label }}</a>
                     {% endif %}
                 </li>
+                {% endif %}
                 {% endfor %}
                 <li class="nav-item">
                     <a class="nav-link btn btn-sm ms-lg-2" href="{{ navigation.cta.href }}" {% if navigation.cta.external %}target="_blank" rel="noopener"{% endif %}>{{ navigation.cta.label }}</a>
