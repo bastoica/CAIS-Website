@@ -104,6 +104,41 @@ h1, h2, h3, h4, h5, h6, p {
     text-decoration: none !important;
 }
 
+/* Dropdown menu (Bootstrap) */
+.navbar .dropdown-menu {
+    background-color: var(--seasalt);
+    border: 1px solid var(--silver);
+    box-shadow: none;
+    padding: 0.35rem 0;
+    margin-top: 0.25rem;
+}
+
+.navbar .dropdown-item {
+    color: var(--eerie-black);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: background-color 200ms linear, color 200ms linear;
+}
+
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+    background-color: rgba(149, 108, 88, 0.08); /* clay at 8% */
+    color: var(--eerie-black);
+    text-decoration: none;
+}
+
+.navbar .dropdown-item.active,
+.navbar .dropdown-item:active {
+    background-color: rgba(184, 89, 62, 0.10); /* terracotta-deep at 10% */
+    color: var(--eerie-black);
+}
+
+.navbar .dropdown-item.disabled,
+.navbar .dropdown-item:disabled {
+    color: var(--silver);
+    background-color: transparent;
+}
+
 /* Nav button (Updates) - charcoal default, terracotta hover */
 .nav-link.btn {
     background-color: var(--eerie-black) !important;

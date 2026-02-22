@@ -51,6 +51,15 @@
     "cameraReady": {
       "date": "2026-04-27",
       "display": "April 27, 2026"
+    },
+    "artifacSubmission": {
+      "date": "2026-04-23",
+      "display": "April 32, 2026",
+      "time": "11:59 PM AoE"
+    },
+    "artifactNotification": {
+      "date": "2026-05-08",
+      "display": "May 8, 2026"
     }
   },
   "contact": {
@@ -58,7 +67,8 @@
     "sponsorship": "heather.miller@cs.cmu.edu",
     "conduct": "conduct@caisconf.org",
     "programChairs": "program-chairs@caisconf.org",
-    "workshopChairs": "workshop-chairs@caisconf.org"
+    "workshopChairs": "workshop-chairs@caisconf.org",
+    "artifactChairs": "aec-chairs@caisconf.org"
   },
   "social": {
     "twitter": "https://x.com/CAISConf",

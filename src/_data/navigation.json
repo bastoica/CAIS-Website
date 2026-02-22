@@ -17,9 +17,19 @@
       "href": "/pages/workshops/"
     },
     {
-      "label": "Call for Papers",
-      "href": "/pages/cfp/",
-      "disabled": false
+      "label": "Call for",
+      "children": [
+        {
+          "label": "Papers",
+          "href": "/pages/cfp/",
+          "disabled": false
+        },
+        {
+          "label": "Artifacts",
+          "href": "/pages/cfa/",
+          "disabled": false
+        }
+      ]
     },
     {
       "label": "Sponsors",
