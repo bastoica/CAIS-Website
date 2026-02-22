@@ -75,11 +75,11 @@ extraStyles: |
                 <!-- Overview / Goals -->
                 <section id="overview" class="anchor mb-5">
                     <h2 class="section-title h4 mb-3">Overview</h2>
-                    <p>The Artifact Evaluation (AE) process is a community service intended to strengthen the long-term value of accepted papers by encouraging authors to provide substantial supplementary materials for peer-review. These artifacts enable future researchers to more effectively reproduce, compare, and extend prior work. CAIS invites authors of accepted papers to submit their artifacts for evaluation. Research artifacts refer to digital objects that are either developed by the authors for use in the reported study or generated as part of the experimental process.</p>
+                    <p>The Artifact Evaluation (AE) process is a community service intended to strengthen the long-term value of accepted papers by encouraging authors to provide substantial supplementary materials for review. These artifacts enable future researchers to reproduce, compare, and extend prior work more effectively. ACM CAIS invites authors of accepted papers to submit their artifacts for evaluation. Research artifacts are digital objects developed by the authors for use in the reported study or generated during the experimental process.</p>
 
-                    <p>Artifact evaluation is optional at CAIS. Authors of accepted papers may submit their artifacts shortly after receiving the acceptance notification, but they are strongly encouraged to prepare these materials in advance. For papers whose artifacts successfully pass evaluation, the paper will receive one or more official ACM AE badges displayed on its first page, and the final version of the paper must include an appendix describing the artifacts.</p>
+                    <p>Artifact evaluation is optional at ACM CAIS'26. Authors of accepted papers may submit their artifacts shortly after receiving the acceptance notification, but they are strongly encouraged to prepare these materials in advance. If an artifact passes evaluation, the paper will receive one or more official ACM AE badges displayed on its first page, and the final camera-ready version must include an appendix describing the artifact.</p>
 
-                    <p>The AE process for CAIS'26 "single blind", meaning that the identities of artifact authors will be known to evaluators, but authors will not know which evaluators have reviewed their artifacts. To maintain the anonymity of evaluators, artifact authors should not embed analytics or other tracking tools in the websites hosting their artifacts for the duration of the artifact evaluation period. This is important to maintain the confidentiality of the evaluators. In cases where tracing is unavoidable, authors should notify the AEC Chairs in advance so that AEC reviewers can take adequate precautions.</p>
+                    <p>The AE process for ACM CAIS'26 is <em>single-blind</em>, meaning that reviewers will know the identities of the authors, but authors will not know which Artifact Evaluation Committee (AEC) members reviewed their artifacts. To preserve reviewer anonymity, authors should not embed analytics or other tracking tools in websites hosting their artifacts during the artifact evaluation period. In cases where tracking is unavoidable, authors should notify the AEC Chairs in advance so that AEC members can take appropriate precautions.</p>
 
                     <p class="mb-0">More detailed information about artifact packaging, formatting, and evaluation criteria can be found <a href="https://sysartifacts.github.io/cais2026/" target="_blank" rel="noopener">here</a>.</p>
                 </section>
@@ -92,19 +92,23 @@ extraStyles: |
                         <i class="bi bi-info-circle me-2"></i><strong>Note:</strong> These dates are subject to change. Subscribe for updates to receive notifications of any changes.
                     </div>
 
-                    <table class="table table-sm mb-4">
+                    <table class="table table-sm mb-4" style="table-layout: fixed; width: 100%;">
+                        <colgroup>
+                            <col style="width: 68%;">
+                            <col style="width: 32%;">
+                        </colgroup>
                         <tbody>
                             <tr>
                                 <td>Artifact registration opens</td>
-                                <td class="text-end"><strong>Tue, April 21, 2026</strong></td>
+                                <td class="text-start"><strong>Tue, April 21, 2026</strong></td>
                             </tr>
                             <tr>
                                 <td>Artifact submission deadline</td>
-                                <td class="text-end"><strong>Thu, April 23, 2026</strong> (11:59 PM AoE)</td>
+                                <td class="text-start"><strong>Thu, April 23, 2026</strong> (11:59 PM AoE)</td>
                             </tr>
                             <tr>
                                 <td>Artifact decision notification</td>
-                                <td class="text-end"><strong>Fri, May 8, 2026</strong></td>
+                                <td class="text-start"><strong>Fri, May 8, 2026</strong></td>
                             </tr>
                         </tbody>
                     </table>
@@ -115,7 +119,7 @@ extraStyles: |
 
                 <section id="badges" class="anchor mb-5">
                     <h2 class="section-title h4 mb-3">Badges</h2>
-                    <p>CAIS is an ACM conference and thus uses ACM's official artifact evaluation badges. Authors can apply for, and be awarded, one of following three combinations:</p>
+                    <p>CAIS is an ACM conference and thus uses ACM's official artifact evaluation badges. Authors can apply for, and be awarded, one of following three badge combinations:</p>
 
                     <table style="margin-bottom: 1.5rem;">
                         <tr>
@@ -125,7 +129,7 @@ extraStyles: |
                                 <img src="/assets/images/badges_acm_reproduced_1.1.png" style="width: 64px; height: 64px; object-fit: cover;" alt="ACM Reproduced badge">
                             </td>
                             <td>
-                                For the vast majority of software artifacts, and for hardware artifacts whenever possible.
+                                Available, Functional, and Reproduced: for the vast majority of software artifacts, and hardware artifacts whenever possible.
                             </td>
                         </tr>
                         <tr>
@@ -134,7 +138,7 @@ extraStyles: |
                                 <img src="/assets/images/badges_acm_functional_1.1.png" style="width: 64px; height: 64px; object-fit: cover;" alt="ACM Functional badge">
                             </td>
                             <td>
-                                For data sets, as well as artifacts that require custom environments authors can’t give access to.
+                                Available and Functional: for datasets, as well as artifacts that require custom environments authors can't give access to.
                             </td>
                         </tr>
                         <tr>
@@ -143,37 +147,37 @@ extraStyles: |
                                 <img src="/assets/images/badges_acm_reproduced_1.1.png" style="width: 64px; height: 64px; object-fit: cover;" alt="ACM Reproduced badge">
                             </td>
                             <td>
-                                For software and hardware artifacts that the authors cannot make public.
+                                Functional and Reproduced: for software and hardware artifacts that the authors cannot make public.
                             </td>
                         </tr>
                     </table>
 
-                    <p>Artifacts submitted for the first target may be awarded one of the other two if availability or reproducibility evaluations fail, respectively. Authors cannot apply for other combinations of badges as these make little sense, such as "an artifact that is not public, does not appear functional, but outputs the right numbers".</p>
+                    <p>Artifacts submitted for the first target may still be awarded one of the other two badges if they do not pass the availability or reproducibility evaluation. Authors cannot apply for other combinations of badges as these make little sense, such as "an artifact that is not public, does not appear functional, but outputs the right numbers".</p>
 
-                    <p>Authors and AEC reviewers are encouraged to read the following <a href="https://sysartifacts.github.io/cais2026/badges" target="_blank" rel="noopener">badge awarding guidelines</a>.</p>
+                    <p>Authors and AEC members are encouraged to read the following <a href="https://sysartifacts.github.io/cais2026/badges" target="_blank" rel="noopener">badge awarding guidelines</a>.</p>
                 </section>
                 
                 <!-- Call for AEC members -->
                 <section id="callforaec" class="anchor mb-5">
-                    <h2 class="section-title h4 mb-3">Call for AEC reviewers</h2>
-                    <p>We are pleased to invite you to serve as a reviewer on the Artifact Evaluation Committee (AEC) for CAIS. This role is well suited for PhD students, postdocs, and industry practitioners. Prior AE experience as an author or reviewer is especially valued, but not required.</p> 
+                    <h2 class="section-title h4 mb-3">Call for AEC members</h2>
+                    <p>We are pleased to invite you to serve as a reviewer on the Artifact Evaluation Committee for ACM CAIS. This role is well suited for PhD students, postdocs, and industry practitioners. Prior AE experience as an author or reviewer is especially valued, but not required.</p> 
                     
-                    <p>We are looking for reviewers who can provide detailed, constructive evaluations and review 1-2 artifacts during the AE review period. AEC reviewers assess artifact quality, reproducibility, and relevance. They also provide clear feedback to help authors improve their work and participate in committee discussions on artifact badge decisions. In return, reviewers gain early insight into emerging research, opportunities to connect with peers in the community, and recognition for their service on the CAIS website and, possibly, in the conference proceedings.</p>
+                    <p>We are looking for reviewers who can provide detailed, constructive evaluations and review 1-2 artifacts during the AE review period. AEC members assess artifact quality, reproducibility, and relevance. They also provide clear feedback to help authors improve their work and participate in committee discussions on artifact badge decisions. In return, AEC members gain early insight into emerging research, opportunities to connect with peers in the community, and recognition for their service on the ACM CAIS website and potentially in the conference proceedings.</p>
 
-                    <p>Prospective reviewers are encouraged to read the following <a href="https://sysartifacts.github.io/evaluator-guide.html" target="_blank" rel="noopener">guidelines for reviewers</a>.</p>
+                    <p>Prospective reviewers are encouraged to read the following <a href="https://sysartifacts.github.io/reviewer-guide.html" target="_blank" rel="noopener">guidelines</a>.</p>
 
                     <p>Application process:</p>
                     <ul>
-                        <li><strong>Self-nomination form:</strong> TBD</li>
-                        <li><strong>Application deadline:</strong> TBD</li>
-                        <li><strong>Decision notification:</strong> TBD</li>
+                        <li><strong>Self-nomination form:</strong> Please fill this <a href="https://forms.gle/bhuPueC2cboQ1K6C8" target="_blank" rel="noopener">self-nomination form</a></li>
+                        <li><strong>Self-nomination deadline:</strong> April 12, 2026</li>
+                        <li><strong>Decision notification:</strong> April 14, 2026</li>
                     </ul>
 
                 </section>
                 
                 <!-- Artifact Evaluation Chairs -->
                 <section id="chairs" class="anchor mb-5">
-                    <h2 class="section-title h4 mb-3">Artifact Evaluation Chair</h2>
+                    <h2 class="section-title h4 mb-3">Artifact Evaluation Chairs</h2>
                     <div class="row g-4">
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center">
@@ -192,6 +196,12 @@ extraStyles: |
             <!-- Sidebar -->
             <div class="col-lg-4">
                 <aside>
+                    <!-- Submit Button -->
+                    <div class="d-grid mb-4">
+                        <a href="https://acm-cais26-ae.hotcrp.com/" target="_blank" rel="noopener" class="btn btn-primary btn-lg py-3 fw-bold" style="background:var(--cais-accent); border:none; color:#fff; font-size:1.1rem;">
+                            <i class="bi bi-box-arrow-up-right me-2"></i>Submit arifacts (comming soon)
+                        </a>
+                    </div>
                     <!-- Key Dates -->
                     <div class="card dates-card mb-4">
                         <div class="card-body">
@@ -204,12 +214,12 @@ extraStyles: |
                                 </div>
                                 <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--terracotta-deep) !important;">
                                     <div class="fw-bold small">Artifact submission deadline</div>
-                                    <div class="small">Thur, April 23, 2026</div>
+                                    <div class="small">Thu, April 23, 2026</div>
                                     <div class="text-muted small">11:59 PM AoE</div>
                                 </div>
                                 <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--terracotta-deep) !important;">
                                     <div class="fw-bold small">Artifact decision notification</div>
-                                    <div class="small">Mon, May 8, 2026</div>
+                                    <div class="small">Fri, May 8, 2026</div>
                                 </div>
                             </div>
 
@@ -243,7 +253,7 @@ extraStyles: |
 
                     <!-- Questions -->
                     <div class="highlight-box mb-3">
-                        <h3 class="h6 fw-bold mb-2">Workshop Questions?</h3>
+                        <h3 class="h6 fw-bold mb-2">Artifact Evaluation Questions?</h3>
                         <p class="small text-muted mb-2">Questions about the artifact evaluation requirements, process, or scheduling.</p>
                         <p class="small mb-0"><a href="mailto:{{ site.contact.artifactChairs }}">{{ site.contact.artifactChairs }}</a></p>
                     </div>
