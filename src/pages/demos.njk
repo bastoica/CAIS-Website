@@ -1,0 +1,299 @@
+---
+layout: base.njk
+title: Call for Demos
+description: ACM CAIS 2026 Call for System Demonstrations. Showcase innovative AI systems, compound AI architectures, and autonomous agents.
+permalink: /pages/demos/
+extraStyles: |
+  /* CFP-specific styles */
+  .cfp-hero {
+    position: relative;
+    background: url('/assets/images/hero ultralight gradient.png') center/cover no-repeat;
+    color: var(--eerie-black);
+    padding: 4.5rem 0;
+  }
+
+  .cfp-hero h1, .cfp-hero p {
+    color: var(--eerie-black);
+  }
+
+  .section-title {
+    font-weight: 700;
+    letter-spacing: .2px;
+    margin-top: 0;
+    color: var(--eerie-black);
+  }
+
+  .anchor {
+    scroll-margin-top: 84px;
+  }
+
+  .card-quiet {
+    border: 1px solid var(--silver);
+    border-radius: 4px;
+    padding: 1.5rem;
+    background: var(--seasalt);
+    transition: border-color 200ms linear;
+  }
+
+  .card-quiet:hover {
+    border-color: var(--olive-moss);
+  }
+
+  .highlight-box {
+    background: rgba(149, 108, 88, 0.05);
+    padding: 1.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--platinum);
+  }
+
+  .dates-card {
+    border: 2px solid var(--terracotta-deep);
+    border-radius: 4px;
+  }
+
+  @media (max-width: 768px) {
+    .cfp-hero {
+      padding: 3rem 0;
+    }
+  }
+---
+
+<header class="hero">
+    <div class="container">
+        <h1 class="display-6 fw-bold">Call for System Demonstrations</h1>
+        <p class="lead mb-3">ACM Conference on AI and Agentic Systems (ACM CAIS 2026)</p>
+        <p class="mb-0"><strong>San Jose, CA • May 26–29, 2026</strong></p>
+  </div>
+</header>
+
+<div class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Main Content Column -->
+            <div class="col-lg-8">
+
+                <!-- Overview -->
+                <section id="overview" class="anchor mb-5">
+                    <h2 class="section-title h4 mb-3">Overview</h2>
+                    <p>The CAIS 2026 System Demonstrations track invites submissions showcasing innovative AI systems, compound AI architectures, and autonomous agents. We welcome demonstrations of both research prototypes and production systems that advance the state of the art in AI systems and agentic systems.</p>
+
+                    <p class="mb-0">CAIS is uniquely positioned at the intersection of AI, systems, and engineering&mdash;and our demo track reflects that. We are looking for demos that show real systems doing real things, whether that means a novel inference serving architecture, a multi-agent coordination framework, a production monitoring tool, or an interactive autonomous agent.</p>
+                </section>
+
+                <!-- Topics of Interest -->
+                <section id="topics" class="anchor mb-5">
+                    <h2 class="section-title h4 mb-3">Topics of Interest</h2>
+                    <p>We invite demonstrations across two broad categories:</p>
+
+                    <h3 class="h5 fw-bold mt-4 mb-3">Agent Demonstrations</h3>
+                    <ul>
+                        <li>Autonomous AI agents with formalized goal-driven behavior</li>
+                        <li>Novel multi-agent systems with emergent coordination and interaction protocols</li>
+                        <li>Integration of agents with external real-world systems, sensors, or hardware</li>
+                        <li>Evaluated agent behavior with principled benchmarking or user studies</li>
+                        <li>Agents with persistent memory, learning, and adaptation over time</li>
+                        <li>&hellip;and more! We welcome other demos that push the boundaries of what AI agents can do!</li>
+                    </ul>
+
+                    <h3 class="h5 fw-bold mt-4 mb-3">AI Systems Demonstrations</h3>
+                    <ul>
+                        <li>Novel inference serving systems with efficiency or scalability advances</li>
+                        <li>Compound AI system architectures with principled composition</li>
+                        <li>Data and ML pipeline systems for training, fine-tuning, or curation at scale</li>
+                        <li>Production AI system monitoring, evaluation, and debugging tools</li>
+                        <li>Optimization and adaptation of AI systems for deployment constraints</li>
+                        <li>&hellip;and more! We welcome other demos that advance the state of the art in building, deploying, or operating AI systems!</li>
+                    </ul>
+                </section>
+
+                <!-- Submission Guidelines -->
+                <section id="guidelines" class="anchor mb-5">
+                    <h2 class="section-title h4 mb-3">Submission Guidelines</h2>
+
+                    <h3 class="h5 fw-bold mt-4 mb-3">Paper</h3>
+                    <ul>
+                        <li><strong>4 pages</strong> of content, plus unlimited additional pages for references and appendices</li>
+                        <li>Accepted papers will receive <strong>1 additional page</strong> for the camera-ready version</li>
+                        <li>Use the standard <a href="https://www.acm.org/publications/proceedings-template" target="_blank" rel="noopener">ACM sigconf format</a> (double-column!)</li>
+                        <li>Submissions are <strong>single-blind</strong> (author names are visible to reviewers)</li>
+                    </ul>
+
+                    <h3 class="h5 fw-bold mt-4 mb-3">What to Include in Your Paper</h3>
+                    <p>Your submission should cover:</p>
+                    <ol>
+                        <li class="mb-3"><strong>What your system does and why it matters.</strong> Describe the problem, your approach, and what makes it different from existing systems or tools.</li>
+                        <li class="mb-3"><strong>Architecture and technical details.</strong> Provide enough detail for a knowledgeable reader to understand how the system works, including key design decisions and trade-offs.</li>
+                        <li class="mb-3">
+                            <strong>Demonstrating your system's contribution.</strong> Show evidence that your system works and is meaningfully better or different from alternatives, using metrics appropriate to what you built. For example:
+                            <ul class="mt-2">
+                                <li><em>Inference system:</em> latency, throughput, cost per query at scale</li>
+                                <li><em>Agent framework:</em> task completion rates, number of tool calls, error recovery</li>
+                                <li><em>Monitoring tool:</em> detection latency, false positive rate, coverage</li>
+                                <li><em>RAG pipeline:</em> retrieval accuracy, end-to-end response quality, indexing speed</li>
+                                <li><em>Interactive agent demo:</em> success rate on representative tasks, qualitative walkthroughs</li>
+                            </ul>
+                            <p class="mt-2 mb-0">Formal user studies are welcome but not required.</p>
+                        </li>
+                        <li><strong>Demo scenario.</strong> Describe what attendees will see and experience at the live demonstration. What is the interaction? What is the most compelling thing to show?</li>
+                    </ol>
+
+                    <h3 class="h5 fw-bold mt-4 mb-3">Video</h3>
+                    <ul>
+                        <li>A <strong>demo video is required</strong> (3&ndash;5 minutes)</li>
+                        <li>The video should show the system in action end-to-end, not just slides or architecture diagrams</li>
+                        <li>Upload the video to a hosting platform (e.g., YouTube, Vimeo) and include the link in your submission; a private YouTube link may be used for this purpose and attached as a footnote in the main paper</li>
+                    </ul>
+
+                    <h3 class="h5 fw-bold mt-4 mb-3">Live Demo Artifact</h3>
+                    <p>Authors are strongly encouraged to provide a <strong>live demo URL, hosted notebook, or installable package</strong> that reviewers can interact with. Accessible artifacts help reviewers better evaluate the system and strengthen the submission.</p>
+
+                    <p class="mb-0">If a live artifact is not feasible (e.g., due to infrastructure requirements or proprietary constraints), authors should explain why in the submission and ensure the demo video clearly demonstrates end-to-end functionality.</p>
+                </section>
+
+                <!-- How Demos Will Be Reviewed -->
+                <section id="review" class="anchor mb-5">
+                    <h2 class="section-title h4 mb-3">How Demos Will Be Reviewed</h2>
+                    <p>Demo submissions may emphasize <strong>technical depth</strong> (novel architecture, significant engineering contribution, production-scale challenges) or <strong>audience experience</strong> (interactive, compelling live demonstration, clear real-world impact)&mdash;or both. Reviewers will evaluate each submission based on its strengths. A technically deep infrastructure demo should not be penalized for being less visually flashy, and a highly interactive agent demo should not be penalized for having a simpler architecture, as long as each excels in its primary dimension.</p>
+
+                    <p>Authors are encouraged to indicate which dimension their demo primarily demonstrates:</p>
+                    <ul>
+                        <li>(a) Novel technical contribution</li>
+                        <li>(b) Compelling interactive experience</li>
+                        <li>(c) Both</li>
+                    </ul>
+
+                    <h3 class="h5 fw-bold mt-4 mb-3">Review Criteria</h3>
+                    <ul>
+                        <li><strong>Relevance:</strong> Does the system address problems in AI systems, compound AI, or agentic systems?</li>
+                        <li><strong>Novelty:</strong> Does the system introduce new ideas, architectures, or approaches? Has this system been demonstrated at another venue before?</li>
+                        <li><strong>Technical quality:</strong> Is the system well-designed? Are the design decisions and trade-offs clearly explained?</li>
+                        <li><strong>Evidence of contribution:</strong> Does the submission include appropriate metrics or evaluation demonstrating the system works as described?</li>
+                        <li><strong>Demo quality:</strong> Is the demo scenario well-designed? Will it be compelling for a live audience? Is the video clear and informative?</li>
+                    </ul>
+                </section>
+
+                <!-- Presentation -->
+                <section id="presentation" class="anchor mb-5">
+                    <h2 class="section-title h4 mb-3">Presentation</h2>
+                    <p>Accepted demos will be presented as <strong>live demonstrations during poster and demo sessions</strong>, with dedicated demo stations. Authors should be prepared to give live demonstrations and answer questions from attendees throughout the session.</p>
+
+                    <p class="mb-0">For demos that do not translate well to an interactive booth format&mdash;for example, systems requiring specialized hardware, large-scale infrastructure, or extended setup&mdash;there may be an option to present as a <strong>5&ndash;10 minute demo talk</strong> during a scheduled demo talk session. Authors who believe their demo is better suited to this format should discuss this with the demo chairs after paper acceptance.</p>
+                </section>
+
+                <!-- Important Dates -->
+                <section id="dates" class="anchor mb-5">
+                    <h2 class="section-title h4 mb-3">Important Dates</h2>
+
+                    <div class="alert alert-warning mb-4">
+                        <i class="bi bi-info-circle me-2"></i><strong>Note:</strong> All deadlines are 11:59 PM AoE (Anywhere on Earth). Dates are subject to change. Subscribe for updates to receive notifications of any changes.
+                    </div>
+
+                    <table class="table table-sm mb-4" style="table-layout: fixed; width: 100%;">
+                        <colgroup>
+                            <col style="width: 68%;">
+                            <col style="width: 32%;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>Demo submission deadline</td>
+                                <td class="text-start"><strong>Fri, March 13, 2026</strong> (11:59 PM AoE)</td>
+                            </tr>
+                            <tr>
+                                <td>Notification of acceptance</td>
+                                <td class="text-start"><strong>Fri, April 10, 2026</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Camera-ready deadline</td>
+                                <td class="text-start"><strong>Mon, April 27, 2026</strong> (11:59 PM AoE)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Submission Site -->
+                <section id="submission" class="anchor mb-5">
+                    <h2 class="section-title h4 mb-3">Submission Site</h2>
+                    <p class="mb-0">Submissions will be handled via HotCRP. Link coming soon.</p>
+                </section>
+
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <aside>
+                    <!-- Submit Button -->
+                    <div class="d-grid mb-4">
+                        <a href="#submission" class="btn btn-primary btn-lg py-3 fw-bold" style="background:var(--cais-accent); border:none; color:#fff; font-size:1.1rem;">
+                            <i class="bi bi-box-arrow-up-right me-2"></i>Submit Demo (coming soon)
+                        </a>
+                    </div>
+                    <!-- Key Dates -->
+                    <div class="card dates-card mb-4">
+                        <div class="card-body">
+                            <h3 class="h6 fw-bold mb-3"><i class="bi bi-calendar-event me-2"></i>Key Dates</h3>
+
+                            <div class="mb-3">
+                                <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--terracotta-deep) !important;">
+                                    <div class="fw-bold small">Demo submission deadline</div>
+                                    <div class="small">Fri, March 13, 2026</div>
+                                    <div class="text-muted small">11:59 PM AoE</div>
+                                </div>
+                                <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--terracotta-deep) !important;">
+                                    <div class="fw-bold small">Notification of acceptance</div>
+                                    <div class="small">Fri, April 10, 2026</div>
+                                </div>
+                                <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--terracotta-deep) !important;">
+                                    <div class="fw-bold small">Camera-ready deadline</div>
+                                    <div class="small">Mon, April 27, 2026</div>
+                                    <div class="text-muted small">11:59 PM AoE</div>
+                                </div>
+                            </div>
+
+                            <p class="text-muted small mb-0"><i class="bi bi-info-circle me-1"></i>Dates subject to change</p>
+                        </div>
+                    </div>
+
+                    <!-- Stay Updated -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="h6 fw-bold mb-3">Stay Updated</h3>
+                            <p class="small mb-3">Get notified when deadlines approach.</p>
+                            <a href="{{ site.forms.subscribe }}" target="_blank" rel="noopener" class="btn btn-primary btn-sm w-100" style="background:var(--cais-accent); border:none; color:#fff;">
+                                <i class="bi bi-envelope me-2"></i>Subscribe for Updates
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="h6 fw-bold mb-3"><i class="bi bi-link-45deg me-2"></i>Quick Links</h3>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="#overview">Overview</a></li>
+                                <li class="mb-2"><a href="#topics">Topics of Interest</a></li>
+                                <li class="mb-2"><a href="#guidelines">Submission Guidelines</a></li>
+                                <li class="mb-2"><a href="#review">Review Criteria</a></li>
+                                <li class="mb-2"><a href="#presentation">Presentation</a></li>
+                                <li class="mb-2"><a href="#dates">Important Dates</a></li>
+                                <li class="mb-2"><a href="#submission">Submission Site</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Questions -->
+                    <div class="highlight-box mb-3">
+                        <h3 class="h6 fw-bold mb-2">Demo Track Questions?</h3>
+                        <p class="small text-muted mb-2">Questions about demo submissions, format, or requirements.</p>
+                        <p class="small mb-0"><a href="mailto:{{ site.contact.programChairs }}">{{ site.contact.programChairs }}</a></p>
+                    </div>
+                    <div class="highlight-box">
+                        <h3 class="h6 fw-bold mb-2">General Inquiries</h3>
+                        <p class="small text-muted mb-2">Registration, logistics, and other conference questions.</p>
+                        <p class="small mb-0"><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></p>
+                    </div>
+                </aside>
+            </div>
+
+        </div>
+    </div>
+</div>

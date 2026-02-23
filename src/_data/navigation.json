@@ -28,6 +28,11 @@
           "label": "Artifacts",
           "href": "/pages/cfa/",
           "disabled": false
+        },
+        {
+          "label": "Demos",
+          "href": "/pages/demos/",
+          "disabled": false
         }
       ]
     },
