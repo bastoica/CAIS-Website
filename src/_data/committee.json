@@ -110,6 +110,13 @@
       "bio": "Assistant Professor of CS at Brown University. Her research focuses on systems for ML, networking, and operating systems. She has received a Google ML and Systems Junior Faculty award, NSF Graduate Research Fellowship, and Distinguished Artifact Award at SOSP."
     },
     {
+      "name": "Bogdan Stoica",
+      "affiliation": "University of Illinois Urbana-Champaign",
+      "photo": "Bogdan_Stoica.png",
+      "role": "Artifact Evaluation Chair",
+      "bio": "Postdoctoral Research Associate at the University of Illinois Urbana-Champaign. His research lies at the intersection of systems, programming languages, and AI, with a focus on improving the reliability and efficiency of software systems. He is the recipient of an Eckhardt Scholarship and a Distinguished Artifact Evaluator Award (EuroSys '25)."
+    },
+    {
       "name": "Matei Zaharia",
       "affiliation": "UC Berkeley & Databricks",
       "photo": "Zaharia_Matei.png",
