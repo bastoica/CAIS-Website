@@ -1,10 +1,13 @@
 module.exports = async function handler(req, res) {
-  // CORS — restrict to our own domain
-  const allowedOrigin = "https://caisconf.org";
-  const origin = req.headers.origin;
+  // CORS — allow production domain and Vercel preview deployments
+  const origin = req.headers.origin || "";
+  const isAllowed =
+    origin === "https://caisconf.org" ||
+    origin.endsWith(".vercel.app") ||
+    origin.startsWith("http://localhost:");
 
-  if (origin === allowedOrigin) {
-    res.setHeader("Access-Control-Allow-Origin", allowedOrigin);
+  if (isAllowed) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
   }
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
