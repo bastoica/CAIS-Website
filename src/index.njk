@@ -6,6 +6,7 @@ showOpenGraph: true
 showJsonLd: true
 showSponsorshipCallout: false
 ---
+{% from "subscribe-form.njk" import subscribe %}
 
 <!-- ===== HERO ===== -->
 <header class="hero">
@@ -24,13 +25,11 @@ showSponsorshipCallout: false
                 <div class="d-flex flex-wrap align-items-center gap-3 mb-2">
                     <span class="fs-4 fw-bold" style="color: var(--cais-accent);"><i class="bi bi-clock me-2" aria-hidden="true"></i>Paper Submission Deadline: {{ site.deadlines.paperSubmission.display }}</span>
                 </div>
-                <div class="d-flex flex-wrap gap-2">
+                <div class="d-flex flex-wrap gap-3 align-items-center">
                     <a href="https://acm-cais26.hotcrp.com/" target="_blank" rel="noopener" class="btn btn-primary btn-lg px-4" style="background:var(--cais-accent); border:none; color:var(--seasalt);">
                         <i class="bi bi-box-arrow-up-right me-2"></i>Submit Paper
                     </a>
-                    <a href="{{ site.forms.subscribe }}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-lg px-4">
-                        <i class="bi bi-envelope me-2"></i>Subscribe for Updates
-                    </a>
+                    {{ subscribe(layout="inline", inputId="bd-email-hero") }}
                 </div>
             </div>
         </div>
@@ -145,7 +144,7 @@ showSponsorshipCallout: false
                             <a href="https://acm-cais26.hotcrp.com/" target="_blank" rel="noopener" class="btn btn-outline-primary" style="background:var(--cais-accent); border-color:var(--cais-accent); color:#fff;">
                                 <i class="bi bi-box-arrow-up-right me-2"></i>Submit Paper
                             </a>
-                            <a href="{{ site.forms.subscribe }}" target="_blank" rel="noopener" class="btn btn-outline-primary">Get CAIS Updates</a>
+                            {{ subscribe(layout="inline", inputId="bd-email-track") }}
                         </div>
                     </div>
                 </div>
@@ -200,9 +199,7 @@ showSponsorshipCallout: false
                 <a class="btn btn-light btn-lg text-dark px-4" href="https://acm-cais26.hotcrp.com/" target="_blank" rel="noopener">
                     <i class="bi bi-box-arrow-up-right me-2"></i>Submit Paper
                 </a>
-                <a class="btn btn-outline-light btn-lg px-4" href="{{ site.forms.subscribe }}" target="_blank" rel="noopener">
-                    <i class="bi bi-envelope me-2"></i>Updates
-                </a>
+                {{ subscribe(layout="inline", inputId="bd-email-cta", btnClass="btn-light", btnStyle="background:#fff; border:none; color:var(--eerie-black); font-weight:600;") }}
             </div>
         </div>
     </div>

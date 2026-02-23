@@ -41,8 +41,21 @@
                 </li>
                 {% endif %}
                 {% endfor %}
-                <li class="nav-item">
-                    <a class="nav-link btn btn-sm ms-lg-2" href="{{ navigation.cta.href }}" {% if navigation.cta.external %}target="_blank" rel="noopener"{% endif %}>{{ navigation.cta.label }}</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link btn btn-sm ms-lg-2 dropdown-toggle" href="#" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">Get Updates</a>
+                    <div class="dropdown-menu dropdown-menu-end p-3" style="min-width:300px;">
+                        <div class="mb-2 small fw-bold">Subscribe for updates</div>
+                        <form action="https://buttondown.com/api/emails/embed-subscribe/caisconf"
+                              method="post" referrerpolicy="unsafe-url">
+                            <div class="input-group input-group-sm">
+                                <input type="email" name="email" id="bd-email-nav" class="form-control"
+                                       placeholder="Your email" required aria-label="Email address">
+                                <button type="submit" class="btn"
+                                        style="background:var(--cais-accent); color:#fff;">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
                 </li>
                 <li class="nav-item ms-lg-1">
                     <a class="nav-link btn btn-sm px-3 fw-bold" href="https://acm-cais26.hotcrp.com/" target="_blank" rel="noopener" style="background:var(--cais-accent) !important; color:#fff !important;">

@@ -57,6 +57,7 @@ extraStyles: |
     }
   }
 ---
+{% from "subscribe-form.njk" import subscribe %}
 
 <header class="hero">
     <div class="container">
@@ -232,9 +233,7 @@ extraStyles: |
                         <div class="card-body">
                             <h3 class="h6 fw-bold mb-3">Stay Updated</h3>
                             <p class="small mb-3">Get notified when deadlines approach.</p>
-                            <a href="{{ site.forms.subscribe }}" target="_blank" rel="noopener" class="btn btn-primary btn-sm w-100" style="background:var(--cais-accent); border:none; color:#fff;">
-                                <i class="bi bi-envelope me-2"></i>Subscribe for Updates
-                            </a>
+                            {{ subscribe(layout="stacked", inputId="bd-email-cfa") }}
                         </div>
                     </div>
 

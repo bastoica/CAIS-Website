@@ -1,0 +1,28 @@
+{#
+  Buttondown subscribe form macro.
+
+  Parameters:
+    layout   – "inline" (horizontal) or "stacked" (vertical)  [default: "inline"]
+    inputId  – unique HTML id for the email input               [default: "bd-email"]
+    btnClass – extra classes on the submit button                [default: ""]
+    btnStyle – inline style on the submit button                 [default: uses cais-accent]
+#}
+{% macro subscribe(layout="inline", inputId="bd-email", btnClass="", btnStyle="background:var(--cais-accent); border:none; color:#fff;") %}
+<form class="subscribe-form subscribe-form--{{ layout }}"
+      action="https://buttondown.com/api/emails/embed-subscribe/caisconf"
+      method="post" referrerpolicy="unsafe-url">
+  {% if layout == "inline" %}
+  <div class="input-group">
+    <input type="email" name="email" id="{{ inputId }}" class="form-control"
+           placeholder="Your email address" required aria-label="Email address">
+    <button type="submit" class="btn {{ btnClass }}" style="{{ btnStyle }}">Subscribe</button>
+  </div>
+  {% else %}
+  <input type="email" name="email" id="{{ inputId }}" class="form-control mb-2"
+         placeholder="Your email address" required aria-label="Email address">
+  <button type="submit" class="btn w-100 {{ btnClass }}" style="{{ btnStyle }}">
+    <i class="bi bi-envelope me-2"></i>Subscribe for Updates
+  </button>
+  {% endif %}
+</form>
+{% endmacro %}
