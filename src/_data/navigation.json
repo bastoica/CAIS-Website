@@ -13,10 +13,6 @@
       "href": "/pages/committee/"
     },
     {
-      "label": "Workshops",
-      "href": "/pages/workshops/"
-    },
-    {
       "label": "Call for",
       "children": [
         {
@@ -32,6 +28,11 @@
         {
           "label": "Demos",
           "href": "/pages/demos/",
+          "disabled": false
+        },
+        {
+          "label": "Workshops",
+          "href": "/pages/workshops/",
           "disabled": false
         }
       ]

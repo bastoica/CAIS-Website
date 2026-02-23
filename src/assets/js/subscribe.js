@@ -1,4 +1,14 @@
 (function () {
+  // Toggle "Add name & affiliation" in inline forms
+  document.querySelectorAll(".subscribe-extra-toggle").forEach(function (toggle) {
+    toggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      var fields = toggle.nextElementSibling;
+      fields.classList.remove("d-none");
+      toggle.remove();
+    });
+  });
+
   document.querySelectorAll(".subscribe-form").forEach(function (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -10,13 +20,22 @@
 
       if (!email) return;
 
+      var nameInput = form.querySelector('input[name="name"]');
+      var affiliationInput = form.querySelector('input[name="affiliation"]');
+      var name = nameInput ? nameInput.value.trim() : "";
+      var affiliation = affiliationInput ? affiliationInput.value.trim() : "";
+
+      var payload = { email: email };
+      if (name) payload.name = name;
+      if (affiliation) payload.affiliation = affiliation;
+
       btn.disabled = true;
       btn.textContent = "Subscribing\u2026";
 
       fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email }),
+        body: JSON.stringify(payload),
       })
         .then(function (res) {
           return res.json().then(function (data) {

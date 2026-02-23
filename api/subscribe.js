@@ -21,7 +21,7 @@ module.exports = async function handler(req, res) {
     return res.status(405).json({ ok: false, error: "Method not allowed" });
   }
 
-  const { email } = req.body || {};
+  const { email, name, affiliation } = req.body || {};
 
   if (!email || typeof email !== "string" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return res.status(400).json({ ok: false, error: "A valid email address is required." });
@@ -43,6 +43,12 @@ module.exports = async function handler(req, res) {
     };
     if (ip) {
       payload.ip_address = ip;
+    }
+    if (name && typeof name === "string" && name.trim()) {
+      payload.metadata = { name: name.trim() };
+    }
+    if (affiliation && typeof affiliation === "string" && affiliation.trim()) {
+      payload.tags = [affiliation.trim()];
     }
 
     const response = await fetch("https://api.buttondown.com/v1/subscribers", {

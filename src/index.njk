@@ -25,11 +25,11 @@ showSponsorshipCallout: false
                 <div class="d-flex flex-wrap align-items-center gap-3 mb-2">
                     <span class="fs-4 fw-bold" style="color: var(--cais-accent);"><i class="bi bi-clock me-2" aria-hidden="true"></i>Paper Submission Deadline: {{ site.deadlines.paperSubmission.display }}</span>
                 </div>
-                <div class="d-flex flex-wrap gap-3 align-items-center">
+                <div class="d-flex flex-wrap gap-3 align-items-center justify-content-between">
                     <a href="https://acm-cais26.hotcrp.com/" target="_blank" rel="noopener" class="btn btn-primary btn-lg px-4" style="background:var(--cais-accent); border:none; color:var(--seasalt);">
                         <i class="bi bi-box-arrow-up-right me-2"></i>Submit Paper
                     </a>
-                    <div>
+                    <div style="max-width:420px; width:100%;">
                         <small class="text-muted d-block mb-1"><i class="bi bi-envelope me-1"></i>Get conference updates &amp; deadline reminders</small>
                         {{ subscribe(layout="inline", inputId="bd-email-hero") }}
                     </div>
@@ -147,7 +147,6 @@ showSponsorshipCallout: false
                             <a href="https://acm-cais26.hotcrp.com/" target="_blank" rel="noopener" class="btn btn-outline-primary" style="background:var(--cais-accent); border-color:var(--cais-accent); color:#fff;">
                                 <i class="bi bi-box-arrow-up-right me-2"></i>Submit Paper
                             </a>
-                            {{ subscribe(layout="inline", inputId="bd-email-track") }}
                         </div>
                     </div>
                 </div>
@@ -161,7 +160,7 @@ showSponsorshipCallout: false
                         <div>
                             <h3 class="h5 fw-bold mb-2">Tutorials &amp; Workshops</h3>
                             <p class="mb-3">Deep dives into practical methods and frameworks such as DSPy, LangChain, and more tools for building compound AI systems at scale.</p>
-                            <a href="/pages/workshops/" class="btn btn-outline-primary">View Workshop Details</a>
+                            <a href="/pages/workshops/" class="btn btn-outline-primary" style="background:var(--cais-accent); border-color:var(--cais-accent); color:#fff;">Submit a Proposal</a>
                         </div>
                     </div>
                 </div>
@@ -172,7 +171,7 @@ showSponsorshipCallout: false
         <div class="row g-4 mt-3">
             <div class="col-12">
                 <div class="card card-quiet p-4">
-                    <div class="d-flex align-items-start gap-3 mb-3">
+                    <div class="d-flex align-items-center gap-3 mb-3">
                         <div class="flex-shrink-0">
                             <i class="bi bi-award fs-1" style="color:var(--cais-accent);" aria-hidden="true"></i>
                         </div>
@@ -181,7 +180,7 @@ showSponsorshipCallout: false
                             <p class="mb-0">ACM CAIS emphasizes open artifacts, transparent evaluation, and benchmarking standards. We adopt ACM's reproducibility badging taxonomy to recognize high-quality, deployable research.</p>
                         </div>
                         <div class="col-lg-3 text-lg-end mt-3 mt-lg-0">
-                            <a href="/pages/cfa/" rel="noopener" class="btn btn-outline-primary">Check the call-for-artifact</a>
+                            <a href="/pages/cfa/" rel="noopener" class="btn btn-outline-primary">Call for Artifacts</a>
                         </div>
                     </div>
                 </div>
@@ -198,11 +197,14 @@ showSponsorshipCallout: false
                 <h2 class="h3 fw-bold mb-1">Be part of the inaugural ACM CAIS</h2>
                 <p class="mb-0">Submission timeline and important dates available in the Call for Papers.</p>
             </div>
-            <div class="d-flex flex-wrap gap-2">
+            <div class="d-flex flex-wrap gap-3 align-items-center">
                 <a class="btn btn-light btn-lg text-dark px-4" href="https://acm-cais26.hotcrp.com/" target="_blank" rel="noopener">
                     <i class="bi bi-box-arrow-up-right me-2"></i>Submit Paper
                 </a>
-                {{ subscribe(layout="inline", inputId="bd-email-cta", btnClass="btn-light", btnStyle="background:#fff; border:none; color:var(--eerie-black); font-weight:600;") }}
+                <div>
+                    <small class="text-muted d-block mb-1"><i class="bi bi-envelope me-1"></i>Get conference updates &amp; deadline reminders</small>
+                    {{ subscribe(layout="inline", inputId="bd-email-cta", btnClass="", btnStyle="background:var(--cais-accent); border:none; color:#fff;") }}
+                </div>
             </div>
         </div>
     </div>

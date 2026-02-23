@@ -623,7 +623,7 @@ a:focus, button:focus, .btn:focus {
 
 .subscribe-form--inline {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 0;
     min-width: 260px;
 }
