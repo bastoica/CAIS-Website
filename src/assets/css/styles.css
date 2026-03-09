@@ -618,12 +618,37 @@ a:focus, button:focus, .btn:focus {
 }
 
 /* ============================================
+   SUBSCRIBE FORMS (Buttondown)
+   ============================================ */
+
+.subscribe-form--inline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    min-width: 260px;
+}
+
+.subscribe-form--stacked {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.subscribe-form .form-control {
+    padding: 0.5rem 0.75rem;
+}
+
+/* ============================================
    RESPONSIVE
    ============================================ */
 
 @media (max-width: 768px) {
     .hero, .coc-hero, .cfp-hero {
         padding: 3rem 0;
+    }
+
+    .subscribe-form--inline {
+        min-width: 100%;
     }
 }
 

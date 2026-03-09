@@ -13,10 +13,6 @@
       "href": "/pages/committee/"
     },
     {
-      "label": "Workshops",
-      "href": "/pages/workshops/"
-    },
-    {
       "label": "Call for",
       "children": [
         {
@@ -27,6 +23,16 @@
         {
           "label": "Artifacts",
           "href": "/pages/cfa/",
+          "disabled": false
+        },
+        {
+          "label": "Demos",
+          "href": "/pages/demos/",
+          "disabled": false
+        },
+        {
+          "label": "Workshops",
+          "href": "/pages/workshops/",
           "disabled": false
         }
       ]
@@ -44,7 +50,7 @@
   "footerAuthors": [
     {
       "label": "Subscribe for CFP Updates",
-      "href": "https://forms.gle/gxUDUQZ7KKtEnYYA9",
+      "href": "https://buttondown.com/caisconf",
       "external": true
     },
     {

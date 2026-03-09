@@ -57,6 +57,7 @@ extraStyles: |
     }
   }
 ---
+{% from "subscribe-form.njk" import subscribe %}
 
 <header class="hero">
     <div class="container">
@@ -199,7 +200,7 @@ extraStyles: |
                     <!-- Submit Button -->
                     <div class="d-grid mb-4">
                         <a href="https://acm-cais26-ae.hotcrp.com/" target="_blank" rel="noopener" class="btn btn-primary btn-lg py-3 fw-bold" style="background:var(--cais-accent); border:none; color:#fff; font-size:1.1rem;">
-                            <i class="bi bi-box-arrow-up-right me-2"></i>Submit arifacts (comming soon)
+                            <i class="bi bi-box-arrow-up-right me-2"></i>Submit Artifacts (coming soon)
                         </a>
                     </div>
                     <!-- Key Dates -->
@@ -232,9 +233,7 @@ extraStyles: |
                         <div class="card-body">
                             <h3 class="h6 fw-bold mb-3">Stay Updated</h3>
                             <p class="small mb-3">Get notified when deadlines approach.</p>
-                            <a href="{{ site.forms.subscribe }}" target="_blank" rel="noopener" class="btn btn-primary btn-sm w-100" style="background:var(--cais-accent); border:none; color:#fff;">
-                                <i class="bi bi-envelope me-2"></i>Subscribe for Updates
-                            </a>
+                            {{ subscribe(layout="stacked", inputId="bd-email-cfa") }}
                         </div>
                     </div>
 

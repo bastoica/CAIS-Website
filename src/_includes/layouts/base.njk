@@ -109,10 +109,11 @@
 
 <!-- Navigation helpers -->
 <script>
-    // Close mobile nav on link click
+    // Close mobile nav on link click (but not on dropdown toggles)
     window.addEventListener('DOMContentLoaded', function(){
         const navMain = document.getElementById('navMain');
         navMain.querySelectorAll('a.nav-link').forEach(function(link){
+            if (link.classList.contains('dropdown-toggle')) return;
             link.addEventListener('click', function(){
                 const bsCollapse = bootstrap.Collapse.getInstance(navMain);
                 if (bsCollapse) bsCollapse.hide();
@@ -136,6 +137,9 @@
         }));
     })();
 </script>
+
+<!-- Subscribe form progressive enhancement -->
+<script src="/assets/js/subscribe.js" defer></script>
 
 <!-- Cookie Consent (GDPR-compliant, manages GA consent) -->
 <script src="/assets/js/cookie-consent.js" defer></script>
