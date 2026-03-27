@@ -1,0 +1,18 @@
+{
+  "gold": [
+    {
+      "name": "Snorkel AI",
+      "logo": "sponsors/snorkel-ai.svg",
+      "url": "https://snorkel.ai"
+    }
+  ],
+  "silver": [
+    {
+      "name": "OpenHands",
+      "logo": "sponsors/openhands.svg",
+      "url": "https://www.all-hands.dev"
+    }
+  ],
+  "bronze": [],
+  "supporting": []
+}

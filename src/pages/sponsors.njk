@@ -125,9 +125,42 @@ extraStyles: |
     padding: 0.75rem 0;
   }
 
+  /* Sponsor tier display */
+  .sponsor-tier { margin-bottom: 2rem; }
+  .sponsor-tier-label {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--platinum);
+    margin-bottom: 1.25rem;
+  }
+  .sponsor-tier-label.gold { color: var(--cais-accent); border-color: var(--cais-accent); }
+  .sponsor-tier-label.silver { color: var(--davys-gray); border-color: var(--davys-gray); }
+  .sponsor-tier-label.bronze { color: #8b7355; border-color: #8b7355; }
+  .sponsor-tier-label.supporting { color: var(--davys-gray); border-color: var(--platinum); }
+  .sponsor-logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+  }
+  .sponsor-logos a {
+    display: block;
+    transition: opacity 150ms ease;
+  }
+  .sponsor-logos a:hover { opacity: 0.7; }
+  .sponsor-logos.gold img { height: 60px; width: auto; }
+  .sponsor-logos.silver img { height: 48px; width: auto; }
+  .sponsor-logos.bronze img { height: 36px; width: auto; }
+  .sponsor-logos.supporting img { height: 28px; width: auto; }
+
   @media (max-width: 768px) {
     .sponsor-hero { padding: 3rem 0; }
     .tier-price { font-size: 1.35rem; }
+    .sponsor-logos.gold img { height: 48px; }
+    .sponsor-logos.silver img { height: 36px; }
   }
 ---
 
@@ -298,12 +331,67 @@ extraStyles: |
           </a>
         </section>
 
-        <!-- Current Sponsors (placeholder) -->
+        <!-- Our Sponsors -->
         <section id="current-sponsors" class="anchor mb-5">
           <h2 class="section-title h4 mb-3">Our Sponsors</h2>
+
+          {% if sponsors.gold.length %}
+          <div class="sponsor-tier">
+            <div class="sponsor-tier-label gold">Gold</div>
+            <div class="sponsor-logos gold">
+              {% for s in sponsors.gold %}
+              <a href="{{ s.url }}" target="_blank" rel="noopener">
+                <img src="/assets/images/{{ s.logo }}" alt="{{ s.name }}" loading="lazy" />
+              </a>
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+
+          {% if sponsors.silver.length %}
+          <div class="sponsor-tier">
+            <div class="sponsor-tier-label silver">Silver</div>
+            <div class="sponsor-logos silver">
+              {% for s in sponsors.silver %}
+              <a href="{{ s.url }}" target="_blank" rel="noopener">
+                <img src="/assets/images/{{ s.logo }}" alt="{{ s.name }}" loading="lazy" />
+              </a>
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+
+          {% if sponsors.bronze.length %}
+          <div class="sponsor-tier">
+            <div class="sponsor-tier-label bronze">Bronze</div>
+            <div class="sponsor-logos bronze">
+              {% for s in sponsors.bronze %}
+              <a href="{{ s.url }}" target="_blank" rel="noopener">
+                <img src="/assets/images/{{ s.logo }}" alt="{{ s.name }}" loading="lazy" />
+              </a>
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+
+          {% if sponsors.supporting.length %}
+          <div class="sponsor-tier">
+            <div class="sponsor-tier-label supporting">Supporting Sponsors</div>
+            <div class="sponsor-logos supporting">
+              {% for s in sponsors.supporting %}
+              <a href="{{ s.url }}" target="_blank" rel="noopener">
+                <img src="/assets/images/{{ s.logo }}" alt="{{ s.name }}" loading="lazy" />
+              </a>
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+
+          {% if not sponsors.gold.length and not sponsors.silver.length and not sponsors.bronze.length and not sponsors.supporting.length %}
           <div class="highlight-box p-4 text-center">
             <p class="text-muted mb-0"><i class="bi bi-stars me-2"></i>Sponsor logos will appear here as partnerships are confirmed.</p>
           </div>
+          {% endif %}
         </section>
 
       </div>
