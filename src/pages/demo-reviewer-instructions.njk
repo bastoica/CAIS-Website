@@ -1,0 +1,270 @@
+---
+layout: base.njk
+title: Demo Track Reviewer Instructions
+description: CAIS 2026 Demo Track reviewer instructions, review criteria, and review form details.
+permalink: /pages/demo-reviewer-instructions/
+extraStyles: |
+  .section-title {
+    font-weight: 700;
+    letter-spacing: .2px;
+    margin-top: 0;
+    color: var(--eerie-black);
+  }
+
+  .anchor {
+    scroll-margin-top: 84px;
+  }
+
+  .table {
+    --bs-table-bg: transparent;
+  }
+
+  .highlight-box {
+    background: rgba(149, 108, 88, 0.05);
+    padding: 1.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--platinum);
+  }
+
+---
+
+<header class="hero">
+    <div class="container">
+        <h1 class="display-6 fw-bold">Demo Track: Reviewer Instructions</h1>
+        <p class="lead mb-3">ACM Conference on AI and Agentic Systems (ACM CAIS 2026)</p>
+        <p class="mb-0"><strong>San Jose, CA &bull; May 26-29, 2026</strong></p>
+    </div>
+</header>
+
+<div class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Main Content Column -->
+            <div class="col-lg-8">
+
+                <!-- About CAIS -->
+                <section id="about" class="anchor mb-5">
+                    <h2 class="section-title h4 mb-3">About CAIS</h2>
+                    <p>CAIS 2026 is the first ACM conference dedicated to AI and Agentic Systems. These are AI systems that advance the state of the art through principled composition of modular components and specifications. This includes agents that orchestrate tool use, retrieval-augmented pipelines, multi-model ensembles, and systems that combine LLMs with symbolic code execution, verifiers, planners, and external knowledge. And beyond.</p>
+                    <p class="mb-0">The Demo Track showcases working systems. While the research track focuses on ideas, methods, and analysis, the demo track asks: <strong>does this system actually work, and is it interesting? Your reviews will shape what CAIS values in working AI systems.</strong></p>
+                </section>
+
+                <!-- What Makes CAIS Different -->
+                <section id="different" class="anchor mb-5">
+                    <h2 class="section-title h4 mb-3">What Makes CAIS Different</h2>
+                    <p>CAIS sits at the intersection of systems, machine learning, NLP, software engineering, programming languages, and security. It is none of these conferences. Reviewing for CAIS requires calibration that no existing conference's norms can provide.</p>
+
+                    <h3 class="h5 fw-bold mt-4 mb-2">1. Practical impact is a first-class contribution</h3>
+                    <p>A production system that reveals what actually works (or fails) at scale has equal standing with a system introducing a novel architecture. We value both architectural innovations and hard-won engineering lessons.</p>
+
+                    <h3 class="h5 fw-bold mt-4 mb-2">2. The field is still defining itself</h3>
+                    <p>AI systems and compound or agentic systems as a research area are young and rapidly evolving. Be open to unconventional approaches, hybrid methodologies, and demos that don't fit neatly into existing categories.</p>
+
+                    <h3 class="h5 fw-bold mt-4 mb-2">3. Methodological breadth is expected</h3>
+                    <p>You will see GPU kernel-level optimizations, multi-agent orchestration frameworks, developer tools, monitoring dashboards, interactive autonomous agents, production infrastructure, ... The list goes on. You are not expected to be an expert in every category that a demo you review may fall within. Report your confidence transparently.</p>
+
+                    <h3 class="h5 fw-bold mt-4 mb-2">4. Industry and academic perspectives are valued equally</h3>
+                    <p class="mb-0">Our reviewers include academics and industry practitioners. A demo from an industry team showing a production-grade system is not "just engineering," and a research prototype demonstrating a novel interaction pattern is not "just a toy." Evaluate each demo on the merits of what it actually does.</p>
+                </section>
+
+                <!-- Two Dimensions of Excellence -->
+                <section id="dimensions" class="anchor mb-5">
+                    <h2 class="section-title h4 mb-3">Two Dimensions of Excellence</h2>
+                    <p>Demo submissions fall into two broad categories:</p>
+                    <ul>
+                        <li><strong>Agent Demonstrations:</strong> autonomous agents, multi-agent coordination, tool-using agents, agents integrated with real-world systems, agents with persistent memory and adaptation</li>
+                        <li><strong>AI Systems Demonstrations:</strong> inference serving systems, compound AI architectures, data/ML pipelines, monitoring and debugging tools, deployment optimization</li>
+                    </ul>
+                    <p>Across both categories, demos may emphasize <strong>technical depth</strong>, <strong>audience experience</strong>, or both. This framing is central to how you should evaluate demos.</p>
+
+                    <h3 class="h5 fw-bold mt-4 mb-3">What "Technical Depth" Means</h3>
+                    <p>The core question: <strong>Is there something technically interesting under the hood that other practitioners could learn from?</strong></p>
+                    <p>A technically deep demo might:</p>
+                    <ul>
+                        <li>Introduce a <strong>novel system design</strong> - a new way of orchestrating multi-agent communication, a custom scheduling strategy for compound AI pipelines, a new approach to caching intermediate results across LLM calls</li>
+                        <li>Solve a <strong>hard engineering problem</strong> - cutting a multi-hop retrieval pipeline from 3 seconds to under 500ms, or making a multi-agent system reliably recover from partial failures</li>
+                        <li>Reveal <strong>production-scale insights</strong> - showing what breaks when you go from 10 to 10,000 concurrent agent sessions, or how cost/quality tradeoffs change at real traffic volumes</li>
+                    </ul>
+
+                    <h3 class="h5 fw-bold mt-4 mb-3">What "Audience Experience" Means</h3>
+                    <p>A demo that's primarily about audience experience might feature an interactive agent that does something genuinely impressive and useful, but whose architecture is relatively standard (LLM + tool calling + RAG with off-the-shelf components). Its value is in showing <em>what's possible</em> and <em>what the user experience looks like</em>, not in novel systems work.</p>
+
+                    <h3 class="h5 fw-bold mt-4 mb-3">Neither Is Lesser</h3>
+                    <p>A demo with standard architecture but a genuinely compelling interaction is a valid CAIS contribution. So is a technically deep infrastructure demo that isn't flashy to watch live. Evaluate each demo on the dimension it's actually trying to contribute in, not the one it isn't.</p>
+                    <p class="mb-0">Some authors may indicate which dimension their demo primarily demonstrates: (a) novel technical contribution, (b) compelling interactive experience, or (c) both. If stated, consider whether you agree. If not stated, make your own assessment. Either way, evaluate the demo on the dimension where it is strongest.</p>
+                </section>
+
+                <!-- Review Criteria -->
+                <section id="criteria" class="anchor mb-5">
+                    <h2 class="section-title h4 mb-3">Review Criteria &amp; How to Assess Them</h2>
+
+                    <h3 class="h5 fw-bold mt-4 mb-2">1. Relevance</h3>
+                    <p>Does the system address problems in AI systems, compound AI, or agentic systems?</p>
+                    <p><strong>Look for:</strong> A clear connection to the CAIS scope. The system should involve composition of AI components, agentic behavior, or infrastructure that enables these. A standalone fine-tuned model with no system-level contribution is outside scope. A wrapper around a single API call is outside scope. A system that orchestrates multiple models, tools, or retrieval components is in scope even if individual components are off-the-shelf, because the contribution is in the composition.</p>
+
+                    <h3 class="h5 fw-bold mt-4 mb-2">2. Novelty</h3>
+                    <p>Does the system introduce new ideas, architectures, or approaches? Or does it apply known approaches to a meaningfully new domain or scale?</p>
+                    <p><strong>Look for:</strong> Something a practitioner or researcher would learn from. This can be a new architecture, a new combination of existing components, a known pattern applied to a domain where it reveals new challenges, or a system that achieves results previously thought impractical. A reimplementation of a well-known pattern with minor variations and no new insight is not novel.</p>
+                    <p>If this system has been <strong>demonstrated at another venue</strong>, what is new here? A demo previously shown elsewhere must offer substantial new capabilities, evaluation, or insights to warrant acceptance at CAIS.</p>
+
+                    <h3 class="h5 fw-bold mt-4 mb-2">3. Technical Quality</h3>
+                    <p>Is the system well-designed? Are the design decisions and trade-offs clearly explained?</p>
+                    <p><strong>Look for:</strong> The paper should explain <em>why</em> the system is built the way it is, not just <em>what</em> it does. Specific things to check:</p>
+                    <ul>
+                        <li>Are the key design decisions identified and justified? ("We chose X over Y because of Z")</li>
+                        <li>Are trade-offs acknowledged honestly? (What did they give up? What are the limitations?)</li>
+                        <li>Is the architecture described with enough detail for a knowledgeable reader to understand the system and potentially reproduce the key ideas?</li>
+                        <li>For multi-component systems: is it clear how components interact and why that interaction pattern was chosen?</li>
+                    </ul>
+                    <p>A demo that describes its architecture only at a high level ("we use LangChain and GPT-4") without explaining the interesting parts of the design is technically thin, regardless of how well the system works.</p>
+
+                    <h3 class="h5 fw-bold mt-4 mb-2">4. Evidence of Contribution</h3>
+                    <p>Does the submission include concrete evidence that the system works and that its contribution is real?</p>
+                    <p>This is the criterion where we ask reviewers to be most careful and most constructive. CAIS is building a new community at the intersection of AI and systems, and many contributors come from industry environments where bold claims are common and rigorous evidence is not. Part of our job as reviewers is to help authors learn how to demonstrate their contributions with appropriate evidence. This is how we collectively raise the bar.</p>
+                    <p><strong>What we mean by evidence:</strong> Numbers, measurements, comparisons, or structured evaluations that a reader can use to independently assess whether the system delivers on its claims. "Our system is fast" is a claim. "Our system achieves p95 latency of 340ms on a workload of 1,000 concurrent sessions, compared to 1,200ms for the baseline" is evidence.</p>
+                    <p><strong>Calibrate to the system type.</strong> Different systems require different evidence:</p>
+
+                    <table class="table table-sm mb-4">
+                        <thead>
+                            <tr>
+                                <th>System Type</th>
+                                <th>Appropriate Evidence</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Inference system</td>
+                                <td>Latency, throughput, cost per query at scale</td>
+                            </tr>
+                            <tr>
+                                <td>Agent framework</td>
+                                <td>Task completion rates, number of tool calls, error recovery</td>
+                            </tr>
+                            <tr>
+                                <td>Monitoring tool</td>
+                                <td>Detection latency, false positive rate, coverage</td>
+                            </tr>
+                            <tr>
+                                <td>RAG pipeline</td>
+                                <td>Retrieval accuracy, end-to-end response quality, indexing speed</td>
+                            </tr>
+                            <tr>
+                                <td>Interactive agent</td>
+                                <td>Success rate on representative tasks, qualitative walkthroughs</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>An interactive agent demo should not be penalized for lacking throughput benchmarks any more than an inference serving system should be penalized for lacking a user study. Formal user studies are welcome but not required.</p>
+
+                    <div class="highlight-box mb-4">
+                        <h4 class="h6 fw-bold mb-2">If evidence is weak or missing</h4>
+                        <p class="mb-0">Do not simply note "insufficient evaluation." Instead, be specific about what evidence you would want to see. If this were your demo, how would you demonstrate the contribution? What metrics would you report, what baselines would you compare against, and what experiments would you run? Concrete, actionable suggestions help authors strengthen their work for future submissions, and help CAIS build the culture of evidence we want in this community.</p>
+                    </div>
+
+                    <h3 class="h5 fw-bold mt-4 mb-2">5. Demo Quality</h3>
+                    <p>Is the demo scenario well-designed? Will it be compelling for a live audience? Does the video show the system working?</p>
+                    <p><strong>Look for:</strong></p>
+                    <ul>
+                        <li><strong>Demo scenario:</strong> The paper should describe what attendees will see and interact with at the conference. Is the scenario feasible for a poster/demo session? Does it show the interesting parts of the system, or just a surface-level walkthrough?</li>
+                        <li><strong>Video (required, 3-5 minutes):</strong> Watch it. Does it show the system in action end-to-end? Does it demonstrate the claimed capabilities, or just describe them? A video that is mostly slides and architecture diagrams is a red flag.</li>
+                        <li><strong>Live artifact (strongly encouraged):</strong> If a live demo URL, notebook, or installable package is provided, try it. If no live artifact is provided, did the authors explain why? Proprietary infrastructure, specialized hardware, or security constraints are legitimate reasons. Absence without explanation is worth noting in your review.</li>
+                    </ul>
+
+                    <div class="alert alert-warning mb-0">
+                        <i class="bi bi-info-circle me-2"></i><strong>Check artifacts early.</strong> As soon as you receive your assignments, check whether you can access the video and any live artifacts. If you run into issues (broken links, access errors, artifacts that won't load), let us know right away so we can reach out to the authors and work out any kinks before the review deadline.
+                    </div>
+                </section>
+
+                <!-- Timeline & Decisions -->
+                <section id="timeline" class="anchor mb-5">
+                    <h2 class="section-title h4 mb-3">Timeline &amp; Decisions</h2>
+
+                    <table class="table table-sm mb-4" style="table-layout: fixed; width: 100%;">
+                        <colgroup>
+                            <col style="width: 55%;">
+                            <col style="width: 45%;">
+                        </colgroup>
+                        <tbody>
+                            <tr class="table-active">
+                                <td><strong>Reviews due</strong></td>
+                                <td class="text-start"><strong>April 10, 2026 (AoE)</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Notification</td>
+                                <td class="text-start">April 14, 2026</td>
+                            </tr>
+                            <tr>
+                                <td>Camera-ready</td>
+                                <td class="text-start">April 27, 2026 (AoE)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>There is no author rebuttal period for the demo track. The review committee will render acceptance decisions directly based on reviews and committee discussion.</p>
+                    <p>Demo submissions are <strong>single-blind</strong>: author names and affiliations are visible to you. This is intentional. For demos, knowing the team and context behind a system helps you evaluate feasibility and production readiness. Do not hold author identity against them or in their favor.</p>
+                    <p class="mb-0">If you are unable to complete your reviews on time, or if you receive a demo entirely outside your expertise, contact the demo chairs as early as possible. Late notification is far more disruptive than early notification.</p>
+                </section>
+
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <aside>
+                    <!-- Key Dates -->
+                    <div class="card mb-4" style="border: 2px solid var(--terracotta-deep); border-radius: 4px;">
+                        <div class="card-body">
+                            <h3 class="h6 fw-bold mb-3"><i class="bi bi-calendar-event me-2"></i>Review Timeline</h3>
+
+                            <div class="mb-3">
+                                <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--terracotta-deep) !important;">
+                                    <div class="fw-bold small">Reviews due</div>
+                                    <div class="small">Fri, April 10, 2026</div>
+                                    <div class="text-muted small">11:59 PM AoE</div>
+                                </div>
+                                <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--terracotta-deep) !important;">
+                                    <div class="fw-bold small">Notification</div>
+                                    <div class="small">Tue, April 14, 2026</div>
+                                </div>
+                                <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--terracotta-deep) !important;">
+                                    <div class="fw-bold small">Camera-ready deadline</div>
+                                    <div class="small">Mon, April 27, 2026</div>
+                                    <div class="text-muted small">11:59 PM AoE</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="h6 fw-bold mb-3"><i class="bi bi-link-45deg me-2"></i>Quick Links</h3>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="#about">About CAIS</a></li>
+                                <li class="mb-2"><a href="#different">What Makes CAIS Different</a></li>
+                                <li class="mb-2"><a href="#dimensions">Two Dimensions of Excellence</a></li>
+                                <li class="mb-2"><a href="#criteria">Review Criteria</a></li>
+                                <li class="mb-2"><a href="#timeline">Timeline &amp; Decisions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- HotCRP -->
+                    <div class="d-grid mb-4">
+                        <a href="https://cais26-demos.hotcrp.com/" target="_blank" rel="noopener" class="btn btn-primary btn-lg py-3 fw-bold" style="background:var(--cais-accent); border:none; color:#fff; font-size:1.1rem;">
+                            <i class="bi bi-box-arrow-up-right me-2"></i>Go to HotCRP
+                        </a>
+                    </div>
+
+                    <!-- Questions -->
+                    <div class="highlight-box">
+                        <h3 class="h6 fw-bold mb-2">Demo Track Questions?</h3>
+                        <p class="small text-muted mb-2">Questions about reviewing, assignments, or deadlines.</p>
+                        <p class="small mb-0"><a href="mailto:{{ site.contact.programChairs }}">{{ site.contact.programChairs }}</a></p>
+                    </div>
+                </aside>
+            </div>
+
+        </div>
+    </div>
+</div>
