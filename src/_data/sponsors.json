@@ -2,7 +2,7 @@
   "gold": [
     {
       "name": "Databricks",
-      "logo": "sponsors/databricks.svg",
+      "logo": "",
       "url": "https://databricks.com"
     },
     {
@@ -12,7 +12,7 @@
     },
     {
       "name": "Megagon Labs",
-      "logo": "sponsors/megagon-labs.svg",
+      "logo": "",
       "url": "https://megagon.ai"
     }
   ],
