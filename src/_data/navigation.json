@@ -38,6 +38,10 @@
       ]
     },
     {
+      "label": "Registration",
+      "href": "/pages/registration/"
+    },
+    {
       "label": "Sponsors",
       "href": "/pages/sponsors/"
     }
