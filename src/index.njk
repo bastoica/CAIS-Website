@@ -1,7 +1,7 @@
 ---
 layout: base.njk
-title: ACM Conference on AI and Agentic Systems | Call for Papers
-description: Call for Papers now open for ACM CAIS 2026 — the ACM Conference on AI and Agentic Systems. Submit your research on compound AI architectures, optimization, and deployment. May 26–29, 2026 in San Jose.
+title: ACM Conference on AI and Agentic Systems
+description: ACM CAIS 2026 — the ACM Conference on AI and Agentic Systems. Rigorous, reproducible research on compound AI architectures, optimization, and deployment. May 26–29, 2026 in San Jose.
 showOpenGraph: true
 showJsonLd: true
 showSponsorshipCallout: false
@@ -17,20 +17,20 @@ showSponsorshipCallout: false
                     <img src="/assets/images/acm_k_flat_pos.png" alt="ACM — Association for Computing Machinery" class="acm-mark" loading="eager" decoding="async" />
                 </a>
                 <h1 class="display-5 fw-bold mb-3">{{ site.tagline }}</h1>
-                <p class="lead mb-4">Submit your research to {{ site.name }} — {{ site.description | lower }}</p>
+                <p class="lead mb-4">{{ site.name }} — {{ site.description }}</p>
                 <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
                     <span class="fs-5"><i class="bi bi-geo-alt-fill me-1" aria-hidden="true"></i> {{ site.location }}</span>
                     <span class="fs-5"><i class="bi bi-calendar-event me-1" aria-hidden="true"></i> {{ site.dates.display }}</span>
                 </div>
                 <div class="d-flex flex-wrap align-items-center gap-3 mb-2">
-                    <span class="fs-4 fw-bold" style="color: var(--cais-accent);"><i class="bi bi-clock me-2" aria-hidden="true"></i>Paper Submission Deadline: {{ site.deadlines.paperSubmission.display }}</span>
+                    <span class="badge bg-secondary fs-6 py-2 px-3"><i class="bi bi-check-circle me-2" aria-hidden="true"></i>Paper, demo, and workshop submissions are now closed</span>
                 </div>
                 <div class="d-flex flex-wrap gap-3 align-items-center justify-content-between">
-                    <a href="https://acm-cais26.hotcrp.com/" target="_blank" rel="noopener" class="btn btn-primary btn-lg px-4" style="background:var(--cais-accent); border:none; color:var(--seasalt);">
-                        <i class="bi bi-box-arrow-up-right me-2"></i>Submit Paper
+                    <a href="/pages/cfp/" class="btn btn-primary btn-lg px-4" style="background:var(--cais-accent); border:none; color:var(--seasalt);">
+                        <i class="bi bi-arrow-right me-2"></i>View Call for Papers
                     </a>
                     <div style="max-width:420px; width:100%;">
-                        <small class="text-muted d-block mb-1"><i class="bi bi-envelope me-1"></i>Get conference updates &amp; deadline reminders</small>
+                        <small class="text-muted d-block mb-1"><i class="bi bi-envelope me-1"></i>Get conference updates</small>
                         {{ subscribe(layout="inline", inputId="bd-email-hero") }}
                     </div>
                 </div>
@@ -74,7 +74,7 @@ showSponsorshipCallout: false
             <p class="mb-4">ACM CAIS 2026 has partnered with the <a href="https://www.ai.engineer/worldsfair" target="_blank" rel="noopener">AI Engineer World's Fair</a> (June 29–July 2, Moscone West, San Francisco). Accepted CAIS papers that earn an Industry Spotlight or Operational Experience designation will be invited to present at both venues — giving authors peer review through ACM plus a stage in front of 6,000+ practicing engineers.</p>
             <div class="d-flex flex-wrap gap-3 align-items-center">
                 <a href="/pages/cfp/" class="btn btn-primary" style="background:var(--cais-accent); border:none; color:#fff;">
-                    <i class="bi bi-arrow-right me-2"></i>Submit a paper
+                    <i class="bi bi-arrow-right me-2"></i>Learn more
                 </a>
                 <a href="/pages/sponsors/" class="btn btn-outline-primary">
                     <i class="bi bi-arrow-right me-2"></i>Become a sponsor
@@ -144,7 +144,7 @@ showSponsorshipCallout: false
                         <div>
                             <h3 class="h5 fw-bold mb-2">Research Track</h3>
                             <p class="mb-3">Peer-reviewed papers on architectural patterns, optimization, engineering, and evaluation of agentic AI systems. Includes keynotes, plenaries, and poster sessions.</p>
-                            <a href="/pages/cfp/" class="btn btn-outline-primary" style="border-color:var(--cais-accent); color:var(--cais-accent);">Call for Papers</a>
+                            <a href="/pages/cfp/" class="btn btn-outline-primary" style="border-color:var(--cais-accent); color:var(--cais-accent);">Call for Papers (Closed)</a>
                         </div>
                     </div>
                 </div>
@@ -158,7 +158,7 @@ showSponsorshipCallout: false
                         <div>
                             <h3 class="h5 fw-bold mb-2">System Demonstrations</h3>
                             <p class="mb-3">Showcase innovative AI systems, compound AI architectures, and autonomous agents through live demos and short papers.</p>
-                            <a href="/pages/demos/" class="btn btn-outline-primary" style="border-color:var(--cais-accent); color:var(--cais-accent);">Call for Demos</a>
+                            <a href="/pages/demos/" class="btn btn-outline-primary" style="border-color:var(--cais-accent); color:var(--cais-accent);">Call for Demos (Closed)</a>
                         </div>
                     </div>
                 </div>
@@ -172,7 +172,7 @@ showSponsorshipCallout: false
                         <div>
                             <h3 class="h5 fw-bold mb-2">Tutorials &amp; Workshops</h3>
                             <p class="mb-3">Deep dives into practical methods and frameworks such as DSPy, LangChain, and more tools for building compound AI systems at scale.</p>
-                            <a href="/pages/workshops/" class="btn btn-outline-primary" style="border-color:var(--cais-accent); color:var(--cais-accent);">Call for Workshops &amp; Tutorials</a>
+                            <a href="/pages/workshops/" class="btn btn-outline-primary" style="border-color:var(--cais-accent); color:var(--cais-accent);">Workshops &amp; Tutorials</a>
                         </div>
                     </div>
                 </div>
@@ -201,14 +201,14 @@ showSponsorshipCallout: false
         <div class="cta-band p-4 p-lg-5 d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
             <div>
                 <h2 class="h3 fw-bold mb-1">Be part of the inaugural ACM CAIS</h2>
-                <p class="mb-0">Submission timeline and important dates available in the Call for Papers.</p>
+                <p class="mb-0">Join us {{ site.dates.display }} in San Jose. Subscribe for registration and program updates.</p>
             </div>
             <div class="d-flex flex-wrap gap-3 align-items-center">
-                <a class="btn btn-light btn-lg text-dark px-4" href="https://acm-cais26.hotcrp.com/" target="_blank" rel="noopener">
-                    <i class="bi bi-box-arrow-up-right me-2"></i>Submit Paper
+                <a class="btn btn-light btn-lg text-dark px-4" href="{{ site.venue.bookingUrl }}" target="_blank" rel="noopener">
+                    <i class="bi bi-calendar-check me-2"></i>Book Hotel
                 </a>
                 <div>
-                    <small class="text-muted d-block mb-1"><i class="bi bi-envelope me-1"></i>Get conference updates &amp; deadline reminders</small>
+                    <small class="text-muted d-block mb-1"><i class="bi bi-envelope me-1"></i>Get conference updates</small>
                     {{ subscribe(layout="inline", inputId="bd-email-cta", btnClass="", btnStyle="background:var(--cais-accent); border:none; color:#fff;") }}
                 </div>
             </div>

@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Call for Demos
-description: ACM CAIS 2026 Call for System Demonstrations. Showcase innovative AI systems, compound AI architectures, and autonomous agents.
+description: ACM CAIS 2026 System Demonstrations (submissions closed). Innovative AI systems, compound AI architectures, and autonomous agents.
 permalink: /pages/demos/
 extraStyles: |
   /* CFP-specific styles */
@@ -69,6 +69,10 @@ extraStyles: |
 
 <div class="py-5">
     <div class="container">
+        <div class="alert alert-info text-center mb-4" role="alert">
+            <i class="bi bi-info-circle me-2"></i>
+            <strong>Demo submissions are now closed.</strong> Notification of acceptance will be sent on April 10, 2026.
+        </div>
         <div class="row g-4">
             <!-- Main Content Column -->
             <div class="col-lg-8">
@@ -195,9 +199,9 @@ extraStyles: |
                             <col style="width: 32%;">
                         </colgroup>
                         <tbody>
-                            <tr>
-                                <td>Demo submission deadline</td>
-                                <td class="text-start"><strong>Fri, March 13, 2026</strong> (11:59 PM AoE)</td>
+                            <tr class="text-muted">
+                                <td><s>Demo submission deadline</s></td>
+                                <td class="text-start"><s>Fri, March 13, 2026</s> <span class="badge bg-secondary">Closed</span></td>
                             </tr>
                             <tr>
                                 <td>Notification of acceptance</td>
@@ -216,9 +220,9 @@ extraStyles: |
                     <h2 class="section-title h4 mb-3">Submission Site</h2>
                     <p>Submissions are handled via a dedicated demo track HotCRP site.</p>
                     <div class="d-grid mb-4">
-                        <a href="https://cais26-demos.hotcrp.com/" target="_blank" rel="noopener" class="btn btn-primary btn-lg py-3 fw-bold" style="background:var(--cais-accent); border:none; color:#fff; font-size:1.25rem;">
-                            <i class="bi bi-box-arrow-up-right me-2"></i>Submit Your Demo on HotCRP
-                        </a>
+                        <span class="btn btn-secondary btn-lg py-3 fw-bold disabled" style="font-size:1.25rem;" aria-disabled="true">
+                            <i class="bi bi-lock me-2"></i>Demo Submissions Closed
+                        </span>
                     </div>
                 </section>
 
@@ -227,11 +231,11 @@ extraStyles: |
             <!-- Sidebar -->
             <div class="col-lg-4">
                 <aside>
-                    <!-- Submit Button -->
+                    <!-- Submissions Closed -->
                     <div class="d-grid mb-4">
-                        <a href="https://cais26-demos.hotcrp.com/" target="_blank" rel="noopener" class="btn btn-primary btn-lg py-3 fw-bold" style="background:var(--cais-accent); border:none; color:#fff; font-size:1.1rem;">
-                            <i class="bi bi-box-arrow-up-right me-2"></i>Submit Demo
-                        </a>
+                        <span class="btn btn-secondary btn-lg py-3 fw-bold disabled" style="font-size:1.1rem;" aria-disabled="true">
+                            <i class="bi bi-lock me-2"></i>Submissions Closed
+                        </span>
                     </div>
                     <!-- Key Dates -->
                     <div class="card dates-card mb-4">
@@ -239,10 +243,9 @@ extraStyles: |
                             <h3 class="h6 fw-bold mb-3"><i class="bi bi-calendar-event me-2"></i>Key Dates</h3>
 
                             <div class="mb-3">
-                                <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--terracotta-deep) !important;">
-                                    <div class="fw-bold small">Demo submission deadline</div>
-                                    <div class="small">Fri, March 13, 2026</div>
-                                    <div class="text-muted small">11:59 PM AoE</div>
+                                <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--davys-gray) !important;">
+                                    <div class="fw-bold small text-muted"><s>Demo submission deadline</s> <span class="badge bg-secondary">Closed</span></div>
+                                    <div class="small text-muted">Fri, March 13, 2026</div>
                                 </div>
                                 <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--terracotta-deep) !important;">
                                     <div class="fw-bold small">Notification of acceptance</div>
@@ -263,7 +266,7 @@ extraStyles: |
                     <div class="card mb-4">
                         <div class="card-body">
                             <h3 class="h6 fw-bold mb-3">Stay Updated</h3>
-                            <p class="small mb-3">Get notified when deadlines approach.</p>
+                            <p class="small mb-3">Get conference and program updates.</p>
                             {{ subscribe(layout="stacked", inputId="bd-email-demos") }}
                         </div>
                     </div>

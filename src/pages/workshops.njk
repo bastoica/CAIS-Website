@@ -58,6 +58,10 @@ extraStyles: |
 
 <div class="py-5">
     <div class="container">
+        <div class="alert alert-info text-center mb-4" role="alert">
+            <i class="bi bi-info-circle me-2"></i>
+            <strong>Workshop and tutorial proposals are now closed.</strong> Accepted workshops have been notified. See you on May 26!
+        </div>
         <div class="row g-4">
             <!-- Main Content Column -->
             <div class="col-lg-8">
@@ -79,17 +83,17 @@ extraStyles: |
 
                     <table class="table table-sm mb-4">
                         <tbody>
-                            <tr>
-                                <td>Workshop Application Open</td>
-                                <td class="text-end"><strong>Mon, February 16, 2026</strong></td>
+                            <tr class="text-muted">
+                                <td><s>Workshop Application Open</s></td>
+                                <td class="text-end"><s>Mon, February 16, 2026</s> <span class="badge bg-secondary">Passed</span></td>
                             </tr>
-                            <tr>
-                                <td>Workshop Application Deadline</td>
-                                <td class="text-end"><strong>Mon, March 9, 2026</strong> (11:59 PM AoE)</td>
+                            <tr class="text-muted">
+                                <td><s>Workshop Application Deadline</s></td>
+                                <td class="text-end"><s>Mon, March 9, 2026</s> <span class="badge bg-secondary">Closed</span></td>
                             </tr>
-                            <tr>
-                                <td>Workshop Acceptance Notification</td>
-                                <td class="text-end"><strong>Tue, March 24, 2026</strong></td>
+                            <tr class="text-muted">
+                                <td><s>Workshop Acceptance Notification</s></td>
+                                <td class="text-end"><s>Tue, March 24, 2026</s> <span class="badge bg-secondary">Passed</span></td>
                             </tr>
                             <tr>
                                 <td>Suggested Submission Date for Workshop Contributions</td>
@@ -212,18 +216,17 @@ extraStyles: |
                             <h3 class="h6 fw-bold mb-3"><i class="bi bi-calendar-event me-2"></i>Key Dates</h3>
 
                             <div class="mb-3">
-                                <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--terracotta-deep) !important;">
-                                    <div class="fw-bold small">Application Opens</div>
-                                    <div class="small">Mon, February 16, 2026</div>
+                                <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--davys-gray) !important;">
+                                    <div class="fw-bold small text-muted"><s>Application Opens</s> <span class="badge bg-secondary">Passed</span></div>
+                                    <div class="small text-muted">Mon, February 16, 2026</div>
                                 </div>
-                                <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--terracotta-deep) !important;">
-                                    <div class="fw-bold small">Application Deadline</div>
-                                    <div class="small">Mon, March 9, 2026</div>
-                                    <div class="text-muted small">11:59 PM AoE</div>
+                                <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--davys-gray) !important;">
+                                    <div class="fw-bold small text-muted"><s>Application Deadline</s> <span class="badge bg-secondary">Closed</span></div>
+                                    <div class="small text-muted">Mon, March 9, 2026</div>
                                 </div>
-                                <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--terracotta-deep) !important;">
-                                    <div class="fw-bold small">Acceptance Notification</div>
-                                    <div class="small">Tue, March 24, 2026</div>
+                                <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--davys-gray) !important;">
+                                    <div class="fw-bold small text-muted"><s>Acceptance Notification</s> <span class="badge bg-secondary">Passed</span></div>
+                                    <div class="small text-muted">Tue, March 24, 2026</div>
                                 </div>
                                 <div class="border-start ps-3" style="border-left-width: 3px !important; border-color: var(--terracotta-deep) !important;">
                                     <div class="fw-bold small">Workshops &amp; Tutorials Day</div>
@@ -235,14 +238,14 @@ extraStyles: |
                         </div>
                     </div>
 
-                    <!-- Submit Proposal -->
+                    <!-- Proposals Closed -->
                     <div class="card mb-4">
                         <div class="card-body">
-                            <h3 class="h6 fw-bold mb-3">Submit a Proposal</h3>
-                            <p class="small mb-3">The workshop submission site is now open. Submit your proposal before the March 9 deadline.</p>
-                            <a href="https://cais26workshops.hotcrp.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm w-100 mb-2" style="background:var(--cais-accent); border:none; color:#fff;">
-                                <i class="bi bi-box-arrow-up-right me-2"></i>Submit on HotCRP
-                            </a>
+                            <h3 class="h6 fw-bold mb-3">Workshop Proposals</h3>
+                            <p class="small mb-3">Workshop and tutorial proposals are now closed. Accepted workshops have been notified.</p>
+                            <span class="btn btn-secondary btn-sm w-100 mb-2 disabled" aria-disabled="true">
+                                <i class="bi bi-lock me-2"></i>Proposals Closed
+                            </span>
                         </div>
                     </div>
 
@@ -250,7 +253,7 @@ extraStyles: |
                     <div class="card mb-4">
                         <div class="card-body">
                             <h3 class="h6 fw-bold mb-3">Stay Updated</h3>
-                            <p class="small mb-3">Get notified when deadlines approach.</p>
+                            <p class="small mb-3">Get conference and program updates.</p>
                             {{ subscribe(layout="stacked", inputId="bd-email-workshops") }}
                         </div>
                     </div>

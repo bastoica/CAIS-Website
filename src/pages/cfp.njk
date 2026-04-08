@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Call for Papers
-description: Submit your research to ACM CAIS 2026. We welcome papers on architectural patterns, optimization, engineering, and evaluation of AI and Agentic systems.
+description: ACM CAIS 2026 Call for Papers (submissions closed). Research on architectural patterns, optimization, engineering, and evaluation of AI and Agentic systems.
 permalink: /pages/cfp/
 extraStyles: |
   /* CFP-specific styles */
@@ -68,6 +68,10 @@ extraStyles: |
 
 <div class="py-5">
   <div class="container">
+    <div class="alert alert-info text-center mb-4" role="alert">
+      <i class="bi bi-info-circle me-2"></i>
+      <strong>Paper submissions are now closed.</strong> The review process is underway. Author notifications will be sent on April 21, 2026.
+    </div>
     <div class="row g-4">
       <!-- Main Content Column -->
       <div class="col-lg-8">
@@ -227,9 +231,9 @@ extraStyles: |
           <h2 class="section-title h4 mb-3">How to Submit</h2>
 
           <div class="d-grid mb-4">
-            <a href="https://acm-cais26.hotcrp.com/" target="_blank" rel="noopener" class="btn btn-primary btn-lg py-3 fw-bold" style="background:var(--cais-accent); border:none; color:#fff; font-size:1.25rem;">
-                <i class="bi bi-box-arrow-up-right me-2"></i>Submit Your Paper on HotCRP
-            </a>
+            <span class="btn btn-secondary btn-lg py-3 fw-bold disabled" style="font-size:1.25rem;" aria-disabled="true">
+                <i class="bi bi-lock me-2"></i>Paper Submissions Closed
+            </span>
           </div>
 
           <h3 class="h6 fw-bold mt-4">Formatting Requirements</h3>
@@ -259,17 +263,17 @@ extraStyles: |
           <h2 class="section-title h4 mb-3">Full Timeline</h2>
 
           <h3 class="h6 fw-bold">Critical Deadlines</h3>
-          <p>These dates require author action. Mark them in your calendar.</p>
+          <p>These dates require author action.</p>
 
           <div class="row g-3 mb-4">
             <div class="col-md-6">
-              <div class="card card-quiet p-3 h-100">
+              <div class="card card-quiet p-3 h-100" style="opacity: 0.65;">
                 <div class="d-flex align-items-center mb-2">
-                  <span class="badge bg-primary me-2">Required</span>
+                  <span class="badge bg-secondary me-2">Closed</span>
                   <h4 class="h6 fw-bold mb-0">Paper Submission</h4>
                 </div>
-                <p class="small mb-1"><strong>Fri, February 27, 2026</strong> (11:59 PM AoE)</p>
-                <p class="small text-muted mb-0">Final PDF must be uploaded. AoE (Anywhere on Earth) gives you until the deadline passes in the last time zone.</p>
+                <p class="small mb-1"><s>Fri, February 27, 2026</s> (11:59 PM AoE)</p>
+                <p class="small text-muted mb-0">The paper submission deadline has passed.</p>
               </div>
             </div>
             <div class="col-md-6">
@@ -324,20 +328,20 @@ extraStyles: |
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td><strong>Fri, Feb 27, 2026</strong></td>
-                  <td>Paper Submission Deadline</td>
-                  <td><span class="badge bg-primary">Author Action</span></td>
+                <tr class="table-light text-muted">
+                  <td><s>Fri, Feb 27, 2026</s></td>
+                  <td><s>Paper Submission Deadline</s></td>
+                  <td><span class="badge bg-secondary">Closed</span></td>
                 </tr>
-                <tr class="table-light">
-                  <td>Fri, Apr 3, 2026</td>
-                  <td>Reviews Due</td>
-                  <td><span class="badge" style="background-color: var(--davys-gray);">Internal</span></td>
+                <tr class="table-light text-muted">
+                  <td><s>Fri, Apr 3, 2026</s></td>
+                  <td><s>Reviews Due</s></td>
+                  <td><span class="badge bg-secondary">Passed</span></td>
                 </tr>
-                <tr class="table-light">
-                  <td>Mon, Apr 6, 2026</td>
-                  <td>Rebuttal Period Opens</td>
-                  <td><span class="badge" style="background-color: var(--olive-moss);">Info</span></td>
+                <tr class="table-light text-muted">
+                  <td><s>Mon, Apr 6, 2026</s></td>
+                  <td><s>Rebuttal Period Opens</s></td>
+                  <td><span class="badge bg-secondary">Passed</span></td>
                 </tr>
                 <tr>
                   <td><strong>Fri, Apr 17, 2026</strong></td>
@@ -529,23 +533,30 @@ extraStyles: |
       <!-- Sidebar -->
       <div class="col-lg-4">
         <aside>
-          <!-- Submit Button -->
+          <!-- Submissions Closed -->
           <div class="d-grid mb-4">
-            <a href="https://acm-cais26.hotcrp.com/" target="_blank" rel="noopener" class="btn btn-primary btn-lg py-3 fw-bold" style="background:var(--cais-accent); border:none; color:#fff; font-size:1.1rem;">
-                <i class="bi bi-box-arrow-up-right me-2"></i>Submit Paper
-            </a>
+            <span class="btn btn-secondary btn-lg py-3 fw-bold disabled" style="font-size:1.1rem;" aria-disabled="true">
+                <i class="bi bi-lock me-2"></i>Submissions Closed
+            </span>
           </div>
 
           <!-- Important Dates -->
           <div class="card dates-card mb-4">
             <div class="card-body">
-              <h3 class="h6 fw-bold mb-3"><i class="bi bi-calendar-event me-2"></i>Key Submission Dates</h3>
+              <h3 class="h6 fw-bold mb-3"><i class="bi bi-calendar-event me-2"></i>Key Dates</h3>
 
               <div class="mb-3">
+                <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--davys-gray) !important;">
+                  <div class="fw-bold small text-muted"><s>Paper Submission</s> <span class="badge bg-secondary">Closed</span></div>
+                  <div class="small text-muted">Fri, February 27, 2026</div>
+                </div>
+                <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--terracotta-deep) !important;">
+                  <div class="fw-bold small">Author Notification</div>
+                  <div class="small">Tue, April 21, 2026</div>
+                </div>
                 <div class="border-start ps-3" style="border-left-width: 3px !important; border-color: var(--terracotta-deep) !important;">
-                  <div class="fw-bold small">Paper Submission</div>
-                  <div class="small">Fri, February 27, 2026</div>
-                  <div class="text-muted small">11:59 PM AoE</div>
+                  <div class="fw-bold small">Camera-Ready Deadline</div>
+                  <div class="small">Mon, April 27, 2026</div>
                 </div>
               </div>
 
