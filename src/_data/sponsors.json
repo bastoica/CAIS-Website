@@ -13,7 +13,8 @@
     {
       "name": "Megagon Labs",
       "logo": "sponsors/megagon-labs.svg",
-      "url": "https://megagon.ai"
+      "url": "https://megagon.ai",
+      "maxWidth": "340px"
     }
   ],
   "silver": [
