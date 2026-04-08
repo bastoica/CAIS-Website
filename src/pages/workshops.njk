@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Workshops & Tutorials
-description: ACM CAIS 2026 workshops and tutorials. Deep dives into practical methods and frameworks for building compound AI systems.
+description: "Five accepted workshops at ACM CAIS 2026 covering AI agents, reinforcement learning, agentic software engineering, and more. Join us May 26 in Santa Cruz."
 permalink: /pages/workshops/
 extraStyles: |
   /* Workshops-specific styles */
@@ -21,11 +21,37 @@ extraStyles: |
     border-radius: 4px;
     padding: 1.5rem;
     background: var(--seasalt);
-    transition: border-color 200ms linear;
+    transition: border-color 200ms linear, box-shadow 200ms linear;
   }
 
   .card-quiet:hover {
     border-color: var(--olive-moss);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+
+  .workshop-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+  }
+
+  .workshop-link:hover {
+    color: inherit;
+  }
+
+  .workshop-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--terracotta-deep);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    flex-shrink: 0;
   }
 
   .highlight-box {
@@ -52,25 +78,74 @@ extraStyles: |
     <div class="container">
         <h1 class="display-6 fw-bold">Workshops &amp; Tutorials</h1>
         <p class="lead mb-3">{{ site.fullName }} ({{ site.name }})</p>
-        <p class="mb-0"><strong>{{ site.location }} • {{ site.dates.workshops }}</strong></p>
+        <p class="mb-0"><strong>{{ site.location }} &bull; {{ site.dates.workshops }}</strong></p>
     </div>
 </header>
 
 <div class="py-5">
     <div class="container">
-        <div class="alert alert-info text-center mb-4" role="alert">
-            <i class="bi bi-info-circle me-2"></i>
-            <strong>Workshop and tutorial proposals are now closed.</strong> Accepted workshops have been notified. See you on May 26!
-        </div>
         <div class="row g-4">
             <!-- Main Content Column -->
             <div class="col-lg-8">
 
-                <!-- Overview / Goals -->
-                <section id="overview" class="anchor mb-5">
-                    <h2 class="section-title h4 mb-3">Overview</h2>
-                    <p>Researchers and practitioners are invited to submit proposals for workshops and tutorials in conjunction with the 1st ACM Conference on AI and Agentic Systems. The workshops will be in-person on <strong>Tuesday, May 26, 2026</strong>, the day before the main conference.</p>
-                    <p class="mb-0">The workshops and tutorials aim to provide a forum for exchanging opinions, presenting ideas, and discussing preliminary results with a diverse group of conference attendees. We welcome proposals on topics including, but not limited to: design and optimization of agentic systems, systems support for agentic systems, and tutorials for frameworks to build or debug agentic systems.</p>
+                <!-- Accepted Workshops -->
+                <section id="workshops" class="anchor mb-5">
+                    <h2 class="section-title h4 mb-3">Accepted Workshops</h2>
+                    <p class="mb-4">Five workshops have been accepted for the inaugural CAIS workshop day on <strong>Tuesday, May 26, 2026</strong>. Workshop attendance is included with conference registration. Visit each workshop's website for submission details and schedules.</p>
+
+                    <div class="d-flex flex-column gap-3">
+
+                        <a href="https://ai-discovery-in-the-wild.github.io/" target="_blank" rel="noopener" class="workshop-link">
+                            <div class="card-quiet d-flex align-items-start gap-3">
+                                <span class="workshop-number mt-1">1</span>
+                                <div>
+                                    <h3 class="h6 fw-bold mb-1">AI Agents for Discovery in the Wild</h3>
+                                    <span class="small text-muted"><i class="bi bi-box-arrow-up-right me-1"></i>ai-discovery-in-the-wild.github.io</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://rl-eval.github.io/" target="_blank" rel="noopener" class="workshop-link">
+                            <div class="card-quiet d-flex align-items-start gap-3">
+                                <span class="workshop-number mt-1">2</span>
+                                <div>
+                                    <h3 class="h6 fw-bold mb-1">RLEval: Methods and Reinforcement Learning Environments for Evaluating AI Agents</h3>
+                                    <span class="small text-muted"><i class="bi bi-box-arrow-up-right me-1"></i>rl-eval.github.io</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://bauplanlabs.github.io/SAO-workshop/" target="_blank" rel="noopener" class="workshop-link">
+                            <div class="card-quiet d-flex align-items-start gap-3">
+                                <span class="workshop-number mt-1">3</span>
+                                <div>
+                                    <h3 class="h6 fw-bold mb-1">Supporting Our AI Overlords (SAO)</h3>
+                                    <span class="small text-muted"><i class="bi bi-box-arrow-up-right me-1"></i>bauplanlabs.github.io/SAO-workshop</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://agentskills-workshop.github.io/" target="_blank" rel="noopener" class="workshop-link">
+                            <div class="card-quiet d-flex align-items-start gap-3">
+                                <span class="workshop-number mt-1">4</span>
+                                <div>
+                                    <h3 class="h6 fw-bold mb-1">Agent Skills 2026</h3>
+                                    <span class="small text-muted"><i class="bi bi-box-arrow-up-right me-1"></i>agentskills-workshop.github.io</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://agenticse-cais.github.io/" target="_blank" rel="noopener" class="workshop-link">
+                            <div class="card-quiet d-flex align-items-start gap-3">
+                                <span class="workshop-number mt-1">5</span>
+                                <div>
+                                    <h3 class="h6 fw-bold mb-1">Agentic Software Engineering</h3>
+                                    <span class="small text-muted"><i class="bi bi-box-arrow-up-right me-1"></i>agenticse-cais.github.io</span>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
                 </section>
 
                 <!-- Workshop Timeline -->
@@ -78,23 +153,11 @@ extraStyles: |
                     <h2 class="section-title h4 mb-3">Important Dates</h2>
 
                     <div class="alert alert-warning mb-4">
-                        <i class="bi bi-info-circle me-2"></i><strong>Note:</strong> These dates are subject to change. Subscribe for updates to receive notifications of any changes.
+                        <i class="bi bi-info-circle me-2"></i><strong>Note:</strong> Individual workshop deadlines may vary. Please check each workshop's website for specific submission and notification dates.
                     </div>
 
                     <table class="table table-sm mb-4">
                         <tbody>
-                            <tr class="text-muted">
-                                <td><s>Workshop Application Open</s></td>
-                                <td class="text-end"><s>Mon, February 16, 2026</s> <span class="badge bg-secondary">Passed</span></td>
-                            </tr>
-                            <tr class="text-muted">
-                                <td><s>Workshop Application Deadline</s></td>
-                                <td class="text-end"><s>Mon, March 9, 2026</s> <span class="badge bg-secondary">Closed</span></td>
-                            </tr>
-                            <tr class="text-muted">
-                                <td><s>Workshop Acceptance Notification</s></td>
-                                <td class="text-end"><s>Tue, March 24, 2026</s> <span class="badge bg-secondary">Passed</span></td>
-                            </tr>
                             <tr>
                                 <td>Suggested Submission Date for Workshop Contributions</td>
                                 <td class="text-end"><strong>Sun, April 12, 2026</strong></td>
@@ -111,73 +174,16 @@ extraStyles: |
                     </table>
                 </section>
 
-                <!-- Proposal Format -->
-                <section id="format" class="anchor mb-5">
-                    <h2 class="section-title h4 mb-3">Proposal Format</h2>
-                    <p>Submissions for workshop organization should be <strong>no more than 3 pages</strong> (with additional pages permitted for references); the 3 pages should include the workshop content itself and information about the organizers.</p>
-                    <p>Submissions <strong>must follow the ACM SIGPLAN template</strong>. The workshop submission site is now closed.</p>
-
-                    <p><strong>Template:</strong> <a href="https://www.overleaf.com/latex/templates/association-for-computing-machinery-acm-sigplan-proceedings-template/rfvsrhgmghtc" target="_blank" rel="noopener">ACM SIGPLAN Proceedings Template on Overleaf</a></p>
-
-                    <p>For LaTeX, we recommend the following:</p>
-                    <pre class="bg-light p-3 rounded" style="font-size: 0.85rem; overflow-x: auto;"><code>\documentclass[sigplan,10pt]{acmart}
-\renewcommand\footnotetextcopyrightpermission[1]{}
-\pagestyle{plain}
-...
-\settopmatter{printfolios=true}
-\maketitle
-…</code></pre>
-                </section>
-
-                <!-- Proposal Content -->
-                <section id="content" class="anchor mb-5">
-                    <h2 class="section-title h4 mb-3">Proposal Content</h2>
-                    <p>Workshop and tutorial proposals should include the following:</p>
-                    <ul>
-                        <li>The workshop/tutorial name and a <strong>150–200 word abstract</strong> describing the workshop/tutorial, suitable for the conference website.</li>
-                        <li>A <strong>summary of the topic, scope, and significance</strong> of the workshop/tutorial, including a discussion on the relevance to the main conference.</li>
-                        <li>Information about <strong>past iterations</strong> of the workshop/tutorial, if any.</li>
-                        <li>An account of any <strong>efforts to include diverse participants</strong> (e.g., via mentoring, subsidies, or the wording and topics in the call for proposals).</li>
-                        <li>A <strong>brief CV/bio</strong> of each of the organizers, including contact addresses and identification of a single primary contact.</li>
-                    </ul>
-
-                    <h3 class="h5 fw-bold mt-4 mb-3">Specifically for Workshops</h3>
-                    <ul>
-                        <li>Information about the <strong>procedure for selecting papers and/or presentations</strong>, the expected number of participants, and the planned workshop format.</li>
-                        <li><strong>Tentative schedule</strong> including paper submission dates, notification dates, camera-ready dates (if any), and registration.</li>
-                        <li>Any <strong>program committee members</strong> already chosen.</li>
-                    </ul>
-
-                    <h3 class="h5 fw-bold mt-4 mb-3">Specifically for Tutorials</h3>
-                    <ul class="mb-0">
-                        <li>Information about the <strong>schedule and activities planned</strong> (e.g., what the tutorial will cover, what participants will need to follow along).</li>
-                    </ul>
-                </section>
-
-                <!-- Selection Criteria -->
-                <section id="criteria" class="anchor mb-5">
-                    <h2 class="section-title h4 mb-3">Selection Criteria</h2>
-                    <p>All proposals will be judged on their merits using the following criteria:</p>
-                    <ul>
-                        <li><strong>Importance and relevance:</strong> Is the workshop focused on a clear and topical problem, and will the community find it interesting, exciting, and useful?</li>
-                        <li><strong>Opportunity for discussion:</strong> The degree to which the proposed program offers an opportunity for discussion among participants and for community building.</li>
-                        <li><strong>Diversity and inclusion</strong> in all forms.</li>
-                        <li><strong>Organizational experience:</strong> The potential and ability of the organizing team.</li>
-                    </ul>
-                    <p class="mb-0">Workshops/tutorials organized at previous conferences (including, but not limited to, NeurIPS, ICLR, SOSP, ICML) will not be automatically accepted.</p>
-                </section>
-
                 <!-- Organizer Support -->
                 <section id="support" class="anchor mb-5">
-                    <h2 class="section-title h4 mb-3">Organizer Support</h2>
-                    <p>ACM CAIS 2026 provides workshop and tutorial organizers with the following:</p>
+                    <h2 class="section-title h4 mb-3">Attendee Information</h2>
                     <ul>
-                        <li><strong>Registration management</strong> for participants (there is no separate workshop registration—workshop attendance is included with conference registration).</li>
-                        <li><strong>Meeting space and equipment</strong> at the conference venue.</li>
-                        <li><strong>Coffee breaks and lunch</strong> arrangements.</li>
-                        <li>Organization of the <strong>common poster and demonstration session</strong> during the extended afternoon coffee break.</li>
+                        <li>There is <strong>no separate workshop registration</strong>. Workshop attendance is included with conference registration.</li>
+                        <li>All workshops take place <strong>in-person at the conference venue</strong> on Tuesday, May 26.</li>
+                        <li><strong>Coffee breaks and lunch</strong> are provided.</li>
+                        <li>A <strong>common poster and demonstration session</strong> will be held during the extended afternoon coffee break.</li>
                     </ul>
-                    <p class="mb-0"><strong>Note:</strong> We will not be providing support for official proceedings from workshops. Workshop organizers are responsible for creating their own website and publishing versions of the workshop papers. The workshop website can be linked from the main CAIS workshops page.</p>
+                    <p class="mb-0"><strong>For workshop organizers:</strong> Workshop organizers are responsible for creating their own website and publishing versions of workshop papers. CAIS does not provide support for official workshop proceedings.</p>
                 </section>
 
                 <!-- Workshop Chairs -->
@@ -217,16 +223,12 @@ extraStyles: |
 
                             <div class="mb-3">
                                 <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--davys-gray) !important;">
-                                    <div class="fw-bold small text-muted"><s>Application Opens</s> <span class="badge bg-secondary">Passed</span></div>
-                                    <div class="small text-muted">Mon, February 16, 2026</div>
+                                    <div class="fw-bold small">Workshop Contributions Due</div>
+                                    <div class="small">Sun, April 12, 2026</div>
                                 </div>
                                 <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--davys-gray) !important;">
-                                    <div class="fw-bold small text-muted"><s>Application Deadline</s> <span class="badge bg-secondary">Closed</span></div>
-                                    <div class="small text-muted">Mon, March 9, 2026</div>
-                                </div>
-                                <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--davys-gray) !important;">
-                                    <div class="fw-bold small text-muted"><s>Acceptance Notification</s> <span class="badge bg-secondary">Passed</span></div>
-                                    <div class="small text-muted">Tue, March 24, 2026</div>
+                                    <div class="fw-bold small">Accept/Reject Notification</div>
+                                    <div class="small">Tue, May 5, 2026 (tentative)</div>
                                 </div>
                                 <div class="border-start ps-3" style="border-left-width: 3px !important; border-color: var(--terracotta-deep) !important;">
                                     <div class="fw-bold small">Workshops &amp; Tutorials Day</div>
@@ -234,18 +236,21 @@ extraStyles: |
                                 </div>
                             </div>
 
-                            <p class="text-muted small mb-0"><i class="bi bi-info-circle me-1"></i>Dates subject to change</p>
+                            <p class="text-muted small mb-0"><i class="bi bi-info-circle me-1"></i>Check individual workshop sites for exact deadlines</p>
                         </div>
                     </div>
 
-                    <!-- Proposals Closed -->
+                    <!-- Workshop Quick Links -->
                     <div class="card mb-4">
                         <div class="card-body">
-                            <h3 class="h6 fw-bold mb-3">Workshop Proposals</h3>
-                            <p class="small mb-3">Workshop and tutorial proposals are now closed. Accepted workshops have been notified.</p>
-                            <span class="btn btn-secondary btn-sm w-100 mb-2 disabled" aria-disabled="true">
-                                <i class="bi bi-lock me-2"></i>Proposals Closed
-                            </span>
+                            <h3 class="h6 fw-bold mb-3"><i class="bi bi-collection me-2"></i>Workshops</h3>
+                            <ul class="list-unstyled mb-0 small">
+                                <li class="mb-2"><a href="https://ai-discovery-in-the-wild.github.io/" target="_blank" rel="noopener">AI Agents for Discovery in the Wild <i class="bi bi-box-arrow-up-right" style="font-size: 0.7rem;"></i></a></li>
+                                <li class="mb-2"><a href="https://rl-eval.github.io/" target="_blank" rel="noopener">RLEval <i class="bi bi-box-arrow-up-right" style="font-size: 0.7rem;"></i></a></li>
+                                <li class="mb-2"><a href="https://bauplanlabs.github.io/SAO-workshop/" target="_blank" rel="noopener">Supporting Our AI Overlords (SAO) <i class="bi bi-box-arrow-up-right" style="font-size: 0.7rem;"></i></a></li>
+                                <li class="mb-2"><a href="https://agentskills-workshop.github.io/" target="_blank" rel="noopener">Agent Skills 2026 <i class="bi bi-box-arrow-up-right" style="font-size: 0.7rem;"></i></a></li>
+                                <li class="mb-0"><a href="https://agenticse-cais.github.io/" target="_blank" rel="noopener">Agentic Software Engineering <i class="bi bi-box-arrow-up-right" style="font-size: 0.7rem;"></i></a></li>
+                            </ul>
                         </div>
                     </div>
 
@@ -258,18 +263,15 @@ extraStyles: |
                         </div>
                     </div>
 
-                    <!-- Quick Links -->
+                    <!-- Page Links -->
                     <div class="card mb-4">
                         <div class="card-body">
-                            <h3 class="h6 fw-bold mb-3"><i class="bi bi-link-45deg me-2"></i>Quick Links</h3>
+                            <h3 class="h6 fw-bold mb-3"><i class="bi bi-link-45deg me-2"></i>On This Page</h3>
                             <ul class="list-unstyled mb-0">
-                                <li class="mb-2"><a href="#overview">Overview</a></li>
+                                <li class="mb-2"><a href="#workshops">Accepted Workshops</a></li>
                                 <li class="mb-2"><a href="#timeline">Important Dates</a></li>
-                                <li class="mb-2"><a href="#format">Proposal Format</a></li>
-                                <li class="mb-2"><a href="#content">Proposal Content</a></li>
-                                <li class="mb-2"><a href="#criteria">Selection Criteria</a></li>
-                                <li class="mb-2"><a href="#support">Organizer Support</a></li>
-                                <li class="mb-2"><a href="#chairs">Workshop Chairs</a></li>
+                                <li class="mb-2"><a href="#support">Attendee Information</a></li>
+                                <li class="mb-0"><a href="#chairs">Workshop Co-Chairs</a></li>
                             </ul>
                         </div>
                     </div>
@@ -277,7 +279,7 @@ extraStyles: |
                     <!-- Questions -->
                     <div class="highlight-box mb-3">
                         <h3 class="h6 fw-bold mb-2">Workshop Questions?</h3>
-                        <p class="small text-muted mb-2">Questions about workshop proposals, submissions, or scheduling.</p>
+                        <p class="small text-muted mb-2">Questions about workshops, submissions, or scheduling.</p>
                         <p class="small mb-0"><a href="mailto:{{ site.contact.workshopChairs }}">{{ site.contact.workshopChairs }}</a></p>
                     </div>
                     <div class="highlight-box">
