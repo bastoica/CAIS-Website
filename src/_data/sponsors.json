@@ -2,7 +2,7 @@
   "gold": [
     {
       "name": "Databricks",
-      "logo": "",
+      "logo": "sponsors/databricks.svg",
       "url": "https://databricks.com"
     },
     {
@@ -24,6 +24,12 @@
       "url": "https://www.all-hands.dev"
     }
   ],
-  "bronze": [],
+  "bronze": [
+    {
+      "name": "Oracle",
+      "logo": "sponsors/oracle.png",
+      "url": "https://www.oracle.com"
+    }
+  ],
   "supporting": []
 }
