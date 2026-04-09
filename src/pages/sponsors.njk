@@ -136,25 +136,20 @@ extraStyles: |
     gap: 2rem;
   }
   .sponsor-logos a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     transition: opacity 150ms ease;
   }
   .sponsor-logos a:hover { opacity: 0.7; }
-  .sponsor-logos.gold a { height: 60px; min-width: 160px; }
-  .sponsor-logos.gold img { max-height: 60px; max-width: 240px; width: auto; object-fit: contain; }
-  .sponsor-logos.silver a { height: 48px; min-width: 120px; }
-  .sponsor-logos.silver img { max-height: 48px; max-width: 200px; width: auto; object-fit: contain; }
+  .sponsor-logos.gold img { height: 60px; width: auto; }
+  .sponsor-logos.silver img { height: 48px; width: auto; }
   .sponsor-logos.bronze img { height: 36px; width: auto; }
   .sponsor-logos.supporting img { height: 28px; width: auto; }
 
   @media (max-width: 768px) {
     .sponsor-hero { padding: 3rem 0; }
     .tier-price { font-size: 1.35rem; }
-    .sponsor-logos.gold a { height: 48px; min-width: 130px; }
-    .sponsor-logos.gold img { max-height: 48px; }
-    .sponsor-logos.silver img { max-height: 36px; }
+    .sponsor-logos.gold img { height: 48px; }
+    .sponsor-logos.silver img { height: 36px; }
   }
 ---
 
