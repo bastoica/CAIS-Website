@@ -41,26 +41,11 @@
                 </li>
                 {% endif %}
                 {% endfor %}
-                <li class="nav-item dropdown">
-                    <a class="nav-link btn btn-sm ms-lg-2 dropdown-toggle" href="#" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">Get Updates</a>
-                    <div class="dropdown-menu dropdown-menu-end p-3" style="min-width:300px;">
-                        <div class="mb-2 small fw-bold">Subscribe for updates</div>
-                        <form class="subscribe-form"
-                              action="https://buttondown.com/api/emails/embed-subscribe/caisconf"
-                              method="post" referrerpolicy="unsafe-url">
-                            <div class="input-group input-group-sm">
-                                <input type="email" name="email" id="bd-email-nav" class="form-control"
-                                       placeholder="Your email" required aria-label="Email address">
-                                <button type="submit" class="btn"
-                                        style="background:var(--cais-accent); color:#fff;">Subscribe</button>
-                            </div>
-                            <input type="text" name="name" class="form-control form-control-sm mt-2"
-                                   placeholder="Name (optional)" aria-label="Name (optional)">
-                            <input type="text" name="affiliation" class="form-control form-control-sm mt-2"
-                                   placeholder="Affiliation (optional)" aria-label="Affiliation (optional)">
-                        </form>
-                    </div>
+                <li class="nav-item ms-lg-2">
+                    <a class="btn btn-sm px-3" href="{{ site.registration.url }}" target="_blank" rel="noopener"
+                       style="background:var(--cais-accent); color:#fff;">
+                        Register Now
+                    </a>
                 </li>
             </ul>
         </div>

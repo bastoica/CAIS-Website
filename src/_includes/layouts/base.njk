@@ -83,8 +83,11 @@
             },
             "offers": {
                 "@type": "Offer",
-                "url": "{{ site.url }}/pages/cfp/",
-                "availability": "https://schema.org/SoldOut"
+                "url": "{{ site.registration.url }}",
+                "price": "500",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
+                "validFrom": "2026-04-10"
             }
         }
     </script>
@@ -99,6 +102,11 @@
 
 <!-- ===== MAIN CONTENT ===== -->
 <main id="main">
+    <div class="alert alert-success text-center mb-0 rounded-0 py-2">
+        <i class="bi bi-ticket-perforated me-2"></i>
+        <strong>Registration is now open!</strong> Early-bird pricing available through {{ site.registration.earlyBirdDeadline.display }}.
+        <a href="{{ site.registration.url }}" class="alert-link ms-2" target="_blank" rel="noopener">Register now <i class="bi bi-arrow-right"></i></a>
+    </div>
     {{ content | safe }}
 </main>
 

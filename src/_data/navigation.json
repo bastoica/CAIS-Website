@@ -47,11 +47,16 @@
     }
   ],
   "cta": {
-    "label": "Get Updates",
-    "href": "https://forms.gle/gxUDUQZ7KKtEnYYA9",
+    "label": "Register Now",
+    "href": "https://cvent.me/aDamv3",
     "external": true
   },
   "footerAuthors": [
+    {
+      "label": "Register",
+      "href": "https://cvent.me/aDamv3",
+      "external": true
+    },
     {
       "label": "Subscribe for Updates",
       "href": "https://buttondown.com/caisconf",

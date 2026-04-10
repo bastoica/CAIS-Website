@@ -23,11 +23,11 @@ showSponsorshipCallout: false
                     <span class="fs-5"><i class="bi bi-calendar-event me-1" aria-hidden="true"></i> {{ site.dates.display }}</span>
                 </div>
                 <div class="d-flex flex-wrap align-items-center gap-3 mb-2">
-                    <span class="badge bg-secondary fs-6 py-2 px-3"><i class="bi bi-check-circle me-2" aria-hidden="true"></i>Paper, demo, and workshop submissions are now closed</span>
+                    <span class="badge bg-success fs-6 py-2 px-3"><i class="bi bi-ticket-perforated me-2" aria-hidden="true"></i>Registration is open — early-bird pricing through {{ site.registration.earlyBirdDeadline.display }}</span>
                 </div>
                 <div class="d-flex flex-wrap gap-3 align-items-center justify-content-between">
-                    <a href="/pages/cfp/" class="btn btn-primary btn-lg px-4" style="background:var(--cais-accent); border:none; color:var(--seasalt);">
-                        <i class="bi bi-arrow-right me-2"></i>View Call for Papers
+                    <a href="{{ site.registration.url }}" class="btn btn-primary btn-lg px-4" style="background:var(--cais-accent); border:none; color:var(--seasalt);" target="_blank" rel="noopener">
+                        <i class="bi bi-ticket-perforated me-2"></i>Register Now
                     </a>
                     <div style="max-width:420px; width:100%;">
                         <small class="text-muted d-block mb-1"><i class="bi bi-envelope me-1"></i>Get conference updates</small>
@@ -201,16 +201,15 @@ showSponsorshipCallout: false
         <div class="cta-band p-4 p-lg-5 d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
             <div>
                 <h2 class="h3 fw-bold mb-1">Be part of the inaugural ACM CAIS</h2>
-                <p class="mb-0">Join us {{ site.dates.display }} in San Jose. Subscribe for registration and program updates.</p>
+                <p class="mb-0">Join us {{ site.dates.display }} in San Jose. Early-bird registration through {{ site.registration.earlyBirdDeadline.display }}.</p>
             </div>
             <div class="d-flex flex-wrap gap-3 align-items-center">
-                <a class="btn btn-light btn-lg text-dark px-4" href="{{ site.venue.bookingUrl }}" target="_blank" rel="noopener">
+                <a class="btn btn-light btn-lg text-dark px-4" href="{{ site.registration.url }}" target="_blank" rel="noopener">
+                    <i class="bi bi-ticket-perforated me-2"></i>Register Now
+                </a>
+                <a class="btn btn-outline-light btn-lg px-4" href="{{ site.venue.bookingUrl }}" target="_blank" rel="noopener">
                     <i class="bi bi-calendar-check me-2"></i>Book Hotel
                 </a>
-                <div>
-                    <small class="text-muted d-block mb-1"><i class="bi bi-envelope me-1"></i>Get conference updates</small>
-                    {{ subscribe(layout="inline", inputId="bd-email-cta", btnClass="", btnStyle="background:var(--cais-accent); border:none; color:#fff;") }}
-                </div>
             </div>
         </div>
     </div>

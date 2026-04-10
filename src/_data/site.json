@@ -74,6 +74,36 @@
     "twitter": "https://x.com/CAISConf",
     "bluesky": "https://bsky.app/profile/caisconf.bsky.social"
   },
+  "registration": {
+    "url": "https://cvent.me/aDamv3",
+    "earlyBirdDeadline": {
+      "date": "2026-05-05",
+      "display": "May 5, 2026",
+      "time": "11:59 PM AoE"
+    },
+    "pricing": {
+      "conference": {
+        "earlyACMStudent": 500,
+        "earlyStudentNonMember": 600,
+        "earlyACMMember": 1050,
+        "earlyNonMember": 1300,
+        "lateACMStudent": 600,
+        "lateStudentNonMember": 700,
+        "lateACMMember": 1500,
+        "lateNonMember": 1750
+      },
+      "workshopOnly": {
+        "earlyACMStudent": 250,
+        "earlyStudentNonMember": 300,
+        "earlyACMMember": 500,
+        "earlyNonMember": 600,
+        "lateACMStudent": 300,
+        "lateStudentNonMember": 350,
+        "lateACMMember": 600,
+        "lateNonMember": 700
+      }
+    }
+  },
   "forms": {
     "subscribe": "https://buttondown.com/caisconf"
   },
