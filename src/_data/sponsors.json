@@ -1,11 +1,6 @@
 {
   "gold": [
-    {
-      "name": "Databricks",
-      "logo": "sponsors/databricks.svg",
-      "url": "https://databricks.com"
-    },
-    {
+{
       "name": "Snorkel AI",
       "logo": "sponsors/snorkel-ai.svg",
       "url": "https://snorkel.ai"

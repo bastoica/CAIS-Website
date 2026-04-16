@@ -84,6 +84,31 @@ showSponsorshipCallout: false
     </div>
 </section>
 
+<!-- ===== ACM CAIS 2026 SPONSORS ===== -->
+{% set allSponsors = [] %}
+{% for s in sponsors.gold %}{% set allSponsors = (allSponsors.push(s), allSponsors) %}{% endfor %}
+{% for s in sponsors.silver %}{% set allSponsors = (allSponsors.push(s), allSponsors) %}{% endfor %}
+{% for s in sponsors.bronze %}{% set allSponsors = (allSponsors.push(s), allSponsors) %}{% endfor %}
+{% for s in sponsors.supporting %}{% set allSponsors = (allSponsors.push(s), allSponsors) %}{% endfor %}
+
+{% if allSponsors.length %}
+<section class="py-4 border-top">
+    <div class="container">
+        <p class="text-uppercase small fw-bold text-muted text-center mb-4" style="letter-spacing: 1.5px;">ACM CAIS 2026 Sponsors</p>
+        <div class="sponsor-strip">
+            {% for s in allSponsors %}
+            <a href="{{ s.url }}" target="_blank" rel="noopener" aria-label="{{ s.name }}">
+                <img src="/assets/images/{{ s.logo }}" alt="{{ s.name }}" loading="lazy" />
+            </a>
+            {% endfor %}
+        </div>
+        <div class="text-center mt-3">
+            <a href="/pages/sponsors/" class="btn btn-ghost small">View sponsorship opportunities <i class="bi bi-arrow-right ms-1"></i></a>
+        </div>
+    </div>
+</section>
+{% endif %}
+
 <!-- ===== WHY ACM CAIS (Pillars) ===== -->
 <section id="why" class="py-5 bg-light">
     <div class="container">

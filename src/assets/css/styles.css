@@ -671,6 +671,46 @@ a:focus, button:focus, .btn:focus {
 }
 
 /* ============================================
+   HOMEPAGE SPONSOR STRIP
+   ============================================ */
+
+.sponsor-strip {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem 3.5rem;
+}
+
+.sponsor-strip a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.sponsor-strip img {
+    height: 36px;
+    width: auto;
+    filter: grayscale(100%);
+    opacity: 0.55;
+    transition: filter 300ms ease, opacity 300ms ease;
+}
+
+.sponsor-strip img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .sponsor-strip {
+        gap: 1.5rem 2.5rem;
+    }
+    .sponsor-strip img {
+        height: 28px;
+    }
+}
+
+/* ============================================
    PRINT STYLES
    ============================================ */
 
