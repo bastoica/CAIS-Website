@@ -1,0 +1,102 @@
+---
+pagination:
+    data: papers2026
+    size: 1
+    alias: paper
+layout: base.njk
+permalink: "/program/2026/papers/{{ paper.slug }}/"
+eleventyComputed:
+    title: "{{ paper.title }} — CAIS 2026"
+    description: "{{ paper.summary }}"
+---
+
+<header class="hero">
+    <div class="container">
+        <p class="mb-2"><a href="/program/2026/papers/" class="small"><i class="bi bi-arrow-left me-1"></i>All Accepted Papers</a></p>
+        <h1 class="h2 fw-bold mb-3">{{ paper.title }}</h1>
+        <p class="mb-2">
+            {% for author in paper.authors %}<strong>{{ author.name }}</strong> <span class="text-muted">({{ author.affiliation }})</span>{% if not loop.last %}, {% endif %}{% endfor %}
+        </p>
+        {% if paper.tags %}
+        <p class="mb-0">
+            {% for tagTitle in paper.tags %}
+                {% for p in programPillars %}
+                    {% if p.title == tagTitle %}
+                        <span class="badge me-1" style="background-color: {{ p.color }}; color: var(--seasalt); {% if p.title == paper.primaryPillar %}box-shadow: inset 0 0 0 2px var(--eerie-black);{% endif %}"><i class="bi {{ p.icon }} me-1"></i>{{ p.title }}</span>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </p>
+        {% endif %}
+    </div>
+</header>
+
+<div class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-8">
+
+                <section class="mb-5">
+                    <h2 class="section-title h4 border-bottom pb-2">Abstract</h2>
+                    <p>{{ paper.abstract }}</p>
+                </section>
+
+                {% if paper.keyContributions %}
+                <section class="mb-5">
+                    <h2 class="section-title h4 border-bottom pb-2">Key Contributions</h2>
+                    <ul>
+                        {% for item in paper.keyContributions %}<li>{{ item }}</li>{% endfor %}
+                    </ul>
+                </section>
+                {% endif %}
+
+                {% if paper.bibtex %}
+                <section class="mb-5">
+                    <h2 class="section-title h4 border-bottom pb-2">Cite</h2>
+                    <pre class="bg-light p-3 rounded" style="font-size: 0.85rem; white-space: pre-wrap;"><code>{{ paper.bibtex }}</code></pre>
+                </section>
+                {% endif %}
+
+            </div>
+
+            <div class="col-lg-4">
+                <aside>
+                    {% if paper.session %}
+                    <div class="card dates-card mb-4">
+                        <div class="card-body">
+                            <h3 class="h6 fw-bold mb-2"><i class="bi bi-calendar-event me-2"></i>Session</h3>
+                            <p class="small fw-bold mb-1">{{ paper.session.name }}</p>
+                            <p class="small text-muted mb-0">{{ paper.session.time }}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    {% if paper.links %}
+                    <div class="card dates-card mb-4">
+                        <div class="card-body">
+                            <h3 class="h6 fw-bold mb-3"><i class="bi bi-link-45deg me-2"></i>Artifacts & Links</h3>
+                            <ul class="list-unstyled mb-0">
+                                {% if paper.links.pdf %}<li class="mb-2"><a href="{{ paper.links.pdf }}" target="_blank" rel="noopener"><i class="bi bi-file-earmark-pdf me-2"></i>Paper (PDF)</a></li>{% endif %}
+                                {% if paper.links.alphaxiv %}<li class="mb-2"><a href="{{ paper.links.alphaxiv }}" target="_blank" rel="noopener"><i class="bi bi-journal me-2"></i>alphaXiv</a></li>{% endif %}
+                                {% if paper.links.github %}<li class="mb-2"><a href="{{ paper.links.github }}" target="_blank" rel="noopener"><i class="bi bi-github me-2"></i>Code (GitHub)</a></li>{% endif %}
+                                {% if paper.links.project %}<li class="mb-2"><a href="{{ paper.links.project }}" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Project site</a></li>{% endif %}
+                                {% if paper.links.video %}<li class="mb-2"><a href="{{ paper.links.video }}" target="_blank" rel="noopener"><i class="bi bi-play-circle me-2"></i>Video</a></li>{% endif %}
+                                {% if paper.links.slides %}<li><a href="{{ paper.links.slides }}" target="_blank" rel="noopener"><i class="bi bi-easel me-2"></i>Slides</a></li>{% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    <div class="highlight-box p-3">
+                        <h3 class="h6 fw-bold mb-2"><i class="bi bi-people me-2"></i>Authors</h3>
+                        <ul class="list-unstyled small mb-0">
+                            {% for author in paper.authors %}
+                            <li class="mb-1"><strong>{{ author.name }}</strong><br><span class="text-muted">{{ author.affiliation }}</span></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</div>

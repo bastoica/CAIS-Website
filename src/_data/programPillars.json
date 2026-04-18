@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Architectural Patterns & Composition",
+    "pct": 42,
+    "color": "#B8593E",
+    "icon": "bi-diagram-3",
+    "description": "How multiple models, tools, and retrievers are composed into coherent systems. Research in this space advances inference-time scaling, studies the generation/verification asymmetry behind verifier-based architectures, explores retrieval-augmented, multi-agent, and tool-augmented designs, and asks what principled modular composability looks like in practice, among other directions."
+  },
+  {
+    "title": "Evaluation & Benchmarking",
+    "pct": 18,
+    "color": "#6B7F5A",
+    "icon": "bi-bar-chart-line",
+    "description": "Characterizing the behavior of compound systems in realistic conditions, including the failure modes that are hardest to detect. Topics include new benchmarks, end-to-end metrics, evaluation methodology that holds up as underlying models grow more capable, and more."
+  },
+  {
+    "title": "Security & Privacy",
+    "pct": 16,
+    "color": "#5B7490",
+    "icon": "bi-shield-check",
+    "description": "Understanding and mitigating threats when agents execute tools on real systems. Topics include threat models for prompt injection and tool misuse, defenses against adaptive attackers, alignment for AI systems with real-world consequences, and more."
+  },
+  {
+    "title": "System Optimization & Efficiency",
+    "pct": 13,
+    "color": "#5E5D59",
+    "icon": "bi-speedometer2",
+    "description": "Making compound systems faster and cheaper while preserving their capabilities. Topics include end-to-end optimization of non-differentiable pipelines, principled caching, routing, serving at agent scale, and more."
+  },
+  {
+    "title": "Engineering & Operations",
+    "pct": 12,
+    "color": "#B8903E",
+    "icon": "bi-gear",
+    "description": "Making compound AI systems reliable in production. Topics include observability for long agent traces, deployment pipelines for compound systems, developer tools the field still needs to invent, and more."
+  }
+]

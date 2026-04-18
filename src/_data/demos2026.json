@@ -1,0 +1,1556 @@
+[
+  {
+    "slug": "nexa-ecommerce-insights",
+    "title": "Nexa: Automatically Surfacing Business Impacting Insights in E-commerce Applications",
+    "summary": "An agentic framework that automatically discovers business-impacting behavioral patterns across billions of e-commerce user interactions using contrastive stateful trajectories.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Smart Sun",
+        "affiliation": "Conviva"
+      },
+      {
+        "name": "Sayan Sinha",
+        "affiliation": "Georgia Tech/Conviva"
+      },
+      {
+        "name": "Haijie Wu",
+        "affiliation": "Conviva"
+      },
+      {
+        "name": "Aditya Ganjam",
+        "affiliation": "Conviva"
+      },
+      {
+        "name": "Qichu Gong",
+        "affiliation": "Conviva"
+      },
+      {
+        "name": "Wei Wang",
+        "affiliation": "Conviva"
+      },
+      {
+        "name": "Zhan Yang",
+        "affiliation": "Conviva"
+      },
+      {
+        "name": "Bo Lin",
+        "affiliation": "Conviva"
+      },
+      {
+        "name": "Vipul Harsh",
+        "affiliation": "Conviva"
+      },
+      {
+        "name": "Ningning Hu",
+        "affiliation": "Conviva"
+      },
+      {
+        "name": "B. Aditya Prakash",
+        "affiliation": "Georgia Tech"
+      },
+      {
+        "name": "Vyas Sekar",
+        "affiliation": "CMU"
+      },
+      {
+        "name": "Hui Zhang",
+        "affiliation": "Conviva"
+      }
+    ],
+    "abstract": "Internet-scale e-commerce storefronts serve millions of users (and increasingly user appointed agents). These storefronts are being rearchitected as compound AI systems with agentic workflows for customer interactions, backend processing, and so on. As this AI transformation and agentic economy is underway, product teams need to get actionable insights into business-impacting outcomes. Classical approaches for understanding business impacts such as static funnels or static dashboards cannot deal with the scale, diversity, and contextual interactions that happen over billions of user interactions. As such, we need novel agentic approaches to automatically surface business-impacting insights.\n\nWe present Nexa, an agentic framework that surfaces business insights automatically. We formalize the target of automated insight discovery in terms of Contrastive Stateful Trajectories (CST): a structural specification over contextual and sequential behavioral patterns whose presence or absence significantly shifts a business KPI across user cohorts. Nexa satisfies three design requirements simultaneously: expressivity through the CST abstraction, scalability through a novel custom analytics backend for CST computations, and explainability by using the CST abstraction and usable presentation layers for analysts to verify the insights. We demonstrate Nexa on representative ecommerce workloads and show that it surfaces high-signal friction contextual patterns spanning user, app, agent, and backend behaviors."
+  },
+  {
+    "slug": "eigentsearch-qplus",
+    "title": "EigentSearch-Q+: Enhancing Deep Research Agents with Structured Reasoning Tools",
+    "summary": "A set of structured query and evidence processing tools that make web search more deliberate for deep research agents, improving accuracy across four benchmarks.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Boer Zhang",
+        "affiliation": "Meta"
+      },
+      {
+        "name": "Mingyan Wu",
+        "affiliation": "Northeastern University, China"
+      },
+      {
+        "name": "Dongzhuoran Zhou",
+        "affiliation": "University of Oslo & Bosch Center of AI"
+      },
+      {
+        "name": "Yuqicheng Zhu",
+        "affiliation": "University of Stuttgart & Bosch Center of AI"
+      },
+      {
+        "name": "Wendong Fan",
+        "affiliation": "CAMEL-AI.org & Eigent.ai"
+      },
+      {
+        "name": "Puzhen Zhang",
+        "affiliation": "CAMEL-AI.org & Eigent.ai"
+      },
+      {
+        "name": "Zifeng Ding",
+        "affiliation": "University of Cambridge & Mina AI"
+      },
+      {
+        "name": "Guohao Li",
+        "affiliation": "CAMEL-AI.org & Eigent.ai"
+      },
+      {
+        "name": "Yuan He",
+        "affiliation": "Amazon"
+      }
+    ],
+    "abstract": "Deep research requires reasoning over web evidence to answer open-ended questions, and it is a core capability for AI agents. Yet many deep research agents still rely on implicit, unstructured search behavior that causes redundant exploration and brittle evidence aggregation. Motivated by Anthropic's \"think\" tool paradigm and insights from the information-retrieval literature, we introduce Q+, a set of query and evidence processing tools that make web search more deliberate by guiding query planning, monitoring search progress, and extracting evidence from long web snapshots. We integrate Q+ into the browser sub-agent of Eigent, an open-source, production-ready multi-agent workforce for computer use, yielding EigentSearch-Q+. Across four benchmarks (SimpleQA-Verified, FRAMES, WebWalkerQA, and X-Bench DeepSearch), Q+ improves Eigent's browser agent benchmark-size-weighted average accuracy by 3.0, 3.8, and 0.6 percentage points (pp) for GPT-4.1, GPT-5.1, and Minimax M2.5 model backends, respectively. Case studies further suggest that EigentSearch-Q+ produces more coherent tool-calling trajectories by making search progress and evidence handling explicit."
+  },
+  {
+    "slug": "sherlock-bug-to-pr",
+    "title": "From Bug Report to Pull Request: An Autonomous Agent Pipeline for Production Issue Resolution",
+    "summary": "An end-to-end autonomous agent (Sherlock) that traces production errors from Jira through New Relic to GitHub and opens a fix PR, resolving 41% of tickets in ~9 minutes vs. a 4.2-hour manual baseline.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition",
+      "Engineering & Operations"
+    ],
+    "authors": [
+      {
+        "name": "Roberto Milev",
+        "affiliation": "Navan"
+      },
+      {
+        "name": "Uday Kanagala",
+        "affiliation": "Navan"
+      },
+      {
+        "name": "Chris Cholette",
+        "affiliation": "Navan"
+      }
+    ],
+    "abstract": "Software teams at scale spend hours tracing production issues across disconnected systems — from issue trackers, through observability platforms, to the responsible codebase — before they can begin fixing them. We present Sherlock, an end-to-end autonomous agent that resolves production issues by orchestrating across Jira (issue tracking), New Relic (observability), and GitHub (source code). Given a Jira ticket containing an error description or screenshot, the agent autonomously traces the error through production stack traces, identifies the responsible service and code, generates a fix, and opens a pull request. Built on Claude SDK running on AWS AgentCore runtime, Sherlock includes a human-in-the-loop mechanism for graceful degradation when information is insufficient. Evaluated on 100 production tickets, the system achieved full autonomous resolution (PR created) for 41% of tickets in an average of 9 minutes, compared to a 4.2-hour manual baseline."
+  },
+  {
+    "slug": "hearthnet",
+    "title": "HearthNet: Edge Multi-Agent Orchestration for Smart Homes",
+    "summary": "An edge multi-agent system that coordinates persistent, role-specialized LLM agents via MQTT and Git-backed state for natural-language smart home control on commodity hardware.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Zhonghao Zhan",
+        "affiliation": "Imperial College London"
+      },
+      {
+        "name": "Krinos Li",
+        "affiliation": "Imperial College London"
+      },
+      {
+        "name": "Yefan Zhang",
+        "affiliation": "Independent Researcher"
+      },
+      {
+        "name": "Hamed Haddadi",
+        "affiliation": "Imperial College London"
+      }
+    ],
+    "abstract": "Smart-home users increasingly want to control their homes in natural language rather than assemble rules, dashboards, and API integrations by hand. At the same time, real deployments are brittle: devices fail, integrations break, and recoveries often require manual intervention. Existing agent toolkits are effective for session-scoped delegation, but smart-home control operates under a different scenario: it is persistent, event-driven, failure-prone, and tied to physical devices with no shared context window.\n\nWe present HearthNet, an edge multi-agent orchestration system for smart homes. HearthNet deploys a small set of persistent, role-specialized LLM agents at the home hub, where they coordinate through MQTT, Git-backed shared state, and root-issued actuation leases to govern heterogeneous devices through thin adapters. This design externalizes context, preserves execution history, and separates planning, verification, authorization, and actuation across explicit boundaries. Our current prototype runs on commodity edge hardware and Android devices; it keeps orchestration, state management, and device control on-premise while using hosted LLM APIs for inference. We demonstrate the system through three live scenarios: intent-driven multi-agent coordination from ambiguous natural language, conflict resolution with timeline-based tracing, and rejection of stale or unauthorized commands before device actuation."
+  },
+  {
+    "slug": "parallel-environments-for-agents",
+    "title": "Parallel Environments for Agents",
+    "summary": "A framework that lets agents branch execution across parallel isolated environment instances, achieving 48% on SWE-bench Pro with a 15-point gain over single-path baselines.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition",
+      "System Optimization & Efficiency"
+    ],
+    "authors": [
+      {
+        "name": "Shangyin Tan",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Jialin Zhang",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Matei Zaharia",
+        "affiliation": "UC Berkeley"
+      }
+    ],
+    "abstract": "Large language models increasingly benefit from scaling test-time compute through parallel sampling and best-of-N decoding. However, these approaches treat reasoning as static text generation, overlooking that real-world agentic tasks require interaction with stateful environments. For example, software engineering agents must iteratively execute code, observe test results, and adapt within changing environments. We introduce ParallelEnv, a modular execution framework that enables agents to branch their execution across parallel, isolated environment instances. ParallelEnv represents execution as a state graph over immutable environment snapshots, supports pluggable environment backends (Docker containers, VMs), and provides configurable scheduling strategies (priority, beam, round-robin) for managing concurrent branches. On SWE-bench Pro, tree-forking with ParallelEnv achieves 48% resolve rate at $0.50 cost, a 15-point gain over single-path baselines at matched compute budget."
+  },
+  {
+    "slug": "optimize-anything",
+    "title": "optimize_anything: A Universal API for Optimizing any Text Parameter",
+    "summary": "A declarative API that treats code, prompts, and agent architectures as optimizable text artifacts, achieving results like 47% faster Claude Code resolution and 89.5% ARC-AGI accuracy.",
+    "primaryPillar": "System Optimization & Efficiency",
+    "tags": [
+      "System Optimization & Efficiency",
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Lakshya A Agrawal",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Donghyun Lee",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Wenjie Ma",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Karim Elmaaroufi",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Shangyin Tan",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Sanjit A. Seshia",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Koushik Sen",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Dan Klein",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Ion Stoica",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Joseph Gonzalez",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Omar Khattab",
+        "affiliation": "Massachusetts Institute of Technology"
+      },
+      {
+        "name": "Alexandros G. Dimakis",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Matei Zaharia",
+        "affiliation": "University of California, Berkeley"
+      }
+    ],
+    "abstract": "We present optimize_anything, a declarative API that formulates a broad class of optimization problems as iterative refinement of text artifacts. The key observation is that code, prompts, agent architectures, and algorithmic policies are all serializable as strings whose quality can be measured through automated evaluations, enabling a unified LLM-driven search over these heterogeneous domains. Our API subsumes three optimization paradigms under a single interface: single-task search, multi-task search with cross-problem transfer, and generalization to unseen inputs. Two mechanisms underpin the approach: (1) Actionable Side Information (ASI), a first-class evaluator contract that surfaces rich, multimodal diagnostics (compiler errors, profiler traces, rendered images) to the LLM proposer, replacing blind mutation with targeted, diagnostic-driven revision; and (2) Pareto-efficient search over per-task and per-metric scores, which preserves complementary candidate strengths that naive score averaging discards. We evaluate across eight domains. On coding agent skill optimization, learned skills push Claude Code to near-perfect task completion while reducing resolution time by 47%. On cloud scheduling, discovered algorithms cut egress costs by 40.2%, topping the ADRS leaderboard. On ARC-AGI, full agent architecture evolution improves Gemini Flash accuracy from 32.5% to 89.5%. On AIME 2025, prompt-only optimization raises GPT-4.1-mini accuracy from 46.67% to 60.00%. On KernelBench, multi-task CUDA kernel generation produces kernels where 87% match or exceed baseline performance. On circle packing (n=26), we surpass AlphaEvolve's published result. On the 56-problem EvalSet benchmark, LLM-generated solver code matches Optuna, a mature numerical optimizer. These results suggest that unifying text optimization under a minimal, diagnostic-rich API can match or exceed domain-specific tools across a wide range of problem classes."
+  },
+  {
+    "slug": "stigmergyrouter",
+    "title": "StigmergyRouter: A Fault-Aware Adaptive Routing Demo for Multi-Agent AI Systems",
+    "summary": "A pheromone-memory-based routing layer that adapts multi-agent routing from low-cost heartbeat feedback alone, improving failed-agent avoidance to 95.7% under specialist faults.",
+    "primaryPillar": "System Optimization & Efficiency",
+    "tags": [
+      "System Optimization & Efficiency",
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Jing Du",
+        "affiliation": "Northeastern University"
+      },
+      {
+        "name": "Hang Zhao",
+        "affiliation": "Northeastern University"
+      },
+      {
+        "name": "Kenneth Huang",
+        "affiliation": "University of Pennsylvania"
+      }
+    ],
+    "abstract": "As compound AI systems increasingly rely on multi-agent architectures, routing user queries to specialized agents becomes a critical bottleneck. Current approaches, from static keyword rules to LLM-call-based and heavier classifier-style meta-routers, either lack adaptability or add extra inference overhead before downstream work begins. We present StigmergyRouter, a fault-aware routing layer that maintains clustered pheromone memory over semantic embeddings and updates its routing preferences from low-cost execution heartbeat feedback alone, without labeled routing data.\n\nWe evaluate across HotpotQA, GSM8K, and CNN/DailyMail with 150 queries per trial over 10 random seeds. We do not present StigmergyRouter as the strongest general-purpose router. The contribution is narrower: a low-supervision, heartbeat-driven adaptation layer that can sit on top of strong semantic routing and improve behavior under specialist failure. We therefore evaluate both the pure mechanism and a practical HybridStigmergyRouter that combines semantic priors with heartbeat-driven pheromone memory. Relative to a strong Semantic+Failover baseline, the hybrid variant gives up a small amount of routing accuracy (89.5% vs. 92.7%) while improving downstream task score (0.387 vs. 0.369) and failed-agent avoidance under specialist faults (95.7% vs. 83.5% for math faults). We show these behaviors in an interactive Streamlit demo with live fault injection and inspectable pheromone state."
+  },
+  {
+    "slug": "governance-by-construction",
+    "title": "Governance by Construction for Generalist Agents",
+    "summary": "A modular policy-as-code governance layer that enforces compliance at five structural checkpoints across an LLM agent's execution pipeline without model fine-tuning.",
+    "primaryPillar": "Security & Privacy",
+    "tags": [
+      "Security & Privacy"
+    ],
+    "authors": [
+      {
+        "name": "Segev Shlomov",
+        "affiliation": "IBM"
+      },
+      {
+        "name": "Iftach Shoham",
+        "affiliation": "IBM"
+      },
+      {
+        "name": "Alon Oved",
+        "affiliation": "IBM"
+      },
+      {
+        "name": "Ido Levy",
+        "affiliation": "IBM"
+      },
+      {
+        "name": "Sami Marreed",
+        "affiliation": "IBM"
+      },
+      {
+        "name": "Harold Ship",
+        "affiliation": "IBM"
+      },
+      {
+        "name": "Offer Akrabi",
+        "affiliation": "IBM"
+      },
+      {
+        "name": "Sergey Zeltyn",
+        "affiliation": "IBM"
+      },
+      {
+        "name": "Avi Yaeli",
+        "affiliation": "IBM"
+      },
+      {
+        "name": "Nir Mashkif",
+        "affiliation": "IBM"
+      }
+    ],
+    "abstract": "Enterprise agents are increasingly expected to operate autonomously across tools and interfaces, yet production deployments require governance by construction. Systems must specify which actions are allowed, when human oversight is required, and what information may be exposed, without rebuilding the agent for each domain. This demo presents CUGA's policy system, a modular policy-as-code layer that composes with a generalist LLM agent to deliver predictable, auditable, and compliance-aware behavior in compound workflows without model fine-tuning. We present a runtime governance architecture that enforces policy interventions at every critical stage of execution. Rather than passively constraining behavior, policies intercept the agent at five structural checkpoints: upstream of planning (Intent Guard), within the system prompt to steer reasoning (Playbook), at the tool-call boundary to enforce proper usage (Tool Guide), outside the reasoning loop as a Human-in-the-Loop gate for high-risk actions (Tool Approvals), and at the output stage to filter and structure the final response (Output Formatter). Together, these stages embed governance continuously across the agent's execution pipeline rather than treating it as an afterthought. Using a healthcare scenario and a multi-layered enforcement intervention, the demo shows dynamic playbook injection for structured tool-sequence enforcement, intent guards that block malicious or accidentally harmful requests, and human-in-the-loop tool approval checkpoints for potentially destructive actions. The artifact illustrates how typed governance primitives enable faster, safer deployment of enterprise agentic systems while improving policy adherence and execution consistency."
+  },
+  {
+    "slug": "forge-agentic-reliability",
+    "title": "Forge: Closing the Agentic Reliability Gap Between Self-Hosted and Frontier Language Models",
+    "summary": "An open-source guardrail framework that enables an 8B self-hosted model to achieve 99% agentic workflow accuracy, matching frontier APIs.",
+    "primaryPillar": "Security & Privacy",
+    "tags": [
+      "Security & Privacy",
+      "Evaluation & Benchmarking"
+    ],
+    "authors": [
+      {
+        "name": "Antoine Zambelli",
+        "affiliation": "Texas Instruments, Inc"
+      }
+    ],
+    "abstract": "Agentic workflows — multi-step processes where language models call tools, interpret results, and make routing decisions — are a critical capability for deploying AI systems beyond simple question-answering. While frontier API models achieve high accuracy on individual function calls, multi-step workflows expose a compounding reliability problem: even 95% per-step accuracy yields only 77% completion over five steps. We present Forge, an open-source Python framework that adds tool-agnostic guardrails to self-hosted language models running on consumer hardware. Forge's guardrail stack — retry nudges, step enforcement, error recovery, context compaction, and hardware-aware VRAM budgeting — operates independently of the specific tools or workflows being executed. We evaluate Forge across 50+ model/backend configurations using a custom eval harness with 9 agentic scenarios run 50 times each. Our key findings: (1) an 8-billion-parameter model with Forge achieves 99% accuracy on agentic workflows, within 1 percentage point of frontier APIs with the same framework; (2) the same 8B model with Forge outperforms frontier APIs without guardrails — the best configuration a consumer can achieve through API alone; (3) even frontier models drop to 49–87% completion without guardrails, with error recovery scoring 0% universally — an architectural gap, not a capability gap; (4) the serving backend is a hidden variable, with identical model weights producing 0% accuracy on one backend and 78% on another; (5) larger models do not always outperform smaller ones, with 8B models beating 14B variants of the same family across multiple configurations. These findings suggest that the reliability gap between self-hosted and frontier models is primarily a framework problem — guardrails close the mechanical gap, while the intelligence gap between model tiers manifests only in reasoning-heavy scenarios where frontier models excel without assistance."
+  },
+  {
+    "slug": "behavioral-fingerprints",
+    "title": "Behavioral Fingerprints for LLM Endpoint Stability and Identity",
+    "summary": "A black-box monitoring system that detects behavioral changes in LLM endpoints caused by weight updates, quantization, or infrastructure changes via output distribution fingerprinting.",
+    "primaryPillar": "Engineering & Operations",
+    "tags": [
+      "Engineering & Operations",
+      "Evaluation & Benchmarking"
+    ],
+    "authors": [
+      {
+        "name": "Jonah Leshin",
+        "affiliation": "VAIL"
+      },
+      {
+        "name": "Manish Shah",
+        "affiliation": "VAIL"
+      },
+      {
+        "name": "Ian Timmis",
+        "affiliation": "VAIL"
+      },
+      {
+        "name": "Daniel Kang",
+        "affiliation": "University of Illinois at Urbana-Champaign"
+      }
+    ],
+    "abstract": "The consistency of AI-native applications depends on the behavioral consistency of the model endpoints that power them. Traditional reliability metrics such as uptime, latency and throughput do not capture behavioral change, and an endpoint can remain \"healthy\" while its effective model identity changes due to updates to weights, tokenizers, quantization, inference engines, kernels, caching, routing, or hardware. We introduce Stability Monitor, a black-box stability monitoring system that periodically fingerprints an endpoint by sampling outputs on a fixed prompt set and comparing the resulting output distributions over time. Fingerprints are compared using a summed energy distance statistic across prompts, with permutation-test p-values as evidence of distribution shift aggregated sequentially to detect change events and define stability periods. In controlled validation, Stability Monitor detects changes to model family, version, inference stack, quantization, and behavioral parameters. In real-world monitoring of the same model hosted by multiple providers, we observe substantial provider-to-provider and within-provider stability differences."
+  },
+  {
+    "slug": "sentinel-architectural-governance",
+    "title": "Sentinel: Autonomous Architectural Governance Through Commit Intelligence Across Multi-Repository Systems",
+    "summary": "A system of choreographed asynchronous agents that provides continuous architectural governance by processing commits and validating implementation against documented design decisions across 120+ microservices.",
+    "primaryPillar": "Engineering & Operations",
+    "tags": [
+      "Engineering & Operations",
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Roberto Milev",
+        "affiliation": "Navan"
+      },
+      {
+        "name": "Uday Kanagala",
+        "affiliation": "Navan"
+      }
+    ],
+    "abstract": "Large-scale software organizations document architectural decisions in technical design documents (TDDs) and architecture decision records (ADRs), but lack automated mechanisms to verify that implementation conforms to these specifications across repositories, teams, and time. We present Sentinel, a system of choreographed asynchronous agents that provides continuous architectural governance. A real-time agent processes every commit, extracting structured context into a two-tier memory model; a separate synthesis agent periodically aggregates these into development initiatives and validates them against documented architectural decisions. Deployed across 120+ microservices and 20 teams, Sentinel detected 18 architectural drift instances with 83% true positive rate, averaging 12 minutes from commit to drift flag."
+  },
+  {
+    "slug": "learning-skills-coding-agents",
+    "title": "Automatically Learning Skills for Coding Agents",
+    "summary": "A fully automated pipeline that learns repository-specific skills from synthetic tasks and evolutionary optimization, boosting coding agent performance without fine-tuning.",
+    "primaryPillar": "System Optimization & Efficiency",
+    "tags": [
+      "System Optimization & Efficiency",
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Shangyin Tan",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Lakshya A Agrawal",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Rohit Sandadi",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Dan Klein",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Koushik Sen",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Alexandros G. Dimakis",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Matei Zaharia",
+        "affiliation": "UC Berkeley"
+      }
+    ],
+    "abstract": "Coding agents powered by large language models can solve a wide range of software engineering tasks, yet they often struggle on unfamiliar repositories whose conventions, testing patterns, and project structure differ from their training data. We introduce gskill, a fully automated pipeline that learns repository-specific skills, concise natural-language documents that capture the knowledge an agent needs to work effectively within a given codebase. gskill combines two components: (1) SWE-smith, a data-generation pipeline that creates diverse, verifiable software engineering tasks from any GitHub repository, and (2) optimize_anything, an evolutionary optimization loop that iteratively refines skill documents using LLM-generated feedback. Skills learned by gskill on a lightweight agent (Mini-SWE-Agent with GPT-5-mini) transfer directly to stronger agents: on the bleve repository, Claude Code with Claude Haiku 4.5 improves from 79.3% to 100.0% pass rate while also reducing average task duration from 173s to 130s. On jinja, Claude Haiku 4.5 improves from 93.9% to 98.5% while Claude Sonnet 4.5 maintains a perfect 100%. Our results demonstrate that automatically learned, repository-specific skills provide a lightweight and transferable mechanism for improving coding agent performance without model fine-tuning. gskill is publicly available at github.com/gepa-ai/gepa/tree/main/src/gepa/gskill.",
+    "links": {
+      "github": "https://github.com/gepa-ai/gepa/tree/main/src/gepa/gskill"
+    }
+  },
+  {
+    "slug": "trace-social-graph",
+    "title": "TRACE: A Multi-Agent System for Natural Language-Driven Social Graph Investigation",
+    "summary": "A multi-agent system for social graph forensics that uses natural-language behavior detection and LLM-driven graph exploration, achieving 10x network expansion and 91.9% discovery of unknown suspicious entities.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Arunachaleshwar Ravichandran",
+        "affiliation": "Meta"
+      },
+      {
+        "name": "Nicole Chen",
+        "affiliation": "Meta"
+      },
+      {
+        "name": "Ankitesh Gupta",
+        "affiliation": "Meta"
+      },
+      {
+        "name": "Antonios Broumas",
+        "affiliation": "Meta"
+      },
+      {
+        "name": "Ioannis Konstantakopoulos",
+        "affiliation": "Meta"
+      },
+      {
+        "name": "Seyoung Park",
+        "affiliation": "Meta"
+      }
+    ],
+    "abstract": "Trust & Safety teams at social platforms must investigate complex networks of suspicious entities — groups, pages, and profiles — that span multiple hops across the social graph. Traditional approaches rely on hard-coded rules or single-entity classifiers that cannot perform multi-hop reasoning or adapt to novel attack patterns without code changes. We present TRACE, a multi-agent LLM-powered system for semi-automated social graph forensics. TRACE introduces two key innovations: (1) natural language behavior detection, where suspicious patterns are defined in prose rather than code and an LLM agent translates these into executable data queries at runtime; and (2) LLM-driven graph exploration, where the system performs weighted breadth-first traversal of the social graph, with the LLM assigning information gain scores to candidate edges to decide which entity relationships to follow. Multiple specialized agents — each behavior spawning its own dedicated Specialist — collaborate through a deterministic pipeline where LLM calls are confined to agent boundaries and all control flow is ordinary code. In evaluations on two real-world investigations, TRACE achieves a 10× network expansion factor, discovers 91.9% previously unknown suspicious entities, and identifies behavioral signals with 2.2× lift over content-only analysis."
+  },
+  {
+    "slug": "agent-aided-cad",
+    "title": "Agent-Aided Design for Dynamic CAD Models",
+    "summary": "An agentic system for generating dynamic 3D CAD assemblies with moving parts, using external constraint solvers and visual feedback to overcome LLM spatial reasoning limitations.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Mitch Adler",
+        "affiliation": "Unaffiliated"
+      },
+      {
+        "name": "Matthew Russo",
+        "affiliation": "MIT"
+      },
+      {
+        "name": "Michael Cafarella",
+        "affiliation": "MIT"
+      }
+    ],
+    "abstract": "In the past year, researchers have started to create agentic systems that can design real-world CAD-style objects in a training-free setting, a new variety of system that we call Agent-Aided Design. Generally speaking, these systems place an agent in a feedback loop in which it can write code, compile that code to an assembly of CAD model(s), visualize the model, and then iteratively refine its code based on visual and other feedback. Despite rapid progress, a key problem remains: none of these systems can build complex 3D assemblies with moving parts. For example, no existing system can build a piston, a pendulum, or even a pair of scissors. In order for Agent-Aided Design to make a real impact in industrial manufacturing, we need a system that is capable of generating such 3D assemblies. In this paper we present a prototype of AADvark, an agentic system designed for this task. Unlike previous state-of-the-art systems, AADvark captures the dynamic part interactions with one or more degrees-of-freedom. This design decision allows AADvark to reason directly about assemblies with moving parts and can thereby achieve cross-cutting goals, including but not limited to mechanical movements. Unfortunately, current LLMs are imperfect spatial reasoners, a problem that AADvark addresses by incorporating external constraint solver tools with a specialized visual feedback mechanism. We demonstrate that, by modifying the agent's tools (FreeCAD and the assembly solver), we are able to create a strong verification signal which enables our system to build 3D assemblies with movable parts."
+  },
+  {
+    "slug": "pathfinder-trace-analysis",
+    "title": "Pathfinder: Self-Improving Agent Trace Analysis via Adversarial Self-Play and Code Execution",
+    "summary": "A schema-agnostic trace analysis system that uses adversarial self-play and executable code search to debug agent failures, outperforming RAG by 35 points.",
+    "primaryPillar": "Engineering & Operations",
+    "tags": [
+      "Engineering & Operations",
+      "Evaluation & Benchmarking"
+    ],
+    "authors": [
+      {
+        "name": "Dhruv Atreja",
+        "affiliation": "Unaffiliated"
+      }
+    ],
+    "abstract": "LLM agents achieve remarkable results on complex tasks, yet debugging their failures remains manual and time-consuming. We introduce Pathfinder, a schema-agnostic trace analysis system that frames agent debugging as multi-hop search over structured and unstructured text. Unlike RAG approaches, Pathfinder uses executable code (SQL queries and bash pipelines) as its primary search mechanism, enabling precise filtering and aggregation that embeddings cannot express. We train Pathfinder via self-play between an Injector role that introduces realistic deficiencies into agent code and a Detector role that analyzes the resulting traces. We contribute a taxonomy of 50 agent failure types derived from real production bugs. Pathfinder achieves 87.2%±1.8% detection accuracy on injected deficiencies and 78.4%±2.3% on real-world bugs from held-out commits, outperforming RAG by 35.4 points in our five-seed evaluation. Self-play training provides an additional 18.8 points, with learned patterns transferring across agent architectures."
+  },
+  {
+    "slug": "alignment-to-optimization-bridge",
+    "title": "Steering Agent Behavior via a Domain Expert-Driven Alignment-to-Optimization Bridge",
+    "summary": "A system that makes agent behavior steerable by bridging domain expert trace labels to calibrated evaluation judges and optimized prompts, improving performance by 15.7%.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition",
+      "Evaluation & Benchmarking"
+    ],
+    "authors": [
+      {
+        "name": "Wesley Pasfield",
+        "affiliation": "University of San Diego and Databricks"
+      }
+    ],
+    "abstract": "Aligning compound AI agents with domain expertise typically requires manual prompt engineering or scorer design that drifts from actual expert quality criteria. We present a system that makes agent behavior steerable: the only manual step is for domain experts to label traces. From those labels, an automated bridge produces a calibrated evaluation judge (via MemAlign), an optimized system prompt (via GEPA), and composable agent skills (via GEPA's optimize_anything). Because the judge is calibrated to expert feedback before optimization begins, every downstream change reflects the expert's definition of quality, and all artifacts are versioned in MLflow for auditability. We demonstrate the bridge using a baseball hitting-analysis assistant with graph-enforced tool routing, per-thread conversation memory, and parallel tool execution. In this example, the bridge culminates in an agent that outperforms the original by 15.7% as evaluated by the aligned judge."
+  },
+  {
+    "slug": "raid-reflective-edit-propagation",
+    "title": "Scaling Expert Feedback with Reflective Edit Propagation in Compositional Knowledge Bases",
+    "summary": "A reflective agent (RAID) that infers the semantic intent behind a single expert edit to a knowledge base and propagates corrections across the entire KB automatically.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Jiajing Guo",
+        "affiliation": "Bosch Research North America"
+      },
+      {
+        "name": "Xueming Li",
+        "affiliation": "Robert Bosch GmbH"
+      },
+      {
+        "name": "Jorge H Piazentin Ono",
+        "affiliation": "Bosch Research North America"
+      },
+      {
+        "name": "Wenbin He",
+        "affiliation": "Bosch Research North America"
+      },
+      {
+        "name": "Liu Ren",
+        "affiliation": "Bosch Research North America"
+      }
+    ],
+    "abstract": "Curation of domain-specific knowledge bases (KBs) is critical for organizations and enterprises, but suffers from a scalability bottleneck: while LLMs can synthesize initial content, only human experts can validate technical accuracy, and manual entry-by-entry correction is labor-intensive. We use an identifier dictionary as a use case and present Reflective Agent for Identifier Dictionary (RAID), a novel system that transforms individual expert edits into systematic knowledge updates. Unlike traditional \"correct-and-save\" paradigms, RAID utilizes a reflective agent to infer the underlying semantic intent behind a single expert edit and propagates that correction across the entire KB through a three-step architecture: Intent Inference, Reflection-based Planning, and User Controlled Execution. We evaluated the reflection and propagation performance on a public dataset and conducted a user study with subject matter experts with proprietary data. The evaluation shows RAID's technical feasibility in capturing expert intent and its potential to scale specialized expertise across industrial knowledge bases."
+  },
+  {
+    "slug": "lake-logic-agent",
+    "title": "L.A.K.E.: Logic Agent for Knowledge Extraction in Data Planning",
+    "summary": "An agentic data planning framework that maps natural language questions to executable workflows over diverse data lake sources, with interactive DAG-based provenance visualization.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition",
+      "Engineering & Operations"
+    ],
+    "authors": [
+      {
+        "name": "Jean-Flavien Bussotti",
+        "affiliation": "Megagon Labs"
+      },
+      {
+        "name": "Naoki Otani",
+        "affiliation": "Megagon Labs"
+      },
+      {
+        "name": "Eser Kandogan",
+        "affiliation": "Megagon Labs"
+      }
+    ],
+    "abstract": "Data lakes in modern enterprises are massive, heterogeneous, and noisy, often preventing non-experts from effectively extracting value. Bridging the semantic gap between ambiguous user intent and explicit data requires orchestrating multiple tools under an open-world assumption. However, reliably executing these compound AI workflows to solve complex extraction tasks, while also providing the transparency needed for evaluation and debugging, remains a significant bottleneck. We propose L.A.K.E. (Logic Agent for Knowledge Extraction), an agentic data planning framework designed to map natural language questions to executable workflows over diverse data sources. Rather than relying on a brittle \"one-size-fits-all\" approach, L.A.K.E. dynamically generates a declarative plan comprised of modular operators — spanning relational (SQL), text, operators, and semantic functions. Within this framework, we introduce and benchmark three distinct planning regimes: Cascade Planning, Single-Shot Tree Planning, and Iterative Planning. We present an interactive demonstration platform that enables users to visually compare the latency and robustness trade-offs of these planners. By rendering execution paths as interactive Directed Acyclic Graphs (DAGs) with step-level provenance, L.A.K.E. provides the critical observability needed to establish trust, debug failures, and optimize data planning for enterprise-scale lakes."
+  },
+  {
+    "slug": "cotomi-act",
+    "title": "cotomi Act: Learning to Automate Work by Watching You",
+    "summary": "A browser agent that learns organizational work patterns by passively observing user browsing, achieving 80.4% on WebArena while building a shared knowledge workspace.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Masafumi Oyamada",
+        "affiliation": "NEC Corporation"
+      },
+      {
+        "name": "Kunihiro Takeoka",
+        "affiliation": "NEC Corporation"
+      },
+      {
+        "name": "Kosuke Akimoto",
+        "affiliation": "NEC Corporation"
+      },
+      {
+        "name": "Ryoma Obara",
+        "affiliation": "NEC Corporation"
+      },
+      {
+        "name": "Masafumi Enomoto",
+        "affiliation": "NEC Corporation"
+      },
+      {
+        "name": "Haochen Zhang",
+        "affiliation": "NEC Corporation"
+      },
+      {
+        "name": "Daichi Haraguchi",
+        "affiliation": "NEC Corporation"
+      },
+      {
+        "name": "Takuya Tamura",
+        "affiliation": "NEC Corporation"
+      }
+    ],
+    "abstract": "What if a browser agent could learn your work simply by watching you do it? We present cotomi Act, a browser-based computer-using agent that combines reliable multi-step task execution with persistent organizational knowledge acquired from user behavior. For execution, an agent scaffold with adaptive lazy observation, coarse-grained actions, and test-time scaling via best-of-N action selection achieves 80.4% on WebArena — exceeding the reported 78.2% human baseline. For organizational knowledge, a behavior-to-knowledge pipeline passively observes the user's browsing and progressively abstracts it into artifacts (TODO boards, wiki) exposed through a shared workspace editable by both user and agent. A controlled evaluation confirms that task success improves as behavioral knowledge accumulates. In our live demonstration, attendees interact with the system in a real browser, issuing tasks and observing end-to-end autonomous execution and shared knowledge management."
+  },
+  {
+    "slug": "peeking-multi-agent-systems",
+    "title": "Peeking Under the Hood of Multi-Agent Systems",
+    "summary": "A practical toolkit for systematically comparing and tuning multi-agent system choices (backend LLMs, agent frameworks, and architectures) addressing the stochastic and failure-prone nature of real deployments.",
+    "primaryPillar": "Evaluation & Benchmarking",
+    "tags": [
+      "Evaluation & Benchmarking",
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Tie Ma",
+        "affiliation": "Beihang University"
+      },
+      {
+        "name": "Yixi Chen",
+        "affiliation": "KAUST"
+      },
+      {
+        "name": "Vaastav Anand",
+        "affiliation": "MPI-SWS"
+      },
+      {
+        "name": "Alessandro Cornacchia",
+        "affiliation": "KAUST"
+      },
+      {
+        "name": "Amândio R. Faustino",
+        "affiliation": "KAUST"
+      },
+      {
+        "name": "Guanheng Liu",
+        "affiliation": "Beihang University"
+      },
+      {
+        "name": "Shan Zhang",
+        "affiliation": "Beihang University"
+      },
+      {
+        "name": "Hongbin Luo",
+        "affiliation": "Beihang University"
+      },
+      {
+        "name": "Suhaib A. Fahmy",
+        "affiliation": "KAUST"
+      },
+      {
+        "name": "Zafar A. Qazi",
+        "affiliation": "LUMS and KAUST"
+      },
+      {
+        "name": "Marco Canini",
+        "affiliation": "KAUST"
+      }
+    ],
+    "abstract": "Multi-agent systems (MASes) powered by large language models (LLMs) are increasingly deployed in real applications, yet practitioners still lack a practical way to systematically compare and tune key system choices such as backend LLMs, agent frameworks, and MAS architectures. The stochastic and failure-prone nature of runtime LLM decisions further complicates controlled experimentation and ablation. Existing benchmarks largely emphasize application-level outcomes (e.g., task success) and provide limited support for studying how these system knobs shape end-to-end behavior. We introduce MAESTRO, an open-source benchmark platform that packages 12 representative MASes and makes it easy to configure, run, and compare variants under controlled repeated executions. To enable diagnosis and the discovery of systematic findings, MAESTRO captures execution dynamics and key system signals, including call-graph similarity and resource consumption. Using MAESTRO, we study these 12 MASes spanning diverse domains, agent frameworks, architectures, and backend LLMs under controlled repeated runs. Our evaluation shows that even when high-level interaction structures remain stable, execution order can vary substantially, and tool usage exhibits strong architecture-dependent cost–accuracy trade-offs. Together, MAESTRO and these findings provide practical guidance for designing, optimizing, and deploying robust MASes."
+  },
+  {
+    "slug": "skilled-agents-iot",
+    "title": "Skilled AI Agents for Embedded and IoT Systems Development",
+    "summary": "A skills-based agentic framework for hardware-in-the-loop embedded/IoT development with a benchmark spanning 3 platforms, 23 peripherals, and 42 tasks validated on real hardware.",
+    "primaryPillar": "Evaluation & Benchmarking",
+    "tags": [
+      "Evaluation & Benchmarking",
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Yiming Li",
+        "affiliation": "Duke University"
+      },
+      {
+        "name": "Yuhan Cheng",
+        "affiliation": "Duke University"
+      },
+      {
+        "name": "Mingchen Ma",
+        "affiliation": "Duke University"
+      },
+      {
+        "name": "Yihang Zou",
+        "affiliation": "Duke University"
+      },
+      {
+        "name": "Ningyuan Yang",
+        "affiliation": "Duke University"
+      },
+      {
+        "name": "Wei Cheng",
+        "affiliation": "Duke University"
+      },
+      {
+        "name": "Hai \"Helen\" Li",
+        "affiliation": "Duke University"
+      },
+      {
+        "name": "Yiran Chen",
+        "affiliation": "Duke University"
+      },
+      {
+        "name": "Tingjun Chen",
+        "affiliation": "Duke University"
+      }
+    ],
+    "abstract": "Large language models (LLMs) and agentic systems have shown promise for automated software development, but applying them to hardware-in-the-loop (HIL) embedded and Internet-of-Things (IoT) systems remains challenging due to the tight coupling between software logic and physical hardware behavior. Code that compiles successfully may still fail when deployed on real devices because of timing constraints, peripheral initialization requirements, or hardware-specific behaviors. To address this challenge, we introduce a skills-based agentic framework for HIL embedded development together with IoT-SkillsBench, a benchmark designed to systematically evaluate AI agents in real embedded programming environments. IoT-SkillsBench spans three representative embedded platforms, 23 peripherals, and 42 tasks across three difficulty levels, where each task is evaluated under three agent configurations (no-skills, LLM-generated skills, and human-expert skills) and validated through real hardware execution. Across 378 hardware-validated experiments, we show that concise human-expert skills with structured expert knowledge enable near-perfect success rates across platforms, achieving nearly perfect pass rates."
+  },
+  {
+    "slug": "altk",
+    "title": "Agent Lifecycle Toolkit (ALTK): Reusable Middleware Components for Robust AI Agents",
+    "summary": "A modular open-source middleware toolkit that systematically addresses agent failure modes across the full lifecycle with reusable components for validation, error recovery, and compliance.",
+    "primaryPillar": "Engineering & Operations",
+    "tags": [
+      "Engineering & Operations",
+      "Security & Privacy"
+    ],
+    "authors": [
+      {
+        "name": "Zidane Wright",
+        "affiliation": "IBM Research"
+      },
+      {
+        "name": "Jason Tsay",
+        "affiliation": "IBM Research"
+      },
+      {
+        "name": "Anupama Murthi",
+        "affiliation": "IBM Research"
+      },
+      {
+        "name": "Osher Elhadad",
+        "affiliation": "IBM Research"
+      },
+      {
+        "name": "Diego Del Rio",
+        "affiliation": "IBM"
+      },
+      {
+        "name": "Saurabh Goyal",
+        "affiliation": "IBM Research"
+      },
+      {
+        "name": "Kiran Kate",
+        "affiliation": "IBM Research"
+      },
+      {
+        "name": "Jim A. Laredo",
+        "affiliation": "IBM Research"
+      },
+      {
+        "name": "Koren Lazar",
+        "affiliation": "IBM Research"
+      },
+      {
+        "name": "Vinod Muthusamy",
+        "affiliation": "IBM T.J. Watson Research Center"
+      },
+      {
+        "name": "Yara Rizk",
+        "affiliation": "IBM Research"
+      }
+    ],
+    "abstract": "As AI agents move from demos into enterprise deployments, their failure modes become consequential: a misinterpreted tool argument can corrupt production data, a silent reasoning error can go undetected until damage is done, and outputs that violate organizational policy can create legal or compliance risk. Yet, most agent frameworks leave builders to handle these failure modes ad hoc, resulting in brittle, one-off safeguards that are hard to reuse or maintain. We present the Agent Lifecycle Toolkit (ALTK), an open-source collection of modular middleware components that systematically address these gaps across the full agent lifecycle.\n\nAcross the agent lifecycle, we identify opportunities to intervene and improve, namely, post-user-request, pre-LLM prompt conditioning, post-LLM output processing, pre-tool validation, post-tool result checking, and pre-response assembly. ALTK provides modular middleware that detects, repairs, and mitigates common failure modes. It offers consistent interfaces that fit naturally into existing pipelines. It is compatible with low-code and no-code tools such as the ContextForge MCP Gateway and Langflow. Finally, it significantly reduces the effort of building reliable, production-grade agents."
+  },
+  {
+    "slug": "multi-agent-position-classification",
+    "title": "Multi-Agent Position Classification with Tool Orchestration: Use Case System for Occupational Taxonomy Mapping",
+    "summary": "A confidence-gated multi-agent architecture using MCP that normalizes free-form job titles across five languages into occupational taxonomies, reducing classification time by 72.5%.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Vahid Farajijobehdar",
+        "affiliation": "Kariyer.net R&D Center"
+      },
+      {
+        "name": "İlknur Köseoğlu Sarı",
+        "affiliation": "Kariyer.net R&D Center"
+      },
+      {
+        "name": "Nazım Kemal Üre",
+        "affiliation": "Stanford University"
+      },
+      {
+        "name": "Engin Zeydan",
+        "affiliation": "Centre Tecnològic de Telecomunicacions de Catalunya"
+      }
+    ],
+    "abstract": "Cross-lingual normalization of free-form job titles to standard occupational taxonomies is essential for labor market analytics, skill-gap detection, and regulatory compliance, but remains difficult because titles vary in language, script, and jargon. Existing approaches typically rely on single-pass pipelines that lack structured access to authoritative occupational databases and do not incorporate multi-agent orchestration or confidence-aware routing. To tackle this problem, this paper provides a confidence-gated multi-agent architecture built on the Model Context Protocol (MCP). This orchestrates specialized AI agents and external occupational databases to normalize noisy job titles across five languages into unified classification hierarchies. The architecture employs a hierarchical agent framework with a root Position Agent that delegates sub-agents for web search, position extraction, database queries, and trend analysis. The system is evaluated on 14K production positions and selected samples of 9,543 user-submitted free-text titles. The agent-assisted workflow reduces manual classification time from 4.0 min to 1.1 min per position (72.5% reduction, 3.6× speedup), with P50 latency of 1.2 s for API calls and 4.2 s for full agent orchestration with structured LLM output. The system achieves 95% segment accuracy with 0.94 average confidence."
+  },
+  {
+    "slug": "sregym",
+    "title": "SREGym: A Live Training Ground for AI SRE Agents with High-Fidelity Failure Drills",
+    "summary": "A live benchmark for AI SRE agents featuring high-fidelity failure drills with fault injection across OS kernels, hardware, and compound multi-event scenarios.",
+    "primaryPillar": "Evaluation & Benchmarking",
+    "tags": [
+      "Evaluation & Benchmarking"
+    ],
+    "authors": [
+      {
+        "name": "Jackson Clark",
+        "affiliation": "University of Illinois Urbana-Champaign"
+      },
+      {
+        "name": "Yiming Su",
+        "affiliation": "University of Illinois Urbana-Champaign"
+      },
+      {
+        "name": "Saad Mohammad Rafid Pial",
+        "affiliation": "Bangladesh University of Engineering and Technology"
+      },
+      {
+        "name": "Lily Gniedziejko",
+        "affiliation": "University of Illinois Urbana-Champaign"
+      },
+      {
+        "name": "Tianyin Xu",
+        "affiliation": "University of Illinois Urbana-Champaign"
+      }
+    ],
+    "abstract": "SREGym is a new benchmark for AI-driven SRE (Site Reliability Engineering) techniques for diagnosing and mitigating production failures. SREGym provides a live training ground where high-fidelity failure drills are emulated through fault injectors. SREGym differs from existing SRE benchmarks such as AIOpsLab and ITBench in its realization of comprehensive, high-fidelity failure drills. SREGym implements an extensible software architecture that orchestrates fault injectors and simulators across system stacks, with new capabilities: (1) simulating low-level faults in OS kernels and hardware, (2) coordinating multiple concurrent events into compound drills, and (3) composing noises to model production environments. We demonstrate how to use and extend SREGym and present three representative cases of how AI agents tackle SREGym problems."
+  },
+  {
+    "slug": "cornserve",
+    "title": "Cornserve: A Distributed Serving System for Any-to-Any Multimodal Models",
+    "summary": "A distributed serving system for any-to-any multimodal models that enables component disaggregation and independent scaling, delivering up to 3.81× higher throughput.",
+    "primaryPillar": "System Optimization & Efficiency",
+    "tags": [
+      "System Optimization & Efficiency",
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Jae-Won Chung",
+        "affiliation": "University of Michigan"
+      },
+      {
+        "name": "Jeff J. Ma",
+        "affiliation": "University of Michigan"
+      },
+      {
+        "name": "Jisang Ahn",
+        "affiliation": "University of Michigan"
+      },
+      {
+        "name": "Yizhuo Liang",
+        "affiliation": "USC"
+      },
+      {
+        "name": "Akshay Jajoo",
+        "affiliation": "Cisco Research"
+      },
+      {
+        "name": "Myungjin Lee",
+        "affiliation": "Cisco Research"
+      },
+      {
+        "name": "Mosharaf Chowdhury",
+        "affiliation": "University of Michigan"
+      }
+    ],
+    "abstract": "Any-to-Any models are an emerging class of multimodal models that accept combinations of multimodal data (e.g., text, image, video, audio) as input and generate them as output. Serving these models are challenging; different requests with different input and output modalities traverse different paths through the model computation graph, and each component of the model have different scaling characteristics.\n\nWe present Cornserve, a distributed serving system for generic Any-to-Any models. Cornserve provides a flexible task abstraction for expressing Any-to-Any model computation graphs, enabling component disaggregation and independent scaling. The distributed runtime dispatches compute to the data plane via an efficient record-and-replay execution model that keeps track of data dependencies, and forwards tensor data between components directly from the producer to the consumer. Built on Kubernetes with approximately 23K new lines of Python, Cornserve supports diverse Any-to-Any models and delivers up to 3.81× higher throughput and 5.79× lower tail latency. Cornserve is open-source (https://github.com/cornserve-ai/cornserve), and the demo video is available on YouTube (https://www.youtube.com/watch?v=nb8R-vztLRg).",
+    "links": {
+      "github": "https://github.com/cornserve-ai/cornserve"
+    }
+  },
+  {
+    "slug": "context-viewer",
+    "title": "Context Viewer: Turning LLM Contexts into Analyzable Artifacts",
+    "summary": "A browser-based visual analytics system for exploratory analysis of LLM contexts, enabling users to inspect token usage, compare trajectories, and debug agent failures.",
+    "primaryPillar": "Engineering & Operations",
+    "tags": [
+      "Engineering & Operations"
+    ],
+    "authors": [
+      {
+        "name": "Srihari Sriraman",
+        "affiliation": "nilenso"
+      },
+      {
+        "name": "Michael Isaac",
+        "affiliation": "Carnegie Mellon University"
+      },
+      {
+        "name": "Atharva Raykar",
+        "affiliation": "nilenso"
+      },
+      {
+        "name": "Heather Miller",
+        "affiliation": "Carnegie Mellon University"
+      }
+    ],
+    "abstract": "As large language models (LLMs) move toward long-horizon tasks and multi-turn interactions, there is an increasing need to inspect and analyze the context that shapes them. However, existing systems typically present context as monolithic text transcripts or message logs in JSON. This makes it difficult to analyze its components and assess where tokens are spent, when irrelevant material accumulates, and how trajectories differ across runs. We present Context Viewer, a browser-based visual analytics system for exploratory analysis of LLM contexts. It uses an LLM-assisted pipeline to divide the context into semantically meaningful units, identify topics, and classify the units into those topics. It allows users to iteratively revise the prompts in the pipeline to refine the components and steer their exploration. And it provides interactive visualizations to filter, group, and compare contexts side-by-side. Context Viewer enables practical tasks such as analyzing agent failures, evaluating context compaction effectiveness, and studying the growth of system prompt components over time, functioning as an observability tool for context engineering."
+  },
+  {
+    "slug": "agent-4-vibe-coding",
+    "title": "Agent 4: Teamwork and Collaboration for Vibe-Coding",
+    "summary": "A multi-agent coding architecture for vibe-coding that decomposes tasks into a DAG, executes them on isolated forked environments, and merges via incremental rebasing.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition",
+      "Engineering & Operations"
+    ],
+    "authors": [
+      {
+        "name": "Peter Zhong",
+        "affiliation": "Replit & Carnegie Mellon University"
+      },
+      {
+        "name": "Jacky Zhao",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Edouard Sioufi",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "James Austin",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Bri Pool",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Luis Héctor Chávez",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Adi Dahiya",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Will Ernst",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Dawei Feng",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Devin Halladay",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Toby Ho",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Zade Kaylani",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Imen Kedir",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Vaibhav Kumar",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Zhen Li",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Haya Ode",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Nicholas Ondo",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Darsh Patel",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Alec Wang",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Jordan Walke",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Ibrahim Sheikh",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Poorva Potnis",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Michele Catasta",
+        "affiliation": "Replit"
+      }
+    ],
+    "abstract": "As AI coding agents grow more capable, a natural path to scaling their throughput is to apply the same collaborative patterns — branching, parallel development, and merging — that human engineering teams have long relied on. However, multi-agent concurrency amplifies coordination challenges such as merge conflicts, duplicated work, and semantic inconsistencies, particularly on platforms like Replit where users describe intent in natural language rather than formal specifications. We present Agent 4's teamwork architecture, which addresses these challenges through three layers: a centralized planning agent decomposes user requests into a dynamic directed acyclic graph of tasks, using codebase exploration and an interview-driven workflow to minimize downstream conflicts. Isolated task agents execute each unit of work on a fully forked copy of the application state — filesystem, database, and configuration — enabled by Replit's copy-on-write storage infrastructure, while lightweight intra-task subagents exploit finer-grained parallelism on a shared filesystem. A multi-layered validation pipeline comprising type checking, replayable regression tests derived from a REPL-based browser testing engine, and automated code review guards against logical drift before changes are merged back via an incremental rebasing strategy."
+  },
+  {
+    "slug": "pager-monitoring-agent",
+    "title": "PAGER: Proactive Monitoring Agent for Enterprise AI Assistant",
+    "summary": "A proactive monitoring agent that statistically models historical system errors to surface potential failures before they impact enterprise AI assistant users.",
+    "primaryPillar": "Engineering & Operations",
+    "tags": [
+      "Engineering & Operations"
+    ],
+    "authors": [
+      {
+        "name": "Junior Garcia",
+        "affiliation": "New York University"
+      },
+      {
+        "name": "Sujan Dutta",
+        "affiliation": "Rochester Institute of Technology"
+      },
+      {
+        "name": "Pranav Umakant Pujar",
+        "affiliation": "Adobe"
+      },
+      {
+        "name": "Sai Sree Harsha",
+        "affiliation": "Adobe"
+      },
+      {
+        "name": "Dan Luo",
+        "affiliation": "Adobe"
+      },
+      {
+        "name": "Nikhil Vasudeva",
+        "affiliation": "Adobe"
+      },
+      {
+        "name": "Bikas Saha",
+        "affiliation": "Adobe"
+      },
+      {
+        "name": "Pritom Baruah",
+        "affiliation": "Adobe"
+      },
+      {
+        "name": "Yunyao Li",
+        "affiliation": "Adobe"
+      }
+    ],
+    "abstract": "Enterprise AI assistants embedded in customer data platforms typically operate reactively, addressing failures only after they occur. We present PAGER, a proactive monitoring agent that augments an enterprise AI assistant by statistically modeling historical system errors and surfacing potential failures before they impact users. Grounded in a formative study with five domain experts, PAGER addresses the need for proactive error remediation with a multi-turn conversational interface, predictive models coupled with natural language explanations, and interactive visualizations to support rapid troubleshooting. A technical evaluation shows that random forest models achieve F1-scores of 67.8% and 57.5% across two critical error prediction stages, substantially outperforming baselines. In a within-subject user study, participants using PAGER completed error investigation tasks faster, reported significantly higher ease of use and confidence in their findings, and achieved greater task correctness. These findings demonstrate that proactive AI support improves user confidence and decision quality in enterprise environments."
+  },
+  {
+    "slug": "genflow-ad-studio",
+    "title": "Genflow Ad Studio: A Compound AI Architecture for Brand-Aligned, Self-Correcting Video Generation",
+    "summary": "A compound AI system that enforces brand consistency in generative video production through retrieval-based brand DNA extraction and an adversarial multi-agent QC loop, improving brand compliance from 42% to 89%.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Debanshu Das",
+        "affiliation": "Google"
+      },
+      {
+        "name": "Lavi Nigam",
+        "affiliation": "Google"
+      },
+      {
+        "name": "Sunil Kumar Jang Bahadur",
+        "affiliation": "Google"
+      },
+      {
+        "name": "Gopala Dhar",
+        "affiliation": "Google"
+      }
+    ],
+    "abstract": "Recent advancements in generative video models demonstrate high visual fidelity, yet their integration into enterprise environments is restricted by temporal inconsistencies and severe brand misalignment. Current monolithic architectures struggle to enforce rigid brand constraints, frequently hallucinating unapproved visual assets. We introduce Genflow, a Compound AI System designed to enforce brand consistency in generative media production. Our architecture integrates a retrieval-based 'Brand DNA' extraction module to parameterize generation according to established corporate identity guidelines. Furthermore, we implement an Adversarial Multi-Agent Quality Control (QC) loop. Instead of a single-pass generation, this pipeline employs evaluator agents to iteratively critique generated frames against the extracted parameters, prompting generator models to refine outputs until a deterministic consensus is reached. By transitioning to a multi-stage, self-correcting pipeline, Genflow improved the yield of brand-compliant video generations from 42% to 89%, establishing a robust framework for scalable, enterprise-grade generative systems."
+  },
+  {
+    "slug": "introspectable-classification",
+    "title": "Introspectable, Updatable, and Uncertainty-aware Classification of Language Model Instruction-following",
+    "summary": "An open-source MCP server for uncertainty-aware binary classification of LLM instruction-following, using similarity-distance-magnitude estimators with interpretability-by-exemplar.",
+    "primaryPillar": "Evaluation & Benchmarking",
+    "tags": [
+      "Evaluation & Benchmarking",
+      "Security & Privacy"
+    ],
+    "authors": [
+      {
+        "name": "Allen Schmaltz",
+        "affiliation": "Reexpress AI, Inc."
+      }
+    ],
+    "abstract": "In this system demonstration paper, we introduce an open-source implementation for training and testing Similarity-Distance-Magnitude (SDM) estimators for the task of binary classification of instruction-following of closed-weight language models (LMs). This SDM estimator provides an approximately conditional estimate of the predictive uncertainty over instruction-following, conditional on multiple closed-weight LMs and the representation space of an open-weight model. While it would be more robust to use as input to the SDM estimator the hidden-states of the underlying models, this indirect, compositional proxy is more reliable than verbalized uncertainty and adds a means of auditing the predictions against data with known labels. We release the code as an MCP Server to simplify adding interpretability-by-exemplar and locally updatable, uncertainty-aware instruction-following to agent-based pipelines. We further release OpenVerification1, a balanced set of over two million examples of instruction-following and associated rationales from recent closed-weight LMs, for bootstrapping domain-specific estimators. Finally, we discuss limitations of estimating the predictive uncertainty without access to the hidden-states of the tool-calling LM and provide practical guidance for applications."
+  },
+  {
+    "slug": "pneuma-seeker",
+    "title": "Demonstration of Pneuma-Seeker: Agentic System for Reifying and Fulfilling Information Needs on Tabular Data",
+    "summary": "An agentic system that reifies vague user information needs as inspectable relational specifications for iterative tabular data discovery and provenance-aware execution.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Muhammad Imam Luthfi Balaka",
+        "affiliation": "The University of Chicago"
+      },
+      {
+        "name": "Raul Castro Fernandez",
+        "affiliation": "The University of Chicago"
+      }
+    ],
+    "abstract": "Data analysts working with relational data often start with vague or underspecified questions and refine them iteratively as they explore the data. To support this iterative process, we demonstrate Pneuma-Seeker, a system that reifies a user's information need as explicit, inspectable relational specifications, enabling iterative refinement of the information need, targeted data discovery, and provenance-aware execution. Through two real-world procurement use cases, we show how Pneuma-Seeker leverages LLMs as transparent, interactive analytical collaborators rather than opaque answer engines."
+  },
+  {
+    "slug": "graft-edge-orchestration",
+    "title": "GRAFT: gRPC-Routed Agent Framework for Tasking in Edge and Personal Devices",
+    "summary": "A distributed edge orchestration system that routes structured tasks across heterogeneous personal devices using gRPC, enabling multi-device SLM workloads entirely off-grid.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition",
+      "System Optimization & Efficiency"
+    ],
+    "authors": [
+      {
+        "name": "Chinmay Shringi",
+        "affiliation": "New York University"
+      },
+      {
+        "name": "Alon Hillel-Tuch",
+        "affiliation": "New York University"
+      },
+      {
+        "name": "Sariya Rizwan",
+        "affiliation": "Pace University"
+      }
+    ],
+    "abstract": "GRAFT is a distributed edge orchestration system that routes structured tasks across heterogeneous personal devices, enabling workloads that exceed the capability of any single small language model (SLM) to be completed entirely off-grid without cloud services. The system provides a sessioned gRPC control plane with device registration, capability-aware policy routing, compute-target inference dispatch (CPU, GPU, NPU), safety-bounded remote execution, and per-request telemetry. We demonstrate GRAFT through a multi-device PDF summarization workflow in which a coordinator partitions a document across four devices, each running a local SLM, and merges partial results through a staged execution plan with explicit synchronization barriers.\n\nOur evaluation on a four-device mesh covering silicon from Apple (laptop), Snapdragon X Elite (laptop), Samsung (mobile), and Arduino Q (embedded) hardware shows that all planned tasks execute on their intended devices, stage ordering is preserved, and end-to-end completion time is governed by the slowest parallel worker rather than total document size. The live demonstration exposes routing decisions, per-task progress, device-level timing, and failure semantics in real time, contributing both a novel systems architecture for multi-device agent orchestration and a compelling interactive experience for conference attendees."
+  },
+  {
+    "slug": "sqlsaber",
+    "title": "SQLsaber: Agentic SQL Assistant for Efficient and High-Accuracy Natural Language Database Exploration",
+    "summary": "An agentic SQL assistant equipped with four core tools that achieves 95.2% execution accuracy on BIRD with Claude Opus, a 47.8% improvement over prior best, in median 16 seconds.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition",
+      "Evaluation & Benchmarking",
+      "Security & Privacy"
+    ],
+    "authors": [
+      {
+        "name": "Sarthak Jariwala",
+        "affiliation": "Swift Solar Inc."
+      }
+    ],
+    "abstract": "Natural language interfaces to databases have long been a goal of human-computer interaction research, yet current Text-to-SQL approaches still struggle with complex query execution accuracy (EX). We introduce SQLsaber, a safe and extensible open-source agentic SQL assistant designed for high accuracy natural language database exploration. SQLsaber is available as both an interactive CLI and Python SDK, and is only equipped with four core tools — list-tables, introspect-schema, search-knowledge, and execute-sql — which together enable it to progressively discover schema context, retrieve domain knowledge, generate queries, and self-correct using execution feedback. Here, we demonstrate the power of tool use and agentic approach for high accuracy natural language database exploration. Furthermore, SQLsaber is designed with defense-in-depth security, including AST-based SQL guards, dialect-specific function denylists, and database-level read-only enforcement, as well as a plugin architecture for extensibility. We evaluate SQLsaber's performance on challenging questions of the BIRD dev set using three frontier LLMs. All three models surpass 88% EX, with Claude Opus 4.6 achieving 95.2% EX, a relative improvement of 47.8% over the prior best. We further show that the SQLsaber agent is efficient, with Claude Opus 4.6 reaching an answer in median time of 16 seconds with 6 tool calls (median). Finally, through cross-model agreement analysis using SQLsaber, we identify 19 instances of incorrect gold SQL in the benchmark's challenging set, highlighting the value of agentic exploration for both natural language query answering and benchmark auditing."
+  },
+  {
+    "slug": "drcy-hardware-review",
+    "title": "DRCY: Agentic Hardware Design Reviews",
+    "summary": "The first production-ready multi-agent LLM system for automated hardware schematic review, performing pin-by-pin analysis against datasheets and posting findings on design reviews.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition",
+      "Engineering & Operations"
+    ],
+    "authors": [
+      {
+        "name": "Kyle Dumont",
+        "affiliation": "AllSpice Inc."
+      },
+      {
+        "name": "Nick Herbert",
+        "affiliation": "AllSpice Inc."
+      },
+      {
+        "name": "Hayder Tirmazi",
+        "affiliation": "AllSpice Inc."
+      },
+      {
+        "name": "Shrikanth Upadhayaya",
+        "affiliation": "AllSpice Inc."
+      }
+    ],
+    "abstract": "Hardware design errors discovered after fabrication require costly physical respins that can delay products by months. Existing electronic design automation (EDA) tools enforce structural connectivity rules. However, they cannot verify that connections are semantically correct with respect to component datasheets. For example, that a symbol's pinout matches the manufacturer's specification, or that a voltage regulator's feedback resistors produce the intended output. We present DRCY, the first production-ready multi-agent LLM system that automates first-pass schematic connection review by autonomously fetching component datasheets, performing pin-by-pin analysis against extracted specifications, and posting findings as inline comments on design reviews. DRCY is deployed in production on AllSpice Hub, a collaborative hardware design platform, where it runs as a CI/CD action triggered on design review submissions. DRCY is used regularly by major hardware companies for use-cases ranging from multi-agent vehicle design to space exploration. We describe DRCY's five-agent pipeline architecture, its agentic datasheet retrieval system with self-evaluation, and its multi-run consensus mechanism for improving reliability on safety-critical analyses."
+  },
+  {
+    "slug": "wily-complexity-gating",
+    "title": "Wily: High-Performance Complexity Gated-Feedback for AI Coding Agents",
+    "summary": "A high-performance code complexity analyzer integrated as gated feedback for coding agents, reducing complexity growth by 10-27% while maintaining comparable resolution rates.",
+    "primaryPillar": "Engineering & Operations",
+    "tags": [
+      "Engineering & Operations",
+      "Evaluation & Benchmarking"
+    ],
+    "authors": [
+      {
+        "name": "Anthony Shaw",
+        "affiliation": "Macquarie University"
+      },
+      {
+        "name": "Amin Beheshti",
+        "affiliation": "Macquarie University"
+      }
+    ],
+    "abstract": "AI coding agents can now resolve a large fraction of real-world software engineering tasks, yet the patches they produce are consistently more complex and less maintainable than those written by skilled human engineers. Left unchecked, widespread adoption of such agents will accelerate technical-debt accumulation in production codebases.\n\nWe present Wily, a high-performance code-analysis tool that computes Cyclomatic Complexity (CC), Maintainability Index (MI), and logical lines of code (LLOC) across an entire git history at over 570,000 LOC/s and is up to 55× faster than existing alternatives. We integrate Wily as a complexity-gated feedback signal (backpressure) inside an agentic SWE-bench harness: after each candidate patch the agent receives a complexity delta report and may iterate to reduce regressions.\n\nIn a controlled study of 500 SWE-bench Verified tasks with two frontier models — Claude Opus 4.6 and GPT-5.3-Codex — the Wily-feedback condition reduces mean complexity growth by 10–27% and LLOC growth by 8–23% relative to a control that receives only test-pass/fail feedback, while maintaining comparable resolution rates (<1.3 pp drop). Both AI conditions remain substantially above the human baseline across both models, confirming a persistent complexity gap that motivates continued research into quality-aware agent training."
+  },
+  {
+    "slug": "skydiscover",
+    "title": "SkyDiscover: A Flexible, Adaptive Framework for AI-Driven Scientific and Algorithmic Discovery",
+    "summary": "A modular framework for AI-driven algorithmic discovery via evolutionary search, achieving strongest open-source performance across 200+ optimization tasks and matching AlphaEvolve on many.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Shu Liu",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Mert Cemri",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Shubham Agarwal",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Alexander Krentsel",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Ashwin Naren",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Qiuyang Mang",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Zhifei Li",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Akshat Gupta",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Monishwaran Maheswaran",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Audrey Cheng",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Melissa Pan",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Ethan Boneh",
+        "affiliation": "Stanford University"
+      },
+      {
+        "name": "Kannan Ramchandran",
+        "affiliation": "University of California at Berkeley"
+      },
+      {
+        "name": "Koushik Sen",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Matei Zaharia",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Alexandros G. Dimakis",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Ion Stoica",
+        "affiliation": "UC Berkeley"
+      }
+    ],
+    "abstract": "LLM-driven evolutionary search is emerging as a powerful approach for discovering algorithms and designs, but existing frameworks are difficult to reuse, extend, and compare. We present SkyDiscover, a flexible, adaptive framework for AI-driven scientific and algorithmic discovery. SkyDiscover decomposes the discovery loop into four reusable components: Context Builder, Solution Generator, Evaluator, and Solution Selector, while exposing the control logic above them as a programmable interface. This modular design enables rapid experimentation and even supports adaptive designs where AI can adapt or even optimize the optimization process itself during search.\n\nWe demonstrate SkyDiscover across more than 200 optimization tasks spanning mathematical optimization, systems design, algorithmic programming, and constrained image generation. Under fixed budgets and shared models, the adaptive algorithms implemented on top of SkyDiscover achieves the strongest open-source performance compared to OpenEvolve, ShinkaEvolve, and GEPA, and matches or exceeds AlphaEvolve on many tasks. A live demo further showcases end-to-end discovery with real-time monitoring, human-in-the-loop steering, and meta-optimization of the search process."
+  },
+  {
+    "slug": "hedwig-dynamic-autonomy",
+    "title": "Hedwig: Dynamic Autonomy for Coding Agents Under Local Oversight",
+    "summary": "A CLI coding agent that dynamically adapts its autonomy level based on developer-agent interaction history, tightening oversight in unfamiliar territory and loosening it where trust is earned.",
+    "primaryPillar": "Security & Privacy",
+    "tags": [
+      "Security & Privacy",
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Tanjal Shukla",
+        "affiliation": "University of Washington"
+      },
+      {
+        "name": "Kevin Feng",
+        "affiliation": "University of Washington"
+      },
+      {
+        "name": "Leijie Wang",
+        "affiliation": "University of Washington"
+      },
+      {
+        "name": "Mohammad Rostami",
+        "affiliation": "Amazon GenAI Innovation Center"
+      },
+      {
+        "name": "Amy Zhang",
+        "affiliation": "University of Washington"
+      }
+    ],
+    "abstract": "Even as coding agents can handle increasingly complex tasks, their continued tendency to introduce unintended edits, subtle bugs, and scope drift that slip past code review means developers must still decide how much autonomy to grant them. However, existing approaches for setting an agent's level of autonomy, such as static permission settings or instruction files, cannot account for how developers' preferences for agent autonomy can shift across tasks and over time. We conducted a formative survey with 21 software engineers who use coding agents, finding that they experience frustration with calibrating autonomy and have evolving preferences for level of oversight. Building on these insights, we present Hedwig, a CLI coding agent that adapts its autonomy level based on developer-agent interactions across sessions. Rather than operating on a global, fixed autonomy configuration, Hedwig learns an evolving set of behavioral guidelines from developer decisions and feedback, reducing friction on work for which the agent has earned trust, while tightening oversight when the agent operates outside familiar territory. Hedwig demonstrates the potential of a new paradigm where agents intelligently adapt their autonomous behaviors based on user trust through active, longitudinal collaboration."
+  },
+  {
+    "slug": "clinicbot",
+    "title": "ClinicBot: A Guideline-Grounded Clinical Chatbot with Prioritized Evidence RAG and Verifiable Citations",
+    "summary": "A clinical chatbot that grounds answers in official medical guidelines using prioritized evidence retrieval and verifiable citations, addressing LLM hallucination risks in high-stakes diagnostic contexts.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Navapat Nananukul",
+        "affiliation": "University of Southern California"
+      },
+      {
+        "name": "Mayank Kejriwal",
+        "affiliation": "University of Southern California"
+      }
+    ],
+    "abstract": "Clinical diagnosis requires answers that are accurate, verifiable, and explicitly grounded in official guidelines. While large language models excel at natural language processing, their tendency to hallucinate undermines their utility in high-stakes medical contexts where precision is essential. Existing retrieval-augmented generation (RAG) systems treat all evidence equally, producing noisy context and generic answers misaligned with clinical practice. We present ClinicBot, an AI system that translates guideline recommendations into trustworthy clinical support through three key advances: (1) structured extraction of clinical guidelines into semantic units (recommendations, tables, definitions, narrative) with explicit provenance, (2) evidence prioritization that ranks content by clinical significance and guideline structure rather than textual similarity, and (3) a web-based interface that presents concise, actionable answers with verifiable evidence. We will demonstrate ClinicBot using diabetes questions from real patients and an additional diabetes risk assessment tool that is faithful to the American Diabetes Association (ADA) Standards of Care in Diabetes (2025). The demonstration will illustrate how semantic knowledge extraction and hierarchical evidence ranking can reliably operate in a multi-agent setting to process complex clinical guidelines at scale."
+  },
+  {
+    "slug": "ontological-notebook-memory",
+    "title": "Complex Knowledge Curation using Agentic Ontological Notebook Memory",
+    "summary": "A personal AI research assistant that uses explicit ontological commitments stored in a TypeDB knowledge graph as agent memory, demonstrated for job-hunting and disease-mechanism understanding.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Gully Burns",
+        "affiliation": "Unaffiliated"
+      },
+      {
+        "name": "Paul Groth",
+        "affiliation": "University of Amsterdam"
+      }
+    ],
+    "abstract": "In the same way that every software system uses a data model (as database schema, type system, or API contracts), large language model (LLM)-powered agents makes domain-specific semantic distinctions in prompts, tool definitions, data sources, etc. These ontological commitments are implicit, hard to test, and difficult to refine systematically. Furthermore, the way that agents preserve context across sessions (agent memory) usually make few, if any, domain-specific ontological commitments and rely only on the inherent intelligence of LLMs to make those distinctions. We argue that making these commitments explicit improves agent performance for domain-specific work.\n\nTo that end, we present Skillful-Alhazen as a personal AI research assistant that uses skills to define domain-specific instructions, tools (coded as scripts), and a new kind of 'ontological notebook' as memory. Users interact with the assistant in plain language, and the assistant applies the semantic definitions from its memory schema to execute work. It retains structured context based on data in the explicitly defined domain model it can access, query, and modify. Skillful-Alhazen uses TypeDB to implement the ontological notebook. This is a recently-commercialized, closed-world, declarative, logic-based persistent knowledge graph with several desirable properties in this application: including type-safety, strong inference, easy refactoring, and scale.\n\nWe demonstrate the use of Skillful-Alhazen in two domains: job-hunting and disease-mechanism-understanding, each based on separate skill definitions. Our tool is open-source available from https://github.com/sciknow-io/skillful-alhazen",
+    "links": {
+      "github": "https://github.com/sciknow-io/skillful-alhazen"
+    }
+  },
+  {
+    "slug": "orla",
+    "title": "Orla: A Library for Serving LLM-Based Multi-Agent Systems",
+    "summary": "A serving library for LLM multi-agent systems that separates request execution from workflow policy, with stage mapping, workflow orchestration, and cross-workflow KV cache management.",
+    "primaryPillar": "System Optimization & Efficiency",
+    "tags": [
+      "System Optimization & Efficiency",
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Rana Shahout",
+        "affiliation": "Harvard University"
+      },
+      {
+        "name": "Hayder Tirmazi",
+        "affiliation": "Boston University"
+      },
+      {
+        "name": "Minlan Yu",
+        "affiliation": "Harvard University"
+      },
+      {
+        "name": "Michael Mitzenmacher",
+        "affiliation": "Harvard University"
+      }
+    ],
+    "abstract": "We introduce Orla, a library for constructing and running LLM-based agentic systems. Modern agentic applications consist of workflows that combine multiple LLM inference steps, tool calls, and heterogeneous infrastructure. Today, developers typically build these systems by manually composing orchestration code with LLM serving engines and tool execution logic.\n\nOrla provides a general abstraction that separates request execution from workflow-level policy. It acts as a serving layer above existing LLM inference engines: developers define workflows composed of stages, while Orla manages how those stages are mapped, executed, and coordinated across models and backends. It provides agent-level control through three mechanisms: a stage mapper, which assigns each stage to an appropriate model and backend; a workflow orchestrator, which schedules stages and manages their resources and context; and a memory manager, which manages inference state such as the KV cache across workflow boundaries.\n\nWe demonstrate Orla with a customer support workflow that exercises many of its capabilities. We evaluate Orla on two datasets, showing that stage mapping improves latency and cost compared to a single-model vLLM baseline, while workflow-level cache management reduces time-to-first-token."
+  },
+  {
+    "slug": "conversational-grant-discovery",
+    "title": "A Compound AI Agent for Conversational Grant Discovery",
+    "summary": "A compound AI agent that unifies fragmented federal grant discovery across ~12,000 opportunities with conversational multi-turn search, used by 3,000+ researchers.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Zhisheng Tang",
+        "affiliation": "University of Southern California"
+      },
+      {
+        "name": "Mayank Kejriwal",
+        "affiliation": "University of Southern California"
+      }
+    ],
+    "abstract": "Research funding discovery remains fundamentally fragmented: researchers navigate disparate agency portals (e.g., in the United States, NSF, NIH, DARPA, Grants.gov, and many others) with heterogeneous interfaces, search capabilities, and data schemas. We present a compound AI system that unifies this landscape through two tightly coupled components: (1) an aggregation layer that autonomously collects, normalizes, and indexes almost 12,000 federal and nonprofit opportunities from fragmented sources via LLM-equipped browser agents, maintaining a biweekly-updated unified database; and (2) an agentic ReAct-based query processing layer that interprets research context (including from PDF documents) and employs hybrid search combining a structured index with selective web search to retrieve relevant opportunities — while avoiding LLM hallucination. The conversational interface supports iterative refinement through multi-turn interactions, allowing researchers to progressively apply constraints without reformulating their core research description. Results stream in real time with full transparency of intermediate reasoning, enabling appropriate calibration of user trust. Currently used by almost 3,000+ users, our approach demonstrates the feasibility of compound AI in reducing grant discovery time from 30–45 minutes (manual, fragmented portal searches) to under 10 minutes (unified, conversational search)."
+  },
+  {
+    "slug": "operama",
+    "title": "Operama: Goal-Oriented Reliability and Self-Improvement for Multi-Agent Systems",
+    "summary": "A runtime reliability framework for multi-agent systems that decomposes goals into verifiable sub-goals, monitors execution, and automatically proposes policy updates without retraining.",
+    "primaryPillar": "Engineering & Operations",
+    "tags": [
+      "Engineering & Operations",
+      "Evaluation & Benchmarking"
+    ],
+    "authors": [
+      {
+        "name": "Vishwanath Katharki",
+        "affiliation": "Operama"
+      },
+      {
+        "name": "Sainyam Galhotra",
+        "affiliation": "Cornell University"
+      }
+    ],
+    "abstract": "We present Operama, a runtime reliability and self-improvement framework for multi-agent AI systems. Modern agentic pipelines frequently degrade when task distributions change, tools fail, or prompts drift, yet existing frameworks provide limited support for diagnosing and correcting these failures. Operama introduces three core components: (1) a Goal Decomposition Engine (GDE) that translates high-level objectives into verifiable sub-goals, (2) a Runtime Reliability Monitor (RRM) that tracks agent execution and detects goal-level degradation, and (3) a Self-Improvement Loop (SIL) that analyzes execution traces and automatically proposes policy updates.\n\nIn this demonstration we present a live end-to-end scenario where a multi-agent software engineering system plans, implements, tests, and deploys a microservice while Operama continuously monitors reliability and adapts the system when failures occur. Attendees will observe how Operama identifies failure points, generates new evaluation scenarios, and improves agent performance without retraining the underlying models."
+  },
+  {
+    "slug": "valkyrie",
+    "title": "Valkyrie: A Microservice-Based Framework for Scalable Evaluation of AI Agents",
+    "summary": "A microservice-based benchmarking framework that decouples benchmark code, agent logic, and execution infrastructure for scalable, reproducible evaluation of AI agents.",
+    "primaryPillar": "Evaluation & Benchmarking",
+    "tags": [
+      "Evaluation & Benchmarking",
+      "Engineering & Operations"
+    ],
+    "authors": [
+      {
+        "name": "Jarett Forzano",
+        "affiliation": "Vals AI"
+      },
+      {
+        "name": "Omar Almatov",
+        "affiliation": "Vals AI"
+      },
+      {
+        "name": "Langston Nashold",
+        "affiliation": "Vals AI"
+      },
+      {
+        "name": "Nikil Ravi",
+        "affiliation": "Vals AI"
+      },
+      {
+        "name": "Orestes Kassian",
+        "affiliation": "Vals AI"
+      }
+    ],
+    "abstract": "Existing frameworks couple benchmark code, agent logic, and execution infrastructure into monolithic repositories, relying on local execution, ephemeral storage, and trust rather than verification. We present Valkyrie, a microservice-based benchmarking framework that decouples these concerns into independently deployable services, scales task execution horizontally across isolated Daytona sandboxes, and persists all results in the organization's own cloud account. We validate the system by running four agents across SWE-Bench Verified and Terminal-Bench 2.0, demonstrating end-to-end orchestration across multiple benchmarks without per-run manual configuration.",
+    "links": {
+      "github": "https://github.com/vals-ai/Valkyrie"
+    }
+  },
+  {
+    "slug": "agentclick",
+    "title": "AgentClick: A Skill-Based Human-in-the-Loop Review Layer for Terminal AI Agents",
+    "summary": "A browser-based human-in-the-loop review layer for terminal AI agents that enables structured supervision of emails, plans, code, and agent trajectories via interactive web UI.",
+    "primaryPillar": "Engineering & Operations",
+    "tags": [
+      "Engineering & Operations",
+      "Security & Privacy"
+    ],
+    "authors": [
+      {
+        "name": "Haomin Zhuang",
+        "affiliation": "University of Notre Dame"
+      },
+      {
+        "name": "Hanwen Xing",
+        "affiliation": "University of Southern California"
+      },
+      {
+        "name": "Xiangliang Zhang",
+        "affiliation": "University of Notre Dame"
+      }
+    ],
+    "abstract": "Recent autonomous AI agents such as Codex, and Claude Code have made it increasingly practical for users to delegate complex tasks, including writing emails, executing code, issuing shell commands, and carrying out multi-step plans. However, despite these capabilities, human-agent interaction still largely happens through terminal interfaces or remote text-based channels such as Discord. These interaction modes are often inefficient and unfriendly: long text outputs are difficult to read and review, proposed actions lack clear structure and visual context, and users must express feedback by typing detailed corrections, which is cumbersome and often discourages effective collaboration. As a result, non-expert users in particular face a high barrier to working productively with agents.\n\nTo address this gap, we present AgentClick, an interactive review layer for terminal-based agents. AgentClick is implemented as a localhost npm server paired with a skill-based plugin that connects the running agent to a browser interface, allowing users to supervise and collaborate with agents through a structured web UI rather than raw terminal text alone. The system supports a range of human-in-the-loop workflows, including email drafting and revision, plan review and modification, memory management, trajectory inspection and visualization, and error localization during agent execution. It also turns code generation and execution into a reviewable process, enabling users to inspect and intervene before consequential actions are taken. In addition, AgentClick supports persistent preference capture through editable memory and remote access over HTTP, allowing users to review agents running on servers from their personal devices. Our goal is to lower the barrier for non-expert users and improve the efficiency and quality of human-agent co-work. The code is available at https://github.com/agentlayer-io/AgentClick/tree/main.",
+    "links": {
+      "github": "https://github.com/agentlayer-io/AgentClick/tree/main"
+    }
+  },
+  {
+    "slug": "arena-benchmarking",
+    "title": "Arena: Benchmarking AI Agent Frameworks Under Fixed-Model Conditions",
+    "summary": "An open-source benchmarking tool that evaluates agent frameworks under fixed-model conditions, finding that scenario-specific orchestration adds no measurable benefit over generic agentic loops.",
+    "primaryPillar": "Evaluation & Benchmarking",
+    "tags": [
+      "Evaluation & Benchmarking"
+    ],
+    "authors": [
+      {
+        "name": "Roberto Milev",
+        "affiliation": "Navan"
+      },
+      {
+        "name": "Uday Kanagala",
+        "affiliation": "Navan"
+      }
+    ],
+    "abstract": "Existing agent benchmarks evaluate models, not the frameworks that orchestrate them, making it impossible to isolate how much performance comes from the model versus the framework's orchestration code. We present Arena, an open-source benchmarking tool that evaluates agent frameworks under fixed-model conditions. Arena fixes six frameworks — Claude Agent SDK, LangChain, LangGraph, AWS Strands, CrewAI, and Google ADK — to Claude Sonnet 4.5 on AWS Bedrock, connects them to the same MCP tool server, and scores them with a deterministic evaluator across three scenarios of increasing complexity using six metrics: code complexity, step efficiency, latency, correctness, consistency, and cost. We ask: does explicitly programming agent flows provide measurable benefit over a generic agentic loop driven by prompts? Our evaluation reveals that on simple tasks all frameworks perform comparably, but as complexity grows, traditional frameworks require 2–4× more scenario-specific orchestration code yet gain no correctness advantage. The Claude Agent SDK uses the same generic agentic loop across all scenarios; only the prompt changes. We contribute (1) a fixed-model methodology isolating framework behavor from model capability, (2) an extensible open-source tool for practitioner evaluation, and (3) empirical evidence that scenario-specific orchestration adds no measurable benefit over generic agentic loops driven by prompts."
+  }
+]

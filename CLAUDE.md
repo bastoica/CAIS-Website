@@ -247,6 +247,98 @@ Use `class="py-5 bg-light"` to alternate background colors between sections.
 </div>
 ```
 
+## Publishing Accepted Papers & Demos
+
+The program pages live under `src/pages/program/2026/` and are driven by data files in `src/_data/`. Accepted work is in two tracks: research papers and demos.
+
+### Data file locations
+
+- `src/_data/papers2026.json` — accepted research papers (array; `[]` means "decisions not yet released")
+- `src/_data/demos2026.json` — accepted demos (array)
+- `src/_data/programPillars.json` — the 5 pillars with colors, icons, and prose descriptions (do not edit lightly; pillar names must match across files)
+
+### Paper schema
+
+```json
+{
+  "slug": "url-safe-identifier",
+  "title": "Full paper title",
+  "summary": "One-sentence summary shown on the list page.",
+  "primaryPillar": "Architectural Patterns & Composition",
+  "tags": ["Architectural Patterns & Composition", "Evaluation & Benchmarking"],
+  "authors": [
+    {"name": "Full Name", "affiliation": "Institution"}
+  ],
+  "abstract": "Paragraph of abstract text.",
+  "keyContributions": ["Bullet 1.", "Bullet 2.", "Bullet 3."],
+  "session": {"name": "Session 3A: Architectures", "time": "Wed May 27, 10:30–12:00"},
+  "bibtex": "@inproceedings{...}",
+  "links": {
+    "pdf": "https://...",
+    "github": "https://...",
+    "video": "https://...",
+    "slides": "https://...",
+    "alphaxiv": "https://...",
+    "project": "https://..."
+  }
+}
+```
+
+**Required**: `slug`, `title`, `summary`, `primaryPillar`, `tags`, `authors[]`, `abstract`.
+**Optional**: `keyContributions`, `session`, `bibtex`, `links` (any subset).
+
+### Demo schema
+
+```json
+{
+  "slug": "url-safe-identifier",
+  "title": "Demo title",
+  "summary": "One-sentence summary.",
+  "authors": [{"name": "Name", "affiliation": "Org"}],
+  "abstract": "Optional longer description.",
+  "links": {
+    "demo": "https://...",
+    "github": "https://...",
+    "project": "https://...",
+    "pdf": "https://...",
+    "video": "https://...",
+    "slides": "https://..."
+  }
+}
+```
+
+**Required**: `slug`, `title`, `summary`, `authors[]`.
+**Optional**: `abstract`, `links`.
+
+### Pillar naming rules
+
+- `primaryPillar` and every entry in `tags` must be a copy-paste match of a `title` in `programPillars.json` (e.g., exactly `"Architectural Patterns & Composition"`, not `"Architectural Patterns"`).
+- `tags` is ordered. Index 0 is the primary (should equal `primaryPillar`); index 1 is the 2nd-most-relevant pillar, etc. Badges render in this order on the paper card and detail page.
+- Slugs should be lowercase, hyphen-separated, and URL-safe. They become the final path segment (`/program/2026/papers/<slug>/`).
+
+### Going live with papers (Tuesday, April 21, 2026)
+
+1. Replace `src/_data/papers2026.json` with the real data (transform the provided markdown into the schema above).
+2. Remove `noindex: true` from the frontmatter of `src/pages/program/2026/papers.njk`.
+3. In `src/pages/program/2026/index.njk` (the program landing page):
+   - Remove the "Announcing April 21, 2026" disabled button from the Papers card.
+   - Replace it with an active "Browse Papers" link to `/program/2026/papers/` (mirror the Demos card).
+   - Update the lead paragraph to remove the "Paper decisions will be released…" sentence.
+4. In `src/index.njk` (homepage), change the Program teaser button back to **"See Accepted Papers & Demos →"** and remove the "Research papers announced…" subtext beneath it.
+5. The `{% if (papers2026 | length) == 0 %}` empty-state branch in `papers.njk` can be left as dead code (activates again if the array is ever empty in a future year) or deleted.
+6. `npm run build` and deploy.
+
+### Next year (CAIS 2027)
+
+URLs are year-namespaced so 2026 URLs remain stable forever:
+
+1. `cp src/_data/papers2026.json src/_data/papers2027.json` and edit.
+2. `cp src/_data/demos2026.json src/_data/demos2027.json` and edit.
+3. `cp -r src/pages/program/2026/ src/pages/program/2027/` and search-replace `2026` → `2027` (including permalinks and data-variable references like `papers2026` → `papers2027`).
+4. Update `src/_data/navigation.json` — the "Program" nav item href from `/program/2026/` to `/program/2027/`.
+5. Update the "See Accepted Papers & Demos" link on the homepage (`src/index.njk`) to `/program/2027/`.
+6. The 2026 pages stay published and linkable.
+
 ## Important Notes
 
 - **Always preview changes locally** before committing

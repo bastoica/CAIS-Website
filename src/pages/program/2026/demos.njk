@@ -1,0 +1,202 @@
+---
+layout: base.njk
+title: Accepted Demos — CAIS 2026
+description: System demonstrations accepted to ACM CAIS 2026, the ACM Conference on AI and Agentic Systems.
+permalink: /program/2026/demos/
+extraStyles: |
+    .demo-card {
+        border: 1px solid var(--silver);
+        border-left: 4px solid var(--silver);
+        border-radius: 4px;
+        background: var(--seasalt);
+        padding: 1rem 1.25rem;
+        margin-bottom: 1rem;
+        transition: border-color 200ms linear, box-shadow 150ms ease;
+    }
+    .demo-card:hover {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .demo-card h3 {
+        margin-bottom: 0.25rem;
+    }
+    .demo-card h3 a {
+        color: var(--eerie-black);
+    }
+    .demo-card h3 a:hover {
+        color: var(--terracotta-deep);
+    }
+    .pillar-toc-card {
+        position: sticky;
+        top: 84px;
+    }
+    .pillar-toc-card ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .pillar-toc-card li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.35rem 0;
+        border-bottom: 1px solid var(--platinum);
+    }
+    .pillar-toc-card li:last-child {
+        border-bottom: none;
+    }
+    .pillar-toc-card a {
+        color: var(--eerie-black);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        flex: 1;
+    }
+    .pillar-toc-card a:hover {
+        color: var(--terracotta-deep);
+        text-decoration: underline;
+    }
+    .pillar-count {
+        font-size: 0.75rem;
+        color: var(--davys-gray);
+        font-weight: 500;
+    }
+    .pillar-badge {
+        font-size: 0.7rem;
+        font-weight: 500;
+        color: var(--seasalt);
+        padding: 0.25em 0.55em;
+        border-radius: 3px;
+        display: inline-block;
+        margin-right: 0.25rem;
+    }
+    .pillar-badge-primary {
+        box-shadow: inset 0 0 0 2px var(--eerie-black);
+    }
+    .anchor {
+        scroll-margin-top: 84px;
+    }
+    .pillar-item {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--platinum);
+    }
+    .pillar-item:first-child {
+        padding-top: 0;
+    }
+    .pillar-item:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+    .pillar-item-title {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--eerie-black);
+        margin: 0 0 0.25rem 0;
+    }
+    .pillar-item-text {
+        font-size: 0.8rem;
+        color: var(--davys-gray);
+        margin: 0;
+        line-height: 1.45;
+    }
+---
+
+<header class="hero">
+    <div class="container">
+        <h1 class="display-6 fw-bold">Accepted Demos</h1>
+        <p class="lead mb-0">ACM CAIS 2026 — Demo Track</p>
+    </div>
+</header>
+
+<div class="py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Main Content -->
+      <div class="col-lg-8">
+        <p class="lead mb-4">{{ demos2026 | length }} system demonstrations accepted to CAIS 2026. These are working implementations of AI systems and agent systems that will be presented live in San Jose, May 27–29, 2026. Demos are grouped by primary pillar. Click any demo for its abstract, author list, and video or artifact links.</p>
+
+        {% for pillar in programPillars %}
+            {% set pillarDemos = [] %}
+            {% for demo in demos2026 %}
+                {% if demo.primaryPillar == pillar.title %}
+                    {% set pillarDemos = (pillarDemos.push(demo), pillarDemos) %}
+                {% endif %}
+            {% endfor %}
+
+            {% if pillarDemos | length > 0 %}
+            <section id="pillar-{{ loop.index }}" class="anchor mb-5">
+                <h2 class="section-title h5 border-bottom pb-2 mb-3" style="border-bottom-color: {{ pillar.color }} !important; border-bottom-width: 2px !important;">
+                    <i class="bi {{ pillar.icon }} me-2" style="color: {{ pillar.color }};"></i>{{ pillar.title }}
+                    <span class="text-muted small fw-normal ms-2">{{ pillarDemos | length }} demo{% if (pillarDemos | length) != 1 %}s{% endif %}</span>
+                </h2>
+
+                {% for demo in pillarDemos %}
+                <div class="demo-card" style="border-left-color: {{ pillar.color }};">
+                    <h3 class="h6 fw-bold">
+                        <a href="/program/2026/demos/{{ demo.slug }}/" class="text-decoration-none">{{ demo.title }}</a>
+                    </h3>
+                    <p class="small text-muted mb-1">
+                        {% for author in demo.authors %}{{ author.name }} <span class="text-muted">({{ author.affiliation }})</span>{% if not loop.last %}, {% endif %}{% endfor %}
+                    </p>
+                    <p class="small mb-2">{{ demo.summary }}</p>
+                    {% if demo.tags %}
+                    <div>
+                        {% for tagTitle in demo.tags %}
+                            {% for p in programPillars %}
+                                {% if p.title == tagTitle %}
+                                    <span class="pillar-badge{% if p.title == demo.primaryPillar %} pillar-badge-primary{% endif %}" style="background-color: {{ p.color }};"><i class="bi {{ p.icon }} me-1"></i>{{ p.title }}</span>
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </section>
+            {% endif %}
+        {% endfor %}
+      </div>
+
+      <!-- Sidebar TOC -->
+      <div class="col-lg-4">
+        <aside class="pillar-toc-card">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h3 class="h6 fw-bold mb-3"><i class="bi bi-list-ul me-2"></i>Jump to Pillar</h3>
+                    <ul>
+                        {% for pillar in programPillars %}
+                            {% set pillarCount = 0 %}
+                            {% for demo in demos2026 %}
+                                {% if demo.primaryPillar == pillar.title %}{% set pillarCount = pillarCount + 1 %}{% endif %}
+                            {% endfor %}
+                            {% if pillarCount > 0 %}
+                            <li>
+                                <i class="bi {{ pillar.icon }}" style="color: {{ pillar.color }}; font-size: 1rem; width: 18px; text-align: center;"></i>
+                                <a href="#pillar-{{ loop.index }}">{{ pillar.title }}</a>
+                                <span class="pillar-count">{{ pillarCount }}</span>
+                            </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="h6 fw-bold mb-3"><i class="bi bi-compass me-2"></i>What Each Pillar Covers</h3>
+                    <div class="pillar-narrative">
+                        {% for pillar in programPillars %}
+                        <div class="pillar-item">
+                            <h4 class="pillar-item-title"><i class="bi {{ pillar.icon }} me-1" style="color: {{ pillar.color }};"></i>{{ pillar.title }}</h4>
+                            <p class="pillar-item-text">{{ pillar.description }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </aside>
+      </div>
+
+    </div>
+  </div>
+</div>

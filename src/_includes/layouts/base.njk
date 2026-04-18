@@ -9,6 +9,10 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
+    {% if noindex %}
+    <meta name="robots" content="noindex" />
+    {% endif %}
+
     {% if showOpenGraph %}
     <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website" />
