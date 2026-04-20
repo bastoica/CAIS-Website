@@ -689,8 +689,10 @@ a:focus, button:focus, .btn:focus {
 }
 
 .sponsor-strip img {
-    height: 36px;
+    height: 50px;
+    max-width: 200px;
     width: auto;
+    object-fit: contain;
     filter: grayscale(100%);
     opacity: 0.55;
     transition: filter 300ms ease, opacity 300ms ease;
@@ -706,7 +708,8 @@ a:focus, button:focus, .btn:focus {
         gap: 1.5rem 2.5rem;
     }
     .sponsor-strip img {
-        height: 28px;
+        height: 40px;
+        max-width: 160px;
     }
 }
 

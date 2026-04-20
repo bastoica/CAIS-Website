@@ -115,7 +115,7 @@ extraStyles: |
   }
 
   /* Sponsor tier display */
-  .sponsor-tier { margin-bottom: 2rem; }
+  .sponsor-tier { margin-bottom: 2.5rem; }
   .sponsor-tier-label {
     font-weight: 700;
     text-transform: uppercase;
@@ -123,34 +123,52 @@ extraStyles: |
     font-size: 0.75rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid var(--platinum);
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
   }
   .sponsor-tier-label.gold { color: var(--cais-accent); border-color: var(--cais-accent); }
   .sponsor-tier-label.silver { color: var(--davys-gray); border-color: var(--davys-gray); }
   .sponsor-tier-label.bronze { color: #8b7355; border-color: #8b7355; }
   .sponsor-tier-label.supporting { color: var(--davys-gray); border-color: var(--platinum); }
+
+  /* Uniform logo grid — containment-box approach.
+     Every logo sits inside a fixed-height slot. object-fit: contain
+     prevents distortion regardless of aspect ratio. Tier hierarchy
+     is expressed through subtle slot-height differences, not chaos. */
   .sponsor-logos {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 3rem;
+    justify-content: flex-start;
+    gap: 2.5rem 3.5rem;
   }
-  .sponsor-logos.gold { gap: 4rem; }
   .sponsor-logos a {
-    display: block;
-    transition: opacity 150ms ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 200ms ease;
   }
   .sponsor-logos a:hover { opacity: 0.7; }
-  .sponsor-logos.gold img { height: 60px; width: auto; }
-  .sponsor-logos.silver img { height: 48px; width: auto; }
-  .sponsor-logos.bronze img { height: 36px; width: auto; }
-  .sponsor-logos.supporting img { height: 28px; width: auto; }
+
+  /* Containment slots — fixed height, max-width cap, object-fit: contain.
+     This is the key: logos can't exceed the slot height regardless of
+     native SVG/PNG dimensions, so visual weight stays uniform within a tier. */
+  .sponsor-logos img {
+    object-fit: contain;
+    width: auto;
+  }
+  .sponsor-logos.gold img    { height: 48px; max-width: 220px; }
+  .sponsor-logos.silver img  { height: 40px; max-width: 200px; }
+  .sponsor-logos.bronze img  { height: 36px; max-width: 180px; }
+  .sponsor-logos.supporting img { height: 28px; max-width: 160px; }
 
   @media (max-width: 768px) {
     .sponsor-hero { padding: 3rem 0; }
     .tier-price { font-size: 1.35rem; }
-    .sponsor-logos.gold img { height: 48px; }
-    .sponsor-logos.silver img { height: 36px; }
+    .sponsor-logos { gap: 1.5rem 2.5rem; }
+    .sponsor-logos.gold img    { height: 36px; max-width: 180px; }
+    .sponsor-logos.silver img  { height: 32px; max-width: 160px; }
+    .sponsor-logos.bronze img  { height: 28px; max-width: 140px; }
+    .sponsor-logos.supporting img { height: 22px; max-width: 120px; }
   }
 ---
 
@@ -374,7 +392,7 @@ extraStyles: |
               {% for s in sponsors.gold %}
               {% if s.logo %}
               <a href="{{ s.url }}" target="_blank" rel="noopener">
-                <img src="/assets/images/{{ s.logo }}" alt="{{ s.name }}" loading="lazy"{% if s.maxWidth %} style="max-width: {{ s.maxWidth }}"{% endif %} />
+                <img src="/assets/images/{{ s.logo }}" alt="{{ s.name }}" loading="lazy" />
               </a>
               {% endif %}
               {% endfor %}

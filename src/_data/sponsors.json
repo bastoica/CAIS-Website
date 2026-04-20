@@ -8,8 +8,7 @@
     {
       "name": "Megagon Labs",
       "logo": "sponsors/megagon-labs.svg",
-      "url": "https://megagon.ai",
-      "maxWidth": "340px"
+      "url": "https://megagon.ai"
     }
   ],
   "silver": [
@@ -22,7 +21,7 @@
   "bronze": [
     {
       "name": "Oracle",
-      "logo": "sponsors/oracle.png",
+      "logo": "sponsors/oracle.svg",
       "url": "https://www.oracle.com"
     }
   ],
