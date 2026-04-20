@@ -1,0 +1,83 @@
+---
+pagination:
+    data: demos2026
+    size: 1
+    alias: demo
+layout: base.njk
+permalink: "/program/2026/demos/{{ demo.slug }}/"
+eleventyComputed:
+    title: "{{ demo.title }} — CAIS 2026"
+    description: "{{ demo.summary }}"
+---
+
+<header class="hero">
+    <div class="container">
+        <p class="mb-2"><a href="/program/2026/demos/" class="small"><i class="bi bi-arrow-left me-1"></i>All Accepted Demos</a></p>
+        <h1 class="h2 fw-bold mb-3">{{ demo.title }}</h1>
+        <p class="mb-2">
+            {% for author in demo.authors %}<strong>{{ author.name }}</strong> <span class="text-muted">({{ author.affiliation }})</span>{% if not loop.last %}, {% endif %}{% endfor %}
+        </p>
+        {% if demo.tags %}
+        <p class="mb-0">
+            {% for tagTitle in demo.tags %}
+                {% for p in programPillars %}
+                    {% if p.title == tagTitle %}
+                        <span class="badge me-1" style="background-color: {{ p.color }}; color: var(--seasalt); {% if p.title == demo.primaryPillar %}box-shadow: inset 0 0 0 2px var(--eerie-black);{% endif %}"><i class="bi {{ p.icon }} me-1"></i>{{ p.title }}</span>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </p>
+        {% endif %}
+    </div>
+</header>
+
+<div class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-8">
+
+                <section class="mb-5">
+                    <h2 class="section-title h4 border-bottom pb-2">Summary</h2>
+                    <p class="lead">{{ demo.summary }}</p>
+                </section>
+
+                {% if demo.abstract %}
+                <section class="mb-5">
+                    <h2 class="section-title h4 border-bottom pb-2">Description</h2>
+                    <p>{{ demo.abstract }}</p>
+                </section>
+                {% endif %}
+
+            </div>
+
+            <div class="col-lg-4">
+                <aside>
+                    {% if demo.links %}
+                    <div class="card dates-card mb-4">
+                        <div class="card-body">
+                            <h3 class="h6 fw-bold mb-3"><i class="bi bi-link-45deg me-2"></i>Artifacts & Links</h3>
+                            <ul class="list-unstyled mb-0">
+                                {% if demo.links.demo %}<li class="mb-2"><a href="{{ demo.links.demo }}" target="_blank" rel="noopener"><i class="bi bi-play-btn me-2"></i>Live Demo</a></li>{% endif %}
+                                {% if demo.links.github %}<li class="mb-2"><a href="{{ demo.links.github }}" target="_blank" rel="noopener"><i class="bi bi-github me-2"></i>Code (GitHub)</a></li>{% endif %}
+                                {% if demo.links.project %}<li class="mb-2"><a href="{{ demo.links.project }}" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Project site</a></li>{% endif %}
+                                {% if demo.links.pdf %}<li class="mb-2"><a href="{{ demo.links.pdf }}" target="_blank" rel="noopener"><i class="bi bi-file-earmark-pdf me-2"></i>Paper (PDF)</a></li>{% endif %}
+                                {% if demo.links.video %}<li class="mb-2"><a href="{{ demo.links.video }}" target="_blank" rel="noopener"><i class="bi bi-play-circle me-2"></i>Video</a></li>{% endif %}
+                                {% if demo.links.slides %}<li><a href="{{ demo.links.slides }}" target="_blank" rel="noopener"><i class="bi bi-easel me-2"></i>Slides</a></li>{% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                    {% endif %}
+
+                    <div class="highlight-box p-3">
+                        <h3 class="h6 fw-bold mb-2"><i class="bi bi-people me-2"></i>Authors</h3>
+                        <ul class="list-unstyled small mb-0">
+                            {% for author in demo.authors %}
+                            <li class="mb-1"><strong>{{ author.name }}</strong><br><span class="text-muted">{{ author.affiliation }}</span></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</div>
