@@ -9,6 +9,11 @@
       "name": "Megagon Labs",
       "logo": "sponsors/megagon-labs.svg",
       "url": "https://megagon.ai"
+    },
+    {
+      "name": "Databricks",
+      "logo": "sponsors/databricks.svg",
+      "url": "https://www.databricks.com"
     }
   ],
   "silver": [
