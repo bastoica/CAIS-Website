@@ -18,9 +18,10 @@ showSponsorshipCallout: false
                 </a>
                 <h1 class="display-5 fw-bold mb-3">{{ site.tagline }}</h1>
                 <p class="lead mb-4">{{ site.name }} — {{ site.description }}</p>
-                <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
+                <div class="d-flex flex-column gap-2 mb-4">
                     <span class="fs-5"><i class="bi bi-geo-alt-fill me-1" aria-hidden="true"></i> {{ site.location }}</span>
-                    <span class="fs-5"><i class="bi bi-calendar-event me-1" aria-hidden="true"></i> {{ site.dates.display }}</span>
+                    <span class="fs-5"><i class="bi bi-calendar-event me-1" aria-hidden="true"></i> <strong>Workshops &amp; Tutorials</strong> — Tue, May 26</span>
+                    <span class="fs-5"><i class="bi bi-calendar-event me-1" aria-hidden="true"></i> <strong>Main Conference</strong> — Wed–Fri, May 27–29</span>
                 </div>
                 <div class="d-flex flex-wrap align-items-center gap-3 mb-2">
                     <span class="badge bg-success fs-6 py-2 px-3"><i class="bi bi-ticket-perforated me-2" aria-hidden="true"></i>Registration is open — early-bird pricing through {{ site.registration.earlyBirdDeadline.display }}</span>
@@ -38,6 +39,149 @@ showSponsorshipCallout: false
         </div>
     </div>
 </header>
+
+<!-- ===== PROGRAM PREVIEW ===== -->
+<section id="program" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title mb-3">The 2026 Program</h2>
+        <p class="lead mb-4">Four days in San Jose, May 26–29. One day of workshops and tutorials, followed by three days of peer-reviewed research papers, system demonstrations, and keynotes.</p>
+
+        <div class="row g-4 mb-4">
+            <div class="col-md-4">
+                <div class="card card-quiet p-4 h-100">
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <i class="bi bi-code-slash fs-1" style="color:var(--cais-accent);" aria-hidden="true"></i>
+                        <div>
+                            <p class="text-uppercase small fw-bold text-muted mb-1" style="letter-spacing: 1px;">Tue, May 26</p>
+                            <h3 class="h5 fw-bold mb-2">5 Workshops &amp; Tutorials</h3>
+                            <p class="mb-3">Day-long programs on agent skills, agentic software engineering, RL environments, discovery agents, and more.</p>
+                            <a href="/pages/workshops/" class="btn btn-outline-primary" style="border-color:var(--cais-accent); color:var(--cais-accent);">
+                                <i class="bi bi-arrow-right me-1"></i>Browse Workshops
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-quiet p-4 h-100">
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <i class="bi bi-file-earmark-text fs-1" style="color:var(--cais-accent);" aria-hidden="true"></i>
+                        <div>
+                            <p class="text-uppercase small fw-bold text-muted mb-1" style="letter-spacing: 1px;">Wed–Fri, May 27–29</p>
+                            <h3 class="h5 fw-bold mb-2">{{ papers2026 | length }} Research Papers</h3>
+                            <p class="mb-3">Peer-reviewed contributions on architecture, optimization, evaluation, security, and engineering of AI and agentic systems.</p>
+                            <a href="/program/2026/papers/" class="btn btn-outline-primary" style="border-color:var(--cais-accent); color:var(--cais-accent);">
+                                <i class="bi bi-arrow-right me-1"></i>Browse Papers
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-quiet p-4 h-100">
+                    <div class="d-flex align-items-start gap-3 mb-2">
+                        <i class="bi bi-display fs-1" style="color:var(--cais-accent);" aria-hidden="true"></i>
+                        <div>
+                            <p class="text-uppercase small fw-bold text-muted mb-1" style="letter-spacing: 1px;">Wed–Fri, May 27–29</p>
+                            <h3 class="h5 fw-bold mb-2">{{ demos2026 | length }} System Demos</h3>
+                            <p class="mb-3">Working implementations of AI systems and agent systems, presented live by their authors.</p>
+                            <a href="/program/2026/demos/" class="btn btn-outline-primary" style="border-color:var(--cais-accent); color:var(--cais-accent);">
+                                <i class="bi bi-arrow-right me-1"></i>Browse Demos
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Participating Institutions -->
+        <div class="card card-quiet p-4">
+            <h3 class="h6 fw-bold text-uppercase mb-3" style="letter-spacing: 1px; color: var(--davys-gray);"><i class="bi bi-mortarboard me-2"></i>Participating Institutions</h3>
+            <p class="small mb-3">CAIS 2026 papers and demos come from <strong>115+ institutions</strong> across academia and industry, including:</p>
+            <div class="d-flex flex-wrap gap-2">                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Adobe</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Allen Institute for AI</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Amazon</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Bar Ilan University</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Bosch</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Carnegie Mellon University</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Cisco</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Cornell University</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Dartmouth College</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Databricks</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Duke University</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">EPFL</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Georgia Tech</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Google</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Harvard University</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">IBM</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Imperial College London</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Johns Hopkins University</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">KAUST</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">LinkedIn</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">MBZUAI</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Megagon Labs</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Meta</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Microsoft</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">MIT</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Navan</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Northeastern University</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">NVIDIA</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">NYU</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">OpenAI</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Oracle</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Pacific Northwest National Laboratory</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Princeton University</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Purdue University</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Red Hat</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Replit</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Salesforce</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">ServiceNow</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">Stanford University</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">UC Berkeley</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">University of Cambridge</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">University of Chicago</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">University of Illinois Urbana-Champaign</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">University of Maryland</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">University of Michigan</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">University of Notre Dame</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">University of Pennsylvania</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">University of Texas at Austin</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">University of Toronto</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">University of Washington</span>
+                <span class="badge" style="background: var(--platinum); color: var(--eerie-black); font-weight: 500; padding: 0.4em 0.7em;">USC</span>
+                <span class="badge" style="background: var(--platinum); color: var(--davys-gray); font-weight: 500; padding: 0.4em 0.7em; font-style: italic;">+ 65 more</span>
+            </div>
+        </div>
+
+        <!-- At a glance -->
+        <div class="card card-quiet p-4 mt-4">
+            <h3 class="h6 fw-bold text-uppercase mb-3" style="letter-spacing: 1px; color: var(--davys-gray);"><i class="bi bi-calendar-week me-2"></i>At a Glance</h3>
+            <table class="table table-sm mb-0" style="background: var(--platinum);">
+                <tbody>
+                    <tr>
+                        <td style="width: 200px;"><strong>Tue, May 26</strong></td>
+                        <td>Workshops &amp; Tutorials</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Wed, May 27</strong></td>
+                        <td>Main Conference — Day 1 (papers, demos, keynote)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Thu, May 28</strong></td>
+                        <td>Main Conference — Day 2 (papers, demos, keynote)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fri, May 29</strong></td>
+                        <td>Main Conference — Day 3 (papers, demos, keynote)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        
+    </div>
+</section>
+
 
 <!-- ===== VENUE DETAILS ===== -->
 <section class="py-4 bg-white border-bottom">
@@ -149,77 +293,6 @@ showSponsorshipCallout: false
 
         <div class="text-center mt-4">
             <a href="/pages/committee/" class="btn btn-outline-primary">View Full Committee <i class="bi bi-arrow-right ms-1"></i></a>
-        </div>
-    </div>
-</section>
-
-<!-- ===== PROGRAM PREVIEW ===== -->
-<section id="program" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="section-title mb-3">Conference Program</h2>
-        <p class="lead mb-4">Four days of cutting-edge research presentations, hands-on tutorials, and community building—{{ site.dates.display }} in San Jose.</p>
-
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="card card-quiet p-4 h-100">
-                    <div class="d-flex align-items-start gap-3 mb-3">
-                        <div class="flex-shrink-0">
-                            <i class="bi bi-file-earmark-text fs-1" style="color:var(--cais-accent);" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                            <h3 class="h5 fw-bold mb-2">Research Track</h3>
-                            <p class="mb-3">Peer-reviewed papers on architectural patterns, optimization, engineering, and evaluation of agentic AI systems. Includes keynotes, plenaries, and poster sessions.</p>
-                            <a href="/pages/cfp/" class="btn btn-outline-primary" style="border-color:var(--cais-accent); color:var(--cais-accent);">Call for Papers (Closed)</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card card-quiet p-4 h-100">
-                    <div class="d-flex align-items-start gap-3 mb-3">
-                        <div class="flex-shrink-0">
-                            <i class="bi bi-display fs-1" style="color:var(--cais-accent);" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                            <h3 class="h5 fw-bold mb-2">System Demonstrations</h3>
-                            <p class="mb-3">Showcase innovative AI systems, compound AI architectures, and autonomous agents through live demos and short papers.</p>
-                            <a href="/pages/demos/" class="btn btn-outline-primary" style="border-color:var(--cais-accent); color:var(--cais-accent);">Call for Demos (Closed)</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card card-quiet p-4 h-100">
-                    <div class="d-flex align-items-start gap-3 mb-3">
-                        <div class="flex-shrink-0">
-                            <i class="bi bi-code-slash fs-1" style="color:var(--cais-accent);" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                            <h3 class="h5 fw-bold mb-2">Tutorials &amp; Workshops</h3>
-                            <p class="mb-3">Deep dives into practical methods and frameworks such as DSPy, LangChain, and more tools for building compound AI systems at scale.</p>
-                            <a href="/pages/workshops/" class="btn btn-outline-primary" style="border-color:var(--cais-accent); color:var(--cais-accent);">Workshops &amp; Tutorials</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card card-quiet p-4 h-100">
-                    <div class="d-flex align-items-start gap-3 mb-3">
-                        <div class="flex-shrink-0">
-                            <i class="bi bi-award fs-1" style="color:var(--cais-accent);" aria-hidden="true"></i>
-                        </div>
-                        <div>
-                            <h3 class="h5 fw-bold mb-2">Artifact Evaluation</h3>
-                            <p class="mb-3">Open artifacts, transparent evaluation, and ACM reproducibility badges to recognize high-quality, deployable research.</p>
-                            <a href="/pages/cfa/" class="btn btn-outline-primary" style="border-color:var(--cais-accent); color:var(--cais-accent);">Call for Artifacts</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="text-center mt-4">
-            <a href="/program/2026/" class="btn btn-outline-primary">See Accepted Papers &amp; Demos <i class="bi bi-arrow-right ms-1"></i></a>
         </div>
     </div>
 </section>
