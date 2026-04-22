@@ -1,1 +1,2111 @@
-[]
+[
+  {
+    "slug": "dossier-deep-research-via-ledger-driven-branching-search-and-query-encoding-lear",
+    "title": "Dossier: Deep Research via Ledger-Driven Branching Search and Query Encoding Learning",
+    "summary": "Dossier is a deep research agent that replaces linear search trajectories with parallel branching search, tracking claims, contradictions, and information gaps in a persistent Research Ledger. It consistently outperforms ReAct-style agents on multi-hop research tasks by preventing early retrieval failures from compounding through the reasoning chain.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Om Chabra",
+        "affiliation": "MIT"
+      },
+      {
+        "name": "Noah Ziems",
+        "affiliation": "University of Notre Dame"
+      },
+      {
+        "name": "Meng Jiang",
+        "affiliation": "University of Notre Dame"
+      },
+      {
+        "name": "Omar Khattab",
+        "affiliation": "MIT"
+      },
+      {
+        "name": "Hari Balakrishnan",
+        "affiliation": "MIT"
+      }
+    ],
+    "abstract": "Deep research requires synthesizing information across fragmented sources. Existing ReAct-style agents typically rely on long, linear search trajectories, where early retrieval failures propagate and compound through the reasoning chain. We introduce \\textbf{Dossier}, a deep research agent that replaces linear paths with {\\em locally parallel, branching search} managed by a persistent \\textbf{Research Ledger}. The Ledger explicitly tracks claims, contradictions, and information gaps, continuously updating as new evidence is synthesized. To improve the quality of each retrieval step, we introduce \\textbf{Evidence-Aligned Query Learning (EAQL)}, a training mechanism that fine-tunes query encoders to condition on the Research Ledger. This ensures that generated queries are contextually grounded in the agent’s evolving state rather than isolated prompts. Our evaluation demonstrates that Dossier’s branching architecture improves end-to-end accuracy on BrowseComp-Plus by 27 percentage points and HoVer by 29 percentage points, respectively, with the Ledger and EAQL contributing 10 and 13 percentage points in accuracy, respectively."
+  },
+  {
+    "slug": "does-socialization-emerge-in-ai-agent-society-a-case-study-of-moltbook",
+    "title": "Does Socialization Emerge in AI Agent Society? A Case Study of Moltbook",
+    "summary": "An empirical study of Moltbook, an AI agent social network, showing that artificial agent societies exhibit human-like socialization dynamics—semantic stabilization, influence persistence, and collective consensus formation—at scale. The findings raise fundamental questions about how social norms and coordination emerge in AI-populated environments.",
+    "primaryPillar": "Evaluation & Benchmarking",
+    "tags": [
+      "Evaluation & Benchmarking"
+    ],
+    "authors": [
+      {
+        "name": "Ming Li",
+        "affiliation": "University of Maryland"
+      },
+      {
+        "name": "Xirui Li",
+        "affiliation": "University of Maryland"
+      },
+      {
+        "name": "Tianyi Zhou",
+        "affiliation": "Mohamed bin Zayed University of Artificial Intelligence"
+      }
+    ],
+    "abstract": "As large language model agents increasingly populate networked environments, a fundamental question arises: do artificial intelligence (AI) agent societies undergo convergence dynamics similar to human social systems?\nLately, Moltbook approximates a plausible future scenario in which autonomous agents\nparticipate in an open-ended, continuously evolving online society.\nWe present the first large-scale systemic diagnosis of this AI agent society. Beyond static observation, we introduce a quantitative diagnostic framework for dynamic evolution in AI agent societies, measuring semantic stabilization, lexical turnover, individual inertia, influence persistence, and collective consensus.\nOur analysis reveals a system in dynamic balance in Moltbook: while the global average of semantic contents stabilizes rapidly, individual agents retain high diversity and persistent lexical turnover, defying homogenization. \nHowever, agents exhibit strong individual inertia and minimal adaptive response to interaction partners, preventing mutual influence and consensus.\nConsequently, influence remains transient with no persistent supernodes, and the society fails to develop a stable structure and consensus due to the absence of shared social memory.\nThese findings demonstrate that scale and interaction density alone are insufficient to induce socialization, providing actionable design and analysis principles for upcoming next-generation AI agent societies."
+  },
+  {
+    "slug": "xgrammar-dynamic-and-efficient-structured-generation-engine-for-agentic-llms",
+    "title": "XGrammar++: Dynamic and Efficient Structured Generation Engine for Agentic LLMs",
+    "summary": "XGrammar++ is a structured generation engine for agentic LLM workloads that efficiently handles dynamic, variable tool-calling schemas by supporting tag-triggered structure switching and fine-grained cross-request reuse. It substantially reduces latency and overhead for production systems that mix diverse tool-call schemas within and across requests.",
+    "primaryPillar": "System Optimization & Efficiency",
+    "tags": [
+      "System Optimization & Efficiency",
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Linzhang Li",
+        "affiliation": "Shanghai Jiao Tong University"
+      },
+      {
+        "name": "Yixin Dong",
+        "affiliation": "Carnegie Mellon University"
+      },
+      {
+        "name": "Guanjie Wang",
+        "affiliation": "Shanghai Jiao Tong University"
+      },
+      {
+        "name": "Ziyi Xu",
+        "affiliation": "Shanghai Jiao Tong University"
+      },
+      {
+        "name": "Alexander Jiang",
+        "affiliation": "Carnegie Mellon University"
+      },
+      {
+        "name": "Tianqi Chen",
+        "affiliation": "Carnegie Mellon University"
+      }
+    ],
+    "abstract": "Modern LLM agents increasingly rely on dynamic structured generation, such as tool calling and response protocols. Unlike traditional structured generation with static structures, these workloads vary both across requests and within a request, posing new challenges to existing engines. We present XGrammar++, a structured generation engine for dynamic agentic workloads. Our design is based on two key ideas: first-class support for tag-triggered structure switching, and fine-grained reuse across requests with different output structures. Concretely, XGrammar++ introduces TagDispatch for dynamic structural dispatching and Cross-Grammar Cache for substructure-level cache reuse across grammars. It further improves efficiency with an Earley-based adaptive token mask cache, just-in-time compilation, and repetition state compression. Experiments show that XGrammar++ achieves over 6× faster compilation than prior structured generation engines, and incurring near-zero end-to-end overhead in modern LLM serving systems."
+  },
+  {
+    "slug": "glia-a-human-inspired-ai-for-automated-systems-design-and-optimization",
+    "title": "Glia: A Human-Inspired AI for Automated Systems Design and Optimization",
+    "summary": "Glia is an AI system that autonomously designs and optimizes computer network mechanisms using a human-inspired multi-agent workflow in which specialized agents reason, experiment, and analyze collaboratively. Applied to distributed systems challenges, it produces interpretable designs that rival human expert solutions.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Pouya Hamadanian",
+        "affiliation": "MIT"
+      },
+      {
+        "name": "Pantea Karimi",
+        "affiliation": "MIT"
+      },
+      {
+        "name": "Arash Nasr-Esfahany",
+        "affiliation": "MIT"
+      },
+      {
+        "name": "Kimia Noorbakhsh",
+        "affiliation": "MIT"
+      },
+      {
+        "name": "Joseph Chandler",
+        "affiliation": "MIT"
+      },
+      {
+        "name": "Ali Parandeh",
+        "affiliation": "Independent"
+      },
+      {
+        "name": "Mohammad Alizadeh",
+        "affiliation": "MIT"
+      },
+      {
+        "name": "Hari Balakrishnan",
+        "affiliation": "MIT"
+      }
+    ],
+    "abstract": "Can AI autonomously design mechanisms for computer systems on par with the creativity and reasoning of human experts? \nWe present Glia, an AI architecture for networked systems design that uses large language models (LLMs) in a human-inspired multi-agent workflow. \nEach agent specializes in reasoning, experimentation, and analysis, collaborating through an evaluation framework that grounds abstract reasoning in empirical feedback.\nUnlike prior ML-for-systems methods that optimize black-box policies, Glia generates interpretable designs and exposes its reasoning. \nWhen applied to a distributed GPU cluster for LLM inference, it produces new algorithms for request routing, scheduling, and auto-scaling that perform at human-expert levels in significantly less time, while yielding novel insights into workload behavior. \nOur results suggest that combining reasoning LLMs with structured experimentation, an AI can produce creative and understandable designs for complex systems problems."
+  },
+  {
+    "slug": "a-language-for-describing-agentic-llm-contexts",
+    "title": "A Language for Describing Agentic LLM Contexts",
+    "summary": "A formal language for precisely describing how LLM context is composed and evolves across agent interaction steps, replacing the informal prose and ad-hoc diagrams currently used in context engineering. It enables teams and researchers to communicate context structure unambiguously—across prompt templates, multi-turn history, and system instructions.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Noga Peleg Pelc",
+        "affiliation": "Bar Ilan University, Israel"
+      },
+      {
+        "name": "Gal A. Kaminka",
+        "affiliation": "Bar Ilan University, Israel"
+      },
+      {
+        "name": "Yoav Goldberg",
+        "affiliation": "Bar Ilan University, Israel"
+      }
+    ],
+    "abstract": "Large language models are increasingly used within larger systems (\"LLM agents\"). These systems often make a sequence of LLM calls, where each call provides the LLM with a combination of instructions, observations and interaction history, among other information. The design of the encoded information and its structure play a central role in the quality of the resulting system, as evidenced by the term \"context engineering\". Despite this, it remains remarkably difficult to communicate the composition of the LLM context in a system, and how it evolves over time. While verbalizing the language of an individual prompt is standard and prompt templates are often included in a system's description, no such system exists for communicating the structure and content of an evolving context. Whether between teammates iterating on an agent's behavior or researchers describing a working system in a publication, context construction is typically conveyed through hand-waving, informal prose, ad hoc diagrams, or direct inspection of code---none of which precisely capture how a prompt evolves across interaction steps or how two context representation strategies differ from each other. To remedy this, we introduce the Agentic Context Description Language (ACDL), a visual language for specifying the structure and dynamics of LLM input contexts in a precise, readable and standard manner. ACDL provides constructs for specifying context aspects such as role message sequences, dynamic content, time-indexed references, and conditional or iterative structure, capturing the full architecture of a prompt independently of any particular implementation. ACDL diagrams can be hand drawn on a whiteboard, or written in formal language which can then be rendered. We describe the language, demonstrate it by documenting several existing systems and their variants, and encourage the community to adopt it for describing LLM systems, both in day-to-day communication and in papers."
+  },
+  {
+    "slug": "securing-agents-with-tracked-capabilities",
+    "title": "Securing Agents With Tracked Capabilities",
+    "summary": "A type-system-based safety harness for AI agents that uses Scala 3's capture checking to statically track which resources and effects an agent can access, preventing prompt injection, data leakage, and unintended side effects at the programming-language level rather than at runtime heuristics.",
+    "primaryPillar": "Security & Privacy",
+    "tags": [
+      "Security & Privacy",
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Martin Odersky",
+        "affiliation": "EPFL"
+      },
+      {
+        "name": "Yaoyu Zhao",
+        "affiliation": "EPFL"
+      },
+      {
+        "name": "Yichen Xu",
+        "affiliation": "EPFL"
+      },
+      {
+        "name": "Oliver Bračevac",
+        "affiliation": "EPFL"
+      },
+      {
+        "name": "Cao Nguyen Pham",
+        "affiliation": "EPFL"
+      }
+    ],
+    "abstract": "AI agents that interact with the real world through tool calls pose fundamental safety challenges: agents might leak private information, cause unintended side effects, or be manipulated through prompt injection. To address these challenges, we propose to put the agent in a programming-language-based \"safety harness\": instead of calling tools directly, agents express their intentions as code in a capability-safe language: Scala 3 with capture checking. Capabilities are program variables that regulate access to effects and resources of interest. Scala's type system tracks capabilities statically, providing fine-grained control over what an agent can do. In particular, it enables local purity, the ability to enforce that sub-computations are side-effect-free, preventing information leakage when agents process classified data. We demonstrate that extensible agent safety harnesses can be built by leveraging a strong type system with tracked capabilities. Our experiments show that agents can generate capability-safe code with no significant loss in task performance, while the type system reliably prevents unsafe behaviors such as information leakage and malicious side effects."
+  },
+  {
+    "slug": "sapo-secure-automated-prompt-optimization-via-multi-agent-collaboration",
+    "title": "SAPO: Secure Automated Prompt Optimization via Multi-Agent Collaboration",
+    "summary": "SAPO is a multi-agent prompt optimization framework that treats safety as a first-class constraint, jointly maximizing task performance and robustness to adversarial inputs. It closes the gap left by accuracy-only prompt optimization, which routinely produces prompts vulnerable to jailbreaks and harmful outputs.",
+    "primaryPillar": "Security & Privacy",
+    "tags": [
+      "Security & Privacy",
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Emmanuel Aboah Boateng",
+        "affiliation": "None"
+      },
+      {
+        "name": "Zachary Johnson",
+        "affiliation": "Microsoft"
+      },
+      {
+        "name": "Tian Xia",
+        "affiliation": "Microsoft"
+      },
+      {
+        "name": "Sarah Zhang",
+        "affiliation": "None"
+      },
+      {
+        "name": "Aidan Jay",
+        "affiliation": "Microsoft"
+      },
+      {
+        "name": "Junyao Feng",
+        "affiliation": "Microsoft"
+      },
+      {
+        "name": "Aditya Mate",
+        "affiliation": "Microsoft"
+      },
+      {
+        "name": "Ehi Nosakhare",
+        "affiliation": "Microsoft"
+      }
+    ],
+    "abstract": "Prompt optimization is essential for deploying language models in specialized tasks, yet existing automated prompt optimization methods focus almost exclusively on task performance while treating safety as an afterthought. This gap is consequential: prompts optimized purely for accuracy can become susceptible to adversarial inputs that elicit harmful, biased, or confidential outputs. We introduce SAPO (Secure Automated Prompt Optimization), a multi-agent framework that formulates prompt optimization as a constrained multi-objective problem, maximizing task performance subject to explicit security constraints. SAPO coordinates four specialized agents through a central orchestrator: a Prompt Generation Agent for candidate creation, a Security Check Agent for adversarial robustness evaluation, a Performance Evaluation Agent for task accuracy measurement, and a Critic Agent that synthesizes cross-agent feedback to adaptively rebalance optimization weights across iterations. A security constraint ensures that candidate prompts that exceed a minimum security and overall score threshold are favored for selection. The framework extends naturally to model migration scenarios where prompts must transfer across model families without sacrificing safety or performance. Experiments across six tasks from the Instruction Induction and BIG-Bench Hard benchmarks, evaluated against HarmBench for adversarial robustness, demonstrate that SAPO achieves perfect security scores while simultaneously achieving the highest aggregated task-accuracy score by at least 2.6% over single-objective baseline methods."
+  },
+  {
+    "slug": "do-agents-need-to-plan-step-by-step-rethinking-planning-horizon-in-data-centric",
+    "title": "Do Agents Need to Plan Step-by-Step? Rethinking Planning Horizon in Data-Centric Tool Calling",
+    "summary": "An empirical study overturning the assumption that single-step 'think-then-act' planning is the right default for agentic AI: for data-centric tool-calling tasks, full-horizon planning—generating a complete plan before any execution—consistently yields higher accuracy. The finding challenges a foundational design choice in most current agent frameworks.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Naoki Otani",
+        "affiliation": "Megagon Labs"
+      },
+      {
+        "name": "Nikita Bhutani",
+        "affiliation": "Megagon Labs"
+      },
+      {
+        "name": "Hannah Kim",
+        "affiliation": "Megagon Labs"
+      },
+      {
+        "name": "Dan Zhang",
+        "affiliation": "Megagon Labs"
+      },
+      {
+        "name": "Estevam Hruschka",
+        "affiliation": "Megagon Labs"
+      }
+    ],
+    "abstract": "Explicit planning is a critical capability for LLM-based agents solving complex data-centric tasks, which require precise tool calling to interact with external data. Existing strategies fall into two paradigms based on their planning horizon: (1) full-horizon (FH), which generates a complete plan before execution, and (2) single-step horizon (SH), which interleaves action with incremental reasoning and observation. While the research community has largely converged on SH planning as the de facto standard under the assumption that \\textit{eager} execution monitoring is necessary for adaptability, we challenge this default adoption. We isolate planning horizon as the key architectural feature and systematically analyze the effects of topological complexity and tool robustness on both paradigms. Our experiments across Knowledge Base Question Answering (KBQA) and Multi-hop QA validate our hypothesis: FH planning with \\textit{lazy} replanning achieves performance parity with SH across varying depths, breadths, and robustness levels, while reducing token consumption by $2-3\\times$. These findings suggest that for well-defined data-centric tasks, eager step-wise monitoring is often unnecessary, and full-horizon planning with on-demand replanning offers a more efficient default."
+  },
+  {
+    "slug": "open-agent-specification-a-unified-representation-for-ai-agents",
+    "title": "Open Agent Specification: A Unified Representation for AI Agents",
+    "summary": "Open Agent Specification is a framework-agnostic declarative language for defining AI agents and multi-agent workflows, enabling portability and interoperability across agent frameworks. It provides common abstractions for control flow, data semantics, and tool integration so that workflows built in one framework can run in another.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Soufiane Amini",
+        "affiliation": "Oracle"
+      },
+      {
+        "name": "Yassine Benajiba",
+        "affiliation": "Oracle"
+      },
+      {
+        "name": "Cesare Bernardis",
+        "affiliation": "Oracle"
+      },
+      {
+        "name": "Paul Cayet",
+        "affiliation": "Oracle"
+      },
+      {
+        "name": "Hassan Chafi",
+        "affiliation": "Oracle"
+      },
+      {
+        "name": "Abderrahim Fathan",
+        "affiliation": "Oracle"
+      },
+      {
+        "name": "Louis Faucon",
+        "affiliation": "Oracle"
+      },
+      {
+        "name": "Damien Hilloulin",
+        "affiliation": "Oracle, Zurich, Switzerland"
+      },
+      {
+        "name": "Sungpack Hong",
+        "affiliation": "Oracle"
+      },
+      {
+        "name": "Ingo Kossyk",
+        "affiliation": "Oracle"
+      },
+      {
+        "name": "Tirthankar Lahiri",
+        "affiliation": "Oracle"
+      },
+      {
+        "name": "Tran Minh Son Le",
+        "affiliation": "Oracle"
+      },
+      {
+        "name": "Rhicheek Patra",
+        "affiliation": "Oracle"
+      },
+      {
+        "name": "Sujith Ravi",
+        "affiliation": "Oracle"
+      },
+      {
+        "name": "Jonas Schweizer",
+        "affiliation": "Oracle"
+      },
+      {
+        "name": "Jyotika Singh",
+        "affiliation": "Oracle"
+      },
+      {
+        "name": "Shailender Singh",
+        "affiliation": "Oracle"
+      },
+      {
+        "name": "Weiyi Sun",
+        "affiliation": "Oracle"
+      },
+      {
+        "name": "Kartik Talamadupula",
+        "affiliation": "Oracle"
+      },
+      {
+        "name": "Jerry Xu",
+        "affiliation": "Oracle"
+      }
+    ],
+    "abstract": "The proliferation of agent frameworks has led to fragmentation in how agents are defined, executed, and evaluated. Existing systems differ in their abstractions, data flow semantics, and tool integrations, making it difficult to share or reproduce workflows. We introduce Open Agent Specification (Agent Spec), a declarative language that defines AI agents and agentic workflows in a way that is compatible across frameworks, promoting reusability, portability and interoperability of AI agents. Agent Spec defines a common set of components, control and data flow semantics, and schemas that allow an agent to be defined once and executed across\ndifferent runtimes. Agent Spec also introduces a standardized Evaluation harness to assess agent behavior and agentic workflows across runtimes - analogous to how HELM and related harnesses\nstandardized LLM evaluation - so that performance, robustness, and efficiency can be compared consistently across frameworks. We demonstrate this using four distinct runtimes (LangGraph,\nCrewAI, AutoGen, and WayFlow) evaluated over three different benchmarks (SimpleQA Verified, 𝜏2-Bench and BIRD-SQL). We provide accompanying toolsets: a Python SDK (PyAgentSpec), a\nreference runtime (WayFlow), and adapters for popular frameworks (e.g., LangGraph, AutoGen, CrewAI). Agent Spec bridges the gap between model-centric and agent-centric standardization & evaluation, laying the groundwork for reliable, reusable, and portable agentic systems."
+  },
+  {
+    "slug": "sear-schema-based-evaluation-and-routing-for-llm-gateways",
+    "title": "SEAR: Schema-Based Evaluation and Routing for LLM Gateways",
+    "summary": "SEAR is a production evaluation and routing system for multi-model LLM gateways that exposes ~100 typed, SQL-queryable quality signals—covering intent, response characteristics, issue attribution, and scores—to drive fine-grained routing decisions across providers. It makes LLM gateway behavior observable and steerable in a way that provider-level metrics alone cannot.",
+    "primaryPillar": "Engineering & Operations",
+    "tags": [
+      "Engineering & Operations",
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Zecheng Zhang",
+        "affiliation": "Strukto.AI"
+      },
+      {
+        "name": "Han Zheng",
+        "affiliation": "Infron.AI"
+      },
+      {
+        "name": "Yue Xu",
+        "affiliation": "Infron.AI"
+      }
+    ],
+    "abstract": "Evaluating production LLM responses and routing requests across providers at LLM gateways requires fine-grained quality signals and operationally grounded decisions. To address this gap, we present SEAR, a schema-based evaluation and routing system for multi-model, multi-provider LLM gateways. SEAR defines an extensible relational schema with cross-table consistency links and around one hundred typed, SQL-queryable signals covering context, intent, response characteristics, issue attribution, and quality scores. To populate this schema reliably, SEAR proposes self-contained column instructions, in-schema reasoning, and a multi-stage judge pipeline that produces database-ready structured outputs. Combined with gateway operational metrics, these records enable flexible SQL-based analysis, diagnosis, and routing recommendations from production traffic. Across thousands of production sessions, SEAR achieves strong signal accuracy on human-labeled data and supports practical routing decisions, including large cost reductions with comparable quality in the offline replay."
+  },
+  {
+    "slug": "draftnepabench-a-benchmark-for-drafting-nepa-document-sections-with-coding-agent",
+    "title": "DraftNEPABench: A Benchmark for Drafting NEPA Document Sections with Coding Agents",
+    "summary": "DraftNEPABench is a benchmark that challenges AI coding agents to draft sections of Environmental Impact Statements, extending the agentic evaluation frontier beyond software engineering into high-stakes structured document creation. Results reveal where frontier agents still fall short when domain knowledge, regulatory structure, and long-form coherence are all required.",
+    "primaryPillar": "Evaluation & Benchmarking",
+    "tags": [
+      "Evaluation & Benchmarking"
+    ],
+    "authors": [
+      {
+        "name": "Anurag Acharya",
+        "affiliation": "Pacific Northwest National Laboratory"
+      },
+      {
+        "name": "Bishal Lakha",
+        "affiliation": "Pacific Northwest National Laboratory"
+      },
+      {
+        "name": "Rounak Meyur",
+        "affiliation": "Pacific Northwest National Laboratory"
+      },
+      {
+        "name": "Rohan Nuttall",
+        "affiliation": "OpenAI"
+      },
+      {
+        "name": "Sarthak Chaturvedi",
+        "affiliation": "Pacific Northwest National Laboratory"
+      },
+      {
+        "name": "Anika Halappanavar",
+        "affiliation": "Pacific Northwest National Laboratory"
+      },
+      {
+        "name": "Leah Hare",
+        "affiliation": "Pacific Northwest National Laboratory"
+      },
+      {
+        "name": "Lin Zeng",
+        "affiliation": "Pacific Northwest National Laboratory"
+      },
+      {
+        "name": "Mike Parker",
+        "affiliation": "Pacific Northwest National Laboratory"
+      },
+      {
+        "name": "Sai Munikoti",
+        "affiliation": "Pacific Northwest National Laboratory"
+      },
+      {
+        "name": "Sameera Horawalavithana",
+        "affiliation": "Pacific Northwest National Laboratory"
+      }
+    ],
+    "abstract": "Coding agents represent a transformative paradigm in software engineering, enabling automated coding, generation, and debugging through a natural language interface. Recent advancements in large language models (LLMs) and their ability to use external tools have expanded the potential of using these agents beyond software engineering tasks. In this work, we explore the application of coding agents in a noncoding domain: drafting environmental impact statement (EIS) sections. For that, we introduce DraftNEPABench: a challenging benchmark that requires coding agents to compose structured, coherent, and domain-specific drafts grounded in multiple complex regulatory and scientific reference materials. We evaluate various state-of-the-art commercial coding agents on this benchmark and demonstrate their promise in generating EIS documents. Our findings show that while coding agents outperform vanilla retrieval-augmented generation (RAG) setups for these tasks, there is still room for improvement. We highlight the potential and limitations of such agents in high-stakes, complex, and real-world tasks, and point toward future directions."
+  },
+  {
+    "slug": "exploring-and-developing-a-pre-model-safeguard-with-draft-models",
+    "title": "Exploring and Developing a Pre-Model Safeguard with Draft Models",
+    "summary": "A pre-model jailbreak guard that invokes a draft model to generate a partial response before the target model sees the prompt, enabling safety auditing of both the input and the anticipated output. This dual-signal approach catches attacks that evade prompt-only guards by embedding harmful intent across multiple benign-looking turns.",
+    "primaryPillar": "Security & Privacy",
+    "tags": [
+      "Security & Privacy"
+    ],
+    "authors": [
+      {
+        "name": "Hongyu Cai",
+        "affiliation": "Purdue University"
+      },
+      {
+        "name": "Arjun Arunasalam",
+        "affiliation": "Florida International University"
+      },
+      {
+        "name": "Yiming Liang",
+        "affiliation": "Purdue University"
+      },
+      {
+        "name": "Antonio Bianchi",
+        "affiliation": "Purdue University"
+      },
+      {
+        "name": "Z. Berkay Celik",
+        "affiliation": "Purdue University"
+      }
+    ],
+    "abstract": "Large Language Model (LLM) providers have implemented alignment techniques to ensure that LLMs adhere to human values. Despite these efforts, such alignment methods remain vulnerable to jailbreak attacks, which aim to elicit unaligned responses from LLMs. To mitigate this, pre-model and post-model guards are employed. Pre-model guards audit the safety of prompts before invoking the target model. However, relying solely on the prompt often leads to high false-negative rates (i.e., jailbreak attacks are undetected). Post-model guards address this issue by auditing both the user prompt and the target model’s response. However, they incur a high computational cost, including increased token usage and processing time, as they operate after target model inference.\n\nIn this paper, we introduce a safeguard design that leverages the transferability of jailbreak attacks to enforce prompt safety before target model inference. We first conduct a systematic study of jailbreak transferability, particularly from LLMs to small language models (SLMs). We extensively evaluate transferability using three representative jailbreak generation systems, six SLMs, and three LLMs. Through these experiments, we identify key factors influencing transferability. Building on these insights, we observe that responses from smaller draft models reflect the safety implications of those from large target models, i.e., given a jailbreak prompt constructed for an LLM, another SLM is likely to be triggered to generate an unaligned response. Based on this observation, our safeguard design leverages speculative inference with SLMs to generate a set of draft responses. It then inputs the original prompt and these drafts into existing guards to predict their safety.\n\nWe demonstrate that this design reduces the false negative rate of pre-model guards and offers a low prompt-to-response time alternative to post-model guards. Compared to pre-model guards, our safeguard design reduces false negative rate of jailbreak prompts by an average of 32.4% (σ = 32.92%). Relative to post-model guards, our safeguard design reduces false negative rate by an average of 17.38% (σ = 44.65%) and reduces prompt-to-response time by 97.07% (Llama-3-70B-Instruct-AWQ). For benign prompts, our safeguard design achieves the same accuracy of benign prompts of 98% with both pre- and post-guards with a minimal latency increase of 0.59%. Notice: This paper contains examples of harmful language."
+  },
+  {
+    "slug": "robust-batch-level-query-routing-for-large-language-models-under-cost-and-capaci",
+    "title": "Robust Batch-Level Query Routing for Large Language Models under Cost and Capacity Constraints",
+    "summary": "A batch-level LLM routing framework that jointly assigns models to an entire incoming request batch while respecting cost, GPU, and concurrency constraints—rather than routing each query independently. A robust variant explicitly accounts for uncertainty in predicted model quality, preventing adversarial or skewed batches from defeating cost controls.",
+    "primaryPillar": "System Optimization & Efficiency",
+    "tags": [
+      "System Optimization & Efficiency",
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Jelena Markovic-Voronov",
+        "affiliation": "LinkedIn"
+      },
+      {
+        "name": "Kayhan Behdin",
+        "affiliation": "LinkedIn"
+      },
+      {
+        "name": "Yuanda Xu",
+        "affiliation": "LinkedIn"
+      },
+      {
+        "name": "Zhengze Zhou",
+        "affiliation": "LinkedIn"
+      },
+      {
+        "name": "Zhipeng Wang",
+        "affiliation": "LinkedIn"
+      },
+      {
+        "name": "Rahul Mazumder",
+        "affiliation": "LinkedIn, MIT"
+      }
+    ],
+    "abstract": "We study the problem of routing queries to large language models (LLMs) under cost, GPU, and concurrency constraints. Prior per-query routing methods often fail to control batch-level cost, especially under non-uniform or adversarial batching. To address this, we propose a batch-level, resource-aware routing framework that jointly optimizes model assignment for each batch while respecting cost and capacity limits. We further introduce a robust variant that accounts for uncertainty in predicted LLM performance, along with an offline instance allocation procedure that balances quality and throughput across multiple models. Experiments on two multi-task LLM benchmarks show that robustness improves accuracy by 1–14% over non-robust counterparts (depending on the performance estimator), batch-level routing outperforms per-query methods by up to 24% under adversarial batching, and optimized instance allocation yields additional gains of up to 3%, all while strictly controlling cost and GPU resource constraints."
+  },
+  {
+    "slug": "generating-expressive-and-customizable-evals-for-timeseries-data-analysis-agents",
+    "title": "Generating Expressive and Customizable Evals for Timeseries Data Analysis Agents with AgentFuel",
+    "summary": "AgentFuel is a framework for generating expressive, domain-specific evaluations for conversational data analysis agents, exposing systematic gaps in how popular open-source and proprietary agents handle domain-relevant timeseries queries. It gives practitioners a principled way to evaluate and compare agents on their own data and query patterns rather than generic benchmarks.",
+    "primaryPillar": "Evaluation & Benchmarking",
+    "tags": [
+      "Evaluation & Benchmarking"
+    ],
+    "authors": [
+      {
+        "name": "Aadyaa Maddi",
+        "affiliation": "Carnegie Mellon University"
+      },
+      {
+        "name": "Prakhar Naval",
+        "affiliation": "Rockfish"
+      },
+      {
+        "name": "Deepti Mande",
+        "affiliation": "Rockfish"
+      },
+      {
+        "name": "Muckai Girish",
+        "affiliation": "Rockfish"
+      },
+      {
+        "name": "Shane Duan",
+        "affiliation": "Rockfish"
+      },
+      {
+        "name": "Vyas Sekar",
+        "affiliation": "CMU/Rockfish"
+      }
+    ],
+    "abstract": "Across many domains (e.g., IoT, observability, telecommunications,\ncybersecurity), there is an emerging adoption of conversational data\nanalysis agents that enable users to “talk to your data” to extract\ninsights. Such data analysis agents operate on timeseries data mod-\nels; e.g., measurements from sensors or events monitoring user\nclicks and actions in product analytics. We evaluate popular data\nanalysis agents (both open-source and proprietary) on domain-\nspecific data and query patterns of interest and find that they fail\non domain-relevant queries. We observe two key expressivity gaps\nin existing evals: domain-customized datasets and domain-specific\nquery patterns. To enable practitioners in such domains to generate\ncustomized and expressive evals for such timeseries data agents, we\npresent AgentFuel. AgentFuel helps domain experts quickly create\ncustomized evals to perform end-to-end functional tests. We show\nthat AgentFuel’s benchmarks exposes key directions for improvement in existing data agent frameworks. We also show anecdotal\nevidence that using AgentFuel can improve the performance of\nagents (e.g., using GEPA)."
+  },
+  {
+    "slug": "retrieval-augmented-llms-for-security-incident-analysis",
+    "title": "Retrieval-Augmented LLMs for Security Incident Analysis",
+    "summary": "A RAG-based system that automates cybersecurity incident analysis by mapping evidence from heterogeneous logs to MITRE ATT&CK techniques and generating structured incident reports. It substantially reduces the manual effort of correlating intrusion alerts, network records, and authentication events into a coherent attack narrative.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition",
+      "Evaluation & Benchmarking"
+    ],
+    "authors": [
+      {
+        "name": "Xavier Cadet",
+        "affiliation": "Dartmouth College"
+      },
+      {
+        "name": "Aditya Vikram Singh",
+        "affiliation": "Northeastern University"
+      },
+      {
+        "name": "Harsh Mamania",
+        "affiliation": "Northeastern University"
+      },
+      {
+        "name": "Edward Koh",
+        "affiliation": "Dartmouth College"
+      },
+      {
+        "name": "Alex Fitts",
+        "affiliation": "Punch Cyber"
+      },
+      {
+        "name": "Dirk Van Bruggen",
+        "affiliation": "Punch Cyber"
+      },
+      {
+        "name": "Simona Boboila",
+        "affiliation": "Northeastern University"
+      },
+      {
+        "name": "Peter Chin",
+        "affiliation": "Dartmouth College"
+      },
+      {
+        "name": "Alina Oprea",
+        "affiliation": "Northeastern University"
+      }
+    ],
+    "abstract": "Investigating cybersecurity incidents requires collecting and analyzing evidence from multiple log sources, including intrusion detection alerts, network traffic records, and authentication events. This process is labor-intensive: analysts must sift through large volumes of data to identify relevant indicators and piece together what happened. We present a RAG-based system that performs security incident analysis through targeted query-based filtering and LLM semantic reasoning. The system uses a query library with associated MITRE ATT\\&CK techniques to extract indicators from raw logs, then retrieves relevant context to answer forensic questions and reconstruct attack sequences. We evaluate the system with five LLM providers on malware traffic incidents and multi-stage Active Directory attacks. We find that LLM models have different performance and tradeoffs, with Claude Sonnet~4 and DeepSeek~V3 achieving 100\\% recall across all four malware scenarios, while DeepSeek costs 15$\\times$ less (\\$0.008 vs. \\$0.12 per analysis). Attack step detection on Active Directory scenarios reaches 100\\% precision and 82\\% recall. Ablation studies confirm that a RAG architecture is essential: LLM baselines without RAG-enhanced context correctly identify victim hosts but miss all attack infrastructure including malicious domains and command-and-control servers. These results demonstrate that combining targeted query-based filtering with RAG-based retrieval enables accurate, cost-effective security analysis within LLM context limits."
+  },
+  {
+    "slug": "decomposing-sycophancy-fragility-consensus-collapse-and-cost-in-homogeneous-mult",
+    "title": "Decomposing Sycophancy, Fragility, Consensus Collapse and Cost in Homogeneous Multi-Agent LLM Debate",
+    "summary": "A controlled empirical study showing that homogeneous multi-agent debate amplifies rather than corrects LLM errors through sycophancy and consensus collapse, often performing worse than a single isolated model on hard benchmarks. The results undercut a widely-held assumption that peer review among agents filters hallucinations.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition",
+      "Evaluation & Benchmarking"
+    ],
+    "authors": [
+      {
+        "name": "Blaž Bertalanič",
+        "affiliation": "Jožef Stefan Institute"
+      },
+      {
+        "name": "Carolina Fortuna",
+        "affiliation": "Jozef Stefan Institute, Jamova 39, Ljubljana, Slovenia"
+      }
+    ],
+    "abstract": "Multi-agent debate, where teams of LLMs iteratively exchange rationales and vote on answers, is widely deployed under the assumption that peer review filters hallucinations. Yet the failure dynamics of homogeneous debate remain poorly understood, therefore we report findings from a controlled empirical study of teams of $N{=}10$ homogeneous agents (Qwen2.5-7B, Llama-3.1-8B, Ministral-3-8B) across $R{=}3$ debate rounds on two high-difficulty benchmarks (GSM-Hard and MMLU-Hard). We compare peer debate against isolated self-correction and a stochastic noise control that injects rationales from unrelated problems. We decompose debate failure into three model-dependent pathways: \\textit{sycophantic conformity}, where agents uncritically adopt majority answers (modal adoption up to 85.5\\%); \\textit{contextual fragility}, where peer rationales destabilize previously correct reasoning (vulnerability rate up to 70.0\\%); and \\textit{consensus collapse}, where plurality voting discards correct answers already present in the generation pool (oracle gap up to 32.3 percentage points). Ablations over communication density ($K \\in \\{2,4,9\\}$) and sampling temperature ($T \\in \\{0.4, 0.7\\}$) show that conformity reaches high levels at minimal peer exposure ($K{=}2$) and intensifies with greater initial diversity. Across all configurations, debate consumes 2.1-3.4$\\times$ more tokens (up to 28,631 tokens per problem) than self-correction for \\textit{equal or lower accuracy}. Our results indicate that, within the 7-8B parameter class, homogeneous teams without structured roles do not benefit from unguided peer exchange, and that isolated self-correction consistently offers a more favorable cost-accuracy tradeoff."
+  },
+  {
+    "slug": "improving-coherence-and-persistence-in-agentic-ai-for-system-optimization",
+    "title": "Improving Coherence and Persistence in Agentic AI for System Optimization",
+    "summary": "A framework for automated system heuristic design that addresses two fundamental LLM agent failure modes: evolutionary neighborhood bias (getting stuck in local optima) and the coherence ceiling (context degradation over long agent runs). Together the fixes enable more reliable, multi-step discovery of high-performance system configurations.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Pantea Karimi",
+        "affiliation": "MIT"
+      },
+      {
+        "name": "Kimia Noorbakhsh",
+        "affiliation": "MIT"
+      },
+      {
+        "name": "Mohammad Alizadeh",
+        "affiliation": "MIT"
+      },
+      {
+        "name": "Hari Balakrishnan",
+        "affiliation": "MIT"
+      }
+    ],
+    "abstract": "Designing high-performance system heuristics is a creative, iterative process requiring experts to form hypotheses and execute multi-step conceptual shifts. While Large Language Models (LLMs) show promise in automating this loop, they struggle with complex system problems due to two critical failure modes: evolutionary neighborhood bias and the coherence ceiling. Evolutionary methods often remain trapped in local optima by relying on scalar benchmark scores, failing when coordinated multi-step changes are required. Conversely, existing agentic frameworks suffer from context degradation over long horizons or fail to accumulate knowledge across independent runs. \n\nWe present Engram, an agentic researcher architecture that addresses these limitations by decoupling long-horizon exploration from the constraints of a single context window. Engram organizes exploration into a sequence of agents that iteratively design, test, and analyze mechanisms. At the conclusion of each run, an agent stores code snapshots, logs, and results in a persistent Archive and distills high-level modeling insights into a compact, persistent Research Digest. Subsequent agents then begin with a fresh context window, reading the Research Digest to build on prior discoveries. \n\nWe find that Engram exhibits superior performance across diverse domains including multi-cloud multicast, LLM inference request routing, and optimizing KV cache reuse in databases with natural language queries."
+  },
+  {
+    "slug": "reasoning-intensive-regression",
+    "title": "Reasoning-Intensive Regression",
+    "summary": "This paper establishes a new problem class—reasoning-intensive regression—where LLMs deduce subtle numerical scores from text, covering rubric grading, dense reward modeling, and domain-specific retrieval scoring. LLMs prove surprisingly effective at this with limited task-specific training data, opening a practical path to automated evaluation in settings where labeled data is scarce.",
+    "primaryPillar": "Evaluation & Benchmarking",
+    "tags": [
+      "Evaluation & Benchmarking",
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Diane Tchuindjo",
+        "affiliation": "Massachusetts Institute of Technology"
+      },
+      {
+        "name": "Omar Khattab",
+        "affiliation": "Massachusetts Institute of Technology"
+      }
+    ],
+    "abstract": "AI researchers and practitioners increasingly apply large language models (LLMs) to what we call reasoning-intensive regression (RiR), i.e., deducing subtle numerical scores from text. Unlike standard language regression tasks, e.g., for sentiment or similarity, RiR often appears instead in ad-hoc problems such as rubric-based scoring, modeling dense rewards in complex environments, or domain-specific retrieval, where much deeper analysis of context is required while only limited task-specific training data and computation are available. We cast four realistic problems as RiR tasks to establish an initial benchmark, and use that to test our hypothesis that prompting frozen LLMs and finetuning Transformer encoders via gradient descent will both often struggle in RiR. We then propose MENTAT, a simple and lightweight method that combines batch-reflective prompt optimization with neural ensemble learning. MENTAT achieves up to 65% improvement over both baselines, though substantial room remains for future advances in RiR."
+  },
+  {
+    "slug": "why-johnny-cant-use-agents-industry-aspirations-vs-user-realities-with-ai-agents",
+    "title": "Why Johnny Can’t Use Agents: Industry Aspirations vs. User Realities with AI Agents",
+    "summary": "A mixed-methods study of 102 commercial AI agents and 31 end-user participants that quantifies the gap between what the industry markets AI agents as being able to do and what real users can actually accomplish. The findings surface recurring usability failure patterns and call into question whether current agent UX is ready for the mainstream use cases being advertised.",
+    "primaryPillar": "Evaluation & Benchmarking",
+    "tags": [
+      "Evaluation & Benchmarking"
+    ],
+    "authors": [
+      {
+        "name": "Pradyumna Shome",
+        "affiliation": "Carnegie Mellon University"
+      },
+      {
+        "name": "Sashreek Krishnan",
+        "affiliation": "Carnegie Mellon University"
+      },
+      {
+        "name": "Sauvik Das",
+        "affiliation": "Carnegie Mellon University"
+      }
+    ],
+    "abstract": "There is growing imprecision about what \"AI agents\" are, what they can do, and how effectively they can be used by their intended users. We pose two key research questions: (i) How does the tech industry conceive of and market \"AI agents\"? (ii) What challenges do end-users face when attempting to use commercial AI agents for their advertised uses? We first performed a systematic review of marketed use cases for 102 commercial AI agents, finding that they fall into three umbrella categories: orchestration, creation, and insight. Next, we conducted a usability assessment where N = 31 participants attempted representative tasks for each of these categories on two popular commercial AI agent tools: Operator and Manus. We found that users were generally impressed with these agents but faced several critical usability challenges ranging from agent capabilities that were misaligned with user mental models to agents lacking the meta-cognitive abilities necessary for effective collaboration."
+  },
+  {
+    "slug": "robust-agent-compensation-rac-teaching-ai-agents-to-compensate",
+    "title": "Robust Agent Compensation (RAC): Teaching AI Agents to Compensate",
+    "summary": "Robust Agent Compensation (RAC) is an architectural extension that adds automatic rollback and recovery to existing agent frameworks, providing a log-based safety net for unintended side effects without requiring agents to be rewritten. It's compatible with most major frameworks via existing extension points and validated on τ²-bench and REALM-Bench.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Srinath Perera",
+        "affiliation": "WSO2, Santa Clara, CA, USA"
+      },
+      {
+        "name": "Kaviru Hapuarachchi",
+        "affiliation": "WSO2, Santa Clara, CA, USA"
+      },
+      {
+        "name": "Frank Leymann",
+        "affiliation": "University of Stuttgart, Stuttgart, Germany"
+      },
+      {
+        "name": "Rania Khalaf",
+        "affiliation": "WSO2, Santa Clara, CA, USA"
+      }
+    ],
+    "abstract": "We present Robust Agent Compensation (RAC), a log-based recovery paradigm (providing a safety net) implemented through an architectural extension that can be applied to most Agent frameworks to support reliable executions (avoiding unintended side effects). Users can choose to enable RAC without changing their current agent code (e.g., LangGraph agents). The proposed approach can be implemented in most existing agent frameworks via their existing extension points. We present an implementation based on LangChain, demonstrate its viability through the $\\tau$²-bench and REALM-Bench, and show that when solving complex problems, RAC is 10X or more better in both latency and token economy compared to state-of-the-art LLM-based recovery approaches."
+  },
+  {
+    "slug": "fedmeca-scalable-federated-learning-via-memory-efficient-and-concurrent-aggregat",
+    "title": "FedMECA: Scalable Federated Learning via Memory-Efficient and Concurrent Aggregation",
+    "summary": "FedMECA is a federated learning aggregation system that decouples model collection from aggregation to overcome scalability failures as client counts or model sizes grow. By enabling concurrent, memory-efficient aggregation, it makes federated training viable at scales where existing systems stall.",
+    "primaryPillar": "System Optimization & Efficiency",
+    "tags": [
+      "System Optimization & Efficiency"
+    ],
+    "authors": [
+      {
+        "name": "Zhonghao Chen",
+        "affiliation": "University of Florida"
+      },
+      {
+        "name": "Duo Zhang",
+        "affiliation": "University of California, Merced"
+      },
+      {
+        "name": "Xiaoyi Lu",
+        "affiliation": "University of Florida"
+      }
+    ],
+    "abstract": "Federated learning (FL) enables collaborative model training across distributed clients while preserving data privacy, but it faces growing scalability issues, causing FL to fail as the number of participating clients or model size increases. Existing aggregation paradigms usually overlook the memory and computational challenges arising from the tightly coupled processes of model collection and aggregation. Within such paradigms, aggregation necessitates waiting for all selected client updates, and the process is computationally demanding. To overcome these limitations, we propose \\textbf{FedMECA}, a scalable, memory-efficient, and concurrency-aware aggregation framework for FL. FedMECA is designed to decouple model collection from aggregation, alleviating memory pressure on the central server by $\\boldsymbol{36.57\\times}$ and achieving up to $\\boldsymbol{238.5\\times}$ speedup in aggregation runtime compared to FedAvg-based systems, without compromising model accuracy or convergence speed. FedMECA is designed with minimal system complexity and can support clients with heterogeneity and non-IID data. Moreover, our approach is easily extensible to aggregation strategies at different synchrony, offering flexibility and adaptability across diverse FL applications. These results highlight the importance of rethinking server-side aggregation in FL and demonstrate that FedMECA enables scalable and efficient training for modern large-scale FL workloads."
+  },
+  {
+    "slug": "tressoir-unifying-online-offline-and-hil-design-and-evolution-of-multi-agent-sys",
+    "title": "Tressoir: Unifying Online, Offline, and HIL Design and Evolution of Multi-Agent Systems via Interpretable Blueprints",
+    "summary": "Tressoir jointly designs and evolves multi-agent architectures, prompts, tools, and knowledge through human-readable Interpretable Blueprints that encode both online design intent and offline-generated high-quality components. It supports automated, human-guided, and hybrid optimization modes, making multi-agent system development more systematic and reproducible.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Amadou Ngom",
+        "affiliation": "Massachusetts Institute of Technology"
+      },
+      {
+        "name": "Ziniu Wu",
+        "affiliation": "Massachusetts Institute of Technology"
+      },
+      {
+        "name": "Jason Mohoney",
+        "affiliation": "Massachusetts Institute of Technology"
+      },
+      {
+        "name": "James Moore",
+        "affiliation": "Massachusetts Institute of Technology"
+      },
+      {
+        "name": "Alex Zhang",
+        "affiliation": "Massachusetts Institute of Technology"
+      },
+      {
+        "name": "Samuel Madden",
+        "affiliation": "Massachusetts Institute of Technology"
+      },
+      {
+        "name": "Tim Kraska",
+        "affiliation": "Massachusetts Institute of Technology"
+      }
+    ],
+    "abstract": "We explore a principled approach that jointly designs and evolves the architectures, prompts, tools, and knowledge of multi-agent systems, whether online, offline, or with human guidance.\n\nWe first propose \\textit{Interpretable Blueprints (IBs)} that jointly encode online-interpretable Design Documents (describing multi-agent architecture patterns, tool use/creation guidelines, lessons learned, etc.) with offline-generated \\textit{materialized} components and scaffolds proven to be high-quality or cost-effective.\nSecond, we propose a \\textit{supervising interpreter} that co-interprets the IB and the task to construct a specialized agentic system on the fly, without assuming any pre-existing implementation, thereby enabling maximal adaptation to the task.\nIBs are also the primary online communication mechanism between agents.\nOffline learning is a subset of this approach; \\textit{learning IBs} encode learning strategies that let the interpreter orchestrate metrics collection and IB improvement.\nHuman guidance is enabled at every layer, whether through co-editing IBs or by steering online or offline interpretation in ways that the system learns from over time.\n\nTo instantiate this vision, we develop \\textit{Tressoir}, an IB-centric framework that unifies online, offline, and human-guided evolution under a single mechanism. Tressoir is tailored for long-running, complex projects with tasks that build on each other and require continual learning during or in between executions. Its generality further allows it to bootstrap itself, where its own features are now self-generated with human guidance.\n\nWe also evaluate Tressoir on shorter-term benchmarks. On SWE-Bench-Pro's Qutebrowser subset, Tressoir with Claude 4.6 Opus reaches 75.95\\% vs.\\ 56.96\\% for SWE-Agent; on ScreenSpot-Pro, it lifts Gemini 3 Flash from a 69.1\\% baseline to 83.05\\%; and on Bird-Critic Flash, Tressoir with Gemini 3 Flash tools scores 56\\%, exceeding SQL-ACT with Claude 4.6 Opus at 52\\%."
+  },
+  {
+    "slug": "how-to-steer-your-multi-agent-system-human-llm-collaborative-planning",
+    "title": "How To Steer Your Multi-Agent System: Human-LLM Collaborative Planning",
+    "summary": "A user study and prototype showing that humans can effectively supervise multi-agent plans at the process level—inspecting, steering, and refining intermediate reasoning—rather than only verifying final outputs. The work characterizes hybrid human-AI planning patterns and identifies the effort-control-risk trade-offs that determine when process-level supervision is worth the cost.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition",
+      "Evaluation & Benchmarking"
+    ],
+    "authors": [
+      {
+        "name": "Zeyu He",
+        "affiliation": "Penn State University"
+      },
+      {
+        "name": "Hannah Kim",
+        "affiliation": "Megagon Labs"
+      },
+      {
+        "name": "Dan Zhang",
+        "affiliation": "Megagon Labs"
+      },
+      {
+        "name": "Estevam Hruschka",
+        "affiliation": "Megagon Labs"
+      }
+    ],
+    "abstract": "In orchestrated multi-agent systems, humans often struggle to manage plans due to their complexity and limited transparency. Existing approaches rely on outcome-level supervision, where users verify only final outputs without visibility into intermediate reasoning. We investigate human–LLM collaborative planning with interaction paradigms that enable process-level supervision, allowing humans to iteratively inspect, steer, and refine plans. Our System-X prototype supports semantic and structural interactions, including high-level LLM-assisted structural edits, letting users modify individual subtasks or overall plan structures while the LLM interprets guidance and suggests revisions. Through a user study and complementary experiments, we characterize human collaboration patterns and evaluate how LLMs respond to feedback with varying scope and revision strategies. Our findings reveal hybrid workflows, effort–control–risk trade-offs, and design insights for more transparent, controllable, and effective human–AI co-planning."
+  },
+  {
+    "slug": "securing-the-agent-vendor-neutral-multitenant-enterprise-retrieval-and-tool-use",
+    "title": "Securing the Agent: Vendor-Neutral, Multitenant Enterprise Retrieval and Tool Use",
+    "summary": "An open-source, vendor-neutral architecture (Llama Stack) for enterprise RAG and agentic systems that enforces multi-tenant isolation, policy-aware access control, and regulatory compliance at the retrieval layer. It addresses a fundamental flaw in standard RAG: relevance-based retrieval can surface one tenant's confidential data to another tenant simply because it scores highest.",
+    "primaryPillar": "Security & Privacy",
+    "tags": [
+      "Security & Privacy",
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Francisco Javier Arceo",
+        "affiliation": "Red Hat"
+      },
+      {
+        "name": "Varsha Prasad Narsing",
+        "affiliation": "Red Hat"
+      }
+    ],
+    "abstract": "Retrieval-Augmented Generation (RAG) and agentic AI systems are increasingly prevalent in enterprise AI deployments. However, real enterprise environments introduce challenges largely absent from academic treatments and consumer-facing APIs: multiple tenants with heterogeneous data, strict access-control requirements, regulatory compliance, and cost pressures that demand shared infrastructure.\n\nA fundamental problem underlies existing RAG architectures in these settings: retrieval systems rank documents by relevance---whether through semantic similarity, keyword matching, or hybrid approaches---not by authorization, so a query from one tenant can surface another tenant's confidential data simply because it scores highest. We formalize this gap and analyze additional shortcomings---including tool-mediated disclosure, context accumulation across turns, and client-side orchestration bypass---that arise when agentic systems conflate relevance with authorization. To address these challenges, we introduce a layered isolation architecture combining policy-aware ingestion, retrieval-time gating, and shared inference, enforced through server-side agentic orchestration. This approach centralizes security-critical operations---tool execution authorization, state isolation, and policy enforcement---on the server, creating natural enforcement points for multitenant isolation while allowing client-side frameworks to retain control over agent composition and latency-sensitive operations.\n\nWe validate the proposed architecture through an open sourced implementation in Llama Stack---a vendor-neutral framework realizing the Responses API paradigm with server-side multi-turn orchestration---demonstrating that secure multitenancy, cost-efficient resource sharing, and autonomous agent capabilities are simultaneously achievable on shared infrastructure."
+  },
+  {
+    "slug": "constant-memory-retrieval-via-koopman-operator-estimation-for-mamba-3",
+    "title": "Constant-Memory Retrieval via Koopman Operator Estimation for Mamba-3",
+    "summary": "Spectral Koopman Attention (SKA) is a module for state-space models that eliminates the 'memory cliff'—where retrieval accuracy collapses for long sequences—while maintaining constant memory usage with no KV cache. It fits a spectral linear system to key-value history in closed form, enabling reliable long-range fact retrieval for extended agentic traces on commodity hardware.",
+    "primaryPillar": "System Optimization & Efficiency",
+    "tags": [
+      "System Optimization & Efficiency",
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Alexander Johansen",
+        "affiliation": "Stanford University"
+      },
+      {
+        "name": "Anupama Sridhar",
+        "affiliation": ""
+      }
+    ],
+    "abstract": "Long chain-of-thought reasoning and agentic tool-calling produce traces\nspanning tens of thousands of tokens, yet Transformer KV caches grow linearly\nwith sequence length, creating a memory bottleneck on commodity hardware.\nState-space models offer constant-memory recurrence but suffer a\n\\emph{memory cliff}: retrieval accuracy collapses once the gap between a\nstored fact and its query exceeds the effective horizon of the recurrent state.\nWe introduce \\textbf{Spectral Koopman Attention (SKA)}, a module that augments\nSSM layers with a closed-form dynamical operator whose sufficient statistics\nare accumulated in constant memory with no KV cache, nor attention layers.\nSKA fits a spectral linear system to the key, value history via kernel ridge\nregression and retrieves through a learned power-iterated filter, all from\n$O(r^{2})$ streaming state where $r$ is a small projection rank.\nOn a Tool Trace benchmark requiring retrieval of high-entropy identifiers\nafter distractor gaps of up to $8{,}192$ tokens, a bare Mamba-3 SSM fail to exceed chance accuracy (${\\sim}2\\text{--}8\\%$),\nwhile SKA-augmented models reach near perfect retrieval accuracy.\nAblations confirm that the spectral operator, not the masking strategy, drives the retrieval gain."
+  },
+  {
+    "slug": "trace-level-analysis-of-information-contamination-in-multi-agent-systems",
+    "title": "Trace-Level Analysis of Information Contamination in Multi-Agent Systems",
+    "summary": "A study showing how uncertainty in heterogeneous input artifacts—PDFs, spreadsheets, slide decks—propagates and amplifies through multi-agent workflows, producing qualitatively different execution trajectories under controlled perturbations. The results show that outcome-only evaluation of agentic systems systematically misses contamination-induced failures that are only visible at the trace level.",
+    "primaryPillar": "Evaluation & Benchmarking",
+    "tags": [
+      "Evaluation & Benchmarking"
+    ],
+    "authors": [
+      {
+        "name": "Anna Mazhar",
+        "affiliation": "Cornell University"
+      },
+      {
+        "name": "Huzaifa Suri",
+        "affiliation": "UIUC"
+      },
+      {
+        "name": "Sainyam Galhotra",
+        "affiliation": "Cornell University"
+      }
+    ],
+    "abstract": "Reasoning over heterogeneous artifacts (PDFs, spreadsheets, slide decks, etc.) \nincreasingly occurs within structured agent workflows that iteratively extract, \ntransform, and reference external information. In these workflows, \nuncertainty is not merely an input-quality issue: \nit can redirect decomposition and routing decisions, reshape intermediate state, \nand produce qualitatively different execution trajectories. \nWe study this phenomenon by treating uncertainty as a controlled variable:\nwe inject structured perturbations into artifact-derived representations, \nexecute fixed workflows under comprehensive logging, and \nquantify contamination via trace divergence in plans, tool invocations, and intermediate state. \nAcross 614 paired runs on 32 GAIA tasks with three different language models, we find a decoupling: \nworkflows may diverge substantially yet recover correct answers, or remain structurally similar \nwhile producing incorrect outputs. We characterize three manifestation types: silent semantic \ncorruption, behavioral detours with recovery, and combined structural disruption and their \ncontrol-flow signatures (rerouting, extended execution, early termination). We measure operational \ncosts and characterize why commonly used verification guardrails fail to intercept contamination. \nWe contribute (i) a formal taxonomy of contamination manifestations in structured workflows, \n(ii) a trace-based measurement framework for detecting and localizing contamination across agent \ninteractions, and (iii) empirical evidence with implications for targeted verification, defensive \ndesign, and cost control."
+  },
+  {
+    "slug": "vista-verifier-in-the-loop-agentic-rl-for-semantic-program-synthesis-in-quantum",
+    "title": "Vista: Verifier-in-the-Loop Agentic RL for Semantic Program Synthesis in Quantum Computing",
+    "summary": "Vista is a verifier-in-the-loop RL system for quantum program synthesis that efficiently schedules staged verification calls—compilers, simulators, optimizers—across training, training agents on correctness signals rather than text plausibility. It demonstrates that formally verified program synthesis is tractable as a learning problem when verification cost is treated as a first-class system constraint.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Cong Yu",
+        "affiliation": "Aalto University"
+      },
+      {
+        "name": "Tuo Shi",
+        "affiliation": "Aalto University"
+      },
+      {
+        "name": "Valter Uotila",
+        "affiliation": "Aalto University"
+      },
+      {
+        "name": "Shilong Deng",
+        "affiliation": "University of Liverpool"
+      },
+      {
+        "name": "Lei You",
+        "affiliation": "Technical University of Denmark"
+      },
+      {
+        "name": "Bo Zhao",
+        "affiliation": "Aalto University"
+      }
+    ],
+    "abstract": "Semantic program synthesis increasingly depends on external verifiers such as compilers, simulators, and optimizers. In these settings, correctness is determined not by text plausibility but by staged execution against tool-defined semantics. This makes verifier-in-the-loop training a systems problem: verifier stages differ sharply in cost, latency, and informativeness, so executing the full verifier on every candidate is inefficient, while collapsing all verifier outcomes into a single reward can destabilize learning. We present Vista, a verifier-in-the-loop agentic RL system for semantic program synthesis, instantiated for OpenQASM 3.0 quantum circuit generation. VISTA introduces two mechanisms: hierarchical verified reward optimization, which converts staged verifier outcomes into stable learning signals spanning feasibility, behavior, objective quality, and utility; and budget-aware gated evaluation, which schedules expensive verifier stages using partial evidence from earlier stages. VISTA outperforms four classes of baselines - frontier LLM agents, quantum-specific agents, RL post-training agents, and RL agentic tool-use agents. Across quantum optimization tasks, it achieves 1.13$\\times$ higher executability at Pass@10, improves semantic solution quality by 1.10$\\times$, and cuts verifier cost by 1.77$\\times$ under matched-budget evaluation."
+  },
+  {
+    "slug": "context-reasoning-and-hierarchy-a-costperformance-study-of-compound-llm-agent-de",
+    "title": "Context, Reasoning, and Hierarchy: A Cost–Performance Study of Compound LLM Agent Design in an Adversarial POMDP",
+    "summary": "A controlled study of compound LLM agent design in CybORG, an adversarial cyber defense environment, that separates the effects of context design, reasoning depth, and task decomposition on agent performance. It gives practitioners empirical guidance on which design choices genuinely improve outcomes versus which merely increase inference cost via token consumption.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Igor Bogdanov",
+        "affiliation": "Carleton University"
+      },
+      {
+        "name": "Chung-Horng Lung",
+        "affiliation": "Carleton University"
+      },
+      {
+        "name": "Thomas Kunz",
+        "affiliation": "Carleton University"
+      },
+      {
+        "name": "Jie Gao",
+        "affiliation": "Carleton University"
+      },
+      {
+        "name": "Adrian Taylor",
+        "affiliation": "Defence R&D Canada"
+      },
+      {
+        "name": "Marzia Zaman",
+        "affiliation": "Cistel Technology"
+      }
+    ],
+    "abstract": "Deploying compound LLM agents in adversarial, partially observable sequential environments requires navigating several interacting design dimensions: (1) what the agent sees, (2) how it reasons, and (3) how tasks are decomposed across components. Yet this design space remains empirically underexplored, and practitioners lack guidance on which design choices improve performance versus merely increase inference costs via token consumption. We present a controlled study of compound LLM agent design in CybORG CAGE-2, a cyber defense environment modeled as a Partially Observable Markov Decision Process (POMDP). Reward is non-positive, so all configurations operate in a failure-mitigation regime where errors compound over time. Our evaluation spans five model families, six models, and twelve configurations (3,475 evaluated episodes) with token-level cost accounting. We systematically vary context representation (raw observations vs. a deterministic, programmatic environment state-tracking layer with compressed history), deliberation (self-questioning, self-critique, and self-improvement tools, with optional explicit chain-of-thought prompting), and hierarchical decomposition (monolithic planner vs. delegation to specialized Analyst and ActionChooser sub-agents). We find that: (1) Programmatic state abstraction consistently delivers the largest returns per token spent (RPTS), improving mean episode return by up to 76\\% relative to raw observations, without increasing LLM API calls. (2) Distributing deliberation tools across a hierarchy degrades performance relative to hierarchy alone for all five model families, reaching up to 3.4$\\times$ worse mean return while using 2-3$\\times$ more tokens. We call this destructive interaction pattern a \\emph{deliberation cascade}. (3) Hierarchical decomposition without deliberation tools achieves the best absolute performance for most models, and context engineering is generally more cost-effective than deliberation. These findings suggest a design principle for structured adversarial POMDPs: invest in programmatic infrastructure and clean task decomposition rather than deeper per-agent reasoning, as these strategies can interfere when combined."
+  },
+  {
+    "slug": "marvis-modality-adaptive-reasoning-over-visualizations",
+    "title": "MARVIS: Modality Adaptive Reasoning over VISualizations",
+    "summary": "MARVIS converts latent embeddings from small specialized ML models into visual representations, then uses a VLM's spatial reasoning to make predictions on non-traditional modalities and long-tail domains. It achieves competitive accuracy without requiring raw data exposure or retraining the underlying specialized models.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Benjamin Feuer",
+        "affiliation": "Stanford University"
+      },
+      {
+        "name": "Lennart Purucker",
+        "affiliation": "Prior Labs"
+      },
+      {
+        "name": "Oussama Elachqar",
+        "affiliation": "Oumi"
+      },
+      {
+        "name": "Chinmay Hegde",
+        "affiliation": "New York University"
+      }
+    ],
+    "abstract": "Predictive applications of machine learning often rely on small (sub 1 Bn parameter) specialized models tuned to particular domains or modalities. Such models often achieve excellent performance, but lack flexibility. LLMs and VLMs offer versatility, but typically underperform specialized predictors, especially on non-traditional modalities and long-tail domains, and introduce risks of data exposure. We propose MARVIS (Modality Adaptive Reasoning over VISualizations), a system that transforms latent embedding spaces into visual representations and then leverages the spatial and fine-grained reasoning skills of VLMs to interpret the visualizations and utilize them for predictions successfully. MARVIS achieves competitive performance across vision, audio, biological, and tabular domains using a single 3B parameter model, yielding results that beat Gemini 2.0 by 16\\% on average. MARVIS drastically reduces the gap between LLM/VLMs approaches and specialized domain-specific methods, without exposing sensitive data or requiring any domain-specific training. Code and datasets are available at \\url{https://anonymous.4open.science/r/marvis-6F54}."
+  },
+  {
+    "slug": "flasc-federated-lora-with-sparse-communication",
+    "title": "FLASC: Federated LoRA with Sparse Communication",
+    "summary": "FLASC is a federated LoRA fine-tuning method that combines low-rank adaptation with sparse top-K gradient communication, reducing inter-device communication overhead in cross-device federated learning. Unlike prior sparse LoRA approaches, it avoids the accuracy degradation and counterproductive communication cost increases that come from imposing sparsity alone.",
+    "primaryPillar": "System Optimization & Efficiency",
+    "tags": [
+      "System Optimization & Efficiency"
+    ],
+    "authors": [
+      {
+        "name": "Kevin Kuo",
+        "affiliation": "Carnegie Mellon University"
+      },
+      {
+        "name": "Arian Raje",
+        "affiliation": "Carnegie Mellon University"
+      },
+      {
+        "name": "Kousik Rajesh",
+        "affiliation": "Carnegie Mellon University"
+      },
+      {
+        "name": "Virginia Smith",
+        "affiliation": "Carnegie Mellon University"
+      }
+    ],
+    "abstract": "Low-rank adaptation (LoRA) is a promising method for finetuning models in communication-constrained settings such as cross-device federated learning (FL). Prior work has explored ways to improve the efficiency of LoRA in federated settings by imposing additional sparsity constraints. However, existing methods for sparse LoRA not only harm accuracy but can in fact increase overall communication costs. We instead propose FLASC, a simple composite method that consists of a PEFT method and compression algorithm. First, we demonstrate that FLASC as a combination of LoRA and sparse Top-K communication outperforms baselines of using a lower LoRA rank or pruning LoRA weights. Second, FLASC-Search efficiently searches the space of rank-and-sparsity configurations by first tuning sparsity at a low rank and then transferring to higher ranks. Across four FL datasets, we demonstrate that FLASC outperforms existing sparse LoRA methods with up to 20% higher accuracy or 10x less communication. Overall, FLASC is a simple yet competitive baseline which can be easily extended to more advanced PEFT and compression methods in the future"
+  },
+  {
+    "slug": "supervisory-control-theory-for-llm-revision",
+    "title": "Supervisory Control Theory for LLM Revision",
+    "summary": "PLSA is a structured prompting framework that applies Supervisory Control Theory—a cognitive model of human oversight of automated systems—to guide LLM iterative self-revision. In large-scale evaluation across ML conference paper revision tasks, SCT-structured prompts produce revisions with significantly higher fidelity than matched standard self-refinement baselines.",
+    "primaryPillar": "Engineering & Operations",
+    "tags": [
+      "Engineering & Operations",
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Carlos Toxtli",
+        "affiliation": "Clemson University"
+      },
+      {
+        "name": "Wangfan Li",
+        "affiliation": "Clemson University"
+      }
+    ],
+    "abstract": "Iterative self-refinement is the dominant paradigm for improving LLM outputs without retraining, yet it lacks principled grounding for what to refine or in what order. We propose Prompt-Level Supervisory Alignment (PLSA), a framework that operationalizes Supervisory Control Theory (SCT), a cognitive framework for human oversight of automated systems, as a structured prompting strategy, and empirically evaluate whether theoretically-grounded prompt structure yields higher revision fidelity than matched iterative self-refinement. In a large-scale evaluation across eight venue-year combinations from three ML conference series (ICLR, NeurIPS, CoRL), SCT-structured conditions produce revisions with significantly higher fidelity to actual author revisions than both a single-pass baseline and a matched two-pass self-refinement baseline that uses identical review information without SCT structure (all $p < .001$, medium-to-large effect sizes). All conditions maintain practically equivalent LLM-judge quality, and cross-model evaluation with Google Gemini 2.5 Flash-Lite corroborates condition rankings, confirming findings are not artifacts of generator self-preference. These results provide empirical evidence that theoretically-grounded prompt structure, not merely iterative refinement, is the operative variable driving higher revision fidelity."
+  },
+  {
+    "slug": "willful-disobedience-automatically-detecting-failures-in-agentic-traces",
+    "title": "Willful Disobedience: Automatically Detecting Failures in Agentic Traces",
+    "summary": "AgentPex automatically detects procedural failures in agentic execution traces—wrong workflow routing, unsafe tool use, violations of prompt-specified rules—by extracting behavioral rules from agent prompts and checking entire execution histories against them. It catches critical failures that outcome-only benchmarks miss, making it practical to validate agent behavior at the workflow level.",
+    "primaryPillar": "Evaluation & Benchmarking",
+    "tags": [
+      "Evaluation & Benchmarking"
+    ],
+    "authors": [
+      {
+        "name": "Reshabh K Sharma",
+        "affiliation": "University of Washington"
+      },
+      {
+        "name": "Shraddha Barke",
+        "affiliation": "Microsoft Research"
+      },
+      {
+        "name": "Benjamin Zorn",
+        "affiliation": "Microsoft Research"
+      }
+    ],
+    "abstract": "AI agents are increasingly embedded in real software systems, where they execute multi-step workflows through multi-turn dialogue, tool invocations, and intermediate decisions.\nThese long execution histories, called \\emph{agentic traces}, make validation difficult.\nOutcome-only benchmarks can miss critical procedural failures, such as incorrect workflow routing, unsafe tool usage, or violations of prompt-specified rules. This paper presents AgentPex, an AI-powered tool designed to systematically evaluate agentic traces. AgentPex extracts behavioral rules from agent prompts and system instructions, then uses these specifications to automatically evaluate traces for compliance. We evaluate AgentPex on 424 traces from the $\\tau^2$ benchmark across models in telecom, retail, and airline customer service. Our results show that AgentPex distinguishes agent behavior across models and surfaces specification violations that are not captured by outcome-only scoring. It also provides fine-grained analysis by domain and metric, enabling developers to understand agent strengths and weaknesses at scale."
+  },
+  {
+    "slug": "learning-from-supervision-with-semantic-and-episodic-memory-a-reflective-approac",
+    "title": "Learning from Supervision with Semantic and Episodic Memory: A Reflective Approach to Agent Adaptation",
+    "summary": "A memory-augmented agent framework that enables LLM agents to learn new classification functions from labeled examples at inference time, without any parameter updates. It uses LLM-generated episodic critiques of specific past mistakes and distills them into reusable semantic task-level guidance, outperforming few-shot prompting and matching fine-tuned baselines on diverse tasks.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Jackson Hassell",
+        "affiliation": "Megagon Labs"
+      },
+      {
+        "name": "Dan Zhang",
+        "affiliation": "Megagon Labs"
+      },
+      {
+        "name": "Hannah Kim",
+        "affiliation": "Megagon Labs"
+      },
+      {
+        "name": "Tom Mitchell",
+        "affiliation": "Megagon Labs"
+      },
+      {
+        "name": "Estevam Hruschka",
+        "affiliation": "Megagon Labs"
+      }
+    ],
+    "abstract": "We investigate how agents built on pretrained large language models (LLMs) can learn target classification functions from labeled examples without parameter updates. While conventional approaches like fine-tuning are often costly, inflexible, and opaque, we propose a memory-augmented framework that leverages LLM-generated critiques grounded in labeled data. Our framework uses episodic memory to store instance-level critiques—capturing specific past experiences—and semantic memory to distill these into reusable, task-level guidance.\n\nAcross a diverse set of tasks and models, our best performing self-critique strategy (utilizing both memory types) yields an average improvement of 8.1 percentage points over the zero shot baseline, and 4.6pp over a RAG-based baseline that relies only on labels. However, improvements vary substantially across models and domains. To explain this variation, we introduce suggestibility - a novel metric capturing how receptive a model is to external reasoning provided in context. We use suggestibility to illuminate when and why memory augmentation succeeds or falls short. Beyond accuracy gains, we find pre-computed critiques  substantially reduce inference-time computation for reasoning models, cutting thinking tokens by up to 85.4% by substituting for reasoning the model would otherwise perform independently. Our findings highlight the conditions under which memory-driven, reflective learning can serve as a lightweight, interpretable, and efficient strategy for improving LLM adaptability."
+  },
+  {
+    "slug": "forge-self-evolving-agent-memory-with-no-weight-updates-via-population-broadcast",
+    "title": "FORGE: Self-Evolving Agent Memory With No Weight Updates via Population Broadcast",
+    "summary": "FORGE is a population-based protocol in which LLM agents self-generate and evolve natural-language memory—textual heuristics and few-shot demonstrations—through reflection and competitive selection across episodes. It improves agent decision-making over time with no gradient updates, using only the same base LLM that the agent runs on.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Igor Bogdanov",
+        "affiliation": "Carleton University"
+      },
+      {
+        "name": "Chung-Horng Lung",
+        "affiliation": "Carleton University"
+      },
+      {
+        "name": "Thomas Kunz",
+        "affiliation": "Carleton University"
+      },
+      {
+        "name": "Jie Gao",
+        "affiliation": "Carleton University"
+      },
+      {
+        "name": "Adrian Taylor",
+        "affiliation": "Defence R&D Canada"
+      },
+      {
+        "name": "Marzia Zaman",
+        "affiliation": "Cistel Technology"
+      }
+    ],
+    "abstract": "Can LLM agents improve decision-making through self-generated memory without gradient updates? We propose FORGE (Failure-Optimized Reflective Graduation and Evolution), a staged, population-based protocol that evolves prompt-injected natural-language memory for hierarchical ReAct agents. Within each stage, attempts that encounter a per-step reward below a threshold are terminated early. A dedicated reflection agent, using the same underlying LLM (no distillation from a stronger model), analyzes the trajectory and produces reusable knowledge artifacts: textual heuristics (RULES), few-shot demonstrations (EXAMPLES), or both (MIXED). These artifacts are appended to the acting agent's prompt, and the next attempt starts a fresh episode from the initial state. The best-performing instance's memory is propagated with replacement to the population between stages, while a graduation criterion freezes converged instances and excludes them from further training. We establish a baseline by evaluating an empty-memory hierarchical ReAct agent on CybORG CAGE-2, a stochastic network-defense environment modelled as a Partially Observable Markov Decision Process (POMDP), where all four tested LLM families (Gemini-2.5-Flash-Lite, Grok-4-Fast, Llama-4-Maverick, Qwen3-235B) exhibit strongly negative, heavy-tailed baseline rewards. FORGE improves average evaluation return by up to 7.1× over baseline, and reduces catastrophic-failure rates (below -100) to as low as 0-6% in the strongest configurations. Across 46 experiments totaling 910 evaluated episodes and 4B+ tokens, we find that (1) knowledge transfer via population broadcast is critical, improving performance by 22.7-74.3% over the no-broadcast ablation; (2) all three representations yield large improvements in the replicated Gemini study, with observed substantial gains in single-session probes across three additional model families; and (3) weaker baseline models benefit disproportionately, suggesting FORGE mitigates capability gaps rather than amplifying strong models."
+  },
+  {
+    "slug": "benchmarking-agents-in-insurance-underwriting-environments",
+    "title": "Benchmarking Agents in Insurance Underwriting Environments",
+    "summary": "UNDERWRITE is an expert-first benchmark for evaluating AI agents in insurance underwriting, built in close collaboration with domain practitioners to capture enterprise-realistic complexity: proprietary business knowledge, noisy tool interfaces, and imperfect data. It fills the gap left by open-domain benchmarks that overemphasize code and narrow accuracy metrics.",
+    "primaryPillar": "Evaluation & Benchmarking",
+    "tags": [
+      "Evaluation & Benchmarking"
+    ],
+    "authors": [
+      {
+        "name": "Amanda Dsouza",
+        "affiliation": "Snorkel AI"
+      },
+      {
+        "name": "Ramya Ramakrishnan",
+        "affiliation": "Snorkel AI"
+      },
+      {
+        "name": "Charles Dickens",
+        "affiliation": "Snorkel AI"
+      },
+      {
+        "name": "Bhavishya Pohani",
+        "affiliation": "Snorkel AI"
+      },
+      {
+        "name": "Christopher M Glaze",
+        "affiliation": "Snorkel AI"
+      }
+    ],
+    "abstract": "As AI agents integrate into enterprise applications, their evaluation demands benchmarks that reflect the complexity of real-world operations. Instead, existing benchmarks overemphasize open-domains such as code, use narrow accuracy metrics, and lack authentic complexity. We present UNDERWRITE, an expert-first, multi-turn insurance underwriting benchmark designed in close collaboration with domain experts to capture real-world enterprise challenges. UNDERWRITE introduces critical realism factors often absent in current benchmarks: proprietary business knowledge, noisy tool interfaces, and imperfect simulated users requiring careful information gathering. Evaluating 13 frontier models, we uncover significant gaps between research lab performance and enterprise readiness: the most accurate models are not the most efficient, models hallucinate domain knowledge despite tool access, and passˆk results show a 20% drop in performance. The results from UNDERWRITE demonstrate that expert involvement in benchmark design is essential for realistic agent evaluation, common agentic frameworks exhibit brittleness that skews performance reporting, and hallucination detection in specialized domains demands compositional approaches. Our work provides insights for developing benchmarks that better align with enterprise deployment requirements."
+  },
+  {
+    "slug": "scalable-inference-architectures-for-compound-ai-systems-a-production-deployment",
+    "title": "Scalable Inference Architectures for Compound AI Systems: A Production Deployment Study",
+    "summary": "A production deployment study from Salesforce describing the modular, platform-agnostic inference architecture behind Agentforce and ApexGuru, sharing hard-won lessons on serving concurrent, heterogeneous compound AI workloads at enterprise scale. The paper provides concrete architectural patterns for cost-effective, low-latency multi-model serving that academic treatments typically omit.",
+    "primaryPillar": "Engineering & Operations",
+    "tags": [
+      "Engineering & Operations",
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Srikanta Prasad Sondekoppam Vijayashankar",
+        "affiliation": "Salesforce India Pvt Ltd"
+      },
+      {
+        "name": "Utkarsh Arora",
+        "affiliation": "Salesforce India Pvt Ltd"
+      }
+    ],
+    "abstract": "Modern enterprise AI applications increasingly rely on compound AI systems—architectures that compose multiple models, retrievers, and tools to accomplish complex tasks. Deploying such systems in production demands inference infrastructure that can efficiently serve concurrent, heterogeneous model invocations while maintaining cost-effectiveness and low latency. This paper presents a production deployment study of a modular, platform-agnostic inference architecture developed at Salesforce to support compound AI use cases including Agentforce (autonomous AI agents) and ApexGuru (AI-powered code analysis). The system integrates serverless execution, dynamic autoscaling, and MLOps pipelines to deliver consistent low-latency inference across multi-component agent workflows. We report production results demonstrating over 50% reduction in tail latency (P95), up to 3.9× throughput improvement, and 30–40% cost savings compared to prior static deployments. We further present a novel analysis of compound-system-specific challenges including multi-model fan-out overhead, cascading cold-start propagation, and heterogeneous scaling dynamics that emerge uniquely when serving agentic workloads. Through detailed case studies and operational lessons, we illustrate how the architecture enables compound AI systems to scale model invocations in parallel, handle bursty multi-agent workloads, and support rapid model iteration—capabilities essential for operationalizing agentic AI at enterprise scale"
+  },
+  {
+    "slug": "fastworkflow-closing-the-agentic-performance-gap-between-small-and-frontier-lang",
+    "title": "fastWorkflow: Closing the Agentic Performance Gap Between Small and Frontier Language Models",
+    "summary": "fastWorkflow is a dual-mode agentic framework that closes the performance gap between small and frontier language models by addressing a five-dimensional taxonomy of SLM failure modes: NLU, tool management, planning, agentic reasoning, and context management. It enables smaller, lower-cost, privacy-preserving models to reach near-frontier task success rates on agentic benchmarks.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Sanchit Satija",
+        "affiliation": "Radiant Logic"
+      },
+      {
+        "name": "Aditya Bhatt",
+        "affiliation": "Radiant Logic"
+      },
+      {
+        "name": "Priyanshu Jani",
+        "affiliation": "Radiant Logic"
+      },
+      {
+        "name": "Dhar Rawal",
+        "affiliation": "Radiant Logic"
+      }
+    ],
+    "abstract": "Large language models power increasingly capable autonomous agents, yet their deployment at scale is constrained by high inference costs, latency, and data privacy concerns. Small language models (SLMs) offer compelling operational advantages but exhibit systematic failure modes in agentic settings. Despite growing SLM deployment, these agentic failure modes remain poorly characterized and inadequately addressed. We present an empirically-grounded taxonomy categorizing SLM failures across five dimensions: natural language understanding failures, tool management failures, planning failures, agentic reasoning failures, and context management failures, and quantify their prevalence on the 𝜏-bench benchmark. Guided by this taxonomy, we introduce fastWorkflow, a dual-mode agentic architectural framework implementing a cascaded NLU pipeline for intent detection and structured parameter extraction with validation, hierarchical context organization that reduces effective action space, explicit task planning with dependency-aware decomposition, and adaptive context management, among other targeted mitigations. On 𝜏-bench, GPT-OSS-20B augmented with fastWorkflow achieves 83.47% Pass^1 on the Retail domain and 78.00% on Airline, surpassing all frontier models evaluated on 𝜏- bench including Claude Opus 4.1 (82.40% Retail, 56.00% Airline) and Claude Sonnet 4 (80.50% Retail, 60.00% Airline). Even Mistral-7B-Instruct with fastWorkflow matches Claude Sonnet 4 on Airline at 60.00% while operating at 15–75× lower inference cost. Ablation studies confirm that the cascaded NLU pipeline is the most impactful component, with its removal causing a 58-point performance collapse. Our findings demonstrate that architectural separation of concerns, offloading error-prone operations to structured subsystems while preserving LLM flexibility for planning and recovery can close the performance gap between small and frontier models in agentic tasks, shifting the cost-performance Pareto frontier for production agent deployment."
+  },
+  {
+    "slug": "tracefix-repairing-agent-coordination-protocols-with-tla-counterexamples",
+    "title": "TraceFix: Repairing Agent Coordination Protocols with TLA+ Counterexamples",
+    "summary": "TraceFix is a verification-first pipeline that synthesizes TLA+-verified coordination protocols for multi-agent systems, compiles them into per-agent system prompts, and enforces them at runtime with a monitor that rejects out-of-topology operations. It provides formal correctness guarantees for multi-agent coordination from nothing more than a natural-language task description.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Shuren Xia",
+        "affiliation": "Rutgers University"
+      },
+      {
+        "name": "Qiwei Li",
+        "affiliation": "Rutgers University"
+      },
+      {
+        "name": "Taqiya Ehsan",
+        "affiliation": "Rutgers University"
+      },
+      {
+        "name": "Jorge Ortiz",
+        "affiliation": "Rutgers University"
+      }
+    ],
+    "abstract": "We present TraceFix, a verification-first pipeline for Large Language\nModel (LLM) multi-agent coordination. An agent synthesizes a pro-\ntocol topology as a structured intermediate representation (IR) from\na task description, generates PlusCal coordination logic, and itera-\ntively repairs the protocol using counterexamples from the TLA+\nmodel checker (TLC) until verification succeeds. Verified process\nbodies are compiled into per-agent system prompts and executed\nunder a runtime monitor that rejects out-of-topology coordination\noperations. On 48 tasks spanning 16 scenario families, all tasks reach\nfull TLC verification; 62.5% pass on the first attempt and none re-\nquires more than four repair iterations. State spaces span six orders\nof magnitude yet verification completes in under 60 s for every task.\nA 3,456-run runtime comparison shows that topology-monitored\nexecution achieves the highest task completion (89.4% average,\n81.5% full) and that runtimes using the verified protocol degrade\nat roughly half the rate of prompt-only and chat-only baselines\nwhen model capability is reduced. A paired ablation under a fixed\nruntime shows that TLC-verified protocols cut deadlock/livelock\n(DL/LL) from 31.1% to 14.1%, with the largest separation under fault\ninjection."
+  },
+  {
+    "slug": "the-verifier-tax-horizon-dependent-safety-success-tradeoffs-in-tool-using-llm-ag",
+    "title": "The Verifier Tax: Horizon Dependent Safety--Success Tradeoffs in Tool Using LLM Agents",
+    "summary": "An empirical study quantifying the 'Verifier Tax'—the persistent reduction in task success rate caused by adding runtime safety enforcement to tool-using LLM agents. The results show a model-dependent Safety-Capability Gap with interaction horizons of 15–30 turns beyond which safety enforcement dominates, giving practitioners concrete guidance on where safety and capability trade-offs bite.",
+    "primaryPillar": "Security & Privacy",
+    "tags": [
+      "Security & Privacy",
+      "Evaluation & Benchmarking"
+    ],
+    "authors": [
+      {
+        "name": "Tanmay Sah",
+        "affiliation": "Harrisburg University of Science and Technology"
+      },
+      {
+        "name": "Vishal Srivastava",
+        "affiliation": "Johns Hopkins University"
+      },
+      {
+        "name": "Dolly Sah",
+        "affiliation": "University of Utah"
+      },
+      {
+        "name": "Kayden Jordan",
+        "affiliation": "Harrisburg University of Science and Technology"
+      }
+    ],
+    "abstract": "We study how runtime enforcement against unsafe actions affects end-to-end task \nperformance in multi-step tool using large language model (LLM) agents. \nUsing \\taubench{} across Airline and Retail domains, we compare \nbaseline Tool-Calling, planning-integrated (\\triad), and \npolicy-mediated (\\triadsafety) architectures with GPT-OSS-20B and \nGLM-4-9B. We identify model dependent interaction horizons (15--30 \nturns) and decompose outcomes into overall success rate (SR), safe success rate\n(SSR), and unsafe success rate (USR). Our results reveal a persistent \n``Safety-Capability Gap''. While safety mediation can intercept up to \n94\\% of non-compliant actions, it rarely translates into strictly \nsafe goal attainment (SSR < 5\\% in most settings). We find that \nhigh unsafe success rates are primarily driven by ``Integrity Leaks,'' \nwhere models hallucinate user identifiers to bypass mandatory \nauthentication. Recovery rates following blocked actions are \nconsistently low, ranging from 21\\% for GPT-OSS-20B in simpler \nprocedural tasks to near 0\\% in complex Retail scenarios. These \nresults demonstrate that runtime enforcement imposes a significant \n``verifier tax'' on conversational length and compute cost without \nguaranteeing safe completion, highlighting the critical need for \nagents capable of grounded identity verification and \npost-intervention reasoning."
+  },
+  {
+    "slug": "scideator-human-llm-compound-system-for-scientific-ideation-through-facet-recomb",
+    "title": "Scideator: Human-LLM Compound System for Scientific Ideation through Facet Recombination and Novelty Evaluation",
+    "summary": "Scideator is a human-LLM compound system for scientific ideation that extracts purposes, mechanisms, and evaluations from researcher-supplied papers, then lets users interactively recombine these facets to generate and evaluate novel research ideas. It operationalizes facet-based ideation with both an LLM-driven novelty evaluator and a user study confirming idea quality.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Marissa Radensky",
+        "affiliation": "University of Washington"
+      },
+      {
+        "name": "Simra Shahid",
+        "affiliation": "Microsoft"
+      },
+      {
+        "name": "Raymond Fok",
+        "affiliation": "University of Washington"
+      },
+      {
+        "name": "Pao Siangliulue",
+        "affiliation": "Allen Institute for AI"
+      },
+      {
+        "name": "Tom Hope",
+        "affiliation": "Allen Institute for AI"
+      },
+      {
+        "name": "Daniel S. Weld",
+        "affiliation": "Allen Institute for AI"
+      }
+    ],
+    "abstract": "The scientific ideation process often involves blending salient aspects of existing papers to create new ideas — a framework known as facet-based ideation.  We contribute **SCIDEATOR**, the first human-LLM system for facet-based scientific ideation. Starting from a user-provided set of scientific papers, SCIDEATOR extracts key facets---purposes, mechanisms, and evaluations---from these and related papers, allowing users to explore the idea space by interactively recombining facets to synthesize inventive ideas. \nSCIDEATOR is driven by three design choices: (1) human-in-the-loop facet recombination, where users select facets from retrieved papers and the system generates ideas by finding analogies across these facets via the **Faceted Idea Generator** module; (2) distance-controlled retrieval via the **Analogous Paper Facet Finder** module, which surfaces papers from the same topic to entirely different subareas to provide a spectrum of creative directions; and (3) facet-based novelty verification via the **Idea Novelty Checker** module, a retrieve-then-rerank pipeline that evaluates idea originality using facets. In a user study with computer science researchers, SCIDEATOR provided significantly more creativity support than a baseline using the same backbone LLM without our facet-based modules, particularly in idea exploration and expressiveness. Participants' favorite ideas more often included facets selected by themselves rather than the LLM, and participants used fewer free-text instructions with SCIDEATOR, indicating a preference for facet-level steering over prompting. Finally, re-ranking papers by facet matching rather than general relevance improved novelty classification accuracy from 13.79% to 89.66%."
+  },
+  {
+    "slug": "vibench-a-benchmark-on-vibe-coding",
+    "title": "ViBench: A Benchmark on Vibe Coding",
+    "summary": "ViBench is the first open-source benchmark for evaluating AI agents on realistic end-to-end vibe coding—natural-language-to-working-web-application creation—derived from production traces across 15 applications. It measures the complete development process rather than isolated code completion, revealing where the current generation of agents breaks down in practice.",
+    "primaryPillar": "Evaluation & Benchmarking",
+    "tags": [
+      "Evaluation & Benchmarking"
+    ],
+    "authors": [
+      {
+        "name": "Peter Zhong",
+        "affiliation": "Replit & Carnegie Mellon University"
+      },
+      {
+        "name": "Pashootan Vaezipoor",
+        "affiliation": "Georgian AI Lab"
+      },
+      {
+        "name": "Fuyang Cui",
+        "affiliation": "Georgian AI Lab"
+      },
+      {
+        "name": "Vaibhav Kumar",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "James Austin",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Azin Asgarian",
+        "affiliation": "Georgian AI Lab"
+      },
+      {
+        "name": "Toby Ho",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Paul Inder",
+        "affiliation": "Georgian AI Lab"
+      },
+      {
+        "name": "Imen Kedir",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Zhen Li",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Nicholas Ondo",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Asna Shafiq",
+        "affiliation": "Georgian AI Lab"
+      },
+      {
+        "name": "Ibrahim Sheikh",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Edouard Sioufi",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Setareh Soltanieh",
+        "affiliation": "Georgian AI Lab"
+      },
+      {
+        "name": "Ben Wilde",
+        "affiliation": "Georgian AI Lab"
+      },
+      {
+        "name": "Jacky Zhao",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Ryan Carelli",
+        "affiliation": "Replit"
+      },
+      {
+        "name": "Heather Miller",
+        "affiliation": "Carnegie Mellon University"
+      },
+      {
+        "name": "Michele Catasta",
+        "affiliation": "Replit"
+      }
+    ],
+    "abstract": "Vibe coding -- where users describe applications in natural language and AI agents autonomously handle all implementation -- has rapidly emerged as a mainstream development paradigm. Yet existing benchmarks evaluate mainly an agent's ability at code completion or fixing bugs, not end-to-end application creation from a user's perspective.\n\nWe introduce ViBench, the first open-source benchmark for evaluating AI agents on realistic, end-to-end web application development. ViBench comprises tasks derived from production traces across 15 applications spanning different domains, covering both zero-to-one creation and feature extension -- the two core workflows of vibe coding. Unlike prior benchmarks, tasks are specified entirely through user-facing requirements with no implementation constraints, and evaluation occurs at the abstraction level of an end user interacting with the application. We contribute an adaptive automatic evaluator that uses REPL-based browser automation to verify arbitrary implementations without assuming anything about code structure, achieving 99% step-level agreement with human experts across 1,082 test steps.\n\nEvaluating nine models -- five closed-source and four open-weight -- across 105 artifacts, we find that even the best models are far from reliable: Claude Opus 4.6 and GPT-5.2 lead with only 46% and 42% Pass@1 -- fully correct artifacts on the first try -- while no open-weight model exceeds 12% Pass@1. Feature extension on a stable reference codebase proves easier than zero-to-one creation, but errors compound when models extend their own code: seven of nine models degrade in the Vibe-on-Vibe setting, with complete failure rates rising sharply. Notably, open-weight models that perform competitively on coding benchmarks such as SWE-bench struggle to generalize to end-to-end vibe coding, exhibiting complete failure rates up to 40% -- underscoring that end-to-end application development demands capabilities beyond what current coding benchmarks measure. As vibe coding matures into mainstream development practice, ViBench provides the open-source infrastructure needed to measure progress, compare models, and guide practitioners toward reliable AI-assisted development, beyond just a \"Vibe Check\"."
+  },
+  {
+    "slug": "agentstop-terminating-local-ai-agents-early-to-save-energy-in-consumer-devices",
+    "title": "AgentStop: Terminating Local AI Agents Early to Save Energy in Consumer Devices",
+    "summary": "AgentStop reduces energy consumption of locally deployed LLM agents on consumer devices by predicting task completion likelihood mid-execution and terminating unproductive branches early. The system saves substantial energy with minimal impact on task success rates, making local agentic deployment practical on battery-powered hardware.",
+    "primaryPillar": "System Optimization & Efficiency",
+    "tags": [
+      "System Optimization & Efficiency"
+    ],
+    "authors": [
+      {
+        "name": "Dzung Pham",
+        "affiliation": "University of Massachusetts Amherst"
+      },
+      {
+        "name": "Kleomenis Katevas",
+        "affiliation": "Brave Software"
+      },
+      {
+        "name": "Ali Shahin Shamsabadi",
+        "affiliation": "Brave Software"
+      },
+      {
+        "name": "Hamed Haddadi",
+        "affiliation": "Brave Software, Imperial College London"
+      }
+    ],
+    "abstract": "Autonomous agents powered by large language models (LLMs) are increasingly used to automate complex, multi-step tasks such as coding or web-based question answering. While remote, cloud-based agents offer scalability and ease of deployment, they raise privacy concerns, depend on network connectivity, and incur recurring API costs. Deploying agents locally on user devices mitigates these issues by preserving data privacy and eliminating usage-based fees. However, agentic workflows are far more resource-intensive than typical LLM interactions, which usually involve a single prompt–response exchange. Iterative reasoning, tool use, and failure-retry loops substantially increase token consumption, often expending significant compute without successfully completing tasks.\n\nIn this work, we investigate the time, token, and energy overhead of locally deployed LLM-based agents on consumer hardware. Our measurements show that agentic execution increases GPU power draw, temperature, and battery drain compared to single-inference workloads. To address this inefficiency, we introduce AgentStop, a lightweight efficiency supervisor that predicts and preemptively terminates trajectories unlikely to succeed. Leveraging low-cost execution signals, such as token-level log probabilities, AgentStop can reduce wasted energy by 10-20\\% with minimal impact on task performance (<5\\% utility drop) for challenging web-based question answering and coding benchmarks. These findings position predictive early termination as a practical mechanism for enabling sustainable, privacy-preserving LLM agents on user devices."
+  },
+  {
+    "slug": "composing-policy-gradients-and-prompt-optimization-for-language-model-programs",
+    "title": "Composing Policy Gradients and Prompt Optimization for Language Model Programs",
+    "summary": "A generalization of GRPO to modular multi-prompt LLM programs that enables RL post-training across agent systems with multiple LM calls, variable-length trajectories, and interrupted rollouts. The paper shows for the first time that RL training and automatic prompt optimization compose well together, jointly improving accuracy by 11% on average.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Noah Ziems",
+        "affiliation": "University of Notre Dame"
+      },
+      {
+        "name": "Dilara Soylu",
+        "affiliation": "Stanford University"
+      },
+      {
+        "name": "Lakshya A Agrawal",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Isaac Miller",
+        "affiliation": "Normal Computing"
+      },
+      {
+        "name": "Liheng Lai",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Chen Qian",
+        "affiliation": "Databricks"
+      },
+      {
+        "name": "Kaiqiang Song",
+        "affiliation": "Zoom, Inc."
+      },
+      {
+        "name": "Meng Jiang",
+        "affiliation": "University of Notre Dame"
+      },
+      {
+        "name": "Dan Klein",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Matei Zaharia",
+        "affiliation": "UC Berkeley, Databricks"
+      },
+      {
+        "name": "Karel D’Oosterlinck",
+        "affiliation": "Contextual AI"
+      },
+      {
+        "name": "Christopher Potts",
+        "affiliation": "Stanford University"
+      },
+      {
+        "name": "Omar Khattab",
+        "affiliation": "MIT"
+      }
+    ],
+    "abstract": "Group Relative Policy Optimization (GRPO) has proven to be an effective tool for post-training language models (LMs). However, AI systems are increasingly expressed as modular programs that mix together multiple LM calls with distinct prompt templates and other tools, and it is not clear how best to leverage GRPO to improve these systems. We begin to address this challenge by generalizing GRPO to multi-prompt systems by grouping LM calls by module across rollouts and handling variable-length and interrupted trajectories. We find for the first time that GRPO (and its multi-module counterpart) composes well with automatic prompt optimization, and together they improve accuracy by 11% on average across classification, many-hop search, and privacy-preserving delegation tasks against the post-trained LM---with 5% gains against prompt optimization on its own. Our approach is released as an open-source learning algorithm for compound AI systems."
+  },
+  {
+    "slug": "dissecting-and-improving-communication-performance-in-multi-node-llm-inference",
+    "title": "Dissecting and Improving Communication Performance in Multi-Node LLM Inference",
+    "summary": "A detailed performance study of multi-node distributed LLM inference on GPU clusters that characterizes communication bottlenecks across model-parallel strategies—tensor, pipeline, and sequence parallelism—at scale. The results identify the dominant sources of inter-node communication overhead and provide optimization strategies validated on state-of-the-art inference engines.",
+    "primaryPillar": "System Optimization & Efficiency",
+    "tags": [
+      "System Optimization & Efficiency"
+    ],
+    "authors": [
+      {
+        "name": "Prajwal Singhania",
+        "affiliation": "University of Maryland"
+      },
+      {
+        "name": "Siddharth Singh",
+        "affiliation": "University of Maryland"
+      },
+      {
+        "name": "Lannie Dalton Hough",
+        "affiliation": "University of Maryland"
+      },
+      {
+        "name": "Akarsh Srivastava",
+        "affiliation": "University of Maryland"
+      },
+      {
+        "name": "Harshitha Menon",
+        "affiliation": "Lawrence Livermore National Laboratory"
+      },
+      {
+        "name": "Charles Fredrick Jekel",
+        "affiliation": "Lawrence Livermore National Laboratory"
+      },
+      {
+        "name": "Abhinav Bhatele",
+        "affiliation": "University of Maryland"
+      }
+    ],
+    "abstract": "As large language models (LLMs) continue to grow in size, distributed inference\nhas become increasingly important. Model-parallel strategies must now\nefficiently scale not only across multiple GPUs but also across multiple nodes.\nIn this work, we present a detailed performance study of multi-node distributed\ninference using LLMs on GPU-based supercomputers. We conduct experiments with\nseveral state-of-the-art inference engines alongside YALIS, a research-oriented\nprototype engine designed for controlled experimentation. We analyze the\nstrong-scaling behavior of different model-parallel schemes and identify key\nbottlenecks. Because all-reduce operations are a common performance bottleneck, we develop\nNVRAR, a hierarchical all-reduce algorithm based on recursive doubling with\nNVSHMEM. NVRAR achieves up to 1.9$\\times$-3.6$\\times$ lower latency than NCCL for message sizes between 128\\,KB and 2\\,MB on HPE Slingshot and InfiniBand interconnects.\nIntegrated into YALIS, NVRAR achieves up to a 1.72$\\times$ reduction in end-to-end batch\nlatency for the Llama 3.1 405B model in multi-node decode-heavy workloads using\ntensor parallelism."
+  },
+  {
+    "slug": "malice-in-agentland-down-the-rabbit-hole-of-backdoors-in-the-ai-supply-chain",
+    "title": "Malice in Agentland: Down the Rabbit Hole of Backdoors in the AI Supply Chain",
+    "summary": "Malice in Agentland demonstrates that AI agent supply chains are vulnerable to backdoor attacks at three distinct layers: finetuning data poisoning, pre-backdoored base models, and a novel environment poisoning vector that exploits the agent's interaction with its deployment environment. The attacks are hard to detect and cause agents to behave maliciously only when specific triggers are present.",
+    "primaryPillar": "Security & Privacy",
+    "tags": [
+      "Security & Privacy"
+    ],
+    "authors": [
+      {
+        "name": "Léo Boisvert",
+        "affiliation": "ServiceNow Research, Mila -Quebec AI institute, Polytechnique Montréal"
+      },
+      {
+        "name": "Abhay Puri",
+        "affiliation": "ServiceNow Research"
+      },
+      {
+        "name": "Chandra Kiran Reddy Evuru",
+        "affiliation": "ServiceNow"
+      },
+      {
+        "name": "Nazanin Mohammadi Sepahvand",
+        "affiliation": "ServiceNow Research"
+      },
+      {
+        "name": "Nicolas Chapados",
+        "affiliation": "Mila -Quebec AI institute, Polytechnique Montréal"
+      },
+      {
+        "name": "Quentin Cappart",
+        "affiliation": "Polytechnique Montréal"
+      },
+      {
+        "name": "Alexandre Lacoste",
+        "affiliation": "ServiceNow Research"
+      },
+      {
+        "name": "Krishnamurthy Dvijotham",
+        "affiliation": "ServiceNow Research"
+      },
+      {
+        "name": "Alexandre Drouin",
+        "affiliation": "ServiceNow Research"
+      }
+    ],
+    "abstract": "While finetuning AI agents on interaction data—such as web browsing or tool use—improves their capabilities, it also introduces critical security vulnerabilities within the agentic AI supply chain. We show that adversaries can effectively poison the data collection pipeline at multiple stages to embed hard-to-detect backdoors that, when triggered, cause unsafe or malicious behavior. We formalize three realistic threat models across distinct layers of the supply chain: direct poisoning of finetuning data, pre-backdoored base models, and environment poisoning, a novel attack vector that exploits vulnerabilities specific to agentic training pipelines. Evaluated on two widely adopted agentic benchmarks, all three threat models prove effective: poisoning only a small number of demonstrations is sufficient to embed a backdoor that causes an agent to leak confidential user information with over 80\\% success. Furthermore, we demonstrate that prominent safeguards, including four guardrail models and one weight-based defense, fail to detect or prevent the malicious behavior. These findings expose an urgent and underexplored threat to agentic AI development, underscoring the need for rigorous security vetting of data collection pipelines and model supply chains."
+  },
+  {
+    "slug": "optany-unified-text-optimization-can-outperform-specialized-systems",
+    "title": "optany: Unified Text Optimization can Outperform Specialized Systems",
+    "summary": "optany is a single LLM-based optimization system that achieves state-of-the-art results across six diverse tasks simultaneously—nearly tripling Gemini Flash's ARC-AGI accuracy, cutting cloud scheduling costs 40%, and matching AlphaEvolve on circle packing—by framing all problems as improving a text artifact evaluated by a scoring function. The results challenge the assumption that domain-specific optimization tools are necessary.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Lakshya A Agrawal",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Donghyun Lee",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Wenjie Ma",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Karim Elmaaroufi",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Rohit Sandadi",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Shangyin Tan",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Sanjit A. Seshia",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Koushik Sen",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Dan Klein",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Ion Stoica",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Joseph Gonzalez",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Omar Khattab",
+        "affiliation": "Massachusetts Institute of Technology"
+      },
+      {
+        "name": "Alexandros G. Dimakis",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Matei Zaharia",
+        "affiliation": "University of California, Berkeley"
+      }
+    ],
+    "abstract": "Can a single LLM-based optimization system match specialized tools across fundamentally different domains? We show that when optimization problems are formulated as improving a text artifact evaluated by a scoring function, a single AI-based optimization system---supporting single-task search, multi-task search with cross-problem transfer, and generalization to unseen inputs---achieves state-of-the-art results across six diverse tasks. Our system discovers agent architectures that nearly triple Gemini Flash's ARC-AGI accuracy (32.5\\% → 89.5\\%), finds scheduling algorithms that cut cloud costs by 40\\%, generates CUDA kernels where 87\\% match or beat PyTorch, and outperforms AlphaEvolve's reported circle packing solution (n=26). Ablations reveal that structured diagnostic feedback (side information) yields faster convergence and higher final scores than score-only feedback, and that multi-task search can outperform independent optimization given equivalent per-problem budget through cross-task transfer.\nTogether, we show for the first time that text optimization with LLM-based search is a general-purpose problem-solving paradigm, unifying tasks traditionally requiring domain-specific algorithms under a single framework."
+  },
+  {
+    "slug": "scaling-textual-gradients-via-sampling-based-momentum",
+    "title": "Scaling Textual Gradients via Sampling-Based Momentum",
+    "summary": "A method for scaling prompt optimization with LLM-generated textual gradients that introduces sampling-based momentum to overcome context-length limits and instability at large training set sizes. It shows that principled scaling of textual gradient descent—analogous to SGD with momentum—yields consistent gains that naive scaling cannot achieve.",
+    "primaryPillar": "System Optimization & Efficiency",
+    "tags": [
+      "System Optimization & Efficiency"
+    ],
+    "authors": [
+      {
+        "name": "Zixin Ding",
+        "affiliation": "University of Chicago"
+      },
+      {
+        "name": "Junyuan Hong",
+        "affiliation": "University of Texas at Austin"
+      },
+      {
+        "name": "Zhan Shi",
+        "affiliation": "Santa Clara University"
+      },
+      {
+        "name": "Tianhao Wang",
+        "affiliation": "Princeton University"
+      },
+      {
+        "name": "Zinan Lin",
+        "affiliation": "Microsoft Research"
+      },
+      {
+        "name": "Li Yin",
+        "affiliation": "SylphAI"
+      },
+      {
+        "name": "Meng Liu",
+        "affiliation": "SylphAI"
+      },
+      {
+        "name": "Atlas Wang",
+        "affiliation": "UT Autsin"
+      },
+      {
+        "name": "Yuxin Chen",
+        "affiliation": "University of Chicago"
+      }
+    ],
+    "abstract": "LLM-based prompt optimization, which uses LLM-provided ``textual gradients'' (feedback) to refine prompts, has emerged as an effective method for automatic prompt engineering. However, its scalability and stability are unclear when using more data in training. We systematically investigate the potential and challenges of scaling training data in textual gradient descent. We show that naively scaling training examples is infeasible due to both explicit context-length limits and an implicit context wall, where long-context degradation yields diminishing returns. Inspired by prior wisdom in stochastic gradient descent, we propose Textual Stochastic Gradient Descent with Momentum (TSGD-M), which reweights updates through momentum sampling, using bootstrapped minibatch validation accuracy as importance weights over historical prompts. To stabilize TSGD and enable effective scaling within a limited context window, TSGD-M carries prior prompts information by \\textit{dynamically} exploring the past top performing prompts without expanding input context length. TSGD-M integrates seamlessly into existing prompt optimization frameworks, including TextGrad, DSPy-COPRO, and AdalFlow, and achieves consistent gains across 6 benchmarks. Our framework is integrated within the AdalFlow library."
+  },
+  {
+    "slug": "livegraph-a-compound-ai-system-for-evolving-knowledge-graph-construction-from-st",
+    "title": "LiveGraph: A Compound AI System for Evolving Knowledge Graph Construction from Streaming Data",
+    "summary": "LiveGraph is a compound AI system for continuously updating knowledge graphs from streaming data using a formal operator algebra—five atomic operators with inverses—that enables full rollback, operator logging, and component-level error attribution. It makes incremental knowledge graph construction from heterogeneous live data sources reliable and debuggable.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Rakshit Agrawal",
+        "affiliation": "Microsoft"
+      },
+      {
+        "name": "Pritesh Kanani",
+        "affiliation": "Microsoft"
+      },
+      {
+        "name": "Madhu Sudan",
+        "affiliation": "Microsoft"
+      },
+      {
+        "name": "Ashish Gujarathi",
+        "affiliation": "Microsoft"
+      },
+      {
+        "name": "Dhruv Srivastava",
+        "affiliation": "Microsoft"
+      },
+      {
+        "name": "Mikita Reut",
+        "affiliation": "Microsoft"
+      },
+      {
+        "name": "Naveen Shrivastava",
+        "affiliation": "Microsoft"
+      }
+    ],
+    "abstract": "Constructing knowledge graphs from streaming data requires coordinating LLMs, embedding models, graph databases, and domain adapters—yet existing systems compose these components through ad-hoc interfaces, making them brittle to component changes and opaque to debugging. We present LiveGraph, a compound AI system that orchestrates these heterogeneous components through a formal graph evolution operator algebra comprising five atomic operators (AddNode, AddEdge, MergeEntity, UpdateRelation, ExpireEdge) with inverses enabling full rollback and operator logs enabling component-level error attribution. The algebra serves as the compositional interface: LLMs produce candidate extractions, embedding models retrieve resolution candidates, and the storage backend applies operators atomically—all through the same shared operator vocabulary. The resulting graph serves as a reasoning substrate—graph traversal discovers multi-hop relational paths unavailable to flat retrieval, and temporal validity windows enable time-aware querying over the evolution history. We evaluate on three domains—meeting conversations (AMI), geopolitical events (ICEWS18), and Wikipedia editor interactions—verifying that the operator algebra enforces temporal coherence (S𝐶 = 1.0) across all three. On downstream QA, graph-augmented retrieval from LiveGraph’s graphs achieves 51% accuracy vs. 29% for Microsoft GraphRAG and 2% for vector retrieval, with the largest gains on temporal (+40pp) and multi-hop (+20pp) questions. The modular architecture enables systematic component evaluation through swappable interfaces and dual storage backends (NetworkX, Neo4j)."
+  },
+  {
+    "slug": "expansion-contraction-a-multi-agent-graph-traversal-pattern-for-compound-ai-syst",
+    "title": "Expansion-Contraction: A Multi-Agent Graph Traversal Pattern for Compound AI Systems",
+    "summary": "Expansion-Contraction is a domain-agnostic multi-agent coordination pattern in which an expansion phase dynamically spawns specialist agents mapped to nodes of a domain graph, and a contraction phase aggregates their findings inward toward a verdict. Agent topology emerges from data structure rather than hand-design, and each agent's context stays small regardless of graph size.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Aiham Taleb",
+        "affiliation": "AWS"
+      },
+      {
+        "name": "Zainab Afolabi",
+        "affiliation": "AWS"
+      },
+      {
+        "name": "Joao Sousa",
+        "affiliation": "AWS"
+      },
+      {
+        "name": "Mathias Seidel",
+        "affiliation": "Continental Tires"
+      }
+    ],
+    "abstract": "Compound AI systems that coordinate multiple specialized agents offer a promising path for complex reasoning tasks, yet principled architectural patterns for multi-agent coordination over structured data remain under-explored. We introduce \\textit{Expansion-Contraction}, a general-purpose multi-agent graph traversal pattern in which an expansion phase walks a domain graph outward from a query origin, dynamically spawning ephemeral specialist agents at each node, and a contraction phase aggregates their findings inward to produce a verdict. The pattern is domain-agnostic: agent topology emerges isomorphically from the data graph rather than being hand-designed, and each agent operates on a small local context---avoiding the context-window saturation that degrades single-agent approaches on large graphs. We instantiate the pattern for supply chain root cause analysis, integrating domain-specific tools with temporal lead-time propagation. Across eight datasets (three real-world, five synthetic with controlled depth and width), Expansion-Contraction achieves 98.2\\% accuracy on a production supply chain (624 cases) and 100\\% on public benchmarks, outperforming single-agent baselines by 14+ percentage points while degrading gracefully as graph complexity increases. Investigation caching reduces token usage by up to 93.9\\%, and concurrent path analysis yields up to 1.43$\\times$ speedup. A production deployment demonstrates the pattern's viability for enterprise-scale agentic systems."
+  },
+  {
+    "slug": "cami-cost-aware-agent-guided-multi-indexing-for-semantic-retrieval",
+    "title": "CAMI: Cost-Aware Agent-Guided Multi-Indexing for Semantic Retrieval",
+    "summary": "CAMI is a cost-aware retrieval system that uses an agent to intelligently select which semantic enrichments—hypothetical queries, summaries, paraphrases—to generate per document chunk at index time, optimizing retrieval quality within a practical cost budget. It avoids the combinatorial explosion of exhaustively generating all enrichment types across large corpora.",
+    "primaryPillar": "System Optimization & Efficiency",
+    "tags": [
+      "System Optimization & Efficiency",
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Adnan Qidwai",
+        "affiliation": "IBM Research - India"
+      },
+      {
+        "name": "Anand Eswaran",
+        "affiliation": "IBM Research - India"
+      },
+      {
+        "name": "Sonam Mishra",
+        "affiliation": "IBM Research - India"
+      },
+      {
+        "name": "Jaydeep Sen",
+        "affiliation": "IBM Research - India"
+      },
+      {
+        "name": "Sachindra Joshi",
+        "affiliation": "IBM Research - India"
+      }
+    ],
+    "abstract": "Modern retrieval pipelines can benefit from augmentation of each corpus chunk with multiple semantic representation enrichments, such as content-conditioned hypothetical queries, summaries or paraphrases, to better align document representations with user queries. While these richer chunk representations can substantially improve retrieval quality, they also introduce a new systems challenge: the space of representation types and generator models is combinatorial, and the cost of exhaustive index-time evaluation scales linearly with corpus size. We present CAMI (Cost-Aware Multi-Indexing), a framework that treats multi-index construction as a multi-objective (cost vs accuracy) enrichment-portfolio selection problem. CAMI introduces three primary features: (i) an agentic discovery loop that leverages LLMs to propose usecase and corpus adaptive representation templates; (ii) a multi-objective search algorithm that combines independent statistical sampling with LLM-guided proposals to identify synergistic enrichment portfolio; and (iii) adaptive fidelity control with just-in-time enrichment, which prunes unpromising configurations via low-cost approximations while decoupling optimization spend from total corpus size. We evaluate CAMI across diverse RAG corpora, demonstrating that it automatically discovers high-recall representation portfolios over standard content-only baselines while operating under strict cost budgets. CAMI traces the recall–cost Pareto frontier providing a rigorous methodology for the end-to-end optimization of compound retrieval systems."
+  },
+  {
+    "slug": "ai-realtor-towards-grounded-persuasive-language-generation-for-automated-copywri",
+    "title": "AI Realtor: Towards Grounded Persuasive Language Generation for Automated Copywriting",
+    "summary": "AI Realtor is an agentic copywriting framework for real estate marketing that grounds persuasive language generation in factual property attributes, predicted marketable features, and user preferences. It demonstrates that LLM-based content generation can be simultaneously persuasive, personalized, and factually anchored—a combination prior automated copywriting systems have not achieved.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition",
+      "Evaluation & Benchmarking"
+    ],
+    "authors": [
+      {
+        "name": "Jibang Wu",
+        "affiliation": "The University of Chicago"
+      },
+      {
+        "name": "Chenghao Yang",
+        "affiliation": "The University of Chicago"
+      },
+      {
+        "name": "Yi Wu",
+        "affiliation": "The University of Chicago"
+      },
+      {
+        "name": "Simon Mahns",
+        "affiliation": "The University of Chicago"
+      },
+      {
+        "name": "Chaoqi Wang",
+        "affiliation": "The University of Chicago"
+      },
+      {
+        "name": "Hao Zhu",
+        "affiliation": "Stanford University"
+      },
+      {
+        "name": "Fei Fang",
+        "affiliation": "Carnegie Mellon University"
+      },
+      {
+        "name": "Haifeng Xu",
+        "affiliation": "The University of Chicago"
+      }
+    ],
+    "abstract": "This paper develops an agentic framework that employs large language models (LLMs) for grounded persuasive language generation in automated copywriting, with real estate marketing as a focal application. Our method is designed to align the generated content with user preferences while highlighting useful factual attributes. This agent consists of three key modules: (1) Grounding Module, mimicking expert human behavior to predict marketable features; (2) Personalization Module, aligning content with user preferences; (3) Marketing Module, ensuring factual accuracy and the inclusion of localized features. We conduct systematic human-subject experiments in the domain of real estate marketing, with a focus group of potential house buyers. The results demonstrate that marketing descriptions generated by our approach are preferred over those written by human experts by a clear margin while maintaining the same level of factual accuracy. Our findings suggest a promising agentic approach to automate large-scale targeted\ncopywriting while ensuring factuality of content generation."
+  },
+  {
+    "slug": "does-safety-molt-evaluating-llm-safety-in-multi-agent-social-environments",
+    "title": "Does Safety Molt? Evaluating LLM Safety in Multi-Agent Social Environments",
+    "summary": "A study showing that LLM safety degrades substantially in persistent multi-agent social environments compared to single-turn evaluation: privacy violations nearly double when shifting from isolated to social multi-turn settings, and leakage is socially contagious—spreading across agent communities through interaction. The findings reveal a fundamental gap in how current safety evaluations assess deployed agents.",
+    "primaryPillar": "Security & Privacy",
+    "tags": [
+      "Security & Privacy",
+      "Evaluation & Benchmarking"
+    ],
+    "authors": [
+      {
+        "name": "Aman Priyanshu",
+        "affiliation": "Foundation-AI"
+      },
+      {
+        "name": "Supriti Vijay",
+        "affiliation": "Foundation-AI"
+      },
+      {
+        "name": "Esha Pahwa",
+        "affiliation": "Corvic AI"
+      }
+    ],
+    "abstract": "LLM safety evaluations predominantly test models in isolation, yet deployed AI agents increasingly operate within persistent social environments alongside other agents. We introduce a Moltbook-style simulation platform where thousands of LLM agents interact across communities over a simulated month, and use it to evaluate privacy as a downstream safety concern under varying degrees of social pressure. We find that shifting from single-turn to multi-turn social evaluation amplifies privacy violations (CIMemories---19.95\\% to Ours---45.30\\% across OpenAI models), that leakage is socially contagious---agents are $8\\times$ more likely to disclose sensitive information after observing a peer do so---and that explicit privacy instructions reduce but do not eliminate this effect, leaving leakage rates above 37.8\\% even with safeguards. Our findings suggest that static chat-based safety benchmarks systematically underestimate risks in agentic deployment, and that social context alone is sufficient to elicit sensitive disclosures that single-turn evaluations would never surface."
+  },
+  {
+    "slug": "swiftfusion-scalable-sequence-parallelism-for-distributed-inference-of-diffusion",
+    "title": "SwiftFusion: Scalable Sequence Parallelism for Distributed Inference of Diffusion Transformers on GPUs",
+    "summary": "SwiftFusion is a sequence parallelism system for distributed diffusion transformer inference that reduces latency by optimizing inter-GPU communication patterns and fusing all-to-all operations with attention computation. It enables high-resolution image and long video generation to scale efficiently across multi-GPU and multi-node configurations.",
+    "primaryPillar": "System Optimization & Efficiency",
+    "tags": [
+      "System Optimization & Efficiency"
+    ],
+    "authors": [
+      {
+        "name": "Jiacheng Yang",
+        "affiliation": "University of Toronto"
+      },
+      {
+        "name": "Jun Wu",
+        "affiliation": "Amazon"
+      },
+      {
+        "name": "Yaoyao Ding",
+        "affiliation": "NVIDIA/Univerisity of Toronto"
+      },
+      {
+        "name": "Zhiying Xu",
+        "affiliation": "Amazon Web Services"
+      },
+      {
+        "name": "Yida Wang",
+        "affiliation": "Amazon"
+      },
+      {
+        "name": "Gennady Pekhimenko",
+        "affiliation": "NVIDIA/University of Toronto"
+      }
+    ],
+    "abstract": "Diffusion Transformers (DiTs) have gained increasing adoption in high-quality image and video generation. As demand for higher-resolution images and longer videos increases, single-GPU inference becomes inefficient due to increased latency and large activation sizes. Current frameworks employ sequence parallelism (SP) techniques such as Ulysses Attention and Ring Attention to scale inference. However, these implementations have three primary limitations: (1) suboptimal communication patterns for network topologies on modern GPU machines, (2) latency bottlenecks from all-to-all operations in inter-machine communication, and (3) GPU sender-receiver synchronization and computation overheads from using two-sided communication libraries. To address these issues, we present StreamFusion, a topology-aware efficient DiT serving engine. StreamFusion incorporates three key innovations: (1) a topology-aware sequence parallelism technique that accounts for inter- and intra-machine bandwidth differences, (2) Torus Attention, a novel SP technique enabling overlapping of inter-machine all-to-all operations with computation, and (3) a one-sided communication implementation that minimizes GPU sender-receiver synchronization and computation overheads. Our experiments demonstrate that StreamFusion outperforms the state-of-the-art approach by an average of $1.35\\times$ (up to $1.77\\times$)."
+  },
+  {
+    "slug": "a-hipaa-compliant-architecture-for-agentic-clinical-ai-systems",
+    "title": "A HIPAA-Compliant Architecture for Agentic Clinical AI Systems",
+    "summary": "A framework for HIPAA-compliant agentic clinical AI that enforces PHI governance through attribute-based access control, a hybrid regex-and-BERT redaction pipeline applied at both pre- and post-inference stages, and immutable audit trails. It addresses compliance vulnerabilities that existing LLM frameworks leave unresolved when agents autonomously handle protected health information.",
+    "primaryPillar": "Security & Privacy",
+    "tags": [
+      "Security & Privacy"
+    ],
+    "authors": [
+      {
+        "name": "Himanshu Tripathi",
+        "affiliation": "The University of Alabama"
+      },
+      {
+        "name": "Subash Neupane",
+        "affiliation": "Meharry Medical College"
+      },
+      {
+        "name": "Sudip Mittal",
+        "affiliation": "The University of Alabama"
+      },
+      {
+        "name": "Shahram Rahimi",
+        "affiliation": "University of Alabama"
+      },
+      {
+        "name": "Vibhuti Gupta",
+        "affiliation": "University of Texas Medical Branch"
+      }
+    ],
+    "abstract": "Agentic AI systems powered by Large Language Models (LLMs) are transforming clinical workflows, yet their autonomous handling of Protected Health Information (PHI) creates critical HIPAA compliance vulnerabilities that existing frameworks fail to address. This pa- per introduces a HIPAA-compliant Agentic AI framework enforcing regulatory compliance through three core mechanisms: Attribute- Based Access Control for dynamic PHI governance, a hybrid regex and BERT-based sanitization pipeline delivering defense-in-depth redaction across pre and post-inference stages, and immutable audit trails for compliance verification. We evaluate end-to-end system effectiveness on MIMIC-IV discharge summaries across 107,800 runs, measuring policy-consistent PHI exposure, residual leakage, and clinical utility under multiple authorization settings and ablations. The results show that layered governance substantially reduces PHI exposure while preserving utility for authorized roles, and remains resilient under prompt-injection stress tests."
+  },
+  {
+    "slug": "when-harmful-intent-dissolves-into-technical-detail-how-safe-are-coding-agents-a",
+    "title": "When Harmful Intent Dissolves into Technical Detail: How Safe Are Coding Agents Against Cyber Misuse?",
+    "summary": "A safety study of AI coding agents showing that harmful cyber intent embedded in technically plausible step-by-step prompts frequently bypasses agent safety measures, because the agent can execute each individual step without recognizing the malicious downstream consequence of the sequence. The paper introduces a benchmark for this threat category and evaluates frontier coding agents against it.",
+    "primaryPillar": "Security & Privacy",
+    "tags": [
+      "Security & Privacy",
+      "Evaluation & Benchmarking"
+    ],
+    "authors": [
+      {
+        "name": "Xiangzhe Xu",
+        "affiliation": "Purdue University"
+      },
+      {
+        "name": "Shiwei Feng",
+        "affiliation": "Purdue University"
+      },
+      {
+        "name": "Guangyu Shen",
+        "affiliation": "Purdue University"
+      },
+      {
+        "name": "Xiangyu Zhang",
+        "affiliation": "Purdue University"
+      }
+    ],
+    "abstract": "Coding agents are increasingly integrated into realistic software development workflows, where they can write, modify, and execute code on behalf of users. \nThis capability creates a distinct safety requirement: agents must refuse requests that would enable malicious cyber activity. \nYet in cybersecurity, harmful intent often dissolves into technical detail. \nA prompt may describe a sequence of legitimate operations without explicitly revealing the downstream consequence they collectively produce. \nSafe behavior therefore hinges on an agent's ability to reason from prompt to consequence under partial information.\n\nIn this paper, we empirically evaluate how safe are coding agents against cyber misuse. \nWe construct a cybersecurity evaluation dataset designed to preserve verifiable maliciousness while removing explicit intent. \nOur data synthesis pipeline hierarchically partitions the cybersecurity space and generates diverse, intent-obscured requests, validated using an ensemble of LLM judges to ensure implicit but genuine harmful capability. \nThe resulting dataset contains 2.2k samples and exhibits substantially greater domain coverage and implicitness than existing cybersecurity safety benchmarks.\n\nUsing the resulting dataset, we evaluate nine LLM agents in the OpenHands framework and make three key observations. \nFirst, safety performance varies widely across cybersecurity subdomains, \nhighlighting the need for broad domain coverage. \nSecond, per-step guardrail significantly improves detection over prompt-only refusal, but a non-trivial fraction of harmful cases remain undetected. \nThird, we show that lightweight dry-run simulation, namely allowing the actor model to internally roll out action sequences and plausible consequences, recovers a meaningful portion of the guardrail's detection gains without requiring real execution. \nOverall, our results motivate realistic, domain-diverse evaluation for coding-agent misuse prevention and point to dry-run simulation as a promising direction for more effective and efficient guardrail."
+  },
+  {
+    "slug": "moltgraph-a-longitudinal-temporal-graph-dataset-of-moltbook-for-coordinated-agen",
+    "title": "MoltGraph: A Longitudinal Temporal Graph Dataset of Moltbook for Coordinated-Agent Detection",
+    "summary": "MoltGraph is a longitudinal temporal graph dataset of Moltbook agent interactions with ground-truth coordination labels, capturing heterogeneous interactions, temporal drift, and visibility signals needed to study influence manipulation on AI-native social platforms. It provides the first graph-native dataset for developing and evaluating coordinated inauthentic behavior detection in agent societies.",
+    "primaryPillar": "Security & Privacy",
+    "tags": [
+      "Security & Privacy",
+      "Evaluation & Benchmarking"
+    ],
+    "authors": [
+      {
+        "name": "Kunal Mukherjee",
+        "affiliation": "Virginia Polytechnic Institute and State University (Virginia Tech)"
+      },
+      {
+        "name": "Cuneyt Akcora",
+        "affiliation": "University of Central Florida"
+      },
+      {
+        "name": "Murat Kantarcioglu",
+        "affiliation": "Virginia Polytechnic Institute and State University"
+      }
+    ],
+    "abstract": "gent-native social platforms such as Moltbook are rapidly emerging, yet they inherit and amplify classical influence and abuse attacks, where coordinated agents strategically comment and upvote to manipulate visibility and propagate narratives across communities. However, rigorous measurement and learning-based monitoring remain constrained by the absence of longitudinal, graph-native datasets for agentic social networks that jointly capture heterogeneous interactions, temporal drift, and visibility signals needed to connect coordination behavior to downstream exposure. We present MoltGraph, a temporal heterogeneous graph built from an open-crawling pipeline that continuously ingests agents, submolts, posts, comments, and engagement signals into a unified evolving graph with explicit node/edge lifetimes. MoltGraph spans 30 days and contains 11874 agents, 57465 posts, 101500 comments, and 162024 temporal edges across 6 relation types.\n\nWe introduce MoltGraph as a realistic longitudinal agentic social-network graph dataset for studying how agents behave, coordinate, and evolve in the wild, enabling reproducible measurement on emerging multi-agent social ecosystems. Using MoltGraph, we provide the first graph-centric characterization of Moltbook as a dynamic network: (i) heavy-tailed connectivity with power-law exponents in the range 𝛼 ∈ [1.86, 2.72], (ii) accelerating hub formation and attention centralization where the top 1% agents account for 29.00% of engagements, (iii) bursty, short-lived coordination episodes, 98.33% last under 24 hours, and (iv) measurable exposure effects across submolts. In matched analyses, posts receiving coordinated engagement exhibit 506.35% higher early interaction rates (within 𝐻 = 5 days) and 242.63% higher downstream exposure in feeds than non-coordinated controls"
+  },
+  {
+    "slug": "equitable-ranking-in-heterogeneous-marketplace-ecosystems-a-foundation-model-fra",
+    "title": "Equitable Ranking in Heterogeneous Marketplace Ecosystems: A Foundation Model Framework for Quality-Aware Fairness",
+    "summary": "FairRank-LLM is a production-deployed marketplace ranking framework that uses foundation model semantic representations to simultaneously address fairness, cold-start disadvantage, and quality—eliminating the rich-get-richer dynamics that hurt new or under-resourced providers in interaction-history-dependent ranking systems. It has been deployed in a live marketplace ecosystem.",
+    "primaryPillar": "Architectural Patterns & Composition",
+    "tags": [
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Saurabh Krishna Kansara",
+        "affiliation": "None"
+      }
+    ],
+    "abstract": "Marketplace ecosystems comprising heterogeneous providers face a fundamental tension between optimizing relevance for established items and enabling equitable participation by under-resourced newcomers. Conventional ranking systems systematically disadvantage items lacking interaction history, reinforcing 'rich-get-richer' dynamics.\n\nThis paper presents FairRank-LLM, a production-deployed ranking framework that leverages large pre-trained language model (foundation model) semantic representations to simultaneously address fairness, cold-start, and quality objectives. FairRank-LLM introduces: (i) an LLM-based semantic encoder providing zero-shot relevance estimation that eliminates cold-start disadvantages; (ii) a multi-signal scoring function composing semantic relevance, quality, personalization, and freshness signals with learned weights; (iii) a fairness calibration layer enforcing exposure equity through quality-gated probabilistic promotion; and (iv) a distillation and approximate nearest-neighbor pipeline delivering sub-250ms p99 latency at production scale.\n\nEvaluated across 960 marketplace items, 2.8M active users, and 47.3M interactions over a 75-day production A/B test, FairRank-LLM achieves a 32.6\\% reduction in exposure KL-divergence, a 28.9\\% improvement in opportunity gap, and a 63.7\\% reduction in cold-start time-to-visibility—all while improving NDCG@10 by 1.3\\% and CTR by 4.6\\% relative to the production baseline. Provider success rates increase by 19.4 percentage points, demonstrating tangible economic impact. Ablation studies confirm the necessity of each architectural component. Deployment experience surfaces important lessons regarding LLM representation bias, adversarial gaming, and stakeholder alignment, shared here as practical guidelines."
+  },
+  {
+    "slug": "who-decides-the-trade-off-resolution-policy-as-delegation-governance-in-autonomo",
+    "title": "Who Decides the Trade-off? Resolution Policy as Delegation Governance in Autonomous Agents",
+    "summary": "An empirical study showing that when AI agents face conflicting constraints, today's systems resolve the conflict probabilistically through model sampling—producing outcomes that are unpredictable, irreproducible, and unauditable—and introducing Resolution Policy (the Deterministic Delegation Model) as a formal governance mechanism. DDM makes constraint trade-offs explicit and structurally binding, reducing deviation from 76% to 0% in experiments across two frontier LLMs.",
+    "primaryPillar": "Security & Privacy",
+    "tags": [
+      "Security & Privacy",
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Koji YAMAZAKI",
+        "affiliation": "Docomo Innovations, Inc"
+      }
+    ],
+    "abstract": "When an autonomous AI agent's delegated constraints cannot be simultaneously satisfied, someone must decide which constraint to sacrifice. In current LLM-based agent systems, this decision is made probabilistically by the model's sampling process, producing outcomes that are unpredictable, unreproducible, and unauditable. We term this the \\emph{Trust Gap}.\n\nThrough 2,956 experimental probes across two frontier LLMs, we demonstrate that a single fallback instruction reduces deviation from 84\\% to 0\\%, establishing that \\emph{behavioral compliance} is achievable. However, behavioral compliance is fundamentally distinct from \\emph{structural guarantee}: a single adversarial override reverses compliance from 0\\% to 100\\% (R5), and this pattern generalizes across resolution strategies (R7).\n\nWe formalize the missing element---\\emph{Resolution Policy}---through the \\emph{Deterministic Delegation Model (DDM)}: a principal's deterministic, pre-committed trade-off strategy that structurally binds intent to execution outcome. Evaluation across complete $2\\times2$ factorial designs confirms DDM operates independently of prompt content, injection content, and resolution strategy type. Concurrent work has advanced authorization enforcement; the complementary question---\\emph{what to do when authorized actions conflict, and by whose authority}---is the problem Resolution Policy resolves."
+  },
+  {
+    "slug": "vibe-code-bench-evaluating-ai-models-on-end-to-end-web-application-development",
+    "title": "Vibe Code Bench: Evaluating AI Models on End-to-End Web Application Development",
+    "summary": "Vibe Code Bench is a benchmark of 100 web application specifications with over 10,000 browser-evaluated substeps showing that even the best frontier models complete only 58% of realistic end-to-end application development tasks. The benchmark uses an autonomous browser agent to verify deployed applications against behavioral specifications, measuring what users actually care about rather than code syntax.",
+    "primaryPillar": "Evaluation & Benchmarking",
+    "tags": [
+      "Evaluation & Benchmarking"
+    ],
+    "authors": [
+      {
+        "name": "Hung Tran",
+        "affiliation": "Vals AI"
+      },
+      {
+        "name": "Langston Nashold",
+        "affiliation": "Vals AI"
+      },
+      {
+        "name": "Rayan Krishnan",
+        "affiliation": "Vals AI"
+      },
+      {
+        "name": "Antoine Bigeard",
+        "affiliation": "Vals AI"
+      },
+      {
+        "name": "Alex Gu",
+        "affiliation": "MIT"
+      }
+    ],
+    "abstract": "Code generation has emerged as one of AI's highest-impact use cases, yet existing benchmarks measure isolated tasks rather than the complete \"zero-to-one\" process of building a working application from scratch. We introduce \\textbf{Vibe Code Bench}, a benchmark of 100 web application specifications (50 public validation, 50 held-out test) with 964 browser-based workflows comprising 10,131 substeps, evaluated against deployed applications by an autonomous browser agent.\n\nAcross 16 frontier models, the best achieves only 58.0\\% accuracy on the test split, revealing that reliable end-to-end application development remains a frontier challenge. We identify self-testing during generation as a strong performance predictor (Pearson r=0.72), and show through a completed human alignment study that evaluator selection materially affects outcomes (31.8–93.6\\% pairwise step-level agreement).\n\nOur contributions include (1) a novel benchmark dataset and browser-based evaluation pipeline for end-to-end web application development, (2) a comprehensive evaluation of 16 frontier models with cost, latency, and error analysis, and (3) an evaluator alignment protocol with both cross-model and human annotation results."
+  },
+  {
+    "slug": "persuade-me-if-you-can-a-framework-for-evaluating-persuasion-effectiveness-and-s",
+    "title": "Persuade Me if You Can: A Framework for Evaluating Persuasion Effectiveness and Susceptibility Among Large Language Models",
+    "summary": "Persuade Me if You Can is a framework for systematically evaluating both LLM persuasion effectiveness and susceptibility to persuasion in multi-agent interactions. It shows that susceptibility to persuasion is a distinct and critical alignment property—not captured by existing safety evaluations—and varies substantially across models and persuasion strategies.",
+    "primaryPillar": "Evaluation & Benchmarking",
+    "tags": [
+      "Evaluation & Benchmarking"
+    ],
+    "authors": [
+      {
+        "name": "Nimet Beyza Bozdag",
+        "affiliation": "University of Illinois Urbana-Champaign"
+      },
+      {
+        "name": "Shuhaib Mehri",
+        "affiliation": "University of Illinois Urbana-Champaign"
+      },
+      {
+        "name": "Gokhan Tur",
+        "affiliation": "University of Illinois Urbana-Champaign"
+      },
+      {
+        "name": "Dilek Hakkani-Tur",
+        "affiliation": "University of Illinois Urbana-Champaign"
+      }
+    ],
+    "abstract": "Large Language Models (LLMs) demonstrate persuasive capabilities that rival human-level persuasion. While these capabilities can be used for social good, they also present risks of potential misuse. Beyond the concern of how LLMs persuade others, their own susceptibility to persuasion poses a critical alignment challenge, raising questions about robustness, safety, and adherence to ethical principles. To study these dynamics, we introduce Persuade Me If You Can (PMIYC), an automated framework for evaluating persuasiveness and susceptibility to persuasion in multi-agent interactions. Our framework offers a scalable alternative to the costly and time-intensive human annotation process typically used to study persuasion in LLMs. PMIYC automatically conducts multi-turn conversations between Persuader and Persuadee agents, measuring both the effectiveness of and susceptibility to persuasion. Our comprehensive evaluation spans a diverse set of LLMs and persuasion settings (e.g., subjective and misinformation scenarios). We validate the efficacy of our framework through human evaluations and demonstrate alignment with human assessments from prior studies. Through PMIYC, we find that Llama-3.3-70B and GPT-4o exhibit similar persuasive effectiveness, outperforming Claude 3 Haiku by 30%. However, GPT-4o demonstrates over 50% greater resistance to persuasion for misinformation compared to Llama-3.3-70B. These findings provide empirical insights into the persuasive dynamics of LLMs and contribute to the development of safer AI systems."
+  },
+  {
+    "slug": "opaquetoolsbench-learning-nuances-of-tool-behavior-through-interaction",
+    "title": "OpaqueToolsBench: Learning Nuances of Tool Behavior Through Interaction",
+    "summary": "OpaqueToolsBench evaluates whether LLM agents can learn to use poorly-documented tools through interaction and self-generated documentation improvement, across three environments: general function calling, chess, and long-horizon agentic tasks. Most current agents show limited ability to adapt to opaque tools, exposing a practical gap between benchmark performance and real-world tool-use reliability.",
+    "primaryPillar": "Evaluation & Benchmarking",
+    "tags": [
+      "Evaluation & Benchmarking",
+      "Architectural Patterns & Composition"
+    ],
+    "authors": [
+      {
+        "name": "Skyler Hallinan",
+        "affiliation": "University of Southern California"
+      },
+      {
+        "name": "Thejas Venkatesh",
+        "affiliation": "Samaya AI"
+      },
+      {
+        "name": "Xiang Ren",
+        "affiliation": "University of Southern California"
+      },
+      {
+        "name": "Sai Praneeth Karimireddy",
+        "affiliation": "University of Southern California"
+      },
+      {
+        "name": "Ashwin Paranjape",
+        "affiliation": "Samaya AI"
+      },
+      {
+        "name": "Yuhao Zhang",
+        "affiliation": "Samaya AI"
+      },
+      {
+        "name": "Jack Hessel",
+        "affiliation": "Samaya AI"
+      }
+    ],
+    "abstract": "Tool-calling is essential for Large Language Model (LLM) agents to complete real-world tasks. While most existing benchmarks assume simple, perfectly documented tools, real-world tools (e.g., general “search” APIs) are often opaque, lacking clear best practices or failure modes. Can LLM agents improve their performance in environments with opaque tools by interacting and subsequently improving documentation? To study this, we create OpaqueToolsBench, a benchmark consisting of three distinct task-oriented environments: general function calling, interactive chess playing, and long-trajectory agentic search. Each environment provides underspecified tools that models must learn to use effectively to complete the task. Results on OpaqueToolsBench suggest existing methods for automatically documenting tools are expensive and unreliable when tools are opaque. To address this, we propose a simple framework, ToolObserver, that iteratively refines tool documentation by observing execution feedback from tool-calling trajectories. Our approach outperforms existing methods on OpaqueToolsBench across datasets, even in relatively hard settings. Furthermore, for test-time tool exploration settings, our method is also efficient, consuming 3.5-7.5× fewer total tokens than the best baseline."
+  }
+]
