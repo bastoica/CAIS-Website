@@ -277,13 +277,13 @@ extraStyles: |
               </div>
             </div>
             <div class="col-md-6">
-              <div class="card card-quiet p-3 h-100">
+              <div class="card card-quiet p-3 h-100" style="opacity: 0.65;">
                 <div class="d-flex align-items-center mb-2">
-                  <span class="badge bg-primary me-2">Required</span>
+                  <span class="badge bg-secondary me-2">Closed</span>
                   <h4 class="h6 fw-bold mb-0">Rebuttal Closes</h4>
                 </div>
-                <p class="small mb-1"><strong>Fri, April 17, 2026</strong> (11:59 PM AoE)</p>
-                <p class="small text-muted mb-0">After receiving reviews, you have until this date to submit your response. A strong rebuttal can influence borderline decisions.</p>
+                <p class="small mb-1"><s>Fri, April 17, 2026</s> (11:59 PM AoE)</p>
+                <p class="small text-muted mb-0">The rebuttal period has closed.</p>
               </div>
             </div>
             <div class="col-md-6">
@@ -343,15 +343,15 @@ extraStyles: |
                   <td><s>Rebuttal Period Opens</s></td>
                   <td><span class="badge bg-secondary">Passed</span></td>
                 </tr>
-                <tr>
-                  <td><strong>Fri, Apr 17, 2026</strong></td>
-                  <td>Rebuttal Period Closes</td>
-                  <td><span class="badge bg-primary">Author Action</span></td>
+                <tr class="table-light text-muted">
+                  <td><s>Fri, Apr 17, 2026</s></td>
+                  <td><s>Rebuttal Period Closes</s></td>
+                  <td><span class="badge bg-secondary">Passed</span></td>
                 </tr>
-                <tr class="table-light">
-                  <td>Tue, Apr 21, 2026</td>
-                  <td>Author Notification</td>
-                  <td><span class="badge" style="background-color: var(--olive-moss);">Info</span></td>
+                <tr class="table-light text-muted">
+                  <td><s>Tue, Apr 21, 2026</s></td>
+                  <td><s>Author Notification</s></td>
+                  <td><span class="badge bg-secondary">Sent</span></td>
                 </tr>
                 <tr>
                   <td><strong>Mon, Apr 27, 2026</strong></td>
@@ -550,9 +550,9 @@ extraStyles: |
                   <div class="fw-bold small text-muted"><s>Paper Submission</s> <span class="badge bg-secondary">Closed</span></div>
                   <div class="small text-muted">Fri, February 27, 2026</div>
                 </div>
-                <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--terracotta-deep) !important;">
-                  <div class="fw-bold small">Author Notification</div>
-                  <div class="small">Tue, April 21, 2026</div>
+                <div class="border-start ps-3 mb-3" style="border-left-width: 3px !important; border-color: var(--davys-gray) !important;">
+                  <div class="fw-bold small text-muted"><s>Author Notification</s> <span class="badge bg-secondary">Sent</span></div>
+                  <div class="small text-muted">Tue, April 21, 2026</div>
                 </div>
                 <div class="border-start ps-3" style="border-left-width: 3px !important; border-color: var(--terracotta-deep) !important;">
                   <div class="fw-bold small">Camera-Ready Deadline</div>
