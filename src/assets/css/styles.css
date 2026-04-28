@@ -689,9 +689,10 @@ a:focus, button:focus, .btn:focus {
 }
 
 .sponsor-strip img {
-    height: 50px;
+    max-height: 55px;
     max-width: 200px;
     width: auto;
+    height: auto;
     object-fit: contain;
     filter: grayscale(100%);
     opacity: 0.55;
@@ -703,13 +704,20 @@ a:focus, button:focus, .btn:focus {
     opacity: 1;
 }
 
+.sponsor-strip img.logo-stacked {
+    max-height: 80px;
+}
+
 @media (max-width: 768px) {
     .sponsor-strip {
         gap: 1.5rem 2.5rem;
     }
     .sponsor-strip img {
-        height: 40px;
+        max-height: 44px;
         max-width: 160px;
+    }
+    .sponsor-strip img.logo-stacked {
+        max-height: 64px;
     }
 }
 

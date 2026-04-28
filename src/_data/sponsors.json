@@ -6,9 +6,10 @@
       "url": "https://snorkel.ai"
     },
     {
-      "name": "Megagon Labs",
-      "logo": "sponsors/megagon-labs.svg",
-      "url": "https://megagon.ai"
+      "name": "Megagon",
+      "logo": "sponsors/megagon.svg",
+      "url": "https://megagon.ai",
+      "stacked": true
     },
     {
       "name": "Databricks",

@@ -129,7 +129,7 @@
         <div class="sponsor-strip">
             {% for s in allFooterSponsors %}
             <a href="{{ s.url }}" target="_blank" rel="noopener" aria-label="{{ s.name }}">
-                <img src="/assets/images/{{ s.logo }}" alt="{{ s.name }}" loading="lazy" />
+                <img src="/assets/images/{{ s.logo }}" alt="{{ s.name }}" loading="lazy"{% if s.stacked %} class="logo-stacked"{% endif %} />
             </a>
             {% endfor %}
         </div>

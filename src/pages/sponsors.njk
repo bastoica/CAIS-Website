@@ -149,26 +149,37 @@ extraStyles: |
   }
   .sponsor-logos a:hover { opacity: 0.7; }
 
-  /* Containment slots — fixed height, max-width cap, object-fit: contain.
-     This is the key: logos can't exceed the slot height regardless of
-     native SVG/PNG dimensions, so visual weight stays uniform within a tier. */
+  /* Bounding-box slots — max-height + max-width cap, object-fit: contain.
+     Logos fill whichever dimension they hit first, so both wide and
+     stacked logos achieve balanced visual weight within each tier. */
   .sponsor-logos img {
     object-fit: contain;
     width: auto;
+    height: auto;
   }
-  .sponsor-logos.gold img    { height: 48px; max-width: 220px; }
-  .sponsor-logos.silver img  { height: 40px; max-width: 200px; }
-  .sponsor-logos.bronze img  { height: 36px; max-width: 180px; }
-  .sponsor-logos.supporting img { height: 28px; max-width: 160px; }
+  .sponsor-logos.gold img    { max-height: 52px; max-width: 220px; }
+  .sponsor-logos.silver img  { max-height: 44px; max-width: 200px; }
+  .sponsor-logos.bronze img  { max-height: 40px; max-width: 180px; }
+  .sponsor-logos.supporting img { max-height: 32px; max-width: 160px; }
+
+  /* Stacked-aspect logos get more height to match visual weight of wide logos */
+  .sponsor-logos.gold img.logo-stacked    { max-height: 80px; }
+  .sponsor-logos.silver img.logo-stacked  { max-height: 68px; }
+  .sponsor-logos.bronze img.logo-stacked  { max-height: 60px; }
+  .sponsor-logos.supporting img.logo-stacked { max-height: 48px; }
 
   @media (max-width: 768px) {
     .sponsor-hero { padding: 3rem 0; }
     .tier-price { font-size: 1.35rem; }
     .sponsor-logos { gap: 1.5rem 2.5rem; }
-    .sponsor-logos.gold img    { height: 36px; max-width: 180px; }
-    .sponsor-logos.silver img  { height: 32px; max-width: 160px; }
-    .sponsor-logos.bronze img  { height: 28px; max-width: 140px; }
-    .sponsor-logos.supporting img { height: 22px; max-width: 120px; }
+    .sponsor-logos.gold img    { max-height: 40px; max-width: 180px; }
+    .sponsor-logos.silver img  { max-height: 34px; max-width: 160px; }
+    .sponsor-logos.bronze img  { max-height: 30px; max-width: 140px; }
+    .sponsor-logos.supporting img { max-height: 24px; max-width: 120px; }
+    .sponsor-logos.gold img.logo-stacked    { max-height: 64px; }
+    .sponsor-logos.silver img.logo-stacked  { max-height: 54px; }
+    .sponsor-logos.bronze img.logo-stacked  { max-height: 48px; }
+    .sponsor-logos.supporting img.logo-stacked { max-height: 38px; }
   }
 ---
 
@@ -392,7 +403,7 @@ extraStyles: |
               {% for s in sponsors.gold %}
               {% if s.logo %}
               <a href="{{ s.url }}" target="_blank" rel="noopener">
-                <img src="/assets/images/{{ s.logo }}" alt="{{ s.name }}" loading="lazy" />
+                <img src="/assets/images/{{ s.logo }}" alt="{{ s.name }}" loading="lazy"{% if s.stacked %} class="logo-stacked"{% endif %} />
               </a>
               {% endif %}
               {% endfor %}
@@ -406,7 +417,7 @@ extraStyles: |
             <div class="sponsor-logos silver">
               {% for s in sponsors.silver %}
               <a href="{{ s.url }}" target="_blank" rel="noopener">
-                <img src="/assets/images/{{ s.logo }}" alt="{{ s.name }}" loading="lazy" />
+                <img src="/assets/images/{{ s.logo }}" alt="{{ s.name }}" loading="lazy"{% if s.stacked %} class="logo-stacked"{% endif %} />
               </a>
               {% endfor %}
             </div>
@@ -419,7 +430,7 @@ extraStyles: |
             <div class="sponsor-logos bronze">
               {% for s in sponsors.bronze %}
               <a href="{{ s.url }}" target="_blank" rel="noopener">
-                <img src="/assets/images/{{ s.logo }}" alt="{{ s.name }}" loading="lazy" />
+                <img src="/assets/images/{{ s.logo }}" alt="{{ s.name }}" loading="lazy"{% if s.stacked %} class="logo-stacked"{% endif %} />
               </a>
               {% endfor %}
             </div>
@@ -432,7 +443,7 @@ extraStyles: |
             <div class="sponsor-logos supporting">
               {% for s in sponsors.supporting %}
               <a href="{{ s.url }}" target="_blank" rel="noopener">
-                <img src="/assets/images/{{ s.logo }}" alt="{{ s.name }}" loading="lazy" />
+                <img src="/assets/images/{{ s.logo }}" alt="{{ s.name }}" loading="lazy"{% if s.stacked %} class="logo-stacked"{% endif %} />
               </a>
               {% endfor %}
             </div>
