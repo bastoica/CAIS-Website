@@ -1,6 +1,6 @@
 {
   "gold": [
-{
+    {
       "name": "Snorkel AI",
       "logo": "sponsors/snorkel-ai.svg",
       "url": "https://snorkel.ai"
@@ -17,9 +17,9 @@
       "url": "https://www.databricks.com"
     },
     {
-      "name": "Buildkite",
-      "logo": "sponsors/buildkite.svg",
-      "url": "https://buildkite.com"
+      "name": "Voaige",
+      "logo": "sponsors/voaige.svg",
+      "url": "https://voaige.com"
     }
   ],
   "silver": [
@@ -34,6 +34,11 @@
       "name": "Oracle",
       "logo": "sponsors/oracle.svg",
       "url": "https://www.oracle.com"
+    },
+    {
+      "name": "Buildkite",
+      "logo": "sponsors/buildkite.svg",
+      "url": "https://buildkite.com"
     }
   ],
   "supporting": []
