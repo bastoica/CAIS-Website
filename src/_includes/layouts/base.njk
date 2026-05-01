@@ -104,6 +104,17 @@
     twq('config','rc7hp');
     </script>
     <!-- End X conversion tracking base code -->
+
+    <!-- X conversion tracking: fire event on registration link clicks -->
+    <script>
+    document.addEventListener('click', function(e) {
+        var link = e.target.closest('a[href*="cvent.me"]');
+        if (link) {
+            twq('event', 'tw-rc7hp-rc7ic', {});
+        }
+    });
+    </script>
+    <!-- End X conversion tracking event code -->
 </head>
 <body>
 
