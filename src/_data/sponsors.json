@@ -15,6 +15,11 @@
       "name": "Databricks",
       "logo": "sponsors/databricks.svg",
       "url": "https://www.databricks.com"
+    },
+    {
+      "name": "Buildkite",
+      "logo": "sponsors/buildkite.svg",
+      "url": "https://buildkite.com"
     }
   ],
   "silver": [
