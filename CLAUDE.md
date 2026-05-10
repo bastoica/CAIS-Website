@@ -339,6 +339,66 @@ URLs are year-namespaced so 2026 URLs remain stable forever:
 5. Update the "See Accepted Papers & Demos" link on the homepage (`src/index.njk`) to `/program/2027/`.
 6. The 2026 pages stay published and linkable.
 
+## Publishing Year-Specific Committees
+
+All four committees (Steering, Organizing, Program, Artifact Evaluation) live in one consolidated, year-versioned data file and render on a single page. This keeps the 2026 roster pinned forever even when 2027 lands.
+
+### Data file
+
+**`src/_data/committee2026.json`** — single file with all four committees:
+
+```json
+{
+  "steering": [
+    {"name": "...", "affiliation": "...", "photo": "...", "bio": "..."}
+  ],
+  "organizing": [
+    {"name": "...", "affiliation": "...", "photo": "...", "role": "...", "bio": "..."}
+  ],
+  "programCommittee": {
+    "chairs": [
+      {"name": "...", "affiliation": "...", "photo": "..."}
+    ],
+    "areaChairs": [
+      {"name": "...", "affiliation": "...", "pillar": "Architectural Patterns & Composition"}
+    ],
+    "members": [
+      {"name": "...", "affiliation": "..."}
+    ]
+  },
+  "artifactEvaluationCommittee": {
+    "chairs": [...],
+    "members": [...]
+  }
+}
+```
+
+- **Steering / Organizing** entries reuse the existing schema (name, affiliation, photo, bio, optional role).
+- **Program / Artifact Evaluation chairs** reuse the same photo files as the Organizing Committee — no new images needed.
+- **Program / Artifact Evaluation members** are name + affiliation only (no photos, no bios). Sort alphabetically by family name in the JSON file itself.
+- **Area Chairs** sit between PC chairs and PC members. Each entry must include a `pillar` field whose value exactly matches a pillar `title` in `programPillars.json`. The page groups area chairs by pillar and applies that pillar's icon + color. If a person is also a regular PC reviewer, list them only as an area chair — the page does not deduplicate across sub-sections.
+
+### Page
+
+**`src/pages/program/2026/committee.njk`** — canonical URL is `/program/2026/committee/`. Renders four sections (Steering → Organizing → PC → AC) with a sticky sidebar TOC. The Artifact Evaluation section gracefully falls back to "roster will be published soon" when `members` is empty.
+
+**`src/pages/committee.njk`** is a meta-refresh redirect to the canonical URL. Top-nav Committee link points directly at `/program/2026/committee/`.
+
+### Going live with new committee data
+
+1. Drop new entries into `committee2026.json` (PC members, AC members, AC chair, etc.).
+2. Sort members alphabetically by family name.
+3. `npm run build` and deploy. The page renders empty sections gracefully if any block is empty.
+
+### Next year (CAIS 2027)
+
+1. `cp src/_data/committee2026.json src/_data/committee2027.json` and edit. Steering may have small changes; everything else turns over.
+2. `cp src/pages/program/2026/committee.njk src/pages/program/2027/committee.njk` and search-replace `committee2026` → `committee2027`, `/program/2026/` → `/program/2027/`, and `CAIS 2026` → `CAIS 2027`.
+3. Update `src/_data/navigation.json` — Committee href to `/program/2027/committee/`.
+4. Update `src/pages/committee.njk` redirect target to `/program/2027/committee/`.
+5. Update `src/pages/program/2026/index.njk`'s Committees card link if you want the program landing to point to the current year (or duplicate the landing under `/program/2027/`).
+6. The 2026 committee page stays archived and linkable forever.
+
 ## Important Notes
 
 - **Always preview changes locally** before committing

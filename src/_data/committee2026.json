@@ -1,0 +1,1036 @@
+{
+  "steering": [
+    {
+      "name": "Graham Neubig",
+      "affiliation": "Carnegie Mellon University & All Hands AI",
+      "photo": "neubig_graham.png",
+      "bio": "Associate Professor in the Language Technologies Institute at Carnegie Mellon University and Chief Scientist at All Hands AI. Creator of OpenHands, the open-source AI agent platform achieving state-of-the-art results on SWE-Bench for agentic code generation. Built TheAgentCompany benchmark for evaluating AI agents on real-world workplace tasks. Area Chair at ACL and NeurIPS. PhD from Kyoto University. 52,000+ citations."
+    },
+    {
+      "name": "Lingjiao Chen",
+      "affiliation": "Microsoft Research",
+      "photo": "chen_lingjiao.png",
+      "bio": "Senior Researcher at Microsoft Research, AI Frontiers Group. PhD from Stanford advised by Matei Zaharia and James Zou. Co-author of \"The Shift from Models to Compound AI Systems\" and co-organizer of the inaugural Compound AI Systems Workshop. Creator of FrugalML/FrugalGPT for cost-efficient AI. Google PhD Fellow. Work cited in White House 2024 Economic Report."
+    },
+    {
+      "name": "Jeff Dean",
+      "affiliation": "Google DeepMind",
+      "photo": "dean_jeff.png",
+      "bio": "Chief Scientist at Google DeepMind and Google Research. Co-lead of Gemini. Designer of MapReduce, BigTable, TensorFlow, and TPUs—foundational infrastructure enabling modern AI systems. Google's 30th employee and one of two Google Senior Fellows. Winner of the ACM Prize in Computing and IEEE John von Neumann Medal. Member of the National Academy of Engineering. 380,000+ citations."
+    },
+    {
+      "name": "Omar Khattab",
+      "affiliation": "MIT EECS & CSAIL",
+      "photo": "khattab_omar.png",
+      "bio": "Assistant Professor at MIT EECS and CSAIL. Creator of DSPy, the leading framework for programming and optimizing compound AI systems, and ColBERT, which revolutionized neural information retrieval. PhD from Stanford advised by Matei Zaharia and Christopher Potts. Co-author of \"The Shift from Models to Compound AI Systems.\" Apple Scholars in AI/ML Fellow. Winner of SIGIR 2025 Best Paper Award. 15,000+ citations."
+    },
+    {
+      "name": "Monica Lam",
+      "affiliation": "Stanford University",
+      "photo": "lam_monica.png",
+      "bio": "Kleiner Perkins, Mayfield, Sequoia Capital Professor at Stanford University. Faculty Director of the Open Virtual Assistant Laboratory. Creator of Genie open virtual assistant platform and STORM multi-agent research system. Co-author of the \"Dragon Book\" compiler textbook. Winner of Wikimedia Foundation Research Award 2024. Member of the National Academy of Engineering. ACM Fellow. 54,000+ citations."
+    },
+    {
+      "name": "Thang Luong",
+      "affiliation": "Google DeepMind",
+      "photo": "luong_thang.png",
+      "bio": "Principal Scientist and Director of Research at Google DeepMind, leading the Superhuman Reasoning team. Co-founder of Project Meena, which evolved into LaMDA and Bard. Principal Investigator on AlphaGeometry (Nature, 2024) and leader of the first AI to achieve gold-medal standard at the International Mathematical Olympiad (2025). Inventor of LuongAttention, key to upgrading Google Translate. ACL 2025 Test-of-Time Award winner. PhD from Stanford University. 52,000+ citations."
+    },
+    {
+      "name": "Michele Catasta",
+      "affiliation": "Replit",
+      "photo": "catasta_michele_1.png",
+      "bio": "President and Head of AI at Replit, where he architected and launched Replit Agent. Previously Head of Applied Research at Google X and Google Labs, contributing to PaLM and PaLM 2 coding capabilities. Research Scientist and Instructor at Stanford University, pioneering Transformer architectures for source code. PhD in Computer Science from EPFL. Research positions at MIT Media Lab, Google, and Yahoo Labs."
+    },
+    {
+      "name": "Chris Potts",
+      "affiliation": "Stanford & Bigspin AI",
+      "photo": "potts_chris.png",
+      "bio": "Professor and Chair of Linguistics at Stanford University. Amazon Scholar. Senior researcher on DSPy and co-author of \"The Shift from Models to Compound AI Systems.\" Creator of the Stanford Sentiment Treebank, winner of the ACL Test-of-Time Award. Faculty member of Stanford NLP Group, AI Lab, and HAI. Winner of ACL Best Paper Award 2024. 55,000+ citations."
+    },
+    {
+      "name": "Naveen Rao",
+      "affiliation": "Unconventional AI",
+      "photo": "rao_naveen.png",
+      "bio": "CEO and Co-Founder of Unconventional AI. Previously VP of AI at Databricks, leading Mosaic AI compound systems infrastructure. Founded Nervana Systems (acquired by Intel, $408M) and MosaicML (acquired by Databricks, $1.3B). Co-author of \"The Shift from Models to Compound AI Systems.\" PhD in Computational Neuroscience from Brown University. Scientific Advisory Board Member, Allen Institute."
+    },
+    {
+      "name": "Dawn Song",
+      "affiliation": "UC Berkeley",
+      "photo": "song_dawn.png",
+      "bio": "Professor of Computer Science at UC Berkeley and Co-Director of the Berkeley Center for Responsible Decentralized Intelligence. Leading researcher on AI safety and security for agentic systems. Creator of the LLM Agents MOOC (32,000+ learners) and organizer of the inaugural Agentic AI Summit. MacArthur Fellow, Guggenheim Fellow, and Schmidt Sciences AI2050 Senior Fellow. Most cited scholar in computer security (AMiner). ACM Fellow, IEEE Fellow, and member of the American Academy of Arts and Sciences. PhD from UC Berkeley."
+    },
+    {
+      "name": "Ion Stoica",
+      "affiliation": "UC Berkeley",
+      "photo": "stoica_ion.png",
+      "bio": "Professor at UC Berkeley EECS and Director of SkyLab. Co-creator of Ray, the distributed computing framework powering compound AI infrastructure at OpenAI, Netflix, and Uber. Co-founder of Databricks ($62B) and Anyscale. Creator of Apache Spark and Apache Mesos. His lab produced vLLM (high-throughput LLM serving) and Chatbot Arena (crowdsourced LLM evaluation). Member of the National Academy of Engineering. ACM Fellow. Winner of the ACM SIGOPS Mark Weiser Award. PhD from Carnegie Mellon University."
+    }
+  ],
+  "organizing": [
+    {
+      "name": "Lingjiao Chen",
+      "affiliation": "Microsoft Research",
+      "photo": "Chen_LJ.png",
+      "role": "Workshop Co-Chair",
+      "bio": "Senior Researcher at Microsoft Research AI Frontiers. Co-author of the foundational compound AI systems blog post and co-organizer of the inaugural Compound AI Systems Workshop. His FrugalML work (NeurIPS 2020 Oral) enables 90% cost reduction in ML deployments."
+    },
+    {
+      "name": "Jared Quincy Davis",
+      "affiliation": "Mithril AI",
+      "photo": "Davis_Jared.png",
+      "bio": "Founder and CEO of Mithril, building AI infrastructure for compound and agentic systems. Co-author of compound AI systems scaling laws and networks-of-networks theory. Jared conducted his PhD in Computer Science at Stanford University and was formerly a research scientist at DeepMind where he worked on mathematical and systems methods for scalable deep learning, including early work on linear attention, transformer scaling, and neural diffusion techniques."
+    },
+    {
+      "name": "Heather Miller",
+      "affiliation": "CMU & Two Sigma",
+      "photo": "Miller_Heather.png",
+      "role": "General Co-Chair",
+      "bio": "Assistant Professor at Carnegie Mellon and VP at Two Sigma. Recipient of the Dahl-Nygaard Prize and ACM SIGPLAN Software Award for her work on Scala. Her research bridges distributed systems and AI infrastructure, including work on DSPy and the Language Model System Interface Model."
+    },
+    {
+      "name": "Avi Sil",
+      "affiliation": "Oracle",
+      "photo": "Sil_Avi.jpg",
+      "role": "Program Co-Chair",
+      "bio": "Senior Director of AI & Applied Science at Oracle. Former Principal Research Scientist and Manager at IBM Research, where he led foundational work in natural language processing, multilingual question answering, and enterprise AI systems. He currently leads Oracle's efforts on enterprise-grade AI agents and applied LLM research, bridging academic advances with real-world deployment at scale."
+    },
+    {
+      "name": "Omar Khattab",
+      "affiliation": "MIT EECS & CSAIL",
+      "photo": "khattab_omar.png",
+      "role": "Program Co-Chair",
+      "bio": "Assistant Professor at MIT EECS and CSAIL. Creator of DSPy, the leading framework for programming and optimizing compound AI systems, and ColBERT, which revolutionized neural information retrieval. PhD from Stanford advised by Matei Zaharia and Christopher Potts. Co-author of \"The Shift from Models to Compound AI Systems.\" Apple Scholars in AI/ML Fellow. Winner of SIGIR 2025 Best Paper Award. 15,000+ citations."
+    },
+    {
+      "name": "Deepti Raghavan",
+      "affiliation": "Brown University",
+      "photo": "Raghavan_Deepti.png",
+      "role": "Workshop Co-Chair",
+      "bio": "Assistant Professor of CS at Brown University. Her research focuses on systems for ML, networking, and operating systems. She has received a Google ML and Systems Junior Faculty award, NSF Graduate Research Fellowship, and Distinguished Artifact Award at SOSP."
+    },
+    {
+      "name": "Bogdan Stoica",
+      "affiliation": "University of Illinois Urbana-Champaign",
+      "photo": "Bogdan_Stoica.png",
+      "role": "Artifact Evaluation Chair",
+      "bio": "Postdoctoral Research Associate at the University of Illinois Urbana-Champaign. His research lies at the intersection of systems, programming languages, and AI, with a focus on improving the reliability and efficiency of software systems. He is the recipient of an Eckhardt Scholarship and a Distinguished Artifact Evaluator Award (EuroSys '25)."
+    },
+    {
+      "name": "Josh Quicksall",
+      "affiliation": "cmpnd",
+      "photo": "quicksall_josh.png",
+      "role": "Sponsorship Chair",
+      "bio": "Brand Strategy and Communications Lead at cmpnd, supporting the DSPy ecosystem and compound AI community. Previously Communications Manager at Carnegie Mellon's Software and Societal Systems Department, where he led a departmental rebrand, grew social audiences over 500%, and advised faculty leadership on communications strategy spanning AI, privacy engineering, and HCI."
+    },
+    {
+      "name": "Matei Zaharia",
+      "affiliation": "UC Berkeley & Databricks",
+      "photo": "Zaharia_Matei.png",
+      "role": "General Co-Chair",
+      "bio": "Associate Professor at UC Berkeley and Co-founder/CTO of Databricks. Creator of Apache Spark, MLflow, and Delta Lake. Lead author of \"The Shift from Models to Compound AI Systems\" and co-creator of DSPy. Winner of the ACM Doctoral Dissertation Award."
+    }
+  ],
+  "programCommittee": {
+    "chairs": [
+      {
+        "name": "Avi Sil",
+        "affiliation": "Oracle",
+        "photo": "Sil_Avi.jpg"
+      },
+      {
+        "name": "Heather Miller",
+        "affiliation": "Carnegie Mellon University",
+        "photo": "Miller_Heather.png"
+      },
+      {
+        "name": "Omar Khattab",
+        "affiliation": "Massachusetts Institute of Technology",
+        "photo": "khattab_omar.png"
+      }
+    ],
+    "members": [
+      {
+        "name": "Anurag Acharya",
+        "affiliation": "Pacific Northwest National Laboratory"
+      },
+      {
+        "name": "Emre Can Acikgoz",
+        "affiliation": "UIUC"
+      },
+      {
+        "name": "Lakshya A Agrawal",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Aditya Akella",
+        "affiliation": "The University of Texas at Austin"
+      },
+      {
+        "name": "Kerem Akillioglu",
+        "affiliation": "University of Waterloo"
+      },
+      {
+        "name": "Meysam Alizadeh",
+        "affiliation": "University of Zurich"
+      },
+      {
+        "name": "Saad Alqithami",
+        "affiliation": "Albaha University"
+      },
+      {
+        "name": "Anastasios Angelopoulos",
+        "affiliation": "LMArena"
+      },
+      {
+        "name": "Negar Arabzadeh",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Abhinav Arun",
+        "affiliation": "Domyn"
+      },
+      {
+        "name": "Shubhi Asthana",
+        "affiliation": "IBM Research"
+      },
+      {
+        "name": "Anish Athalye",
+        "affiliation": "Massachusetts Institute of Technology"
+      },
+      {
+        "name": "Rajveer Bachkaniwala",
+        "affiliation": "Georgia Institute of Technology"
+      },
+      {
+        "name": "Razan Baltaji",
+        "affiliation": "UIUC"
+      },
+      {
+        "name": "Shraddha Barke",
+        "affiliation": "University of California at San Diego"
+      },
+      {
+        "name": "Yogesh Barve",
+        "affiliation": "Vanderbilt University"
+      },
+      {
+        "name": "Brad Behnke",
+        "affiliation": "Intuit"
+      },
+      {
+        "name": "William Berrios",
+        "affiliation": "Contextual AI"
+      },
+      {
+        "name": "Léo Boisvert",
+        "affiliation": "ServiceNow Research, Mila -Quebec AI institute, Polytechnique Montréal"
+      },
+      {
+        "name": "Marisa Boston",
+        "affiliation": "Reins AI"
+      },
+      {
+        "name": "Luca Buratti",
+        "affiliation": "IBM"
+      },
+      {
+        "name": "Rui Cai",
+        "affiliation": "UC Davis"
+      },
+      {
+        "name": "Yuchen Cai",
+        "affiliation": "The University of Texas as Dallas"
+      },
+      {
+        "name": "Lei Cao",
+        "affiliation": "MIT CSAIL / U Arizona"
+      },
+      {
+        "name": "Paul Castro",
+        "affiliation": "IBM Research"
+      },
+      {
+        "name": "Z. Berkay Celik",
+        "affiliation": "Purdue University"
+      },
+      {
+        "name": "Om Chabra",
+        "affiliation": "Massachusetts Institute of Technology"
+      },
+      {
+        "name": "Madhurima Chakraborty",
+        "affiliation": "Axiarete.ai"
+      },
+      {
+        "name": "Rong-Ching Chang",
+        "affiliation": "UC Davis"
+      },
+      {
+        "name": "Muhammad Ahmed Chaudhry",
+        "affiliation": "Stanford University"
+      },
+      {
+        "name": "Yimeng Chen",
+        "affiliation": "King Abdullah University of Science and Technology, KAUST"
+      },
+      {
+        "name": "Zixiao Chen",
+        "affiliation": "Microsoft"
+      },
+      {
+        "name": "Abhilash Chenreddy",
+        "affiliation": "Microsoft"
+      },
+      {
+        "name": "Tejas Chopra",
+        "affiliation": "Netflix"
+      },
+      {
+        "name": "Sai Sree Laya Chukkapalli",
+        "affiliation": "IBM Research"
+      },
+      {
+        "name": "Hy Dang",
+        "affiliation": "University of Notre Dame"
+      },
+      {
+        "name": "Debanshu Das",
+        "affiliation": "Google"
+      },
+      {
+        "name": "Xiang Deng",
+        "affiliation": "NeoCognition"
+      },
+      {
+        "name": "Akshar Prabhu Desai",
+        "affiliation": "Google"
+      },
+      {
+        "name": "Sourabh Deshpande",
+        "affiliation": "Accenture"
+      },
+      {
+        "name": "Soumik Dey",
+        "affiliation": "Amazon Inc."
+      },
+      {
+        "name": "Tejas Dharamsi",
+        "affiliation": "LinkedIn"
+      },
+      {
+        "name": "Abhishek Dharmaratnakar",
+        "affiliation": "Google"
+      },
+      {
+        "name": "Yuxiao Dong",
+        "affiliation": "Tsinghua University"
+      },
+      {
+        "name": "Andrew Drozdov",
+        "affiliation": "Databricks"
+      },
+      {
+        "name": "Gaoyuan Du",
+        "affiliation": "Amazon"
+      },
+      {
+        "name": "Chenda Duan",
+        "affiliation": "UCLA"
+      },
+      {
+        "name": "Oussama Elachqar",
+        "affiliation": "Oumi"
+      },
+      {
+        "name": "Marquita Ellis",
+        "affiliation": "IBM Research"
+      },
+      {
+        "name": "Murali Krishna Emani",
+        "affiliation": "Argonne National Lab"
+      },
+      {
+        "name": "Anand Eswaran",
+        "affiliation": "IBM Research - India"
+      },
+      {
+        "name": "Aideen Fay",
+        "affiliation": "Imperial College London"
+      },
+      {
+        "name": "Benjamin Feuer",
+        "affiliation": "Stanford University"
+      },
+      {
+        "name": "Alcides Fonseca",
+        "affiliation": "University of Lisbon"
+      },
+      {
+        "name": "Carolina Fortuna",
+        "affiliation": "Jozef Stefan Institute"
+      },
+      {
+        "name": "Jiayi Geng",
+        "affiliation": "Carnegie Mellon University"
+      },
+      {
+        "name": "Ahmad Ghalayini",
+        "affiliation": "Microsoft"
+      },
+      {
+        "name": "Tarun Gopinath",
+        "affiliation": "Amazon Rufus"
+      },
+      {
+        "name": "Claire Le Goues",
+        "affiliation": "Carnegie Mellon University"
+      },
+      {
+        "name": "Zhuohan Gu",
+        "affiliation": "MIT"
+      },
+      {
+        "name": "Jiajing Guo",
+        "affiliation": "Bosch Research North America"
+      },
+      {
+        "name": "Ishan Gupta",
+        "affiliation": "Netflix"
+      },
+      {
+        "name": "Shrey Gupta",
+        "affiliation": "Boston College"
+      },
+      {
+        "name": "Walid Hanafy",
+        "affiliation": "UMass"
+      },
+      {
+        "name": "Shibo Hao",
+        "affiliation": "UCSD"
+      },
+      {
+        "name": "Ahmed E. Hassan",
+        "affiliation": "Queen's University"
+      },
+      {
+        "name": "Yifeng He",
+        "affiliation": "UC Davis"
+      },
+      {
+        "name": "Smit Hinsu",
+        "affiliation": "YouTube / Google"
+      },
+      {
+        "name": "Sameera Horawalavithana",
+        "affiliation": "Pacific Northwest National Laboratory"
+      },
+      {
+        "name": "Amir Houmansadr",
+        "affiliation": "University of Massachusetts Amherst"
+      },
+      {
+        "name": "Bodun Hu",
+        "affiliation": "University of Texas at Austin"
+      },
+      {
+        "name": "Jingyuan Huang",
+        "affiliation": "Rutgers University"
+      },
+      {
+        "name": "Ahmed Ibrahim",
+        "affiliation": "OpenAI"
+      },
+      {
+        "name": "Michael Isaac",
+        "affiliation": "Carnegie Mellon University"
+      },
+      {
+        "name": "Hamish Ivison",
+        "affiliation": "University of Washington"
+      },
+      {
+        "name": "Reyhan Jabbarvand",
+        "affiliation": "University of Illinois at Urbana-Champaign"
+      },
+      {
+        "name": "Rishabh Jain",
+        "affiliation": "eBay"
+      },
+      {
+        "name": "Alexander Johansen",
+        "affiliation": "Stanford University"
+      },
+      {
+        "name": "William Jurayj",
+        "affiliation": "Johns Hopkins University"
+      },
+      {
+        "name": "Kostis Kaffes",
+        "affiliation": "Columbia University"
+      },
+      {
+        "name": "Nik Kale",
+        "affiliation": "Cisco Systems"
+      },
+      {
+        "name": "Keisuke Kamahori",
+        "affiliation": "University of Washington"
+      },
+      {
+        "name": "Eunsuk Kang",
+        "affiliation": "Carnegie Mellon University"
+      },
+      {
+        "name": "Amine El Khair",
+        "affiliation": "Nvidia"
+      },
+      {
+        "name": "Khurram Khalil",
+        "affiliation": "U Missouri"
+      },
+      {
+        "name": "Dmitrii Khizbullin",
+        "affiliation": "KAUST"
+      },
+      {
+        "name": "Gyuwan Kim",
+        "affiliation": "University of California, Santa Barbara"
+      },
+      {
+        "name": "Hoang-Bao Le",
+        "affiliation": "Dublin City University"
+      },
+      {
+        "name": "Michael Le",
+        "affiliation": "IBM"
+      },
+      {
+        "name": "Leon Leng",
+        "affiliation": "University of Washington"
+      },
+      {
+        "name": "Hanchen Li",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Tianyu Li",
+        "affiliation": "MIT / UW-Madison"
+      },
+      {
+        "name": "Zixu Li",
+        "affiliation": "Sun Yat-sen University"
+      },
+      {
+        "name": "Jiachen Liu",
+        "affiliation": "University of Michigan"
+      },
+      {
+        "name": "Qin Liu",
+        "affiliation": "UC Davis"
+      },
+      {
+        "name": "Shu Liu",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Xiaoyi Lu",
+        "affiliation": "University of Florida"
+      },
+      {
+        "name": "Xing Han Lu",
+        "affiliation": "McGill University"
+      },
+      {
+        "name": "Muxi Lyu",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Aman Madaan",
+        "affiliation": "xAI"
+      },
+      {
+        "name": "Srirangan Madhavan",
+        "affiliation": "NVIDIA"
+      },
+      {
+        "name": "Kevin Madura",
+        "affiliation": "AlixPartners"
+      },
+      {
+        "name": "Michael Majurski",
+        "affiliation": "National Institute of Standards and Technology"
+      },
+      {
+        "name": "Ziming Mao",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Markos Markakis",
+        "affiliation": "MIT"
+      },
+      {
+        "name": "Mark Marron",
+        "affiliation": "University of Kentucky"
+      },
+      {
+        "name": "Shiva Mayahi",
+        "affiliation": "New Jersey Institute of Technology"
+      },
+      {
+        "name": "Tasmiah Tahsin Mayeesha",
+        "affiliation": "U North Texas"
+      },
+      {
+        "name": "Isaac Miller",
+        "affiliation": "cmpnd"
+      },
+      {
+        "name": "Bonan Min",
+        "affiliation": "Airbnb"
+      },
+      {
+        "name": "Sewon Min",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Muhammad Shujaat Mirza",
+        "affiliation": "Microsoft"
+      },
+      {
+        "name": "Sasa Misailovic",
+        "affiliation": "UIUC"
+      },
+      {
+        "name": "Ashirbad Mishra",
+        "affiliation": "eBay Inc."
+      },
+      {
+        "name": "Khalil Mrini",
+        "affiliation": "Oracle"
+      },
+      {
+        "name": "Rohit Avinash Mujumdar",
+        "affiliation": "Target Corporation"
+      },
+      {
+        "name": "Ajinkya Mulay",
+        "affiliation": "Meta"
+      },
+      {
+        "name": "Mukund Narasimhan",
+        "affiliation": "Airbnb"
+      },
+      {
+        "name": "Olaitan Olaleye",
+        "affiliation": "Oracle"
+      },
+      {
+        "name": "Abanisenioluwa Orojo",
+        "affiliation": "Baylor University"
+      },
+      {
+        "name": "Melissa Pan",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Sourav Panda",
+        "affiliation": "Pennsylvania State University"
+      },
+      {
+        "name": "Srikant Panda",
+        "affiliation": "Lam Research"
+      },
+      {
+        "name": "Vivek Pandit",
+        "affiliation": "Turing"
+      },
+      {
+        "name": "Ashwin Paranjape",
+        "affiliation": "Samaya AI"
+      },
+      {
+        "name": "Akshay Paruchuri",
+        "affiliation": "Stanford"
+      },
+      {
+        "name": "Hima Patel",
+        "affiliation": "IBM Research - India"
+      },
+      {
+        "name": "Shishir Patil",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Rhicheek Patra",
+        "affiliation": "Oracle"
+      },
+      {
+        "name": "Luan Pham",
+        "affiliation": "RMIT University"
+      },
+      {
+        "name": "George C. Polyzos",
+        "affiliation": "The Chinese University of Hong Kong, Shenzhen"
+      },
+      {
+        "name": "Shreyas Rajesh",
+        "affiliation": "UCLA"
+      },
+      {
+        "name": "Anand Rao",
+        "affiliation": "Carnegie Mellon University"
+      },
+      {
+        "name": "Awais Rauf",
+        "affiliation": "Queen's University Belfast"
+      },
+      {
+        "name": "Nikil Ravi",
+        "affiliation": "Vals AI"
+      },
+      {
+        "name": "Revanth Gangi Reddy",
+        "affiliation": "Google DeepMind"
+      },
+      {
+        "name": "Franziska Roesner",
+        "affiliation": "University of Washington"
+      },
+      {
+        "name": "Evan Rose",
+        "affiliation": "Northeastern University"
+      },
+      {
+        "name": "Alessio Sacco",
+        "affiliation": "Politecnico Di Torino"
+      },
+      {
+        "name": "Atal Narayan Sahu",
+        "affiliation": "UCLA"
+      },
+      {
+        "name": "Raghu Sangwan",
+        "affiliation": "Penn State"
+      },
+      {
+        "name": "Giorgio Severi",
+        "affiliation": "Northeastern University"
+      },
+      {
+        "name": "Karan Shah",
+        "affiliation": "Roblox / TU Dresden"
+      },
+      {
+        "name": "Rana Shahout",
+        "affiliation": "Harvard University"
+      },
+      {
+        "name": "Mahmood Sharif",
+        "affiliation": "Tel Aviv university"
+      },
+      {
+        "name": "Aakash Sharma",
+        "affiliation": "Pennsylvania State University"
+      },
+      {
+        "name": "Reshabh Kumar Sharma",
+        "affiliation": "University of Washington"
+      },
+      {
+        "name": "Tuo Shi",
+        "affiliation": "Aalto University"
+      },
+      {
+        "name": "Segev Shlomov",
+        "affiliation": "IBM Research"
+      },
+      {
+        "name": "Matteo Silvestri",
+        "affiliation": "Sapienza"
+      },
+      {
+        "name": "Videet Shailendra Singhai",
+        "affiliation": "Carnegie Mellon University (CMU)"
+      },
+      {
+        "name": "Ranjan Sinha",
+        "affiliation": "IBM"
+      },
+      {
+        "name": "Gagan Somashekar",
+        "affiliation": "Microsoft"
+      },
+      {
+        "name": "Kevin Song",
+        "affiliation": "University of Toronto"
+      },
+      {
+        "name": "Atin Sood",
+        "affiliation": "IBM Research"
+      },
+      {
+        "name": "Adriana Meza Soria",
+        "affiliation": "IBM"
+      },
+      {
+        "name": "Dilara Soylu",
+        "affiliation": "Stanford University"
+      },
+      {
+        "name": "Julian James Stephen",
+        "affiliation": "IBM"
+      },
+      {
+        "name": "Bogdan Alexandru Stoica",
+        "affiliation": "UIUC"
+      },
+      {
+        "name": "Georgios Syros",
+        "affiliation": "Northeastern University"
+      },
+      {
+        "name": "Cheng Tan",
+        "affiliation": "Northeastern University"
+      },
+      {
+        "name": "Shangyin Tan",
+        "affiliation": "University of California, Berkeley"
+      },
+      {
+        "name": "Carlos Toxtli",
+        "affiliation": "Clemson University"
+      },
+      {
+        "name": "Asher Trockman",
+        "affiliation": "Google"
+      },
+      {
+        "name": "Valter Uotila",
+        "affiliation": "Aalto University & University of Helsinki"
+      },
+      {
+        "name": "Karthik Valmeekam",
+        "affiliation": "Amazon AGI"
+      },
+      {
+        "name": "Bhanu Prakash Vangala",
+        "affiliation": "University of Missouri, Columbia"
+      },
+      {
+        "name": "Varun Vasudevan",
+        "affiliation": "Walmart Global Tech"
+      },
+      {
+        "name": "Suguna Velury",
+        "affiliation": "Stanford"
+      },
+      {
+        "name": "Thejas Venkatesh",
+        "affiliation": "Samaya AI"
+      },
+      {
+        "name": "Tai Vu",
+        "affiliation": "OpenAI"
+      },
+      {
+        "name": "Yogarshi Vyas",
+        "affiliation": "Oracle"
+      },
+      {
+        "name": "Wenyi Wang",
+        "affiliation": "KAUST - King Abdullah University of Science and Technology"
+      },
+      {
+        "name": "Yichuan Wang",
+        "affiliation": "UC Berkeley"
+      },
+      {
+        "name": "Yuanli Wang",
+        "affiliation": "Boston University"
+      },
+      {
+        "name": "Azmine Toushik Wasi",
+        "affiliation": "Computational Intelligence and Operations Laboratory"
+      },
+      {
+        "name": "Ahmed Wez",
+        "affiliation": "Brownian Labs"
+      },
+      {
+        "name": "Michal Wilinski",
+        "affiliation": "CMU"
+      },
+      {
+        "name": "Adrian Wood",
+        "affiliation": "Dropbox"
+      },
+      {
+        "name": "Bin Wu",
+        "affiliation": "UCL"
+      },
+      {
+        "name": "Eugene Wu",
+        "affiliation": "Columbia University"
+      },
+      {
+        "name": "Xiaoyuan Wu",
+        "affiliation": "CMU"
+      },
+      {
+        "name": "Yunze Xiao",
+        "affiliation": "CMU LTI"
+      },
+      {
+        "name": "Zedian Xiao",
+        "affiliation": "Amazon"
+      },
+      {
+        "name": "Chenyu Xu",
+        "affiliation": "Iowa State University"
+      },
+      {
+        "name": "Guowei Xu",
+        "affiliation": "Tsinghua/Harvard"
+      },
+      {
+        "name": "Yuanda Xu",
+        "affiliation": "LinkedIn"
+      },
+      {
+        "name": "Aashish Yadavally",
+        "affiliation": "UCF"
+      },
+      {
+        "name": "Jiacheng Yang",
+        "affiliation": "University of Toronto"
+      },
+      {
+        "name": "Sri Harsha Yayi",
+        "affiliation": "Intuit"
+      },
+      {
+        "name": "Muhammet Anıl Yağız",
+        "affiliation": "Arizona State University and Kırıkkale University"
+      },
+      {
+        "name": "Daniel Yellin",
+        "affiliation": "IBM/Reichman"
+      },
+      {
+        "name": "Xunjian Yin",
+        "affiliation": "Duke University"
+      },
+      {
+        "name": "Boxi Yu",
+        "affiliation": "LERO"
+      },
+      {
+        "name": "Guangba Yu",
+        "affiliation": "The Chinese University of Hong Kong"
+      },
+      {
+        "name": "Lingfan Yu",
+        "affiliation": "Amazon"
+      },
+      {
+        "name": "Imam Nur Bani Yusuf",
+        "affiliation": "National University of Singapore"
+      },
+      {
+        "name": "Zhonghao Zhan",
+        "affiliation": "Imperial College London"
+      },
+      {
+        "name": "Kexun Zhang",
+        "affiliation": "CMU"
+      },
+      {
+        "name": "Minjia Zhang",
+        "affiliation": "UIUC"
+      },
+      {
+        "name": "Qizheng Zhang",
+        "affiliation": "Stanford University"
+      },
+      {
+        "name": "Ziyu Zhang",
+        "affiliation": "MIT"
+      },
+      {
+        "name": "Peter Zhong",
+        "affiliation": "Carnegie Mellon University"
+      },
+      {
+        "name": "Zhiqing Zhong",
+        "affiliation": "The Chinese University of Hong Kong, Shenzhen (CUHK-Shenzhen)"
+      },
+      {
+        "name": "Zhengze Zhou",
+        "affiliation": "Cornell / LinkedIn"
+      },
+      {
+        "name": "Shaowei Zhu",
+        "affiliation": "AWS Annapurna Labs"
+      },
+      {
+        "name": "Zhanda Zhu",
+        "affiliation": "University of Toronto"
+      },
+      {
+        "name": "Mingchen Zhuge",
+        "affiliation": "KAUST"
+      },
+      {
+        "name": "Noah Ziems",
+        "affiliation": "University of Notre Dame"
+      },
+      {
+        "name": "Benjamin Zorn",
+        "affiliation": "Microsoft Research"
+      }
+    ],
+    "areaChairs": [
+      {
+        "name": "Pradeep Dasigi",
+        "affiliation": "The Allen Institute for Artificial Intelligence",
+        "pillar": "Architectural Patterns & Composition"
+      },
+      {
+        "name": "Yu Su",
+        "affiliation": "Ohio State University",
+        "pillar": "Architectural Patterns & Composition"
+      },
+      {
+        "name": "Shuyan Zhou",
+        "affiliation": "Duke University",
+        "pillar": "Evaluation & Benchmarking"
+      },
+      {
+        "name": "Alina Oprea",
+        "affiliation": "Northeastern University",
+        "pillar": "Security & Privacy"
+      },
+      {
+        "name": "Cristina Nita-Rotaru",
+        "affiliation": "Northeastern University",
+        "pillar": "Security & Privacy"
+      },
+      {
+        "name": "Niranjan Balasubramanian",
+        "affiliation": "Stony Brook University",
+        "pillar": "System Optimization & Efficiency"
+      },
+      {
+        "name": "Haoran Qiu",
+        "affiliation": "Microsoft Azure Research",
+        "pillar": "Engineering & Operations"
+      }
+    ]
+  },
+  "artifactEvaluationCommittee": {
+    "chairs": [],
+    "members": []
+  }
+}
