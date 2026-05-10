@@ -65,6 +65,12 @@
       "affiliation": "UC Berkeley",
       "photo": "stoica_ion.png",
       "bio": "Professor at UC Berkeley EECS and Director of SkyLab. Co-creator of Ray, the distributed computing framework powering compound AI infrastructure at OpenAI, Netflix, and Uber. Co-founder of Databricks ($62B) and Anyscale. Creator of Apache Spark and Apache Mesos. His lab produced vLLM (high-throughput LLM serving) and Chatbot Arena (crowdsourced LLM evaluation). Member of the National Academy of Engineering. ACM Fellow. Winner of the ACM SIGOPS Mark Weiser Award. PhD from Carnegie Mellon University."
+    },
+    {
+      "name": "Heather Miller",
+      "affiliation": "CMU & Two Sigma",
+      "photo": "Miller_Heather.png",
+      "bio": "Assistant Professor at Carnegie Mellon and VP at Two Sigma. Recipient of the Dahl-Nygaard Prize and ACM SIGPLAN Software Award for her work on Scala. Her research bridges distributed systems and AI infrastructure, including work on DSPy and the Language Model System Interface Model."
     }
   ],
   "organizing": [
