@@ -1,0 +1,404 @@
+---
+layout: base.njk
+title: CAIS 2026 Committees
+description: The Steering, Organizing, Program, and Artifact Evaluation Committees for ACM CAIS 2026 — the ACM Conference on AI and Agentic Systems.
+permalink: /program/2026/committee/
+extraStyles: |
+    .committee-photo {
+        width: 88px;
+        height: 88px;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: 50%;
+        flex-shrink: 0;
+        filter: grayscale(100%);
+        opacity: 0.9;
+        transition: filter 300ms ease, opacity 300ms ease;
+    }
+    .committee-card:hover .committee-photo {
+        filter: grayscale(0%);
+        opacity: 1;
+    }
+    .committee-card {
+        border: 1px solid var(--cais-border);
+        background: var(--cais-bg-white);
+        transition: border-color 200ms linear, box-shadow 150ms ease;
+    }
+    .committee-card:hover {
+        border-color: var(--cais-text);
+        box-shadow: 0 2px 8px rgba(51, 58, 63, 0.06);
+    }
+    .committee-header {
+        display: flex;
+        align-items: center;
+        gap: 0.875rem;
+        margin-bottom: 0.75rem;
+    }
+    .committee-name {
+        font-weight: 700;
+        color: var(--cais-text);
+        margin-bottom: 0.15rem;
+        font-size: 1rem;
+    }
+    .committee-affiliation {
+        color: #666;
+        font-size: 0.8rem;
+        margin-bottom: 0;
+    }
+    .committee-role {
+        color: var(--cais-accent);
+        font-weight: 600;
+        font-size: 0.75rem;
+        margin-top: 0.15rem;
+    }
+    .committee-bio {
+        font-size: 0.8rem;
+        color: var(--cais-text);
+        line-height: 1.5;
+        margin: 0;
+    }
+    .role-badge {
+        display: inline-block;
+        background: var(--cais-accent);
+        color: var(--cais-bg-white);
+        font-size: 0.7rem;
+        font-weight: 600;
+        padding: 0.2rem 0.5rem;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border-radius: 2px;
+    }
+    .steering-card {
+        border: 2px solid var(--cais-accent);
+        background: linear-gradient(to bottom, rgba(255, 88, 32, 0.03), transparent 50%);
+    }
+    .steering-card:hover {
+        border-color: #e64d1b;
+    }
+    .pc-chair-card {
+        border: 1px solid var(--cais-border);
+        background: var(--cais-bg-white);
+        padding: 1rem;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        height: 100%;
+    }
+    .pc-chair-card img {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+        filter: grayscale(100%);
+        opacity: 0.9;
+    }
+    .pc-chair-card:hover img {
+        filter: grayscale(0%);
+        opacity: 1;
+    }
+    .pc-chair-name {
+        font-weight: 700;
+        font-size: 0.95rem;
+        margin: 0;
+        color: var(--eerie-black);
+    }
+    .pc-chair-affiliation {
+        font-size: 0.8rem;
+        color: var(--davys-gray);
+        margin: 0;
+    }
+    .area-chair-card {
+        border: 1px solid var(--cais-border);
+        border-left: 4px solid var(--silver);
+        background: var(--cais-bg-white);
+        padding: 0.75rem 1rem;
+        border-radius: 4px;
+        height: 100%;
+    }
+    .area-chair-name {
+        font-weight: 700;
+        font-size: 0.9rem;
+        margin: 0;
+        color: var(--eerie-black);
+    }
+    .area-chair-affiliation {
+        font-size: 0.75rem;
+        color: var(--davys-gray);
+        margin: 0;
+    }
+    .area-chair-pillar-header {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .reviewer-list {
+        column-count: 3;
+        column-gap: 1.5rem;
+        margin-top: 1rem;
+    }
+    @media (max-width: 991px) {
+        .reviewer-list { column-count: 2; }
+    }
+    @media (max-width: 575px) {
+        .reviewer-list { column-count: 1; }
+    }
+    .reviewer-item {
+        break-inside: avoid;
+        padding: 0.45rem 0;
+        border-bottom: 1px solid var(--platinum);
+    }
+    .reviewer-item:last-child {
+        border-bottom: none;
+    }
+    .reviewer-name {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--eerie-black);
+        line-height: 1.3;
+        margin: 0;
+    }
+    .reviewer-affiliation {
+        font-size: 0.75rem;
+        color: var(--davys-gray);
+        margin: 0;
+        line-height: 1.3;
+    }
+    .committee-toc-card {
+        position: sticky;
+        top: 84px;
+    }
+    .committee-toc-card ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .committee-toc-card li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.4rem 0;
+        border-bottom: 1px solid var(--platinum);
+    }
+    .committee-toc-card li:last-child { border-bottom: none; }
+    .committee-toc-card a {
+        color: var(--eerie-black);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        flex: 1;
+    }
+    .committee-toc-card a:hover {
+        color: var(--terracotta-deep);
+        text-decoration: underline;
+    }
+    .committee-count {
+        font-size: 0.75rem;
+        color: var(--davys-gray);
+        font-weight: 500;
+    }
+    .anchor { scroll-margin-top: 84px; }
+---
+
+<header class="hero">
+    <div class="container">
+        <h1 class="display-6 fw-bold">CAIS 2026 Committees</h1>
+        <p class="lead mb-0">The people who shaped the inaugural ACM Conference on AI and Agentic Systems.</p>
+    </div>
+</header>
+
+<div class="py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Main column -->
+      <div class="col-lg-8">
+
+        <!-- ===== STEERING COMMITTEE ===== -->
+        <section id="steering" class="anchor mb-5">
+            <h2 class="section-title h4 border-bottom pb-2 mb-3"><i class="bi bi-compass me-2" style="color: var(--cais-accent);"></i>Steering Committee</h2>
+            <p class="mb-4">The Steering Committee provides strategic guidance and academic oversight for ACM CAIS, ensuring the conference maintains the highest standards of scientific rigor and relevance to the AI and agentic systems community.</p>
+            <div class="row g-4">
+                {% for member in committee2026.steering %}
+                {% set isSteering = true %}
+                {% include "committee-card.njk" %}
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- ===== ORGANIZING COMMITTEE ===== -->
+        <section id="organizing" class="anchor mb-5">
+            <h2 class="section-title h4 border-bottom pb-2 mb-3"><i class="bi bi-people me-2" style="color: var(--cais-accent);"></i>Organizing Committee</h2>
+            <p class="mb-4">The Organizing Committee manages the day-to-day planning and execution of CAIS 2026, including program development, logistics, and community engagement.</p>
+            <div class="row g-4">
+                {% for member in committee2026.organizing %}
+                {% set isSteering = false %}
+                {% include "committee-card.njk" %}
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- ===== PROGRAM COMMITTEE ===== -->
+        <section id="program-committee" class="anchor mb-5">
+            <h2 class="section-title h4 border-bottom pb-2 mb-3"><i class="bi bi-journal-text me-2" style="color: var(--cais-accent);"></i>Program Committee</h2>
+            <p class="mb-4">The Program Committee reviewed paper and demo submissions for CAIS 2026.</p>
+
+            <h3 class="h6 fw-bold text-uppercase text-muted mb-3" style="letter-spacing: 1px;">Program Co-Chairs</h3>
+            <div class="row g-3 mb-4">
+                {% for chair in committee2026.programCommittee.chairs %}
+                <div class="col-md-4">
+                    <div class="pc-chair-card">
+                        {% if chair.photo %}<img src="/assets/images/{{ chair.photo }}" alt="{{ chair.name }}" loading="lazy" />{% endif %}
+                        <div>
+                            <p class="pc-chair-name">{{ chair.name }}</p>
+                            <p class="pc-chair-affiliation">{{ chair.affiliation }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            {% if committee2026.programCommittee.demoTrackChairs and committee2026.programCommittee.demoTrackChairs | length > 0 %}
+            <h3 class="h6 fw-bold text-uppercase text-muted mb-3" style="letter-spacing: 1px;">Demo Co-Chairs</h3>
+            <div class="row g-3 mb-4">
+                {% for chair in committee2026.programCommittee.demoTrackChairs %}
+                <div class="col-md-4">
+                    <div class="pc-chair-card">
+                        {% if chair.photo %}<img src="/assets/images/{{ chair.photo }}" alt="{{ chair.name }}" loading="lazy" />{% endif %}
+                        <div>
+                            <p class="pc-chair-name">{{ chair.name }}</p>
+                            <p class="pc-chair-affiliation">{{ chair.affiliation }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            {% if committee2026.programCommittee.areaChairs and committee2026.programCommittee.areaChairs | length > 0 %}
+            <h3 class="h6 fw-bold text-uppercase text-muted mb-3" style="letter-spacing: 1px;">Area Chairs</h3>
+            {% for pillar in programPillars %}
+                {% set pillarChairs = [] %}
+                {% for ac in committee2026.programCommittee.areaChairs %}
+                    {% if ac.pillar == pillar.title %}
+                        {% set pillarChairs = (pillarChairs.push(ac), pillarChairs) %}
+                    {% endif %}
+                {% endfor %}
+                {% if pillarChairs | length > 0 %}
+                <div class="area-chair-pillar-header" style="color: {{ pillar.color }};">
+                    <i class="bi {{ pillar.icon }}"></i>{{ pillar.title }}
+                </div>
+                <div class="row g-2 mb-2">
+                    {% for ac in pillarChairs %}
+                    <div class="col-md-6">
+                        <div class="area-chair-card" style="border-left-color: {{ pillar.color }};">
+                            <p class="area-chair-name">{{ ac.name }}</p>
+                            <p class="area-chair-affiliation">{{ ac.affiliation }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            {% endfor %}
+            {% endif %}
+
+            <h3 class="h6 fw-bold text-uppercase text-muted mb-2 mt-4" style="letter-spacing: 1px;">Program Committee Members <span class="text-muted fw-normal">({{ committee2026.programCommittee.members | length }})</span></h3>
+            <div class="reviewer-list">
+                {% for m in committee2026.programCommittee.members %}
+                <div class="reviewer-item">
+                    <p class="reviewer-name">{{ m.name }}</p>
+                    <p class="reviewer-affiliation">{{ m.affiliation }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- ===== ARTIFACT EVALUATION COMMITTEE ===== -->
+        <section id="artifact-committee" class="anchor mb-5">
+            <h2 class="section-title h4 border-bottom pb-2 mb-3"><i class="bi bi-award me-2" style="color: var(--cais-accent);"></i>Artifact Evaluation Committee</h2>
+            <p class="mb-4">The Artifact Evaluation Committee reviewed research artifacts for CAIS 2026 — software, datasets, and supporting materials submitted alongside accepted papers.</p>
+
+            {% if committee2026.artifactEvaluationCommittee.chairs and committee2026.artifactEvaluationCommittee.chairs | length > 0 %}
+            <h3 class="h6 fw-bold text-uppercase text-muted mb-3" style="letter-spacing: 1px;">Chair{% if (committee2026.artifactEvaluationCommittee.chairs | length) != 1 %}s{% endif %}</h3>
+            <div class="row g-3 mb-4">
+                {% for chair in committee2026.artifactEvaluationCommittee.chairs %}
+                <div class="col-md-4">
+                    <div class="pc-chair-card">
+                        {% if chair.photo %}<img src="/assets/images/{{ chair.photo }}" alt="{{ chair.name }}" loading="lazy" />{% endif %}
+                        <div>
+                            <p class="pc-chair-name">{{ chair.name }}</p>
+                            <p class="pc-chair-affiliation">{{ chair.affiliation }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            {% if committee2026.artifactEvaluationCommittee.members and committee2026.artifactEvaluationCommittee.members | length > 0 %}
+            <h3 class="h6 fw-bold text-uppercase text-muted mb-2" style="letter-spacing: 1px;">Members <span class="text-muted fw-normal">({{ committee2026.artifactEvaluationCommittee.members | length }})</span></h3>
+            <div class="reviewer-list">
+                {% for m in committee2026.artifactEvaluationCommittee.members %}
+                <div class="reviewer-item">
+                    <p class="reviewer-name">{{ m.name }}</p>
+                    <p class="reviewer-affiliation">{{ m.affiliation }}</p>
+                </div>
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="alert alert-info mb-0">
+                <i class="bi bi-info-circle me-2"></i>The Artifact Evaluation Committee roster will be published soon.
+            </div>
+            {% endif %}
+        </section>
+
+      </div>
+
+      <!-- Sidebar TOC -->
+      <div class="col-lg-4">
+        <aside class="committee-toc-card">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="h6 fw-bold mb-3"><i class="bi bi-list-ul me-2"></i>Jump to Committee</h3>
+                    <ul>
+                        <li>
+                            <i class="bi bi-compass" style="color: var(--cais-accent); width: 18px; text-align: center;"></i>
+                            <a href="#steering">Steering Committee</a>
+                            <span class="committee-count">{{ committee2026.steering | length }}</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-people" style="color: var(--cais-accent); width: 18px; text-align: center;"></i>
+                            <a href="#organizing">Organizing Committee</a>
+                            <span class="committee-count">{{ committee2026.organizing | length }}</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-journal-text" style="color: var(--cais-accent); width: 18px; text-align: center;"></i>
+                            <a href="#program-committee">Program Committee</a>
+                            <span class="committee-count">{{ (committee2026.programCommittee.chairs | length) + (committee2026.programCommittee.demoTrackChairs | length) + (committee2026.programCommittee.areaChairs | length) + (committee2026.programCommittee.members | length) }}</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-award" style="color: var(--cais-accent); width: 18px; text-align: center;"></i>
+                            <a href="#artifact-committee">Artifact Evaluation Committee</a>
+                            {% if committee2026.artifactEvaluationCommittee.members and committee2026.artifactEvaluationCommittee.members | length > 0 %}
+                            <span class="committee-count">{{ (committee2026.artifactEvaluationCommittee.chairs | length) + (committee2026.artifactEvaluationCommittee.members | length) }}</span>
+                            {% else %}
+                            <span class="committee-count">soon</span>
+                            {% endif %}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+      </div>
+
+    </div>
+  </div>
+</div>

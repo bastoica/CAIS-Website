@@ -8,6 +8,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div id="navMain" class="collapse navbar-collapse">
+            {% set bestMatch = navigation.main | bestNavMatch(page.url) %}
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
                 {% for item in navigation.main %}
                 {% if item.children %}
@@ -20,7 +21,7 @@
                         <li>
                             {% if child.disabled %}
                             <span class="dropdown-item disabled" aria-disabled="true">{{ child.label }}</span>
-                            {% elif page.url == child.href or (child.href != "/" and page.url.startsWith(child.href)) %}
+                            {% elif child.href == bestMatch %}
                             <a class="dropdown-item active" aria-current="page" href="{{ child.href }}">{{ child.label }}</a>
                             {% else %}
                             <a class="dropdown-item" href="{{ child.href }}">{{ child.label }}</a>
@@ -33,7 +34,7 @@
                 <li class="nav-item">
                     {% if item.disabled %}
                     <a class="nav-link disabled" href="{{ item.href }}" aria-disabled="true">{{ item.label }}</a>
-                    {% elif page.url == item.href or (item.href != "/" and page.url.startsWith(item.href)) %}
+                    {% elif item.href == bestMatch %}
                     <a class="nav-link active" aria-current="page" href="{{ item.href }}">{{ item.label }}</a>
                     {% else %}
                     <a class="nav-link" href="{{ item.href }}">{{ item.label }}</a>
