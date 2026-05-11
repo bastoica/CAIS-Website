@@ -266,6 +266,23 @@ extraStyles: |
                 {% endfor %}
             </div>
 
+            {% if committee2026.programCommittee.demoTrackChairs and committee2026.programCommittee.demoTrackChairs | length > 0 %}
+            <h3 class="h6 fw-bold text-uppercase text-muted mb-3" style="letter-spacing: 1px;">Demo Co-Chairs</h3>
+            <div class="row g-3 mb-4">
+                {% for chair in committee2026.programCommittee.demoTrackChairs %}
+                <div class="col-md-4">
+                    <div class="pc-chair-card">
+                        {% if chair.photo %}<img src="/assets/images/{{ chair.photo }}" alt="{{ chair.name }}" loading="lazy" />{% endif %}
+                        <div>
+                            <p class="pc-chair-name">{{ chair.name }}</p>
+                            <p class="pc-chair-affiliation">{{ chair.affiliation }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
             {% if committee2026.programCommittee.areaChairs and committee2026.programCommittee.areaChairs | length > 0 %}
             <h3 class="h6 fw-bold text-uppercase text-muted mb-3" style="letter-spacing: 1px;">Area Chairs</h3>
             {% for pillar in programPillars %}
@@ -365,7 +382,7 @@ extraStyles: |
                         <li>
                             <i class="bi bi-journal-text" style="color: var(--cais-accent); width: 18px; text-align: center;"></i>
                             <a href="#program-committee">Program Committee</a>
-                            <span class="committee-count">{{ (committee2026.programCommittee.chairs | length) + (committee2026.programCommittee.areaChairs | length) + (committee2026.programCommittee.members | length) }}</span>
+                            <span class="committee-count">{{ (committee2026.programCommittee.chairs | length) + (committee2026.programCommittee.demoTrackChairs | length) + (committee2026.programCommittee.areaChairs | length) + (committee2026.programCommittee.members | length) }}</span>
                         </li>
                         <li>
                             <i class="bi bi-award" style="color: var(--cais-accent); width: 18px; text-align: center;"></i>

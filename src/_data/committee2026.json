@@ -593,10 +593,6 @@
         "affiliation": "cmpnd"
       },
       {
-        "name": "Bonan Min",
-        "affiliation": "Airbnb"
-      },
-      {
         "name": "Sewon Min",
         "affiliation": "UC Berkeley"
       },
@@ -841,10 +837,6 @@
         "affiliation": "OpenAI"
       },
       {
-        "name": "Yogarshi Vyas",
-        "affiliation": "Oracle"
-      },
-      {
         "name": "Wenyi Wang",
         "affiliation": "KAUST - King Abdullah University of Science and Technology"
       },
@@ -911,10 +903,6 @@
       {
         "name": "Jiacheng Yang",
         "affiliation": "University of Toronto"
-      },
-      {
-        "name": "Sri Harsha Yayi",
-        "affiliation": "Intuit"
       },
       {
         "name": "Muhammet Anıl Yağız",
@@ -1032,6 +1020,23 @@
         "name": "Haoran Qiu",
         "affiliation": "Microsoft Azure Research",
         "pillar": "Engineering & Operations"
+      }
+    ],
+    "demoTrackChairs": [
+      {
+        "name": "Bonan Min",
+        "affiliation": "Airbnb",
+        "photo": "Min_Bonan.jpg"
+      },
+      {
+        "name": "Sri Harsha Yayi",
+        "affiliation": "Intuit",
+        "photo": "Yayi_SriHarsha.jpg"
+      },
+      {
+        "name": "Yogarshi Vyas",
+        "affiliation": "Oracle",
+        "photo": "Vyas_Yogarshi.jpg"
       }
     ]
   },
