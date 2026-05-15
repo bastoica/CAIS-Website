@@ -25,6 +25,11 @@
       "name": "Snowflake",
       "logo": "sponsors/snowflake.svg",
       "url": "https://www.snowflake.com"
+    },
+    {
+      "name": "Two Sigma",
+      "logo": "sponsors/twosigma.svg",
+      "url": "https://www.twosigma.com"
     }
   ],
   "silver": [
