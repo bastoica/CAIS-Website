@@ -147,8 +147,23 @@
     </table>
 
 {% elif block.type == "ops" %}
-    <p class="event-title mb-1"><i class="bi bi-gear event-icon"></i>{{ block.title }}</p>
-    <p class="event-meta"><i class="bi bi-geo-alt me-1"></i>{{ block.room }}</p>
+    {% set opsPaper = null %}
+    {% if block.talks %}
+        {% for paper in papers2026 %}{% if paper.slug == block.talks[0] %}{% set opsPaper = paper %}{% endif %}{% endfor %}
+    {% endif %}
+    {% if opsPaper %}
+        <p class="event-title mb-1"><i class="bi bi-gear event-icon"></i>{{ block.title }}: <a href="/program/2026/papers/{{ opsPaper.slug }}/">{{ opsPaper.title }}</a></p>
+        <p class="event-meta">
+            {% for author in opsPaper.authors %}{% if author.name and author.name != "TBD" %}<strong>{{ author.name }}</strong>{% if author.affiliation and author.affiliation != "TBD" %} <span class="text-muted">· {{ author.affiliation }}</span>{% endif %}{% if not loop.last %}, {% endif %}{% endif %}{% endfor %}
+            {% set hasNamedAuthor = false %}
+            {% for author in opsPaper.authors %}{% if author.name and author.name != "TBD" %}{% set hasNamedAuthor = true %}{% endif %}{% endfor %}
+            {% if hasNamedAuthor %}<br>{% endif %}
+            <i class="bi bi-geo-alt me-1"></i>{{ block.room }}
+        </p>
+    {% else %}
+        <p class="event-title mb-1"><i class="bi bi-gear event-icon"></i>{{ block.title }}</p>
+        <p class="event-meta"><i class="bi bi-geo-alt me-1"></i>{{ block.room }}</p>
+    {% endif %}
 
 {% elif block.type == "reception" %}
     <p class="event-title mb-1"><i class="bi bi-cup-straw event-icon"></i>{{ block.title }}</p>

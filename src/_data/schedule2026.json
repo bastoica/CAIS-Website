@@ -150,8 +150,14 @@
         "start": "4:30 PM",
         "end": "5:00 PM",
         "type": "ops",
+        "id": "ops1",
+        "session": "Ops Experience 1",
         "title": "Ops Experience 1",
-        "room": "Bayshore Ballroom"
+        "room": "Bayshore Ballroom",
+        "slotMinutes": 30,
+        "talks": [
+          "ops-experience-1"
+        ]
       },
       {
         "start": "5:15 PM",
@@ -270,8 +276,14 @@
         "start": "1:30 PM",
         "end": "2:00 PM",
         "type": "ops",
+        "id": "ops2",
+        "session": "Ops Experience 2",
         "title": "Ops Experience 2",
-        "room": "Bayshore Ballroom"
+        "room": "Bayshore Ballroom",
+        "slotMinutes": 30,
+        "talks": [
+          "ops-experience-2"
+        ]
       },
       {
         "start": "2:00 PM",
@@ -367,8 +379,14 @@
         "start": "9:30 AM",
         "end": "10:00 AM",
         "type": "ops",
+        "id": "ops3",
+        "session": "Ops Experience 3",
         "title": "Ops Experience 3",
-        "room": "Bayshore Ballroom"
+        "room": "Bayshore Ballroom",
+        "slotMinutes": 30,
+        "talks": [
+          "popa-securing-gemini-from-cyberattack-misuse"
+        ]
       },
       {
         "start": "10:00 AM",

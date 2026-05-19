@@ -30,10 +30,15 @@ module.exports = function () {
     const papersSource = JSON.parse(fs.readFileSync(path.join(__dirname, 'papers2026-source.json'), 'utf8'));
     const schedule = JSON.parse(fs.readFileSync(path.join(__dirname, 'schedule2026.json'), 'utf8'));
 
+    // Match a paper's slug against either a paper-session OR an ops block's
+    // talks array. The block type also becomes the paper's category, so the
+    // listing/detail templates can branch on research vs. ops without an
+    // explicit field in the source JSON.
     function findPaperSession(slug) {
         for (const [dayKey, day] of Object.entries(schedule)) {
             for (const block of day.blocks || []) {
-                if (block.type !== 'paper-session' || !Array.isArray(block.talks)) continue;
+                if (!Array.isArray(block.talks)) continue;
+                if (block.type !== 'paper-session' && block.type !== 'ops') continue;
                 const idx = block.talks.indexOf(slug);
                 if (idx >= 0) return { block, dayKey, order: idx + 1 };
             }
@@ -47,6 +52,7 @@ module.exports = function () {
         const { block, dayKey, order } = found;
         return {
             ...paper,
+            category: block.type === 'ops' ? 'ops' : 'research',
             talk: {
                 sessionId: block.id,
                 day: dayKey,

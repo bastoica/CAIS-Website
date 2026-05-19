@@ -2090,5 +2090,41 @@
       }
     ],
     "abstract": "Iterative self-refinement is the dominant paradigm for improving LLM outputs without retraining, yet it lacks principled grounding for what to refine or in what order. We propose Prompt-Level Supervisory Alignment (PLSA), a framework that operationalizes Supervisory Control Theory (SCT), a cognitive framework for human oversight of automated systems, as a structured prompting strategy, and empirically evaluate whether theoretically-grounded prompt structure yields higher revision fidelity than matched iterative self-refinement. In a large-scale evaluation across ten venue-year combinations from three ML conference series (ICLR 2021-2025, NeurIPS 2021-2022 and 2024, CoRL 2021 and 2024), SCT-structured conditions produce revisions with significantly higher fidelity to actual author revisions than both a single-pass baseline and a matched two-pass self-refinement baseline that uses identical review information without SCT structure (all $p < .001$, medium-to-large effect sizes). All conditions maintain practically equivalent LLM-judge quality, and cross-model evaluation with Google Gemini 2.5 Flash-Lite corroborates condition rankings, confirming findings are not artifacts of generator self-preference. These results provide empirical evidence that theoretically-grounded prompt structure, not merely iterative refinement, is the operative variable driving higher revision fidelity."
+  },
+  {
+    "slug": "ops-experience-1",
+    "title": "Talk title TBD",
+    "summary": "Operational experience talk — speakers, title, and details to be announced.",
+    "authors": [
+      {
+        "name": "TBD",
+        "affiliation": "TBD"
+      }
+    ],
+    "abstract": "Operational experience talk. Final speaker(s), title, and abstract will be announced closer to the conference."
+  },
+  {
+    "slug": "ops-experience-2",
+    "title": "Talk title TBD",
+    "summary": "Operational experience talk — speakers, title, and details to be announced.",
+    "authors": [
+      {
+        "name": "TBD",
+        "affiliation": "TBD"
+      }
+    ],
+    "abstract": "Operational experience talk. Final speaker(s), title, and abstract will be announced closer to the conference."
+  },
+  {
+    "slug": "popa-securing-gemini-from-cyberattack-misuse",
+    "title": "Securing Gemini from Cyberattack Misuse",
+    "summary": "Operational experience talk — abstract to be announced.",
+    "authors": [
+      {
+        "name": "Raluca Ada Popa",
+        "affiliation": "Google DeepMind and UC Berkeley"
+      }
+    ],
+    "abstract": "Abstract to be announced."
   }
 ]

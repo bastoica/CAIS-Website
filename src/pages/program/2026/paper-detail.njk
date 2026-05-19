@@ -97,11 +97,11 @@ extraStyles: |
                         <div class="row g-4">
                             <div class="col-md-6 presentation-block">
                                 <p class="presentation-label">Talk</p>
-                                <p class="presentation-title">{{ paper.talk.sessionName }}: {{ paper.talk.sessionTheme }}</p>
+                                <p class="presentation-title">{{ paper.talk.sessionName }}{% if paper.talk.sessionTheme %}: {{ paper.talk.sessionTheme }}{% endif %}</p>
                                 <p class="presentation-when">{{ day.label }} · {{ paper.talk.start }} – {{ paper.talk.end }}</p>
                                 <p class="presentation-where"><i class="bi bi-geo-alt me-1"></i>{{ paper.talk.room }}</p>
                             </div>
-                            {% if posterBlock %}
+                            {% if posterBlock and paper.category != "ops" %}
                             <div class="col-md-6 presentation-block">
                                 <p class="presentation-label">Poster</p>
                                 <p class="presentation-when">{{ day.label }} · {{ posterBlock.start }} – {{ posterBlock.end }}</p>

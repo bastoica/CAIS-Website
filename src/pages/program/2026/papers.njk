@@ -122,7 +122,13 @@ extraStyles: |
 
       <!-- Main Content -->
       <div class="col-lg-8">
-        <p class="mb-4">{{ papers2026 | length }} paper{% if (papers2026 | length) != 1 %}s{% endif %} accepted to the CAIS 2026 research track, grouped by primary pillar.</p>
+        {% set researchCount = 0 %}
+        {% set opsCount = 0 %}
+        {% for paper in papers2026 %}
+            {% if paper.category == "ops" %}{% set opsCount = opsCount + 1 %}
+            {% else %}{% set researchCount = researchCount + 1 %}{% endif %}
+        {% endfor %}
+        <p class="mb-4">{{ researchCount }} research paper{% if researchCount != 1 %}s{% endif %} grouped by primary pillar, plus {{ opsCount }} operational experience talk{% if opsCount != 1 %}s{% endif %}.</p>
 
         {% for pillar in programPillars %}
             {% set pillarPapers = [] %}
@@ -164,6 +170,33 @@ extraStyles: |
             </section>
             {% endif %}
         {% endfor %}
+
+        {# Operational Experience section #}
+        {% set opsPapers = [] %}
+        {% for paper in papers2026 %}
+            {% if paper.category == "ops" %}{% set opsPapers = (opsPapers.push(paper), opsPapers) %}{% endif %}
+        {% endfor %}
+        {% if opsPapers | length > 0 %}
+        <section id="ops-experience" class="anchor mb-5">
+            <h2 class="section-title h5 border-bottom pb-2 mb-3" style="border-bottom-color: var(--davys-gray) !important; border-bottom-width: 2px !important;">
+                <i class="bi bi-gear-wide-connected me-2" style="color: var(--davys-gray);"></i>Operational Experience
+                <span class="text-muted small fw-normal ms-2">{{ opsPapers | length }} talk{% if opsPapers | length != 1 %}s{% endif %}</span>
+            </h2>
+            <p class="small text-muted mb-3">Short operational-experience talks from practitioners deploying AI and agentic systems in production. Each runs in a 30-minute slot during the main conference.</p>
+
+            {% for paper in opsPapers %}
+            <div class="paper-card" style="border-left-color: var(--davys-gray);">
+                <h3 class="h6 fw-bold">
+                    <a href="/program/2026/papers/{{ paper.slug }}/" class="text-decoration-none">{{ paper.title }}</a>
+                </h3>
+                <p class="small text-muted mb-1">
+                    {% for author in paper.authors %}{{ author.name }} <span class="text-muted">({{ author.affiliation }})</span>{% if not loop.last %}, {% endif %}{% endfor %}
+                </p>
+                <p class="small mb-0">{{ paper.summary }}</p>
+            </div>
+            {% endfor %}
+        </section>
+        {% endif %}
       </div>
 
       <!-- Sidebar TOC -->
@@ -186,6 +219,15 @@ extraStyles: |
                             </li>
                             {% endif %}
                         {% endfor %}
+                        {% set opsTocCount = 0 %}
+                        {% for paper in papers2026 %}{% if paper.category == "ops" %}{% set opsTocCount = opsTocCount + 1 %}{% endif %}{% endfor %}
+                        {% if opsTocCount > 0 %}
+                            <li>
+                                <i class="bi bi-gear-wide-connected" style="color: var(--davys-gray); font-size: 1rem; width: 18px; text-align: center;"></i>
+                                <a href="#ops-experience">Operational Experience</a>
+                                <span class="pillar-count">{{ opsTocCount }}</span>
+                            </li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
