@@ -1,0 +1,326 @@
+{
+  "tuesday": {
+    "date": "2026-05-26",
+    "label": "Tuesday, May 26",
+    "subtitle": "Workshop Day",
+    "blocks": [
+      {
+        "start": "7:30 AM",
+        "end": "8:30 AM",
+        "type": "break",
+        "title": "AM Break",
+        "room": "Bayshore Foyer"
+      },
+      {
+        "start": "8:30 AM",
+        "end": "12:30 PM",
+        "type": "workshop-session",
+        "title": "Morning workshop sessions",
+        "slot": "am",
+        "breakStart": "10:00 AM",
+        "breakEnd": "10:30 AM",
+        "breakRoom": "Bayshore Foyer"
+      },
+      {
+        "start": "12:30 PM",
+        "end": "1:30 PM",
+        "type": "meal",
+        "title": "Lunch",
+        "room": "Gateway Ballroom"
+      },
+      {
+        "start": "1:30 PM",
+        "end": "6:00 PM",
+        "type": "workshop-session",
+        "title": "Afternoon workshop sessions",
+        "slot": "pm",
+        "breakStart": "3:00 PM",
+        "breakEnd": "3:30 PM",
+        "breakRoom": "Bayshore Foyer"
+      }
+    ]
+  },
+  "wednesday": {
+    "date": "2026-05-27",
+    "label": "Wednesday, May 27",
+    "subtitle": "Main Conference Day 1",
+    "blocks": [
+      {
+        "start": "7:30 AM",
+        "end": "8:30 AM",
+        "type": "break",
+        "title": "AM Break",
+        "room": "Bayshore Foyer"
+      },
+      {
+        "start": "9:00 AM",
+        "end": "10:15 AM",
+        "type": "keynote",
+        "title": "Welcome & Keynote 1",
+        "speakerName": "Andy Konwinski",
+        "speakerImage": "andy-konwinski.jpg",
+        "speakerDesc": "Co-founder of Databricks and Perplexity AI · Founder of Laude Institute",
+        "room": "Bayshore Ballroom"
+      },
+      {
+        "start": "10:15 AM",
+        "end": "10:45 AM",
+        "type": "break",
+        "title": "AM Break",
+        "room": "Bayshore Foyer"
+      },
+      {
+        "start": "10:45 AM",
+        "end": "12:15 PM",
+        "type": "paper-session",
+        "session": "Paper Session 1",
+        "theme": "Agent Design",
+        "room": "Bayshore Ballroom",
+        "talkFormat": "9 talks · 7+2+1 min each"
+      },
+      {
+        "start": "12:15 PM",
+        "end": "1:30 PM",
+        "type": "meal",
+        "title": "Lunch",
+        "room": "Gateway Ballroom"
+      },
+      {
+        "start": "1:30 PM",
+        "end": "3:00 PM",
+        "type": "paper-session",
+        "session": "Paper Session 2",
+        "theme": "Agent Evaluation",
+        "room": "Bayshore Ballroom",
+        "talkFormat": "9 talks · 7+2+1 min each"
+      },
+      {
+        "start": "3:00 PM",
+        "end": "3:30 PM",
+        "type": "break",
+        "title": "PM Break",
+        "room": "Bayshore Foyer"
+      },
+      {
+        "start": "3:30 PM",
+        "end": "4:30 PM",
+        "type": "paper-session",
+        "session": "Paper Session 3",
+        "theme": "Systems Efficiency",
+        "room": "Bayshore Ballroom",
+        "talkFormat": "6 talks · 7+2+1 min each"
+      },
+      {
+        "start": "4:30 PM",
+        "end": "5:00 PM",
+        "type": "ops",
+        "title": "Ops Experience 1",
+        "room": "Bayshore Ballroom"
+      },
+      {
+        "start": "5:15 PM",
+        "end": "6:45 PM",
+        "type": "demo-poster",
+        "title": "Demos & Research Posters",
+        "demoRoom": "San Jose / Santa Clara",
+        "posterRoom": "Carmel / Monterey"
+      },
+      {
+        "start": "6:00 PM",
+        "end": "7:30 PM",
+        "type": "reception",
+        "title": "Databricks Reception",
+        "room": "Sprigs",
+        "note": "Capacity-capped at 100 people"
+      }
+    ]
+  },
+  "thursday": {
+    "date": "2026-05-28",
+    "label": "Thursday, May 28",
+    "subtitle": "Main Conference Day 2",
+    "blocks": [
+      {
+        "start": "8:00 AM",
+        "end": "9:00 AM",
+        "type": "break",
+        "title": "AM Break",
+        "room": "Bayshore Foyer"
+      },
+      {
+        "start": "9:00 AM",
+        "end": "10:30 AM",
+        "type": "paper-session",
+        "session": "Paper Session 4",
+        "theme": "Agent Memory & Planning",
+        "room": "Bayshore Ballroom",
+        "talkFormat": "9 talks · 7+2+1 min each"
+      },
+      {
+        "start": "10:30 AM",
+        "end": "11:00 AM",
+        "type": "break",
+        "title": "AM Break",
+        "room": "Bayshore Foyer"
+      },
+      {
+        "start": "11:00 AM",
+        "end": "12:30 PM",
+        "type": "paper-session",
+        "session": "Paper Session 5",
+        "theme": "Security & Governance",
+        "room": "Bayshore Ballroom",
+        "talkFormat": "9 talks · 7+2+1 min each"
+      },
+      {
+        "start": "12:30 PM",
+        "end": "1:30 PM",
+        "type": "meal",
+        "title": "Lunch",
+        "room": "Gateway Ballroom"
+      },
+      {
+        "start": "12:45 PM",
+        "end": "1:15 PM",
+        "type": "info",
+        "title": "Business Meeting (working lunch)",
+        "room": "San Carlos",
+        "note": "Grab a boxed lunch and bring it to the room"
+      },
+      {
+        "start": "1:30 PM",
+        "end": "2:00 PM",
+        "type": "ops",
+        "title": "Ops Experience 2",
+        "room": "Bayshore Ballroom"
+      },
+      {
+        "start": "2:00 PM",
+        "end": "3:00 PM",
+        "type": "keynote",
+        "title": "Keynote 2",
+        "speakerName": "Percy Liang",
+        "speakerImage": "percy3.jpeg",
+        "speakerDesc": "Professor of Computer Science, Stanford University · Director of CRFM · Co-lead of Stanford HAI",
+        "room": "Bayshore Ballroom"
+      },
+      {
+        "start": "3:00 PM",
+        "end": "3:30 PM",
+        "type": "break",
+        "title": "PM Break",
+        "room": "Bayshore Foyer"
+      },
+      {
+        "start": "3:30 PM",
+        "end": "4:30 PM",
+        "type": "paper-session",
+        "session": "Paper Session 6",
+        "theme": "Learning & Control",
+        "room": "Bayshore Ballroom",
+        "talkFormat": "6 talks · 7+2+1 min each"
+      },
+      {
+        "start": "4:30 PM",
+        "end": "6:00 PM",
+        "type": "demo-poster",
+        "title": "Demos & Research Posters",
+        "demoRoom": "San Jose",
+        "posterRoom": "Carmel"
+      },
+      {
+        "start": "6:00 PM",
+        "end": "7:15 PM",
+        "type": "reception",
+        "title": "Conference Reception",
+        "room": "Gateway Ballroom",
+        "note": "Sponsored by Snorkel"
+      }
+    ]
+  },
+  "friday": {
+    "date": "2026-05-29",
+    "label": "Friday, May 29",
+    "subtitle": "Main Conference Day 3",
+    "blocks": [
+      {
+        "start": "7:30 AM",
+        "end": "8:30 AM",
+        "type": "break",
+        "title": "AM Break",
+        "room": "Bayshore Foyer"
+      },
+      {
+        "start": "9:00 AM",
+        "end": "9:30 AM",
+        "type": "closing",
+        "title": "Closing & Awards",
+        "room": "Bayshore Ballroom"
+      },
+      {
+        "start": "9:30 AM",
+        "end": "10:00 AM",
+        "type": "ops",
+        "title": "Ops Experience 3",
+        "room": "Bayshore Ballroom"
+      },
+      {
+        "start": "10:00 AM",
+        "end": "10:30 AM",
+        "type": "break",
+        "title": "AM Break",
+        "room": "Bayshore Foyer"
+      },
+      {
+        "start": "10:30 AM",
+        "end": "11:30 AM",
+        "type": "paper-session",
+        "session": "Paper Session 7",
+        "theme": "Agent Behavior",
+        "room": "Bayshore Ballroom",
+        "talkFormat": "6 talks · 7+2+1 min each"
+      },
+      {
+        "start": "11:30 AM",
+        "end": "12:30 PM",
+        "type": "meal",
+        "title": "Lunch",
+        "room": "Gateway Ballroom"
+      },
+      {
+        "start": "12:30 PM",
+        "end": "1:30 PM",
+        "type": "paper-session",
+        "session": "Paper Session 8",
+        "theme": "AI Systems in Practice",
+        "room": "Bayshore Ballroom",
+        "talkFormat": "6 talks · 7+2+1 min each"
+      },
+      {
+        "start": "1:45 PM",
+        "end": "3:15 PM",
+        "type": "demo-poster",
+        "title": "Demos & Research Posters",
+        "demoRoom": "San Jose / Santa Clara",
+        "posterRoom": "Carmel / Monterey"
+      },
+      {
+        "start": "3:30 PM",
+        "end": "4:30 PM",
+        "type": "keynote",
+        "title": "Keynote 3",
+        "speakerName": "Thariq Shihipar",
+        "speakerImage": "thariq.png",
+        "speakerDesc": "Member of Technical Staff, Claude Code · Anthropic",
+        "room": "Bayshore Ballroom"
+      },
+      {
+        "start": "4:30 PM",
+        "end": "4:45 PM",
+        "type": "closing",
+        "title": "Closing Remarks & Awards Wrap-up",
+        "room": "Bayshore Ballroom"
+      }
+    ]
+  }
+}
