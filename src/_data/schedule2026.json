@@ -76,7 +76,20 @@
         "session": "Paper Session 1",
         "theme": "Agent Design",
         "room": "Bayshore Ballroom",
-        "talkFormat": "9 talks · 7+2+1 min each"
+        "talkFormat": "9 talks · 7+2+1 min each",
+        "id": "ps1",
+        "slotMinutes": 10,
+        "talks": [
+          "context-reasoning-and-hierarchy-a-costperformance-study-of-compound-llm-agent-de",
+          "expansion-contraction-a-multi-agent-graph-traversal-pattern-for-compound-ai-syst",
+          "a-language-for-describing-agentic-llm-contexts",
+          "tressoir-unifying-online-offline-and-hil-design-and-evolution-of-multi-agent-sys",
+          "glia-a-human-inspired-ai-for-automated-systems-design-and-optimization",
+          "improving-coherence-and-persistence-in-agentic-ai-for-system-optimization",
+          "robust-agent-compensation-rac-teaching-ai-agents-to-compensate",
+          "fastworkflow-closing-the-agentic-performance-gap-between-small-and-frontier-lang",
+          "tracefix-repairing-agent-coordination-protocols-with-tla-counterexamples"
+        ]
       },
       {
         "start": "12:15 PM",
@@ -92,7 +105,20 @@
         "session": "Paper Session 2",
         "theme": "Agent Evaluation",
         "room": "Bayshore Ballroom",
-        "talkFormat": "9 talks · 7+2+1 min each"
+        "talkFormat": "9 talks · 7+2+1 min each",
+        "id": "ps2",
+        "slotMinutes": 10,
+        "talks": [
+          "trace-level-analysis-of-information-contamination-in-multi-agent-systems",
+          "willful-disobedience-automatically-detecting-failures-in-agentic-traces",
+          "opaquetoolsbench-learning-nuances-of-tool-behavior-through-interaction",
+          "vibench-a-benchmark-on-vibe-coding",
+          "vibe-code-bench-evaluating-ai-models-on-end-to-end-web-application-development",
+          "reasoning-intensive-regression",
+          "generating-expressive-and-customizable-evals-for-timeseries-data-analysis-agents",
+          "benchmarking-agents-in-insurance-underwriting-environments",
+          "draftnepabench-a-benchmark-for-drafting-nepa-document-sections-with-coding-agent"
+        ]
       },
       {
         "start": "3:00 PM",
@@ -108,7 +134,17 @@
         "session": "Paper Session 3",
         "theme": "Systems Efficiency",
         "room": "Bayshore Ballroom",
-        "talkFormat": "6 talks · 7+2+1 min each"
+        "talkFormat": "6 talks · 7+2+1 min each",
+        "id": "ps3",
+        "slotMinutes": 10,
+        "talks": [
+          "robust-batch-level-query-routing-for-large-language-models-under-cost-and-capaci",
+          "dissecting-and-improving-communication-performance-in-multi-node-llm-inference",
+          "constant-memory-retrieval-via-koopman-operator-estimation-for-mamba-3",
+          "xgrammar-dynamic-and-efficient-structured-generation-engine-for-agentic-llms",
+          "cami-cost-aware-agent-guided-multi-indexing-for-semantic-retrieval",
+          "swiftfusion-scalable-sequence-parallelism-for-distributed-inference-of-diffusion"
+        ]
       },
       {
         "start": "4:30 PM",
@@ -123,7 +159,24 @@
         "type": "demo-poster",
         "title": "Demos & Research Posters",
         "demoRoom": "San Jose / Santa Clara",
-        "posterRoom": "Carmel / Monterey"
+        "posterRoom": "Carmel / Monterey",
+        "demos": [
+          "nexa-ecommerce-insights",
+          "eigentsearch-qplus",
+          "sherlock-bug-to-pr",
+          "hearthnet",
+          "parallel-environments-for-agents",
+          "optimize-anything",
+          "stigmergyrouter",
+          "learning-skills-coding-agents",
+          "trace-social-graph",
+          "agent-aided-cad",
+          "alignment-to-optimization-bridge",
+          "raid-reflective-edit-propagation",
+          "cotomi-act",
+          "graft-edge-orchestration",
+          "drcy-hardware-review"
+        ]
       },
       {
         "start": "6:00 PM",
@@ -154,7 +207,20 @@
         "session": "Paper Session 4",
         "theme": "Agent Memory & Planning",
         "room": "Bayshore Ballroom",
-        "talkFormat": "9 talks · 7+2+1 min each"
+        "talkFormat": "9 talks · 7+2+1 min each",
+        "id": "ps4",
+        "slotMinutes": 10,
+        "talks": [
+          "livegraph-a-compound-ai-system-for-evolving-knowledge-graph-construction-from-st",
+          "vista-verifier-in-the-loop-agentic-rl-for-semantic-program-synthesis-in-quantum",
+          "dossier-deep-research-via-ledger-driven-branching-search-and-query-encoding-lear",
+          "learning-from-supervision-with-semantic-and-episodic-memory-a-reflective-approac",
+          "forge-self-evolving-agent-memory-with-no-weight-updates-via-population-broadcast",
+          "do-agents-need-to-plan-step-by-step-rethinking-planning-horizon-in-data-centric",
+          "how-to-steer-your-multi-agent-system-human-llm-collaborative-planning",
+          "scideator-human-llm-compound-system-for-scientific-ideation-through-facet-recomb",
+          "open-agent-specification-a-unified-representation-for-ai-agents"
+        ]
       },
       {
         "start": "10:30 AM",
@@ -170,7 +236,20 @@
         "session": "Paper Session 5",
         "theme": "Security & Governance",
         "room": "Bayshore Ballroom",
-        "talkFormat": "9 talks · 7+2+1 min each"
+        "talkFormat": "9 talks · 7+2+1 min each",
+        "id": "ps5",
+        "slotMinutes": 10,
+        "talks": [
+          "retrieval-augmented-llms-for-security-incident-analysis",
+          "a-hipaa-compliant-architecture-for-agentic-clinical-ai-systems",
+          "malice-in-agentland-down-the-rabbit-hole-of-backdoors-in-the-ai-supply-chain",
+          "sapo-secure-automated-prompt-optimization-via-multi-agent-collaboration",
+          "securing-agents-with-tracked-capabilities",
+          "exploring-and-developing-a-pre-model-safeguard-with-draft-models",
+          "who-decides-the-trade-off-resolution-policy-as-delegation-governance-in-autonomo",
+          "securing-the-agent-vendor-neutral-multitenant-enterprise-retrieval-and-tool-use",
+          "when-harmful-intent-dissolves-into-technical-detail-how-safe-are-coding-agents-a"
+        ]
       },
       {
         "start": "12:30 PM",
@@ -218,7 +297,17 @@
         "session": "Paper Session 6",
         "theme": "Learning & Control",
         "room": "Bayshore Ballroom",
-        "talkFormat": "6 talks · 7+2+1 min each"
+        "talkFormat": "6 talks · 7+2+1 min each",
+        "id": "ps6",
+        "slotMinutes": 10,
+        "talks": [
+          "scaling-textual-gradients-via-sampling-based-momentum",
+          "composing-policy-gradients-and-prompt-optimization-for-language-model-programs",
+          "fedmeca-scalable-federated-learning-via-memory-efficient-and-concurrent-aggregat",
+          "flasc-federated-lora-with-sparse-communication",
+          "supervisory-control-theory-for-llm-revision",
+          "the-verifier-tax-horizon-dependent-safety-success-tradeoffs-in-tool-using-llm-ag"
+        ]
       },
       {
         "start": "4:30 PM",
@@ -226,7 +315,24 @@
         "type": "demo-poster",
         "title": "Demos & Research Posters",
         "demoRoom": "San Jose",
-        "posterRoom": "Carmel"
+        "posterRoom": "Carmel",
+        "demos": [
+          "governance-by-construction",
+          "forge-agentic-reliability",
+          "behavioral-fingerprints",
+          "sentinel-architectural-governance",
+          "pathfinder-trace-analysis",
+          "peeking-multi-agent-systems",
+          "skilled-agents-iot",
+          "altk",
+          "sregym",
+          "context-viewer",
+          "pager-monitoring-agent",
+          "introspectable-classification",
+          "hedwig-dynamic-autonomy",
+          "operama",
+          "agentclick"
+        ]
       },
       {
         "start": "6:00 PM",
@@ -278,7 +384,17 @@
         "session": "Paper Session 7",
         "theme": "Agent Behavior",
         "room": "Bayshore Ballroom",
-        "talkFormat": "6 talks · 7+2+1 min each"
+        "talkFormat": "6 talks · 7+2+1 min each",
+        "id": "ps7",
+        "slotMinutes": 10,
+        "talks": [
+          "does-socialization-emerge-in-ai-agent-society-a-case-study-of-moltbook",
+          "decomposing-sycophancy-fragility-consensus-collapse-and-cost-in-homogeneous-mult",
+          "persuade-me-if-you-can-a-framework-for-evaluating-persuasion-effectiveness-and-s",
+          "why-johnny-cant-use-agents-industry-aspirations-vs-user-realities-with-ai-agents",
+          "does-safety-molt-evaluating-llm-safety-in-multi-agent-social-environments",
+          "moltgraph-a-longitudinal-temporal-graph-dataset-of-moltbook-for-coordinated-agen"
+        ]
       },
       {
         "start": "11:30 AM",
@@ -294,7 +410,17 @@
         "session": "Paper Session 8",
         "theme": "AI Systems in Practice",
         "room": "Bayshore Ballroom",
-        "talkFormat": "6 talks · 7+2+1 min each"
+        "talkFormat": "6 talks · 7+2+1 min each",
+        "id": "ps8",
+        "slotMinutes": 10,
+        "talks": [
+          "agentstop-terminating-local-ai-agents-early-to-save-energy-in-consumer-devices",
+          "sear-schema-based-evaluation-and-routing-for-llm-gateways",
+          "equitable-ranking-in-heterogeneous-marketplace-ecosystems-a-foundation-model-fra",
+          "ai-realtor-towards-grounded-persuasive-language-generation-for-automated-copywri",
+          "optany-unified-text-optimization-can-outperform-specialized-systems",
+          "marvis-modality-adaptive-reasoning-over-visualizations"
+        ]
       },
       {
         "start": "1:45 PM",
@@ -302,7 +428,25 @@
         "type": "demo-poster",
         "title": "Demos & Research Posters",
         "demoRoom": "San Jose / Santa Clara",
-        "posterRoom": "Carmel / Monterey"
+        "posterRoom": "Carmel / Monterey",
+        "demos": [
+          "lake-logic-agent",
+          "multi-agent-position-classification",
+          "cornserve",
+          "agent-4-vibe-coding",
+          "genflow-ad-studio",
+          "pneuma-seeker",
+          "sqlsaber",
+          "wily-complexity-gating",
+          "skydiscover",
+          "clinicbot",
+          "ontological-notebook-memory",
+          "orla",
+          "conversational-grant-discovery",
+          "valkyrie",
+          "arena-benchmarking",
+          "flink-self-repair"
+        ]
       },
       {
         "start": "3:30 PM",

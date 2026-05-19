@@ -22,11 +22,11 @@
         </summary>
         <table class="talk-list">
             <tbody>
-            {% for i in range(1, 10) %}
+            {% for slug in block.talks %}
                 {% for paper in papers2026 %}
-                    {% if paper.session.name == block.session and paper.session.day == currentDay and paper.session.order == i %}
+                    {% if paper.slug == slug %}
                         <tr>
-                            <td class="talk-time">{{ paper.session.start }}</td>
+                            <td class="talk-time">{{ paper.talk.start }}</td>
                             <td class="talk-title"><a href="/program/2026/papers/{{ paper.slug }}/">{{ paper.title }}</a></td>
                         </tr>
                     {% endif %}
@@ -40,7 +40,7 @@
     {% set dayDemoCount = 0 %}
     {% for demo in demos2026 %}{% if demo.day == currentDay %}{% set dayDemoCount = dayDemoCount + 1 %}{% endif %}{% endfor %}
     {% set dayPosterCount = 0 %}
-    {% for paper in papers2026 %}{% if paper.session.day == currentDay %}{% set dayPosterCount = dayPosterCount + 1 %}{% endif %}{% endfor %}
+    {% for paper in papers2026 %}{% if paper.talk.day == currentDay %}{% set dayPosterCount = dayPosterCount + 1 %}{% endif %}{% endfor %}
     <details class="session-details">
         <summary>
             <p class="event-title mb-1"><i class="bi bi-display event-icon"></i>{{ block.title }}<i class="bi bi-chevron-right chevron"></i></p>
@@ -97,21 +97,15 @@
             <h4 class="dp-section-title">Research Posters</h4>
             {% for sessBlock in day.blocks %}
                 {% if sessBlock.type == "paper-session" %}
-                    {% set sessPosterCount = 0 %}
-                    {% for paper in papers2026 %}
-                        {% if paper.session.name == sessBlock.session and paper.session.day == currentDay %}
-                            {% set sessPosterCount = sessPosterCount + 1 %}
-                        {% endif %}
-                    {% endfor %}
                     <div class="dp-group">
                         <h5 class="dp-group-title">
                             <i class="bi bi-collection" style="color: var(--terracotta-medium);"></i>{{ sessBlock.session }}: {{ sessBlock.theme }}
-                            <span class="dp-count">{{ sessPosterCount }}</span>
+                            <span class="dp-count">{{ sessBlock.talks | length }}</span>
                         </h5>
                         <ul class="dp-list">
-                            {% for i in range(1, 10) %}
+                            {% for slug in sessBlock.talks %}
                                 {% for paper in papers2026 %}
-                                    {% if paper.session.name == sessBlock.session and paper.session.day == currentDay and paper.session.order == i %}
+                                    {% if paper.slug == slug %}
                                         <li><a href="/program/2026/papers/{{ paper.slug }}/">{{ paper.title }}</a></li>
                                     {% endif %}
                                 {% endfor %}

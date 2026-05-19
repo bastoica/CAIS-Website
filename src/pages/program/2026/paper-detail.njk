@@ -8,6 +8,54 @@ permalink: "/program/2026/papers/{{ paper.slug }}/"
 eleventyComputed:
     title: "{{ paper.title }} — CAIS 2026"
     description: "{{ paper.summary }}"
+extraStyles: |
+    .presentation-band {
+        border: 1px solid var(--platinum);
+        border-left: 4px solid var(--terracotta-deep);
+        border-radius: 4px;
+        background: color-mix(in srgb, var(--terracotta-deep) 5%, var(--seasalt));
+        padding: 1rem 1.25rem;
+    }
+    .presentation-eyebrow {
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--terracotta-deep);
+        font-weight: 700;
+        margin: 0 0 0.7rem;
+    }
+    .presentation-block .presentation-label {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--davys-gray);
+        font-weight: 700;
+        margin: 0 0 0.3rem;
+    }
+    .presentation-block .presentation-title {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--eerie-black);
+        margin: 0 0 0.2rem;
+    }
+    .presentation-block .presentation-when {
+        font-size: 0.9rem;
+        color: var(--eerie-black);
+        margin: 0 0 0.15rem;
+    }
+    .presentation-block .presentation-where {
+        font-size: 0.85rem;
+        color: var(--davys-gray);
+        margin: 0;
+    }
+    .presentation-actions {
+        margin-top: 1rem;
+        padding-top: 0.85rem;
+        border-top: 1px solid var(--platinum);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
 ---
 
 <header class="hero">
@@ -36,9 +84,47 @@ eleventyComputed:
         <div class="row g-4">
             <div class="col-lg-8">
 
+                <section class="mb-4">
+                    <p class="lead">{{ paper.summary }}</p>
+                </section>
+
+                {% if paper.talk %}
+                    {% set day = schedule2026[paper.talk.day] %}
+                    {% set posterBlock = null %}
+                    {% for b in day.blocks %}{% if b.type == "demo-poster" %}{% set posterBlock = b %}{% endif %}{% endfor %}
+                    <div class="presentation-band mb-5">
+                        <p class="presentation-eyebrow"><i class="bi bi-calendar-event me-2"></i>Presentation</p>
+                        <div class="row g-4">
+                            <div class="col-md-6 presentation-block">
+                                <p class="presentation-label">Talk</p>
+                                <p class="presentation-title">{{ paper.talk.sessionName }}: {{ paper.talk.sessionTheme }}</p>
+                                <p class="presentation-when">{{ day.label }} · {{ paper.talk.start }} – {{ paper.talk.end }}</p>
+                                <p class="presentation-where"><i class="bi bi-geo-alt me-1"></i>{{ paper.talk.room }}</p>
+                            </div>
+                            {% if posterBlock %}
+                            <div class="col-md-6 presentation-block">
+                                <p class="presentation-label">Poster</p>
+                                <p class="presentation-when">{{ day.label }} · {{ posterBlock.start }} – {{ posterBlock.end }}</p>
+                                <p class="presentation-where"><i class="bi bi-geo-alt me-1"></i>{{ posterBlock.posterRoom }}</p>
+                            </div>
+                            {% endif %}
+                        </div>
+                        <div class="presentation-actions">
+                            {% if paper.links.video %}
+                            <a href="{{ paper.links.video }}" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="background:var(--cais-accent); border:none; color:#fff;">
+                                <i class="bi bi-play-circle me-2"></i>Watch talk recording
+                            </a>
+                            {% endif %}
+                            <a href="/schedule/2026/{{ paper.talk.day }}/" class="btn btn-outline-primary btn-sm">
+                                <i class="bi bi-arrow-right me-2"></i>View day schedule
+                            </a>
+                        </div>
+                    </div>
+                {% endif %}
+
                 <section class="mb-5">
                     <h2 class="section-title h4 border-bottom pb-2">Abstract</h2>
-                    <p>{{ paper.abstract }}</p>
+                    <p>{{ paper.abstract | latex | safe }}</p>
                 </section>
 
                 {% if paper.keyContributions %}
@@ -61,16 +147,6 @@ eleventyComputed:
 
             <div class="col-lg-4">
                 <aside>
-                    {% if paper.session %}
-                    <div class="card dates-card mb-4">
-                        <div class="card-body">
-                            <h3 class="h6 fw-bold mb-2"><i class="bi bi-calendar-event me-2"></i>Session</h3>
-                            <p class="small fw-bold mb-1">{{ paper.session.name }}</p>
-                            <p class="small text-muted mb-0">{{ paper.session.time }}</p>
-                        </div>
-                    </div>
-                    {% endif %}
-
                     {% if paper.links %}
                     <div class="card dates-card mb-4">
                         <div class="card-body">

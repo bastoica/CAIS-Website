@@ -85,9 +85,9 @@ extraStyles: |
 {% set thuPaperCount = 0 %}{% set thuDemoCount = 0 %}
 {% set friPaperCount = 0 %}{% set friDemoCount = 0 %}
 {% for p in papers2026 %}
-  {% if p.session.day == "wednesday" %}{% set wedPaperCount = wedPaperCount + 1 %}{% endif %}
-  {% if p.session.day == "thursday"  %}{% set thuPaperCount = thuPaperCount + 1 %}{% endif %}
-  {% if p.session.day == "friday"    %}{% set friPaperCount = friPaperCount + 1 %}{% endif %}
+  {% if p.talk.day == "wednesday" %}{% set wedPaperCount = wedPaperCount + 1 %}{% endif %}
+  {% if p.talk.day == "thursday"  %}{% set thuPaperCount = thuPaperCount + 1 %}{% endif %}
+  {% if p.talk.day == "friday"    %}{% set friPaperCount = friPaperCount + 1 %}{% endif %}
 {% endfor %}
 {% for d in demos2026 %}
   {% if d.day == "wednesday" %}{% set wedDemoCount = wedDemoCount + 1 %}{% endif %}

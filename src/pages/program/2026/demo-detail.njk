@@ -8,6 +8,54 @@ permalink: "/program/2026/demos/{{ demo.slug }}/"
 eleventyComputed:
     title: "{{ demo.title }} — CAIS 2026"
     description: "{{ demo.summary }}"
+extraStyles: |
+    .presentation-band {
+        border: 1px solid var(--platinum);
+        border-left: 4px solid var(--terracotta-deep);
+        border-radius: 4px;
+        background: color-mix(in srgb, var(--terracotta-deep) 5%, var(--seasalt));
+        padding: 1rem 1.25rem;
+    }
+    .presentation-eyebrow {
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--terracotta-deep);
+        font-weight: 700;
+        margin: 0 0 0.7rem;
+    }
+    .presentation-block .presentation-label {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--davys-gray);
+        font-weight: 700;
+        margin: 0 0 0.3rem;
+    }
+    .presentation-block .presentation-title {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--eerie-black);
+        margin: 0 0 0.2rem;
+    }
+    .presentation-block .presentation-when {
+        font-size: 0.9rem;
+        color: var(--eerie-black);
+        margin: 0 0 0.15rem;
+    }
+    .presentation-block .presentation-where {
+        font-size: 0.85rem;
+        color: var(--davys-gray);
+        margin: 0;
+    }
+    .presentation-actions {
+        margin-top: 1rem;
+        padding-top: 0.85rem;
+        border-top: 1px solid var(--platinum);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
 ---
 
 <header class="hero">
@@ -36,10 +84,37 @@ eleventyComputed:
         <div class="row g-4">
             <div class="col-lg-8">
 
-                <section class="mb-5">
-                    <h2 class="section-title h4 border-bottom pb-2">Summary</h2>
+                <section class="mb-4">
                     <p class="lead">{{ demo.summary }}</p>
                 </section>
+
+                {% if demo.day %}
+                    {% set day = schedule2026[demo.day] %}
+                    {% set demoBlock = null %}
+                    {% for b in day.blocks %}{% if b.type == "demo-poster" %}{% set demoBlock = b %}{% endif %}{% endfor %}
+                    {% if demoBlock %}
+                    <div class="presentation-band mb-5">
+                        <p class="presentation-eyebrow"><i class="bi bi-calendar-event me-2"></i>Presentation</p>
+                        <div class="row g-4">
+                            <div class="col-md-6 presentation-block">
+                                <p class="presentation-label">Demo session</p>
+                                <p class="presentation-when">{{ day.label }} · {{ demoBlock.start }} – {{ demoBlock.end }}</p>
+                                <p class="presentation-where"><i class="bi bi-geo-alt me-1"></i>{{ demoBlock.demoRoom }}</p>
+                            </div>
+                        </div>
+                        <div class="presentation-actions">
+                            {% if demo.links.video %}
+                            <a href="{{ demo.links.video }}" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="background:var(--cais-accent); border:none; color:#fff;">
+                                <i class="bi bi-play-circle me-2"></i>Watch demo recording
+                            </a>
+                            {% endif %}
+                            <a href="/schedule/2026/{{ demo.day }}/" class="btn btn-outline-primary btn-sm">
+                                <i class="bi bi-arrow-right me-2"></i>View day schedule
+                            </a>
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endif %}
 
                 {% if demo.abstract %}
                 <section class="mb-5">
