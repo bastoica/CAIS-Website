@@ -1,0 +1,220 @@
+---
+layout: base.njk
+title: "Schedule — CAIS 2026"
+description: "The full ACM CAIS 2026 schedule. Four days in San Jose, May 26–29 — workshop day, three days of papers and demos, three keynotes."
+permalink: /schedule/2026/
+extraStyles: |
+    .day-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        background: var(--seasalt);
+        border: 1px solid var(--platinum);
+        border-left: 4px solid var(--cais-accent);
+        border-radius: 4px;
+        padding: 1.1rem 1.2rem;
+        transition: box-shadow 150ms ease;
+    }
+    .day-card:hover {
+        box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    .day-card .day-eyebrow {
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        font-weight: 700;
+        color: var(--davys-gray);
+        margin-bottom: 0.25rem;
+    }
+    .day-card .day-title {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--eerie-black);
+        margin-bottom: 0.55rem;
+    }
+    .day-card .day-summary {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1rem 0;
+        font-size: 0.85rem;
+        color: var(--davys-gray);
+        flex: 1;
+    }
+    .day-card .day-summary li {
+        padding: 0.18rem 0;
+    }
+    .day-card .day-summary li i {
+        color: var(--cais-accent);
+        margin-right: 0.4rem;
+    }
+    .day-card .day-cta {
+        margin-top: auto;
+    }
+    .day-card-workshop {
+        border-left-color: #6B7F5A;
+    }
+    .day-card-workshop .day-summary li i {
+        color: #6B7F5A;
+    }
+    .keynote-time {
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--cais-accent);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.25rem;
+    }
+---
+
+{# Filter counts from existing data #}
+{% set wedPaperCount = 0 %}{% set wedDemoCount = 0 %}
+{% set thuPaperCount = 0 %}{% set thuDemoCount = 0 %}
+{% set friPaperCount = 0 %}{% set friDemoCount = 0 %}
+{% for p in papers2026 %}
+  {% if p.session.day == "wednesday" %}{% set wedPaperCount = wedPaperCount + 1 %}{% endif %}
+  {% if p.session.day == "thursday"  %}{% set thuPaperCount = thuPaperCount + 1 %}{% endif %}
+  {% if p.session.day == "friday"    %}{% set friPaperCount = friPaperCount + 1 %}{% endif %}
+{% endfor %}
+{% for d in demos2026 %}
+  {% if d.day == "wednesday" %}{% set wedDemoCount = wedDemoCount + 1 %}{% endif %}
+  {% if d.day == "thursday"  %}{% set thuDemoCount = thuDemoCount + 1 %}{% endif %}
+  {% if d.day == "friday"    %}{% set friDemoCount = friDemoCount + 1 %}{% endif %}
+{% endfor %}
+
+<header class="hero">
+    <div class="container">
+        <h1 class="display-6 fw-bold">CAIS 2026 Schedule</h1>
+        <p class="lead mb-0">{{ site.dates.display }} · {{ site.venue.name }}, {{ site.venue.city }}</p>
+    </div>
+</header>
+
+<div class="container py-5">
+
+    <!-- 4-day cards -->
+    <div class="row g-4 mb-5">
+        <div class="col-md-6 col-lg-3">
+            <div class="day-card day-card-workshop">
+                <p class="day-eyebrow">Tue, May 26</p>
+                <p class="day-title">Workshop Day</p>
+                <ul class="day-summary">
+                    <li><i class="bi bi-lightbulb"></i>4 full-day workshops</li>
+                    <li><i class="bi bi-mortarboard"></i>1 half-day tutorial</li>
+                    <li><i class="bi bi-lightbulb"></i>1 PM-only workshop</li>
+                    <li><i class="bi bi-cup-hot"></i>Coffee breaks AM &amp; PM</li>
+                </ul>
+                <div class="day-cta">
+                    <a href="/schedule/2026/workshops/" class="btn btn-outline-primary btn-sm w-100" style="border-color:#6B7F5A; color:#6B7F5A;">
+                        View day <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="day-card">
+                <p class="day-eyebrow">Wed, May 27</p>
+                <p class="day-title">Main Conference · Day 1</p>
+                <ul class="day-summary">
+                    <li><i class="bi bi-mic-fill"></i>Keynote — Andy Konwinski</li>
+                    <li><i class="bi bi-collection"></i>3 paper sessions ({{ wedPaperCount }} talks)</li>
+                    <li><i class="bi bi-display"></i>{{ wedDemoCount }} demos · {{ wedPaperCount }} posters</li>
+                    <li><i class="bi bi-cup-straw"></i>Databricks Reception</li>
+                </ul>
+                <div class="day-cta">
+                    <a href="/schedule/2026/wednesday/" class="btn btn-outline-primary btn-sm w-100" style="border-color:var(--cais-accent); color:var(--cais-accent);">
+                        View day <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="day-card">
+                <p class="day-eyebrow">Thu, May 28</p>
+                <p class="day-title">Main Conference · Day 2</p>
+                <ul class="day-summary">
+                    <li><i class="bi bi-mic-fill"></i>Keynote — Percy Liang</li>
+                    <li><i class="bi bi-collection"></i>3 paper sessions ({{ thuPaperCount }} talks)</li>
+                    <li><i class="bi bi-display"></i>{{ thuDemoCount }} demos · {{ thuPaperCount }} posters</li>
+                    <li><i class="bi bi-cup-straw"></i>Conference Reception (Snorkel)</li>
+                </ul>
+                <div class="day-cta">
+                    <a href="/schedule/2026/thursday/" class="btn btn-outline-primary btn-sm w-100" style="border-color:var(--cais-accent); color:var(--cais-accent);">
+                        View day <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="day-card">
+                <p class="day-eyebrow">Fri, May 29</p>
+                <p class="day-title">Main Conference · Day 3</p>
+                <ul class="day-summary">
+                    <li><i class="bi bi-flag-fill"></i>Closing &amp; Awards (AM)</li>
+                    <li><i class="bi bi-collection"></i>2 paper sessions ({{ friPaperCount }} talks)</li>
+                    <li><i class="bi bi-display"></i>{{ friDemoCount }} demos · {{ friPaperCount }} posters</li>
+                    <li><i class="bi bi-mic-fill"></i>Keynote — Thariq Shihipar</li>
+                </ul>
+                <div class="day-cta">
+                    <a href="/schedule/2026/friday/" class="btn btn-outline-primary btn-sm w-100" style="border-color:var(--cais-accent); color:var(--cais-accent);">
+                        View day <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Keynote spotlight -->
+    <section class="mb-5">
+        <h2 class="section-title h5 mb-4"><i class="bi bi-mic-fill me-2" style="color:var(--cais-accent);"></i>Keynote Speakers</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="h-100">
+                    <div style="aspect-ratio: 4/3; overflow: hidden; border-radius: 0.5rem;">
+                        <img src="/assets/images/andy-konwinski.jpg" alt="Andy Konwinski" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
+                    </div>
+                    <div class="pt-3">
+                        <p class="keynote-time">Wed, May 27 · 9:00 AM</p>
+                        <h3 class="h6 fw-bold mb-1"><a href="/schedule/2026/wednesday/" class="text-decoration-none" style="color: var(--eerie-black);">Andy Konwinski</a></h3>
+                        <p class="text-muted small mb-0">Co-founder of <a href="https://www.databricks.com" target="_blank" rel="noopener">Databricks</a> and <a href="https://www.perplexity.ai" target="_blank" rel="noopener">Perplexity AI</a> · Founder of <a href="https://laude.institute" target="_blank" rel="noopener">Laude Institute</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="h-100">
+                    <div style="aspect-ratio: 4/3; overflow: hidden; border-radius: 0.5rem;">
+                        <img src="/assets/images/percy3.jpeg" alt="Percy Liang" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
+                    </div>
+                    <div class="pt-3">
+                        <p class="keynote-time">Thu, May 28 · 2:00 PM</p>
+                        <h3 class="h6 fw-bold mb-1"><a href="/schedule/2026/thursday/" class="text-decoration-none" style="color: var(--eerie-black);">Percy Liang</a></h3>
+                        <p class="text-muted small mb-0">Professor at <a href="https://cs.stanford.edu/~pliang/" target="_blank" rel="noopener">Stanford</a> · Co-founder of <a href="https://www.together.ai/" target="_blank" rel="noopener">Together AI</a> and <a href="https://www.simile.ai/" target="_blank" rel="noopener">Simile AI</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="h-100">
+                    <div style="aspect-ratio: 4/3; overflow: hidden; border-radius: 0.5rem;">
+                        <img src="/assets/images/thariq.png" alt="Thariq Shihipar" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
+                    </div>
+                    <div class="pt-3">
+                        <p class="keynote-time">Fri, May 29 · 3:30 PM</p>
+                        <h3 class="h6 fw-bold mb-1"><a href="/schedule/2026/friday/" class="text-decoration-none" style="color: var(--eerie-black);">Thariq Shihipar</a></h3>
+                        <p class="text-muted small mb-0">Member of Technical Staff, Claude Code · <a href="https://anthropic.com" target="_blank" rel="noopener">Anthropic</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Venue -->
+    <section class="card card-quiet p-4">
+        <h3 class="h6 fw-bold text-uppercase mb-2" style="letter-spacing: 1px; color: var(--davys-gray);"><i class="bi bi-building me-2"></i>Venue</h3>
+        <p class="mb-1"><strong>{{ site.venue.name }}</strong> · {{ site.venue.streetAddress }}, {{ site.venue.city }}, {{ site.venue.state }} {{ site.venue.zip }}</p>
+        <p class="mb-0 small text-muted">
+            <i class="bi bi-airplane me-1"></i>{{ site.venue.shuttleInfo }}
+            · <i class="bi bi-p-circle ms-1 me-1"></i>{{ site.venue.parkingInfo }}
+        </p>
+    </section>
+</div>
