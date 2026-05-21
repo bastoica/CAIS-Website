@@ -1,0 +1,45 @@
+[
+  {
+    "slug": "agent-skills",
+    "title": "Agent Skills '26",
+    "url": "https://agentskills-workshop.github.io/",
+    "room": "San Carlos",
+    "duration": "full-day"
+  },
+  {
+    "slug": "agentic-software-engineering",
+    "title": "Agentic Software Engineering",
+    "url": "https://agenticse-cais.github.io/",
+    "room": "San Jose",
+    "duration": "full-day"
+  },
+  {
+    "slug": "rl-eval",
+    "title": "RLEval: Methods and Reinforcement Learning Environments for Evaluating AI Agents",
+    "url": "https://rl-eval.github.io/",
+    "room": "San Juan",
+    "duration": "full-day"
+  },
+  {
+    "slug": "ai-discovery-in-the-wild",
+    "title": "AI Agents for Discovery in the Wild",
+    "url": "https://ai-discovery-in-the-wild.github.io/",
+    "room": "San Martin",
+    "duration": "full-day"
+  },
+  {
+    "slug": "trustworthy-healthcare",
+    "title": "Trustworthy Multi-Agent AI Systems for Healthcare",
+    "subtitle": "Half-day tutorial",
+    "url": "https://sites.google.com/view/trustworthy-health-ai-tutorial",
+    "room": "Santa Clara",
+    "duration": "am"
+  },
+  {
+    "slug": "sao",
+    "title": "Supporting Our AI Overlords (SAO)",
+    "url": "https://bauplanlabs.github.io/SAO-workshop/",
+    "room": "Santa Clara",
+    "duration": "pm"
+  }
+]

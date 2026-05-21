@@ -3,118 +3,336 @@ layout: base.njk
 title: "Wednesday Schedule — May 27, 2026"
 description: "Schedule for CAIS 2026 main conference Day 1 on Wednesday, May 27, 2026 at the DoubleTree by Hilton San Jose."
 permalink: /schedule/2026/wednesday/
+extraStyles: |
+    .schedule-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-bottom: 0;
+    }
+    .schedule-table tr {
+        border-bottom: 1px solid var(--platinum);
+    }
+    .schedule-table td {
+        padding: 0.85rem 0.9rem;
+        vertical-align: top;
+        border: none;
+    }
+    .schedule-table td.time {
+        width: 7.5rem;
+        font-variant-numeric: tabular-nums;
+        font-weight: 600;
+        font-size: 0.85rem;
+        color: var(--eerie-black);
+        white-space: nowrap;
+        border-left: 4px solid var(--silver);
+    }
+    .schedule-table td.time .time-end {
+        display: block;
+        font-weight: 400;
+        font-size: 0.78rem;
+        color: var(--davys-gray);
+    }
+    .schedule-table td.event {
+        padding-left: 0.9rem;
+    }
+    .schedule-table td.event .event-title {
+        font-weight: 600;
+        color: var(--eerie-black);
+        margin-bottom: 0.15rem;
+    }
+    .schedule-table td.event .event-title a {
+        color: var(--eerie-black);
+        text-decoration: none;
+    }
+    .schedule-table td.event .event-title a:hover {
+        color: var(--terracotta-deep);
+        text-decoration: underline;
+    }
+    .schedule-table td.event .event-meta {
+        font-size: 0.82rem;
+        color: var(--davys-gray);
+        margin-bottom: 0;
+    }
+    .schedule-table td.event .event-meta strong {
+        color: var(--eerie-black);
+    }
+    .schedule-table .event-icon {
+        margin-right: 0.45rem;
+        opacity: 0.85;
+    }
+
+    /* Type bands */
+    .row-keynote td,
+    .row-closing td {
+        background: color-mix(in srgb, var(--terracotta-deep) 8%, var(--seasalt));
+    }
+    .row-keynote td.time,
+    .row-closing td.time {
+        border-left-color: var(--terracotta-deep);
+        color: var(--terracotta-deep);
+    }
+    .row-keynote .event-icon,
+    .row-closing .event-icon {
+        color: var(--terracotta-deep);
+    }
+
+    .row-paper-session td {
+        background: color-mix(in srgb, var(--terracotta-deep) 3%, var(--seasalt));
+    }
+    .row-paper-session td.time {
+        border-left-color: var(--terracotta-medium);
+    }
+    .row-paper-session .event-icon {
+        color: var(--terracotta-medium);
+    }
+
+    .row-demo-poster td {
+        background: color-mix(in srgb, #5B7490 6%, var(--seasalt));
+    }
+    .row-demo-poster td.time {
+        border-left-color: #5B7490;
+    }
+    .row-demo-poster .event-icon {
+        color: #5B7490;
+    }
+
+    .row-ops td {
+        background: color-mix(in srgb, var(--davys-gray) 5%, var(--seasalt));
+    }
+    .row-ops td.time {
+        border-left-color: var(--davys-gray);
+    }
+    .row-ops .event-icon {
+        color: var(--davys-gray);
+    }
+
+    .row-reception td {
+        background: color-mix(in srgb, var(--terracotta-light) 12%, var(--seasalt));
+    }
+    .row-reception td.time {
+        border-left-color: var(--terracotta-light);
+    }
+    .row-reception .event-icon {
+        color: var(--terracotta-medium);
+    }
+
+    .row-break td.time,
+    .row-meal td.time,
+    .row-info td.time {
+        border-left-color: var(--platinum);
+        color: var(--davys-gray);
+    }
+    .row-break .event-title,
+    .row-meal .event-title,
+    .row-info .event-title {
+        color: var(--davys-gray);
+        font-weight: 500;
+        font-size: 0.92rem;
+    }
+    .row-break .event-icon,
+    .row-meal .event-icon,
+    .row-info .event-icon {
+        color: var(--silver);
+    }
+
+    /* Expandable session details */
+    details.session-details {
+        margin: 0;
+    }
+    details.session-details > summary {
+        list-style: none;
+        cursor: pointer;
+        padding: 0;
+        outline: none;
+    }
+    details.session-details > summary::-webkit-details-marker {
+        display: none;
+    }
+    details.session-details > summary .chevron {
+        float: right;
+        font-size: 0.85rem;
+        color: var(--davys-gray);
+        transition: transform 150ms ease;
+        margin-top: 0.15rem;
+    }
+    details.session-details[open] > summary .chevron {
+        transform: rotate(90deg);
+    }
+    details.session-details > summary:hover .event-title {
+        color: var(--terracotta-deep);
+    }
+
+    .talk-list {
+        margin-top: 0.75rem;
+        margin-bottom: 0;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    .talk-list td {
+        padding: 0.35rem 0.5rem;
+        font-size: 0.85rem;
+        border-top: 1px solid var(--platinum);
+        background: transparent;
+        vertical-align: top;
+    }
+    .talk-list tr:first-child td {
+        border-top: 1px solid var(--silver);
+    }
+    .talk-list td.talk-time {
+        width: 4.5rem;
+        font-variant-numeric: tabular-nums;
+        color: var(--davys-gray);
+        white-space: nowrap;
+    }
+    .talk-list td.talk-title a {
+        color: var(--eerie-black);
+        text-decoration: none;
+    }
+    .talk-list td.talk-title a:hover {
+        color: var(--terracotta-deep);
+        text-decoration: underline;
+    }
+
+    /* Pillar mix shown inside demo-poster expansion */
+    .pillar-mix {
+        margin-top: 0.75rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    .pillar-mix .pillar-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.25rem 0.55rem;
+        border-radius: 3px;
+        font-size: 0.78rem;
+        background: var(--seasalt);
+        border: 1px solid var(--platinum);
+    }
+    .pillar-mix .pillar-chip .pillar-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        display: inline-block;
+    }
+    .pillar-mix .pillar-chip .pillar-count {
+        font-weight: 600;
+        color: var(--eerie-black);
+    }
+
+    /* Sidebar sticky */
+    .schedule-sidebar {
+        position: sticky;
+        top: 84px;
+    }
+    /* Demo+Poster expanded sections */
+    .dp-section { margin-top: 0.85rem; }
+    .dp-section-title {
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--davys-gray);
+        font-weight: 700;
+        margin: 0 0 0.6rem;
+    }
+    .dp-group { margin: 0.65rem 0 0.85rem; }
+    .dp-group-title {
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--eerie-black);
+        margin: 0 0 0.35rem;
+    }
+    .dp-group-title i { margin-right: 0.35rem; }
+    .dp-count {
+        font-size: 0.75rem;
+        color: var(--davys-gray);
+        font-weight: 500;
+        margin-left: 0.25rem;
+    }
+    .dp-list {
+        margin: 0 0 0 1.1rem;
+        padding: 0;
+        list-style: disc;
+    }
+    .dp-list li {
+        font-size: 0.85rem;
+        line-height: 1.45;
+        padding: 0.1rem 0;
+    }
+    .dp-list a {
+        color: var(--eerie-black);
+        text-decoration: none;
+    }
+    .dp-list a:hover {
+        color: var(--terracotta-deep);
+        text-decoration: underline;
+    }
+    .dp-browse {
+        font-size: 0.85rem;
+        margin: 0.4rem 0 0;
+    }
+    .dp-divider {
+        border: 0;
+        border-top: 1px solid var(--platinum);
+        margin: 1rem 0;
+    }
 ---
+
+{% set currentDay = "wednesday" %}
+{% set day = schedule2026.wednesday %}
 
 <header class="hero">
     <div class="container">
         <h1 class="display-6 fw-bold">Wednesday Schedule</h1>
-        <p class="lead mb-0">May 27, 2026 — Main Conference Day 1</p>
+        <p class="lead mb-0">{{ day.label }} — {{ day.subtitle }}</p>
     </div>
 </header>
 
 <div class="container py-5">
-
     <div class="row g-4">
         <div class="col-lg-8">
 
-            <div class="alert alert-info mb-4">
-                <i class="bi bi-clock me-2"></i>
-                <strong>Detailed paper assignments coming soon.</strong> Specific papers and room assignments for each session will be posted as they are finalized.
-            </div>
+            <p class="text-muted small mb-4">
+                All sessions take place at the {{ site.venue.name }}, {{ site.venue.streetAddress }}, {{ site.venue.city }}. Click any paper session to see the individual talks.
+            </p>
+
+            <table class="schedule-table mb-5">
+                <tbody>
+                {% for block in day.blocks %}
+                    <tr class="row-{{ block.type }}">
+                        <td class="time">
+                            {{ block.start }}
+                            <span class="time-end">{{ block.end }}</span>
+                        </td>
+                        <td class="event">
+                            {% include "schedule-block.njk" %}
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
 
             <section class="mb-5">
-                <h2 class="h4 fw-bold mb-3">Schedule Overview</h2>
-
-                <table class="table table-sm">
-                    <tbody>
-                        <tr class="table-active">
-                            <td><strong>Welcome &amp; Keynote</strong></td>
-                            <td class="text-end"><strong>9:00 AM – 10:15 AM</strong></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" class="text-muted small">Coffee Break: 10:15 AM – 10:45 AM</td>
-                        </tr>
-                        <tr class="table-active">
-                            <td><strong>Paper Session 1</strong></td>
-                            <td class="text-end"><strong>10:45 AM – 12:15 PM</strong></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" class="text-muted small">Lunch: 12:15 PM – 1:30 PM</td>
-                        </tr>
-                        <tr class="table-active">
-                            <td><strong>Paper Session 2</strong></td>
-                            <td class="text-end"><strong>1:30 PM – 3:00 PM</strong></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" class="text-muted small">Coffee Break: 3:00 PM – 3:30 PM</td>
-                        </tr>
-                        <tr class="table-active">
-                            <td><strong>Paper Session 3</strong></td>
-                            <td class="text-end"><strong>3:30 PM – 4:30 PM</strong></td>
-                        </tr>
-                        <tr class="table-active">
-                            <td><strong>Ops Experience</strong></td>
-                            <td class="text-end"><strong>4:30 PM – 5:00 PM</strong></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" class="text-muted small">Break: 5:00 PM – 5:15 PM</td>
-                        </tr>
-                        <tr class="table-active">
-                            <td><strong>Demos &amp; Posters</strong></td>
-                            <td class="text-end"><strong>5:15 PM – 6:45 PM</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <section class="mb-5">
-                <h2 class="h4 fw-bold mb-3">Independently Organized Events</h2>
-                <p class="small text-muted mb-3">The following events take place at external venues and are independently organized and hosted by their respective organizers. Listings are provided as a courtesy to attendees and do not constitute sponsorship, endorsement, or official affiliation with ACM CAIS.</p>
-                <table class="table table-sm">
-                    <tbody>
-                        <tr class="table-active">
-                            <td>
-                                <strong>SkillsBench 1.0 Launch Party</strong><br>
-                                <span class="small text-muted">Evening &bull; 501 2nd St, San Francisco &bull; Organized by BenchFlow, Google DeepMind &amp; Kernel Labs</span><br>
-                                <span class="small">Afterparty for the <a href="https://www.agentskills-workshop.org/" target="_blank" rel="noopener">Agent Skills'26</a> workshop with live demos and talks on agent benchmarking. Approval required; RSVP below.</span>
-                                <a href="https://luma.com/deepmind-634c" target="_blank" rel="noopener" class="small d-block mt-1"><i class="bi bi-ticket-perforated me-1"></i>RSVP on Luma</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <section class="mb-5">
-                <h2 class="h4 fw-bold mb-3">Venue</h2>
-                <p class="mb-0">{{ site.venue.name }}, {{ site.venue.streetAddress }}, {{ site.venue.city }}, {{ site.venue.state }} {{ site.venue.zip }}</p>
+                <h2 class="h5 fw-bold mb-3"><i class="bi bi-cup-hot me-2"></i>Independently Organized Events</h2>
+                <p class="small text-muted mb-3">The following event takes place at an external venue and is independently organized and hosted by its respective organizers. Listed as a courtesy to attendees and does not constitute sponsorship, endorsement, or official affiliation with ACM CAIS.</p>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="h6 fw-bold mb-1">SkillsBench 1.0 Launch Party</h3>
+                        <p class="small text-muted mb-2"><strong>Evening</strong> · 501 2nd St, San Francisco · Organized by BenchFlow, Google DeepMind &amp; Kernel Labs</p>
+                        <p class="small mb-2">Afterparty for the <a href="https://www.agentskills-workshop.org/" target="_blank" rel="noopener">Agent Skills'26</a> workshop with live demos and talks on agent benchmarking. Approval required; RSVP below.</p>
+                        <a href="https://luma.com/deepmind-634c" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm"><i class="bi bi-ticket-perforated me-1"></i>RSVP on Luma</a>
+                    </div>
+                </div>
             </section>
 
         </div>
 
         <div class="col-lg-4">
-            <div class="card mb-4" style="border: 2px solid var(--terracotta-deep); border-radius: 4px;">
-                <div class="card-body">
-                    <h3 class="h6 fw-bold mb-3"><i class="bi bi-calendar-event me-2"></i>Conference Schedule</h3>
-                    <ul class="list-unstyled mb-0 small">
-                        <li class="mb-2"><a href="/schedule/2026/workshops/">Tue, May 26</a> &mdash; Workshop Day</li>
-                        <li class="mb-2"><strong>Wed, May 27</strong> &mdash; Main Conference Day 1</li>
-                        <li class="mb-2"><a href="/schedule/2026/thursday/">Thu, May 28</a> &mdash; Main Conference Day 2</li>
-                        <li class="mb-0"><a href="/schedule/2026/friday/">Fri, May 29</a> &mdash; Main Conference Day 3</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h3 class="h6 fw-bold mb-3"><i class="bi bi-link-45deg me-2"></i>Quick Links</h3>
-                    <ul class="list-unstyled mb-0 small">
-                        <li class="mb-2"><a href="/program/2026/papers/">Accepted Papers</a></li>
-                        <li class="mb-2"><a href="/program/2026/demos/">Accepted Demos</a></li>
-                        <li class="mb-0"><a href="/pages/registration/">Registration</a></li>
-                    </ul>
-                </div>
-            </div>
+            <aside class="schedule-sidebar">
+                {% include "schedule-day-sidebar.njk" %}
+            </aside>
         </div>
     </div>
-
 </div>

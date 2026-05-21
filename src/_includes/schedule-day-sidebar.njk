@@ -1,0 +1,35 @@
+<div class="card mb-4" style="border: 2px solid var(--terracotta-deep); border-radius: 4px;">
+    <div class="card-body">
+        <h3 class="h6 fw-bold mb-3"><i class="bi bi-calendar-event me-2"></i><a href="/schedule/2026/" class="text-decoration-none" style="color: inherit;">Conference Schedule <i class="bi bi-arrow-up-right small ms-1"></i></a></h3>
+        <ul class="list-unstyled mb-0 small">
+            <li class="mb-2">
+                {% if currentDay == "workshops" %}<strong>Tue, May 26</strong>{% else %}<a href="/schedule/2026/workshops/">Tue, May 26</a>{% endif %}
+                &mdash; Workshop Day
+            </li>
+            <li class="mb-2">
+                {% if currentDay == "wednesday" %}<strong>Wed, May 27</strong>{% else %}<a href="/schedule/2026/wednesday/">Wed, May 27</a>{% endif %}
+                &mdash; Main Conference Day 1
+            </li>
+            <li class="mb-2">
+                {% if currentDay == "thursday" %}<strong>Thu, May 28</strong>{% else %}<a href="/schedule/2026/thursday/">Thu, May 28</a>{% endif %}
+                &mdash; Main Conference Day 2
+            </li>
+            <li class="mb-0">
+                {% if currentDay == "friday" %}<strong>Fri, May 29</strong>{% else %}<a href="/schedule/2026/friday/">Fri, May 29</a>{% endif %}
+                &mdash; Main Conference Day 3
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-body">
+        <h3 class="h6 fw-bold mb-3"><i class="bi bi-link-45deg me-2"></i>Quick Links</h3>
+        <ul class="list-unstyled mb-0 small">
+            <li class="mb-2"><a href="/program/2026/papers/">Accepted Papers</a></li>
+            <li class="mb-2"><a href="/program/2026/demos/">Accepted Demos</a></li>
+            {% if currentDay == "workshops" %}<li class="mb-2"><a href="/pages/workshops/">Workshop Details &amp; CFPs</a></li>{% endif %}
+            <li class="mb-0"><a href="/pages/registration/">Registration</a></li>
+        </ul>
+    </div>
+</div>
