@@ -49,6 +49,11 @@
       "name": "Buildkite",
       "logo": "sponsors/buildkite.svg",
       "url": "https://buildkite.com"
+    },
+    {
+      "name": "Cisco",
+      "logo": "sponsors/cisco.svg",
+      "url": "https://www.cisco.com"
     }
   ],
   "supporting": [
