@@ -8,8 +8,9 @@
         "start": "7:30 AM",
         "end": "8:30 AM",
         "type": "break",
-        "title": "AM Break",
-        "room": "Bayshore Foyer"
+        "title": "Coffee Break",
+        "room": "Bayshore Foyer",
+        "note": "Coffee and tea only"
       },
       {
         "start": "8:30 AM",
@@ -19,13 +20,14 @@
         "slot": "am",
         "breakStart": "10:00 AM",
         "breakEnd": "10:30 AM",
-        "breakRoom": "Bayshore Foyer"
+        "breakRoom": "Bayshore Foyer",
+        "breakLabel": "AM Break"
       },
       {
         "start": "12:30 PM",
         "end": "1:30 PM",
         "type": "meal",
-        "title": "Lunch",
+        "title": "Box Lunch",
         "room": "Gateway Ballroom"
       },
       {
@@ -36,9 +38,13 @@
         "slot": "pm",
         "breakStart": "3:00 PM",
         "breakEnd": "3:30 PM",
-        "breakRoom": "Bayshore Foyer"
+        "breakRoom": "Bayshore Foyer",
+        "breakLabel": "PM Break"
       }
-    ]
+    ],
+    "facilities": {
+      "registrationDeskHours": "7:00am – 5:00pm"
+    }
   },
   "wednesday": {
     "date": "2026-05-27",
@@ -49,8 +55,9 @@
         "start": "7:30 AM",
         "end": "8:30 AM",
         "type": "break",
-        "title": "AM Break",
-        "room": "Bayshore Foyer"
+        "title": "Coffee Break",
+        "room": "Bayshore Foyer",
+        "note": "Coffee and tea only"
       },
       {
         "start": "9:00 AM",
@@ -67,7 +74,8 @@
         "end": "10:45 AM",
         "type": "break",
         "title": "AM Break",
-        "room": "Bayshore Foyer"
+        "room": "Bayshore Foyer",
+        "note": "Light snacks, coffee and tea"
       },
       {
         "start": "10:45 AM",
@@ -95,7 +103,7 @@
         "start": "12:15 PM",
         "end": "1:30 PM",
         "type": "meal",
-        "title": "Lunch",
+        "title": "Box Lunch",
         "room": "Gateway Ballroom"
       },
       {
@@ -125,7 +133,8 @@
         "end": "3:30 PM",
         "type": "break",
         "title": "PM Break",
-        "room": "Bayshore Foyer"
+        "room": "Bayshore Foyer",
+        "note": "Sweets, coffee and tea"
       },
       {
         "start": "3:30 PM",
@@ -189,10 +198,14 @@
         "end": "7:30 PM",
         "type": "reception",
         "title": "Databricks Reception",
-        "room": "Sprigs",
-        "note": "Capacity-capped at 100 people"
+        "room": "Spencer's",
+        "note": "Invite-only event · Invites managed by Databricks"
       }
-    ]
+    ],
+    "facilities": {
+      "registrationDeskHours": "7:30am – 5:00pm",
+      "expoHours": "7:30am – 6:45pm"
+    }
   },
   "thursday": {
     "date": "2026-05-28",
@@ -203,8 +216,9 @@
         "start": "8:00 AM",
         "end": "9:00 AM",
         "type": "break",
-        "title": "AM Break",
-        "room": "Bayshore Foyer"
+        "title": "Coffee Break",
+        "room": "Bayshore Foyer",
+        "note": "Coffee and tea only"
       },
       {
         "start": "9:00 AM",
@@ -233,7 +247,8 @@
         "end": "11:00 AM",
         "type": "break",
         "title": "AM Break",
-        "room": "Bayshore Foyer"
+        "room": "Bayshore Foyer",
+        "note": "Light snacks, coffee and tea"
       },
       {
         "start": "11:00 AM",
@@ -261,7 +276,7 @@
         "start": "12:30 PM",
         "end": "1:30 PM",
         "type": "meal",
-        "title": "Lunch",
+        "title": "Box Lunch",
         "room": "Gateway Ballroom"
       },
       {
@@ -270,7 +285,8 @@
         "type": "info",
         "title": "Business Meeting (working lunch)",
         "room": "San Carlos",
-        "note": "Grab a boxed lunch and bring it to the room"
+        "note": "Grab a boxed lunch and bring it to the room",
+        "hidden": true
       },
       {
         "start": "1:30 PM",
@@ -300,7 +316,8 @@
         "end": "3:30 PM",
         "type": "break",
         "title": "PM Break",
-        "room": "Bayshore Foyer"
+        "room": "Bayshore Foyer",
+        "note": "Sweets, coffee and tea"
       },
       {
         "start": "3:30 PM",
@@ -354,7 +371,11 @@
         "room": "Gateway Ballroom",
         "note": "Sponsored by Snorkel"
       }
-    ]
+    ],
+    "facilities": {
+      "registrationDeskHours": "7:30am – 5:00pm",
+      "expoHours": "7:30am – 5:30pm"
+    }
   },
   "friday": {
     "date": "2026-05-29",
@@ -365,8 +386,9 @@
         "start": "7:30 AM",
         "end": "8:30 AM",
         "type": "break",
-        "title": "AM Break",
-        "room": "Bayshore Foyer"
+        "title": "Coffee Break",
+        "room": "Bayshore Foyer",
+        "note": "Coffee and tea only"
       },
       {
         "start": "9:00 AM",
@@ -393,7 +415,8 @@
         "end": "10:30 AM",
         "type": "break",
         "title": "AM Break",
-        "room": "Bayshore Foyer"
+        "room": "Bayshore Foyer",
+        "note": "Light snacks, coffee and tea"
       },
       {
         "start": "10:30 AM",
@@ -418,7 +441,7 @@
         "start": "11:30 AM",
         "end": "12:30 PM",
         "type": "meal",
-        "title": "Lunch",
+        "title": "Box Lunch",
         "room": "Gateway Ballroom"
       },
       {
@@ -483,6 +506,10 @@
         "title": "Closing Remarks & Awards Wrap-up",
         "room": "Bayshore Ballroom"
       }
-    ]
+    ],
+    "facilities": {
+      "registrationDeskHours": "8:00am – 2:00pm",
+      "expoHours": "7:30am – 1:00pm"
+    }
   }
 }
