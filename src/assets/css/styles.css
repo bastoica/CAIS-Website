@@ -705,7 +705,7 @@ a:focus, button:focus, .btn:focus {
 }
 
 .sponsor-strip img.logo-stacked {
-    max-height: 80px;
+    max-height: 110px;
 }
 
 @media (max-width: 768px) {
@@ -717,7 +717,7 @@ a:focus, button:focus, .btn:focus {
         max-width: 160px;
     }
     .sponsor-strip img.logo-stacked {
-        max-height: 64px;
+        max-height: 80px;
     }
 }
 
