@@ -70,6 +70,10 @@
       "label": "ACM Templates",
       "href": "https://www.acm.org/publications/proceedings-template",
       "external": true
+    },
+    {
+      "label": "Sponsor Jobs",
+      "href": "/pages/jobs/"
     }
   ],
   "footerPolicies": [

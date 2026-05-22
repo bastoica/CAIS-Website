@@ -1,0 +1,165 @@
+---
+layout: base.njk
+title: Sponsor Career Opportunities - ACM CAIS 2026
+description: Open positions from CAIS 2026 sponsors. Explore career opportunities in AI and agentic systems from leading companies in the field.
+permalink: /pages/jobs/
+extraStyles: |
+  .jobs-hero {
+    position: relative;
+    background: url('/assets/images/hero ultralight gradient.png') center/cover no-repeat;
+    color: var(--eerie-black);
+    padding: 4.5rem 0;
+  }
+  .sponsor-block {
+    margin-bottom: 3rem;
+  }
+  .sponsor-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--platinum);
+    margin-bottom: 1.5rem;
+  }
+  .sponsor-header img {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+  }
+  .sponsor-header .tier-badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 2px 8px;
+    border-radius: 3px;
+    background: var(--cais-accent);
+    color: #fff;
+  }
+  .job-card {
+    background: var(--seasalt);
+    border: 1px solid var(--platinum);
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: border-color 200ms ease;
+  }
+  .job-card:hover {
+    border-color: var(--cais-accent);
+  }
+  .job-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .job-card p {
+    font-size: 0.9rem;
+    color: var(--davys-gray);
+    margin-bottom: 1rem;
+  }
+  .job-card .btn-apply {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--cais-accent);
+    text-decoration: none;
+    transition: color 200ms ease;
+  }
+  .job-card .btn-apply:hover {
+    color: var(--terracotta-medium);
+  }
+  .anchor { scroll-margin-top: 84px; }
+  @media (max-width: 768px) {
+    .jobs-hero { padding: 3rem 0; }
+  }
+---
+
+<header class="jobs-hero">
+  <div class="container">
+    <h1 class="display-6 fw-bold mb-3">Career Opportunities</h1>
+    <p class="lead mb-0">Open positions from CAIS 2026 sponsors building the future of AI and agentic systems.</p>
+  </div>
+</header>
+
+<div class="py-5">
+  <div class="container">
+    <div class="row g-5">
+
+      <!-- Main Content -->
+      <div class="col-lg-8">
+
+        {% if sponsorJobs.length == 0 %}
+        <div class="highlight-box p-4 text-center">
+          <p class="text-muted mb-0"><i class="bi bi-briefcase me-2"></i>Sponsor job postings will appear here soon.</p>
+        </div>
+        {% else %}
+
+        {% for sponsor in sponsorJobs %}
+        <section id="{{ sponsor.sponsor | lower | replace(' ', '-') }}" class="sponsor-block anchor">
+          <div class="sponsor-header">
+            <a href="{{ sponsor.url }}" target="_blank" rel="noopener">
+              <img src="/assets/images/{{ sponsor.logo }}" alt="{{ sponsor.sponsor }}" loading="lazy" />
+            </a>
+            <span class="tier-badge">{{ sponsor.tier }} sponsor</span>
+          </div>
+
+          {% for job in sponsor.jobs %}
+          <div class="job-card">
+            <h3>{{ job.title }}</h3>
+            <p>{{ job.description }}</p>
+            <a href="{{ job.applyUrl }}" target="_blank" rel="noopener" class="btn-apply">
+              <i class="bi bi-box-arrow-up-right"></i> Apply on {{ sponsor.sponsor }}
+            </a>
+          </div>
+          {% endfor %}
+        </section>
+        {% endfor %}
+
+        {% endif %}
+
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-lg-4">
+        <aside>
+
+          <div class="card mb-4" style="border: 2px solid var(--cais-accent); border-radius: 4px;">
+            <div class="card-body">
+              <h3 class="h6 fw-bold mb-3"><i class="bi bi-briefcase me-2"></i>About These Listings</h3>
+              <p class="small mb-3">These career opportunities are provided by CAIS 2026 sponsors as part of their sponsorship. All positions are in AI, machine learning, and agentic systems.</p>
+              <p class="small mb-0 text-muted">Interested in posting jobs here? <a href="/pages/sponsors/">Learn about sponsorship</a>.</p>
+            </div>
+          </div>
+
+          {% if sponsorJobs.length > 1 %}
+          <div class="card mb-4">
+            <div class="card-body">
+              <h3 class="h6 fw-bold mb-3"><i class="bi bi-building me-2"></i>Sponsors Hiring</h3>
+              <ul class="list-unstyled mb-0">
+                {% for sponsor in sponsorJobs %}
+                <li class="mb-2"><a href="#{{ sponsor.sponsor | lower | replace(' ', '-') }}">{{ sponsor.sponsor }}</a> <span class="small text-muted">({{ sponsor.jobs.length }} {{ "position" if sponsor.jobs.length == 1 else "positions" }})</span></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          {% endif %}
+
+          <div class="card mb-4">
+            <div class="card-body">
+              <h3 class="h6 fw-bold mb-3"><i class="bi bi-arrow-left me-2"></i>Quick Links</h3>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-2"><a href="/pages/sponsors/">Sponsors</a></li>
+                <li class="mb-2"><a href="/pages/registration/">Registration</a></li>
+                <li class="mb-2"><a href="/program/2026/">Program</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </aside>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+[
+  {
+    "sponsor": "Databricks",
+    "logo": "sponsors/databricks.svg",
+    "url": "https://www.databricks.com",
+    "tier": "gold",
+    "jobs": [
+      {
+        "title": "Staff GenAI Research Scientist - Agents",
+        "description": "As a Staff Research Scientist on the Enterprise Agents team, you will be responsible for keeping up with the latest developments in Agent Context, Information Retrieval, Knowledge Assistants, RAG, Embeddings, and advancing the scientific frontier by creating new techniques that go beyond the state of the art.",
+        "applyUrl": "https://www.databricks.com/company/careers/engineering---pipeline/staff-genai-research-scientist---agents-7642856002"
+      },
+      {
+        "title": "Sr. Machine Learning Engineer",
+        "description": "As our GenAI products continue to evolve, we are seeking multiple GenAI Engineers to drive the next phase of development. You will focus on enhancing LLM quality, expanding GenAI capabilities across Databricks products, and strengthening our platform architecture to enable seamless AI interactions at scale.",
+        "applyUrl": "https://www.databricks.com/company/careers/engineering---pipeline/sr-machine-learning-engineer--7276195002"
+      },
+      {
+        "title": "Staff Machine Learning Engineer",
+        "description": "As our GenAI products continue to evolve, we are seeking multiple GenAI Engineers to drive the next phase of development. You will focus on enhancing LLM quality, expanding GenAI capabilities across Databricks products, and strengthening our platform architecture to enable seamless AI interactions at scale.",
+        "applyUrl": "https://www.databricks.com/company/careers/engineering---pipeline/staff-machine-learning-engineer--8401114002"
+      },
+      {
+        "title": "Staff Software Engineer - Agent Quality",
+        "description": "As a Staff Software Engineer - Agent Quality, you will be a founding member of a new team focused on evaluating and continuously improving Databricks' AI Agents. You will design and scale the infrastructure, tooling, and developer workflows that let researchers and engineers evaluate agents rigorously.",
+        "applyUrl": "https://www.databricks.com/company/careers/engineering---pipeline/staff-software-engineer---agent-quality-8532681002"
+      }
+    ]
+  }
+]

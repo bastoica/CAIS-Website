@@ -296,6 +296,18 @@ h1, h2, h3, h4, h5, h6, p {
     color: var(--olive-moss);
 }
 
+.btn-ghost-white {
+    border: 2px solid #fff;
+    color: #fff;
+    background: transparent;
+    transition: background 200ms ease, color 200ms ease;
+}
+.btn-ghost-white:hover,
+.btn-ghost-white:focus {
+    background: #fff;
+    color: var(--terracotta-deep);
+}
+
 /* ============================================
    CARDS - Silver borders, olive hover
    ============================================ */
@@ -706,6 +718,7 @@ a:focus, button:focus, .btn:focus {
 
 .sponsor-strip img.logo-stacked {
     max-height: 110px;
+    margin: 0 1rem;
 }
 
 @media (max-width: 768px) {
