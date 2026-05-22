@@ -52,8 +52,9 @@
     },
     {
       "name": "Cisco",
-      "logo": "sponsors/cisco.svg",
-      "url": "https://www.cisco.com"
+      "logo": "sponsors/Cisco_Logo_no_TM_Midnight_Blue-RGB.svg",
+      "url": "https://www.cisco.com",
+      "stacked": true
     }
   ],
   "supporting": [
