@@ -6,6 +6,7 @@
     - day (the schedule2026.<currentDay> object — used by demo-poster to enumerate paper sessions)
     - papers2026, demos2026, programPillars (from _data)
 #}
+{% if not block.hidden %}
 {% if block.type == "keynote" %}
     <p class="event-title mb-1"><i class="bi bi-mic-fill event-icon"></i>{{ block.title }} — {{ block.speakerName }}</p>
     <p class="event-meta">{{ block.speakerDesc }}<br><i class="bi bi-geo-alt me-1"></i>{{ block.room }}</p>
@@ -129,7 +130,7 @@
     {% if block.breakStart %}
     <div class="coffee-break-note">
         <i class="bi bi-cup-hot"></i>
-        <span><strong>Coffee break</strong> · {{ block.breakStart }}–{{ block.breakEnd }} · {{ block.breakRoom }}</span>
+        <span><strong>{{ block.breakLabel or "Coffee break" }}</strong> · {{ block.breakStart }}–{{ block.breakEnd }} · {{ block.breakRoom }}</span>
     </div>
     {% endif %}
     <table class="talk-list">
@@ -175,9 +176,10 @@
 
 {% elif block.type == "break" %}
     <p class="event-title mb-1"><i class="bi bi-cup-hot event-icon"></i>{{ block.title }}</p>
-    <p class="event-meta"><i class="bi bi-geo-alt me-1"></i>{{ block.room }}</p>
+    <p class="event-meta"><i class="bi bi-geo-alt me-1"></i>{{ block.room }}{% if block.note %} · {{ block.note }}{% endif %}</p>
 
 {% elif block.type == "info" %}
     <p class="event-title mb-1"><i class="bi bi-info-circle event-icon"></i>{{ block.title }}</p>
     <p class="event-meta"><i class="bi bi-geo-alt me-1"></i>{{ block.room }}{% if block.note %} · {{ block.note }}{% endif %}</p>
+{% endif %}
 {% endif %}

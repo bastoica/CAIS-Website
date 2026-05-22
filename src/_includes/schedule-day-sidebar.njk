@@ -33,3 +33,20 @@
         </ul>
     </div>
 </div>
+
+{% if day.facilities %}
+<div class="card mb-4">
+    <div class="card-body">
+        <h3 class="h6 fw-bold mb-3"><i class="bi bi-info-circle me-2"></i>On-Site Services</h3>
+        <ul class="list-unstyled mb-3 small">
+            {% if day.facilities.registrationDeskHours %}
+            <li class="mb-1"><strong>Registration Desk</strong><br>{{ day.facilities.registrationDeskHours }}</li>
+            {% endif %}
+            {% if day.facilities.expoHours %}
+            <li class="mb-0"><strong>Exhibits</strong><br>{{ day.facilities.expoHours }}</li>
+            {% endif %}
+        </ul>
+        <p class="small text-muted mb-0">A <strong>Mother's Room</strong> and <strong>Desensitization Room</strong> are available for anyone in need — please visit the Registration Desk for access.</p>
+    </div>
+</div>
+{% endif %}
