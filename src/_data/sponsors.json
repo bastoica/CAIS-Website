@@ -55,6 +55,11 @@
       "logo": "sponsors/Cisco_Logo_no_TM_Midnight_Blue-RGB.svg",
       "url": "https://www.cisco.com",
       "stacked": true
+    },
+    {
+      "name": "Mithril",
+      "logo": "sponsors/mithril.svg",
+      "url": "https://mithril.com"
     }
   ],
   "supporting": [
