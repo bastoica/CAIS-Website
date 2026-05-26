@@ -87,10 +87,10 @@
             },
             "offers": {
                 "@type": "Offer",
-                "url": "{{ site.registration.url }}",
+                "url": "/pages/registration/",
                 "price": "500",
                 "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
+                "availability": "https://schema.org/SoldOut",
                 "validFrom": "2026-04-10"
             }
         }
@@ -125,10 +125,10 @@
 
 <!-- ===== MAIN CONTENT ===== -->
 <main id="main">
-    <div class="alert alert-success text-center mb-0 rounded-0 py-2">
-        <i class="bi bi-ticket-perforated me-2"></i>
-        <strong>Registration is now open!</strong>
-        <a href="{{ site.registration.url }}" class="alert-link ms-2" target="_blank" rel="noopener">Register now <i class="bi bi-arrow-right"></i></a>
+    <div class="alert alert-warning text-center mb-0 rounded-0 py-2">
+        <i class="bi bi-exclamation-circle me-2"></i>
+        <strong>Registration has reached capacity.</strong>
+        <a href="/pages/registration/" class="alert-link ms-2">Join the waitlist <i class="bi bi-arrow-right"></i></a>
     </div>
     {{ content | safe }}
 </main>

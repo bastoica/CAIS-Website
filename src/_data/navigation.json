@@ -51,15 +51,14 @@
     }
   ],
   "cta": {
-    "label": "Register Now",
-    "href": "https://cvent.me/aDamv3",
-    "external": true
+    "label": "Join Waitlist",
+    "href": "/pages/registration/",
+    "external": false
   },
   "footerAuthors": [
     {
-      "label": "Register",
-      "href": "https://cvent.me/aDamv3",
-      "external": true
+      "label": "Join Waitlist",
+      "href": "/pages/registration/"
     },
     {
       "label": "Subscribe for Updates",
