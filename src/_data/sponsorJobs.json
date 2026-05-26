@@ -28,6 +28,24 @@
     ]
   },
   {
+    "sponsor": "Voaige",
+    "logo": "sponsors/voaige.svg",
+    "url": "https://voaige.com",
+    "tier": "gold",
+    "jobs": [
+      {
+        "title": "Research Engineer, Test-Time Cognition for Agentic AI",
+        "description": "Voaige is looking for a strong research engineer to build the systems infrastructure behind their inference-time cognition layer for LLMs and agentic AI. You will implement algorithms for dynamic compute allocation, inference-time search, model orchestration, agent evaluation, and production-scale experimentation. This role is ideal for someone who can turn frontier research ideas into fast, reliable, measurable systems.",
+        "applyUrl": "https://voaige.com"
+      },
+      {
+        "title": "Research Scientist, Test-Time Cognition for Agentic AI",
+        "description": "Voaige is looking for a PhD-level research scientist to help define the scientific foundations of test-time cognition for LLMs and agentic AI systems. You will develop new algorithms for adaptive inference, uncertainty-aware compute allocation, search, verification, and multi-model cognitive orchestration.",
+        "applyUrl": "https://voaige.com"
+      }
+    ]
+  },
+  {
     "sponsor": "OpenHands",
     "logo": "sponsors/openhands.svg",
     "url": "https://www.all-hands.dev",
