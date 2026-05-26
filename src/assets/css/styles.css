@@ -738,8 +738,8 @@ a:focus, button:focus, .btn:focus {
    PRINT STYLES
    ============================================ */
 
-/* Inline alphaXiv glyph — sized & baseline-aligned to match Bootstrap Icons */
-.alphaxiv-icon {
+/* Brand glyphs — sized & baseline-aligned to match Bootstrap Icons */
+.alphaxiv-icon, .acm-icon {
     width: 1em;
     height: 1em;
     vertical-align: -0.125em;
