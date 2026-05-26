@@ -26,5 +26,41 @@
         "applyUrl": "https://www.databricks.com/company/careers/engineering---pipeline/staff-software-engineer---agent-quality-8532681002"
       }
     ]
+  },
+  {
+    "sponsor": "OpenHands",
+    "logo": "sponsors/openhands.svg",
+    "url": "https://www.all-hands.dev",
+    "tier": "silver",
+    "jobs": [
+      {
+        "title": "Senior Platform Engineer",
+        "description": "This Senior Platform Engineer role is critical to building and scaling the infrastructure behind OpenHands, including both the SaaS platform and enterprise self-hosted deployments. The team owns the core systems that enable reliable AI-powered developer workflows, and the role offers deep technical ownership across Kubernetes, cloud infrastructure, deployment automation, and platform reliability.",
+        "applyUrl": "https://jobs.ashbyhq.com/OpenHands/653a6bd6-c7df-486b-8788-10efa3001aba"
+      }
+    ]
+  },
+  {
+    "sponsor": "Mithril",
+    "logo": "sponsors/mithril.svg",
+    "url": "https://mithril.ai",
+    "tier": "bronze",
+    "jobs": [
+      {
+        "title": "Site Reliability Engineer (SRE)",
+        "description": "Build the automation, observability, and tooling that allows Mithril to coordinate GPU compute across multiple cloud providers at scale. You will work directly with the founding team on high-impact infrastructure decisions, from SLO design to capacity orchestration, with clear visibility into the technical and commercial dynamics of the business.",
+        "applyUrl": "https://job-boards.greenhouse.io/mithril/jobs/5117694007"
+      },
+      {
+        "title": "Software Engineer - Member of Technical Staff (Consumption)",
+        "description": "Work across Mithril's core engineering areas including the developer-facing product, billing, API surface, orchestration engine, and cloud provider integrations. You will own meaningful features end-to-end, shipping against a platform that handles real revenue, spot auctions, reservation pricing, and capacity allocation.",
+        "applyUrl": "https://job-boards.greenhouse.io/mithril/jobs/5124438007"
+      },
+      {
+        "title": "Software Engineer - Member of Technical Staff (Platform)",
+        "description": "Ship features end-to-end across Mithril's orchestration and marketplace engine, supply integrations, and developer-facing surfaces. Build the systems that manage GPU capacity across providers, handling real market dynamics including spot auctions, reservation pricing, and capacity allocation across a heterogeneous supply base.",
+        "applyUrl": "https://job-boards.greenhouse.io/mithril/jobs/5117511007"
+      }
+    ]
   }
 ]

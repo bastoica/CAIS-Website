@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 80" width="440" height="80">
+  <g fill="#000">
+    <g transform="translate(40, 40)">
+      <polygon points="0,-2.8 -30,0 0,2.8" transform="rotate(0)"/>
+      <polygon points="0,-2.8 -30,0 0,2.8" transform="rotate(22.5)"/>
+      <polygon points="0,-2.8 -30,0 0,2.8" transform="rotate(45)"/>
+      <polygon points="0,-2.8 -30,0 0,2.8" transform="rotate(67.5)"/>
+      <polygon points="0,-2.8 -30,0 0,2.8" transform="rotate(90)"/>
+      <polygon points="0,-2.8 -30,0 0,2.8" transform="rotate(112.5)"/>
+      <polygon points="0,-2.8 -30,0 0,2.8" transform="rotate(135)"/>
+      <polygon points="0,-2.8 -30,0 0,2.8" transform="rotate(157.5)"/>
+      <polygon points="0,-2.8 -30,0 0,2.8" transform="rotate(180)"/>
+      <polygon points="0,-2.8 -30,0 0,2.8" transform="rotate(202.5)"/>
+      <polygon points="0,-2.8 -30,0 0,2.8" transform="rotate(225)"/>
+      <polygon points="0,-2.8 -30,0 0,2.8" transform="rotate(247.5)"/>
+      <polygon points="0,-2.8 -30,0 0,2.8" transform="rotate(270)"/>
+      <polygon points="0,-2.8 -30,0 0,2.8" transform="rotate(292.5)"/>
+      <polygon points="0,-2.8 -30,0 0,2.8" transform="rotate(315)"/>
+      <polygon points="0,-2.8 -30,0 0,2.8" transform="rotate(337.5)"/>
+    </g>
+    <text x="88" y="49" font-family="Courier, 'Courier New', monospace" font-size="26" font-weight="bold" letter-spacing="6">abundant</text>
+  </g>
+</svg>
