@@ -89,23 +89,13 @@
     "jobs": [
       {
         "title": "Machine Learning Researcher, Multimodal LLMs",
-        "description": "Build Bland's next-generation multimodal LLM stack, combining speech, text, tools, and real-time reasoning into a single unified system. You'll develop conversational AI models that power AI voice agents serving millions of calls per day, taking ideas from research through production across LLM architecture, real-time speech systems, agent design, and multimodal reasoning.",
+        "description": "We're hiring a Machine Learning Researcher to develop Bland's next-generation multimodal LLM stack that unifies speech, text, tools, and real-time reasoning into a single system powering AI phone agents at scale. You'll own conversational AI models end-to-end, from idea through production systems serving millions of calls per day, defining how our agents listen, think, and act in real time with streaming audio, tool execution, and dynamic context. Ideal candidates have a strong LLM/multimodal or speech-language background, move fast from idea to experiment to conclusion, and have a sharp instinct for what makes voice interactions feel genuinely human rather than robotic.",
         "applyUrl": "https://jobs.ashbyhq.com/bland/681dfcda-f016-4bda-826e-7e813fae0083"
       },
       {
         "title": "Machine Learning Researcher, Audio",
-        "description": "Spearhead the development of Bland's multimodal LLM infrastructure, integrating streaming audio, tool execution, and dynamic context into a coherent real-time system. This research engineering role sits at the intersection of LLM fine-tuning, real-time speech systems, and agent design, with a focus on building models that define how AI phone agents listen, think, and act.",
+        "description": "We're hiring a Machine Learning Researcher to drive foundational work across Bland's entire voice stack, including text-to-speech, speech-to-text, neural audio codecs, and LLMs, defining how our AI phone agents understand, reason, and speak in real time at enterprise scale. You'll take ideas from theory through large-scale training to production inference serving millions of calls per day: designing expressive, controllable TTS systems, building ASR robust to accents, noise, and telephony artifacts, and pioneering neural audio codecs that achieve extreme compression with minimal perceptual loss. Ideal candidates bring deep research foundations in self-supervised, multimodal, or generative modeling, hands-on experience scaling TTS/STT/codec systems, and an obsession with making voice agents sound truly human.",
         "applyUrl": "https://jobs.ashbyhq.com/bland/2e815d0d-8e7a-43cc-8853-c1b029aeb499"
-      },
-      {
-        "title": "Forward Deployed Engineer",
-        "description": "Work directly with enterprise customers to translate their challenges into production-ready AI voice agents. You'll own end-to-end delivery from discovery through deployment, integrating APIs and data sources to automate real business processes, while embedding within customer organizations to drive adoption and uncover new opportunities for automation at scale.",
-        "applyUrl": "https://jobs.ashbyhq.com/bland/823904dd-f958-45c8-8e9a-4d9755cd03f0"
-      },
-      {
-        "title": "Senior Infrastructure Engineer",
-        "description": "Architect the distributed systems that enable millions of AI-powered phone conversations at Bland. You'll build and scale Kubernetes-based infrastructure for real-time voice processing and ML inference serving, integrate with enterprise telephony systems (SIP, VoIP, WebRTC), and ensure platform reliability at rapidly growing call volumes.",
-        "applyUrl": "https://jobs.ashbyhq.com/bland/a3a383e0-9c15-4777-a95b-536cb8c1174c"
       }
     ]
   }
