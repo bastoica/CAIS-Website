@@ -97,7 +97,11 @@
           "robust-agent-compensation-rac-teaching-ai-agents-to-compensate",
           "fastworkflow-closing-the-agentic-performance-gap-between-small-and-frontier-lang",
           "tracefix-repairing-agent-coordination-protocols-with-tla-counterexamples"
-        ]
+        ],
+        "chair": {
+          "name": "Jorge Ortiz",
+          "affiliation": "Rutgers"
+        }
       },
       {
         "start": "12:15 PM",
@@ -126,7 +130,11 @@
           "generating-expressive-and-customizable-evals-for-timeseries-data-analysis-agents",
           "benchmarking-agents-in-insurance-underwriting-environments",
           "draftnepabench-a-benchmark-for-drafting-nepa-document-sections-with-coding-agent"
-        ]
+        ],
+        "chair": {
+          "name": "Benjamin Zorn",
+          "affiliation": "Microsoft"
+        }
       },
       {
         "start": "3:00 PM",
@@ -153,7 +161,11 @@
           "xgrammar-dynamic-and-efficient-structured-generation-engine-for-agentic-llms",
           "cami-cost-aware-agent-guided-multi-indexing-for-semantic-retrieval",
           "swiftfusion-scalable-sequence-parallelism-for-distributed-inference-of-diffusion"
-        ]
+        ],
+        "chair": {
+          "name": "Jun Wu",
+          "affiliation": "Amazon"
+        }
       },
       {
         "start": "4:30 PM",
@@ -240,7 +252,11 @@
           "how-to-steer-your-multi-agent-system-human-llm-collaborative-planning",
           "scideator-human-llm-compound-system-for-scientific-ideation-through-facet-recomb",
           "open-agent-specification-a-unified-representation-for-ai-agents"
-        ]
+        ],
+        "chair": {
+          "name": "Z. Berkay Celik",
+          "affiliation": "Purdue"
+        }
       },
       {
         "start": "10:30 AM",
@@ -270,7 +286,11 @@
           "who-decides-the-trade-off-resolution-policy-as-delegation-governance-in-autonomo",
           "securing-the-agent-vendor-neutral-multitenant-enterprise-retrieval-and-tool-use",
           "when-harmful-intent-dissolves-into-technical-detail-how-safe-are-coding-agents-a"
-        ]
+        ],
+        "chair": {
+          "name": "Hannah Kim",
+          "affiliation": "Megagon Labs"
+        }
       },
       {
         "start": "12:30 PM",
@@ -336,7 +356,11 @@
           "flasc-federated-lora-with-sparse-communication",
           "supervisory-control-theory-for-llm-revision",
           "the-verifier-tax-horizon-dependent-safety-success-tradeoffs-in-tool-using-llm-ag"
-        ]
+        ],
+        "chair": {
+          "name": "Meng Jiang",
+          "affiliation": "University of Notre Dame"
+        }
       },
       {
         "start": "4:30 PM",
@@ -435,7 +459,11 @@
           "why-johnny-cant-use-agents-industry-aspirations-vs-user-realities-with-ai-agents",
           "does-safety-molt-evaluating-llm-safety-in-multi-agent-social-environments",
           "moltgraph-a-longitudinal-temporal-graph-dataset-of-moltbook-for-coordinated-agen"
-        ]
+        ],
+        "chair": {
+          "name": "Bo Zhao",
+          "affiliation": "Aalto University"
+        }
       },
       {
         "start": "11:30 AM",
@@ -461,7 +489,11 @@
           "ai-realtor-towards-grounded-persuasive-language-generation-for-automated-copywri",
           "optany-unified-text-optimization-can-outperform-specialized-systems",
           "marvis-modality-adaptive-reasoning-over-visualizations"
-        ]
+        ],
+        "chair": {
+          "name": "Chinmay Hegde",
+          "affiliation": "NYU"
+        }
       },
       {
         "start": "1:45 PM",
