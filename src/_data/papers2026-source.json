@@ -2317,28 +2317,28 @@
     }
   },
   {
-    "slug": "ops-experience-1",
-    "title": "Talk title TBD",
-    "summary": "Operational experience talk — speakers, title, and details to be announced.",
+    "slug": "martin-claude-managed-agents",
+    "title": "Claude Managed Agents",
+    "summary": "Operational experience talk — abstract to be announced.",
     "authors": [
       {
-        "name": "TBD",
-        "affiliation": "TBD"
+        "name": "Lance Martin",
+        "affiliation": "Anthropic"
       }
     ],
-    "abstract": "Operational experience talk. Final speaker(s), title, and abstract will be announced closer to the conference."
+    "abstract": "Abstract to be announced."
   },
   {
-    "slug": "ops-experience-2",
-    "title": "Talk title TBD",
-    "summary": "Operational experience talk — speakers, title, and details to be announced.",
+    "slug": "bendersky-building-karl",
+    "title": "Building KARL: Training Knowledge Agents for Enterprise Search with Reinforcement Learning",
+    "summary": "Operational experience talk — abstract to be announced.",
     "authors": [
       {
-        "name": "TBD",
-        "affiliation": "TBD"
+        "name": "Michael Bendersky",
+        "affiliation": "Databricks"
       }
     ],
-    "abstract": "Operational experience talk. Final speaker(s), title, and abstract will be announced closer to the conference."
+    "abstract": "Abstract to be announced."
   },
   {
     "slug": "popa-securing-gemini-from-cyberattack-misuse",
