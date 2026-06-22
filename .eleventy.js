@@ -2,6 +2,9 @@ module.exports = function(eleventyConfig) {
   // Copy assets folder to output
   eleventyConfig.addPassthroughCopy("src/assets");
 
+  // Copy root-level robots.txt to output
+  eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
+
   // Watch for changes in assets
   eleventyConfig.addWatchTarget("src/assets/");
 

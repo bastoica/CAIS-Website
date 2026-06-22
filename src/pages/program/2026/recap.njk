@@ -1,0 +1,642 @@
+---
+layout: base.njk
+title: What CAIS 2026 built, and what it chose to recognize
+description: The official recap of ACM CAIS 2026 in San Jose, California. 623 attendees, 106 papers and demos, research from 124 institutions across 14 countries.
+permalink: /program/2026/recap/
+noindex: true
+showOpenGraph: true
+ogTitle: What CAIS 2026 built, and what it chose to recognize
+ogDescription: Sixty papers converged on one project this year, composing AI systems out of many interacting parts. Most of the work was construction. The work the field named outstanding was the work that made those systems trustworthy.
+hideCapacityBanner: true
+hideSponsorStrip: true
+extraStyles: |
+    /* ===== Recap page: authority through restraint ===== */
+    /* Modular type scale (~1.2 ratio). Seven steps, no near-duplicates.
+       overline 13px · sm 15px · base 16px · md 18px · lead 24px · display 32px · stat 48px */
+    :root {
+        --fs-overline: 0.8125rem;
+        --fs-sm: 0.9375rem;
+        --fs-base: 1rem;
+        --fs-md: 1.125rem;
+        --fs-lead: 1.5rem;
+        --fs-display: 2rem;
+        --fs-stat: 3rem;
+        --rhythm-section: 4.5rem;   /* one vertical beat, used everywhere */
+        --rhythm-seam: 3rem;
+    }
+    @media (max-width: 767px) {
+        :root {
+            --rhythm-section: 3.25rem;
+            --rhythm-seam: 2.25rem;
+        }
+    }
+    /* Shared overline voice: every small label on the page speaks identically.
+       --davys-gray on white is 6.59:1, on --seasalt 6.31:1 — WCAG AA at 13px. */
+    .recap-eyebrow, .recap-section-label, .movement-label, .also-heading {
+        font-size: var(--fs-overline);
+        font-weight: 700;
+        color: var(--davys-gray);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+    }
+    .recap-hero {
+        padding: 5rem 0 4rem;
+        background: var(--seasalt);
+    }
+    .recap-eyebrow {
+        margin-bottom: 1.25rem;
+    }
+    .recap-headline {
+        font-weight: 700;
+        max-width: 22ch;
+        margin-bottom: 1.5rem;
+        line-height: 1.12;
+        letter-spacing: -0.015em;
+    }
+    .recap-standfirst {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: var(--fs-lead);
+        line-height: 1.55;
+        color: var(--eerie-black);
+        max-width: 38em;
+    }
+    .recap-section {
+        padding: var(--rhythm-section) 0;
+    }
+    .recap-section-label {
+        margin-bottom: 1.5rem;
+    }
+    /* Record-band title: the h1's typeface, about a third smaller */
+    .recap-band-title {
+        font-size: var(--fs-display);
+        font-weight: 700;
+        line-height: 1.15;
+        letter-spacing: -0.015em;
+        color: var(--eerie-black);
+        margin-bottom: 1.5rem;
+    }
+    /* Numbers band: a single dark slab — the page's one moment of full contrast.
+       --seasalt numerals on --eerie-black: 14.69:1; --silver labels: 9.0:1. */
+    .stat-band {
+        background: var(--eerie-black);
+        border-radius: 4px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        padding: 2.75rem 1.5rem;
+        gap: 1.5rem 1rem;
+    }
+    @media (max-width: 991px) {
+        .stat-band { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 575px) {
+        .stat-band { grid-template-columns: repeat(2, 1fr); padding: 2rem 1rem; }
+        .stat-band .stat:last-child { grid-column: 1 / -1; }
+    }
+    .stat-band .stat {
+        text-align: center;
+        border-left: 1px solid rgba(250, 250, 248, 0.16);
+    }
+    .stat-band .stat:first-child { border-left: none; }
+    @media (max-width: 991px) {
+        .stat-band .stat { border-left: none; }
+    }
+    .stat-band .stat .value {
+        font-size: clamp(2rem, 5vw, var(--fs-stat));
+        font-weight: 700;
+        line-height: 1.1;
+        color: var(--seasalt);
+        font-variant-numeric: tabular-nums;
+    }
+    .stat-band .stat .label {
+        font-size: var(--fs-overline);
+        color: var(--silver);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-top: 0.4rem;
+    }
+    .stat-caption {
+        font-size: var(--fs-overline);
+        color: var(--davys-gray);
+        margin-top: 0.75rem;
+    }
+    /* Walls */
+    .recap-wall {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        align-items: center;
+    }
+    .recap-wall .wall-name {
+        font-weight: 600;
+        font-size: var(--fs-sm);
+        color: var(--eerie-black);
+        white-space: nowrap;
+        padding: 0.3rem 0.7rem;
+        border: 1px solid var(--silver);
+        border-radius: 3px;
+        background: #fff;
+    }
+    .wall-breadth {
+        color: var(--davys-gray);
+        font-size: var(--fs-overline);
+        font-style: italic;
+        margin-top: 1rem;
+    }
+    /* Sponsor wall: equal cells so mixed logo aspect ratios sit on one grid */
+    .recap-sponsor-wall {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1rem 1.5rem;
+    }
+    .recap-sponsor-wall .logo-cell {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 64px;
+    }
+    .recap-sponsor-wall img {
+        max-height: 30px;
+        max-width: 124px;
+        width: auto;
+        filter: grayscale(1);
+        opacity: 0.75;
+    }
+    .recap-sponsor-wall img.logo-stacked {
+        max-height: 48px;
+    }
+    /* Track cards: the five paper tracks as discrete cells, not a run-on line */
+    .track-cards {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0.75rem;
+    }
+    @media (max-width: 991px) {
+        .track-cards { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 575px) {
+        .track-cards { grid-template-columns: repeat(2, 1fr); }
+    }
+    .track-card {
+        background: var(--seasalt);
+        border: 1px solid var(--silver);
+        border-radius: 4px;
+        padding: 1.1rem 1rem;
+    }
+    .track-card .track-count {
+        font-size: var(--fs-display);
+        font-weight: 700;
+        line-height: 1;
+        color: var(--eerie-black);
+        font-variant-numeric: tabular-nums;
+    }
+    .track-card .track-name {
+        font-size: var(--fs-overline);
+        color: var(--davys-gray);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        line-height: 1.3;
+        margin-top: 0.5rem;
+    }
+    .composition-summary {
+        font-size: var(--fs-sm);
+        line-height: 1.55;
+        color: var(--davys-gray);
+    }
+    /* Seams */
+    .recap-seam-section {
+        padding: var(--rhythm-seam) 0;
+    }
+    .recap-seam {
+        max-width: 44em;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: var(--fs-md);
+        line-height: 1.6;
+        color: var(--eerie-black);
+    }
+    /* Movements. The accent is a terracotta bar, not terracotta type:
+       --terracotta-deep on --seasalt is 4.43:1 — under AA for 13px text. */
+    .movement-label {
+        margin-bottom: 0.75rem;
+    }
+    .movement-label::before {
+        content: "";
+        display: block;
+        width: 2.25rem;
+        height: 3px;
+        background: var(--terracotta-deep);
+        margin-bottom: 0.75rem;
+    }
+    .movement-headline {
+        font-weight: 700;
+        max-width: 30ch;
+        margin-bottom: 1.25rem;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+    }
+    .movement-framing {
+        max-width: 44em;
+        font-size: var(--fs-md);
+        margin-bottom: 2.5rem;
+    }
+    /* Award stamps: two tiers, Outstanding clearly dominant.
+       White on --terracotta-deep: 4.63:1, AA at this size/weight. */
+    .stamp {
+        display: inline-block;
+        font-size: var(--fs-overline);
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        padding: 0.3rem 0.6rem;
+        border-radius: 3px;
+        margin-bottom: 0.75rem;
+    }
+    .stamp-outstanding {
+        background: var(--terracotta-deep);
+        color: #fff;
+        border: 1px solid var(--terracotta-deep);
+    }
+    .stamp-spotlight {
+        background: transparent;
+        color: var(--davys-gray);
+        border: 1px solid var(--silver);
+    }
+    .stamp-note {
+        font-size: var(--fs-overline);
+        color: var(--davys-gray);
+        margin-left: 0.5rem;
+    }
+    /* Featured cards: a firm top rule marks them as the chosen few */
+    .featured-card {
+        background: #fff;
+        border: 1px solid var(--silver);
+        border-top: 3px solid var(--eerie-black);
+        border-radius: 4px;
+        padding: 1.75rem;
+        height: 100%;
+    }
+    .featured-card h3 {
+        font-size: var(--fs-base);
+        font-weight: 700;
+        margin-bottom: 0.4rem;
+        line-height: 1.35;
+    }
+    .featured-card h3 a {
+        color: var(--eerie-black);
+        text-decoration: none;
+    }
+    .featured-card h3 a:hover {
+        color: var(--terracotta-deep);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+    .featured-card .byline {
+        font-size: var(--fs-overline);
+        color: var(--davys-gray);
+        margin-bottom: 0.75rem;
+    }
+    .featured-card .gloss {
+        font-size: var(--fs-sm);
+        margin-bottom: 0;
+    }
+    /* Also-in-this-movement: hairline rows turn link soup into an index */
+    .also-heading {
+        margin: 2.5rem 0 0;
+        padding-bottom: 0.6rem;
+        border-bottom: 2px solid var(--eerie-black);
+    }
+    .also-wall {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0 2.5rem;
+    }
+    @media (max-width: 991px) {
+        .also-wall { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 575px) {
+        .also-wall { grid-template-columns: 1fr; }
+    }
+    .also-wall li {
+        font-size: var(--fs-sm);
+        line-height: 1.4;
+        padding: 0.8rem 0;
+        border-bottom: 1px solid var(--platinum);
+    }
+    .also-wall li a {
+        color: var(--eerie-black);
+        text-decoration: none;
+        font-weight: 600;
+    }
+    .also-wall li a:hover {
+        color: var(--terracotta-deep);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+    .also-wall .inst {
+        display: block;
+        color: var(--davys-gray);
+        font-size: var(--fs-overline);
+        margin-top: 0.15rem;
+    }
+    /* Winners record */
+    .winners-group-heading {
+        font-size: var(--fs-md);
+        font-weight: 700;
+        margin: 2.5rem 0 0.5rem;
+        padding-bottom: 0.6rem;
+        border-bottom: 2px solid var(--eerie-black);
+    }
+    .winners-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .winners-list li {
+        padding: 0.85rem 0;
+        border-bottom: 1px solid var(--platinum);
+    }
+    .winners-list li:last-child {
+        border-bottom: none;
+    }
+    .winners-list .w-title {
+        font-weight: 600;
+    }
+    .winners-list .w-title a {
+        color: var(--eerie-black);
+        text-decoration: none;
+    }
+    .winners-list .w-title a:hover {
+        color: var(--terracotta-deep);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+    .winners-list .w-meta {
+        font-size: var(--fs-overline);
+        color: var(--davys-gray);
+    }
+    .winners-list .stamp {
+        margin-bottom: 0.35rem;
+    }
+    /* Voices */
+    .voice-quote {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: var(--fs-md);
+        line-height: 1.6;
+    }
+    .voice-attrib {
+        font-size: var(--fs-sm);
+        color: var(--davys-gray);
+    }
+    /* Close */
+    .recap-close {
+        padding: 5rem 0;
+        background: var(--eerie-black);
+    }
+    .recap-close-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2.25rem;
+    }
+    .recap-close-glyph {
+        flex: 0 0 auto;
+        width: auto;
+        height: 120px;
+        color: var(--terracotta-deep);
+    }
+    .recap-close-text {
+        text-align: left;
+    }
+    .recap-close .line1 {
+        font-size: var(--fs-display);
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: #fff;
+    }
+    .recap-close .line2 {
+        color: #fff;
+        margin-bottom: 0;
+    }
+    .recap-close .line2 a {
+        color: #fff;
+        font-weight: 700;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+    .recap-close .line2 a:hover {
+        color: #fff;
+    }
+    @media (max-width: 575px) {
+        .recap-close-inner { gap: 1.25rem; }
+        .recap-close-glyph { height: 72px; }
+    }
+    .anchor {
+        scroll-margin-top: 84px;
+    }
+---
+
+{# ============ 1. Top unit ============ #}
+<header id="top" class="recap-hero anchor">
+    <div class="container">
+        <p class="recap-eyebrow">{{ recap2026.eyebrow }}</p>
+        <h1 class="display-5 recap-headline">{{ recap2026.headline }}</h1>
+        <p class="recap-standfirst mb-0">{{ recap2026.standfirst }}</p>
+    </div>
+</header>
+
+{# ============ 2. Proof block ============ #}
+<section id="numbers" class="recap-section anchor" style="background:#fff;">
+    <div class="container">
+        <h2 class="recap-band-title">{{ recap2026.numbers.label }}</h2>
+
+        <div class="stat-band">
+            {% for s in recap2026.numbers.stats %}
+            <div class="stat">
+                <div class="value">{{ s.value }}</div>
+                <div class="label">{{ s.label }}</div>
+            </div>
+            {% endfor %}
+        </div>
+        <p class="stat-caption">{{ recap2026.numbers.caption }}</p>
+
+        <h3 class="recap-section-label mt-5">{{ recap2026.numbers.composition.heading }}</h3>
+        <p class="composition-summary mb-4">{{ recap2026.numbers.composition.summary }}</p>
+        <div class="track-cards">
+            {% for t in recap2026.numbers.composition.tracks %}
+            <div class="track-card">
+                <div class="track-count">{{ t.count }}</div>
+                <div class="track-name">{{ t.name }}</div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <h3 class="recap-section-label mt-5">{{ recap2026.institutionsHeading }}</h3>
+        <div class="recap-wall">
+            {% for name in recapInstitutions2026.marquee %}
+            <span class="wall-name">{{ name }}</span>
+            {% endfor %}
+        </div>
+        <p class="wall-breadth">{{ recapInstitutions2026.breadthLine }}</p>
+
+        <h3 class="recap-section-label mt-5">{{ recap2026.sponsorsHeading }}</h3>
+        <div class="recap-sponsor-wall">
+            {% set wallSponsors = [] %}
+            {% for s in sponsors.gold %}{% set wallSponsors = (wallSponsors.push(s), wallSponsors) %}{% endfor %}
+            {% for s in sponsors.silver %}{% set wallSponsors = (wallSponsors.push(s), wallSponsors) %}{% endfor %}
+            {% for s in sponsors.bronze %}{% set wallSponsors = (wallSponsors.push(s), wallSponsors) %}{% endfor %}
+            {% for s in sponsors.supporting %}{% set wallSponsors = (wallSponsors.push(s), wallSponsors) %}{% endfor %}
+            {% for s in wallSponsors %}
+            <div class="logo-cell"><img src="/assets/images/{{ s.logo }}" alt="{{ s.name }}" loading="lazy"{% if s.stacked %} class="logo-stacked"{% endif %} /></div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{# ============ 3. Orientation seam ============ #}
+<section class="recap-seam-section">
+    <div class="container">
+        <div class="row g-4 align-items-start">
+            <div class="col-lg-4">
+                <h2 class="recap-band-title mb-0">{{ recap2026.orientationLabel }}</h2>
+            </div>
+            <div class="col-lg-8">
+                <p class="recap-seam mb-0">{{ recap2026.orientationSeam }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{# ============ 4 to 6. The three movements ============ #}
+{% for m in recap2026.movements %}
+<section id="{{ m.id }}" class="recap-section anchor"{% if loop.index is odd %} style="background:#fff;"{% endif %}>
+    <div class="container">
+        <p class="movement-label">{{ m.label }}</p>
+        <h2 class="h3 movement-headline">{{ m.headline }}</h2>
+        <p class="movement-framing">{{ m.framing }}</p>
+
+        <div class="row g-4">
+            {% for f in m.featured %}
+            <div class="col-lg-4">
+                <article class="featured-card">
+                    <div>
+                        <span class="stamp stamp-{{ f.tier }}">{{ f.stamp }}</span>
+                        {% if f.stampNote %}<span class="stamp-note">({{ f.stampNote }})</span>{% endif %}
+                    </div>
+                    <h3><a href="/program/2026/papers/{{ f.slug }}/">{{ f.title }}</a></h3>
+                    <p class="byline">{{ f.authors }} · {{ f.affiliation }}</p>
+                    <p class="gloss">{{ f.gloss }}</p>
+                </article>
+            </div>
+            {% endfor %}
+        </div>
+
+        <h3 class="also-heading">Also in this movement</h3>
+        <ul class="also-wall">
+            {% for w in m.also %}
+            <li>
+                {% if w.crossRef %}
+                <a href="{{ w.crossRef }}">{{ w.title }}</a>
+                <span class="inst">{{ w.institutions | join(' · ') }} ({{ w.crossNote }})</span>
+                {% else %}
+                <a href="/program/2026/papers/{{ w.slug }}/">{{ w.title }}</a>
+                <span class="inst">{{ w.institutions | join(' · ') }}</span>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+{% endfor %}
+
+{# ============ 7. Winners record ============ #}
+<section id="winners" class="recap-section anchor">
+    <div class="container">
+        <h2 class="recap-band-title">The official record</h2>
+        <p style="max-width:44em;">{{ recap2026.winners.intro }}</p>
+
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <h3 class="winners-group-heading">Outstanding Papers</h3>
+                <ul class="winners-list">
+                    {% for w in recap2026.winners.outstanding %}
+                    <li>
+                        <span class="stamp stamp-outstanding">{{ w.award }}</span>
+                        <div class="w-title"><a href="/program/2026/papers/{{ w.slug }}/">{{ w.title }}</a></div>
+                        <div class="w-meta">{{ w.authors }} · {{ w.affiliation }} · {{ w.track }}</div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <h3 class="winners-group-heading">Best Artifact</h3>
+                <ul class="winners-list">
+                    {% for w in recap2026.winners.bestArtifact %}
+                    <li>
+                        <span class="stamp stamp-outstanding">{{ w.award }}</span>
+                        <div class="w-title"><a href="/program/2026/papers/{{ w.slug }}/">{{ w.title }}</a></div>
+                        <div class="w-meta">{{ w.authors }} · {{ w.affiliation }} · {{ w.track }}</div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <h3 class="winners-group-heading">{{ recap2026.winners.spotlightPapersHeading }} <span class="fw-normal text-muted">({{ recap2026.winners.spotlightAttribution }})</span></h3>
+                <ul class="winners-list">
+                    {% for w in recap2026.winners.spotlightPapers %}
+                    <li>
+                        <div class="w-title"><a href="/program/2026/papers/{{ w.slug }}/">{{ w.title }}</a></div>
+                        <div class="w-meta">{{ w.authors }} · {{ w.affiliation }}</div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <h3 class="winners-group-heading">{{ recap2026.winners.spotlightDemosHeading }} <span class="fw-normal text-muted">({{ recap2026.winners.spotlightAttribution }})</span></h3>
+                <ul class="winners-list">
+                    {% for w in recap2026.winners.spotlightDemos %}
+                    <li>
+                        <div class="w-title"><a href="/program/2026/demos/{{ w.slug }}/">{{ w.title }}</a></div>
+                        <div class="w-meta">{{ w.authors }} · {{ w.affiliation }}</div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+{# ============ 9. The view from the room ============ #}
+{% if recap2026.voices.quotes.length %}
+<section id="voices" class="recap-section anchor">
+    <div class="container">
+        <h2 class="recap-section-label">{{ recap2026.voices.heading }}</h2>
+        <div class="row g-4">
+            {% for q in recap2026.voices.quotes %}
+            <div class="col-lg-4">
+                <blockquote class="voice-quote">{{ q.text }}</blockquote>
+                <p class="voice-attrib">{{ q.name }} · {{ q.affiliation }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{# ============ 10. Close ============ #}
+<section id="cais2027" class="recap-close anchor">
+    <div class="container">
+        <div class="recap-close-inner">
+            <svg class="recap-close-glyph" viewBox="0 0 748.84 750.96" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true">
+                <path d="M709.44,260.03h-153.8c-14.45,0-28.31-5.74-38.53-15.96l-14.45-14.45c-10.22-10.22-15.96-24.08-15.96-38.53V39.4c0-21.76-17.64-39.4-39.4-39.4h-151.03c-21.76,0-39.4,17.64-39.4,39.4v151.03c0,21.76,17.64,39.4,39.4,39.4h152.14c14.45,0,28.31,5.74,38.53,15.96l16.12,16.12c10.22,10.22,15.96,24.08,15.96,38.53v150.42c0,14.49-5.77,28.38-16.04,38.61l-15.84,15.78c-10.21,10.17-24.04,15.88-38.45,15.88H39.4c-21.76,0-39.4,17.64-39.4,39.4v151.03c0,21.76,17.64,39.4,39.4,39.4h408.95c21.76,0,39.4-17.64,39.4-39.4v-152.47c0-14.49,5.77-28.38,16.04-38.61l14.79-14.73c10.21-10.17,24.04-15.88,38.45-15.88h152.41c21.76,0,39.4-17.64,39.4-39.4v-151.03c0-21.76-17.64-39.4-39.4-39.4Z"/>
+            </svg>
+            <div class="recap-close-text">
+                <p class="line1">{{ recap2026.close.line1 }}</p>
+                <p class="line2">Follow <a href="{{ recap2026.close.handleUrl }}" target="_blank" rel="noopener">@CAISConf</a> for the call for papers and dates.</p>
+            </div>
+        </div>
+    </div>
+</section>

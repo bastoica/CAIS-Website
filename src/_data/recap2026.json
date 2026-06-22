@@ -1,0 +1,757 @@
+{
+  "eyebrow": "ACM CAIS 2026 · San Jose, California · May 26 to 29, 2026",
+  "headline": "What CAIS 2026 built, and what it chose to recognize",
+  "standfirst": "Sixty papers converged on one project this year: composing AI systems out of many interacting parts. Most of the work was construction. The work the field named outstanding was the work that made those systems trustworthy.",
+  "numbers": {
+    "label": "CAIS 2026, by the record",
+    "stats": [
+      {
+        "value": "623",
+        "label": "attendees"
+      },
+      {
+        "value": "116",
+        "label": "on the waitlist"
+      },
+      {
+        "value": "106",
+        "label": "papers and demos"
+      },
+      {
+        "value": "~35%",
+        "label": "paper acceptance rate"
+      },
+      {
+        "value": "12",
+        "label": "sponsors"
+      }
+    ],
+    "caption": "Final figures, June 2026. Registration reached capacity.",
+    "composition": {
+      "heading": "The program",
+      "tracks": [
+        { "name": "Architectural Patterns & Composition", "count": "25" },
+        { "name": "Evaluation & Benchmarking", "count": "12" },
+        { "name": "Security & Privacy", "count": "11" },
+        { "name": "System Optimization & Efficiency", "count": "10" },
+        { "name": "Engineering & Operations", "count": "2" }
+      ],
+      "summary": "Sixty peer-reviewed papers ran across these five tracks, selected from 170 reviewed submissions. Alongside them: 46 system demonstrations (45 in the archival proceedings), 3 operational-experience talks, 5 workshops, and 1 tutorial."
+    }
+  },
+  "institutionsHeading": "Research came from",
+  "sponsorsHeading": "Supported by",
+  "orientationLabel": "How to read what follows",
+  "orientationSeam": "This recap groups the year's 60 papers into three movements, matching what the field spent 2026 doing: building agentic systems (Build), measuring whether they work (Measure), and making them safe to trust (Secure). Each movement features a few standout papers, and the full winners list is at the end.",
+  "movements": [
+    {
+      "id": "build",
+      "label": "Build",
+      "headline": "Most of the year’s work was construction: assembling agents, models, and tools into systems that hold.",
+      "framing": "Thirty-seven of the sixty papers, more than three in five, take up architecture and composition, plus the optimization and operations that make composed systems run. The volume is itself the finding. In 2026 the field’s main occupation was not a better single model but the discipline of putting many parts together into something dependable.",
+      "featured": [
+        {
+          "title": "optimize_anything: Unified Text Optimization can Outperform Specialized Systems",
+          "authors": "Lakshya A Agrawal, Donghyun Lee, et al.",
+          "affiliation": "UC Berkeley",
+          "stamp": "Industry Spotlight (Papers and Demos)",
+          "tier": "spotlight",
+          "gloss": "Opens the proceedings and is the only contribution recognized in both the paper and demo tracks: one text-optimization method that matches or beats systems hand-built for a specific task.",
+          "slug": "optany-unified-text-optimization-can-outperform-specialized-systems"
+        },
+        {
+          "title": "The Cost of Consensus: Isolated Self-Correction Prevails Over Unguided Homogeneous Multi-Agent Debate",
+          "authors": "Blaž Bertalanič, Carolina Fortuna",
+          "affiliation": "Jožef Stefan Institute",
+          "stamp": "Industry Spotlight",
+          "tier": "spotlight",
+          "gloss": "A result about composing well rather than composing more: for these tasks, agents correcting themselves in isolation outperform an unstructured debate among them.",
+          "slug": "decomposing-sycophancy-fragility-consensus-collapse-and-cost-in-homogeneous-mult"
+        },
+        {
+          "title": "Improving Coherence and Persistence in Agentic AI for System Optimization",
+          "authors": "Pantea Karimi, Kimia Noorbakhsh, et al.",
+          "affiliation": "MIT",
+          "stamp": "Industry Spotlight",
+          "tier": "spotlight",
+          "gloss": "Takes on the unglamorous half of composition: keeping a long-running agent coherent and on task as it works a real system across many steps.",
+          "slug": "improving-coherence-and-persistence-in-agentic-ai-for-system-optimization"
+        }
+      ],
+      "also": [
+        {
+          "title": "Context, Reasoning, and Hierarchy: A Cost–Performance Study of Compound LLM Agent Design in an Adversarial POMDP",
+          "institutions": [
+            "Carleton University",
+            "Cistel",
+            "Defence R&D Canada"
+          ],
+          "slug": "context-reasoning-and-hierarchy-a-costperformance-study-of-compound-llm-agent-de"
+        },
+        {
+          "title": "Tressoir: Unifying Online, Offline, and HIL Design and Evolution of Multi-Agent Systems via Interpretable Blueprints",
+          "institutions": [
+            "MIT"
+          ],
+          "slug": "tressoir-unifying-online-offline-and-hil-design-and-evolution-of-multi-agent-sys"
+        },
+        {
+          "title": "Glia: A Human-Inspired AI for Automated Systems Design and Optimization",
+          "institutions": [
+            "Fidian AI",
+            "MIT"
+          ],
+          "slug": "glia-a-human-inspired-ai-for-automated-systems-design-and-optimization"
+        },
+        {
+          "title": "A Language for Describing Agentic LLM Contexts",
+          "institutions": [
+            "Bar-Ilan University"
+          ],
+          "slug": "a-language-for-describing-agentic-llm-contexts"
+        },
+        {
+          "title": "Retrieval-Augmented LLMs for Security Incident Analysis",
+          "institutions": [
+            "Dartmouth",
+            "Northeastern",
+            "Punch Cyber"
+          ],
+          "slug": "retrieval-augmented-llms-for-security-incident-analysis"
+        },
+        {
+          "title": "fastWorkflow: Closing the Performance Gap Between Small and Frontier Language Models for Conversational Agents",
+          "institutions": [
+            "Radiant Logic"
+          ],
+          "slug": "fastworkflow-closing-the-agentic-performance-gap-between-small-and-frontier-lang"
+        },
+        {
+          "title": "Composing Policy Gradients and Prompt Optimization for Language Model Programs",
+          "institutions": [
+            "Anyscale",
+            "Carnegie Mellon",
+            "Contextual AI",
+            "MIT",
+            "Notre Dame",
+            "Stanford",
+            "UC Berkeley",
+            "Zoom"
+          ],
+          "slug": "composing-policy-gradients-and-prompt-optimization-for-language-model-programs"
+        },
+        {
+          "title": "LiveGraph: A Compound AI System for Evolving Knowledge Graph Construction from Streaming Data",
+          "institutions": [
+            "Microsoft"
+          ],
+          "slug": "livegraph-a-compound-ai-system-for-evolving-knowledge-graph-construction-from-st"
+        },
+        {
+          "title": "Expansion-Contraction: A Multi-Agent Graph Traversal Pattern for Compound AI Systems",
+          "institutions": [
+            "Amazon",
+            "Continental"
+          ],
+          "slug": "expansion-contraction-a-multi-agent-graph-traversal-pattern-for-compound-ai-syst"
+        },
+        {
+          "title": "VISTA: Verifier-in-the-Loop Agentic Reinforcement Learning for Quantum Program Synthesis",
+          "institutions": [
+            "Aalto University",
+            "Technical University of Denmark",
+            "University of Liverpool"
+          ],
+          "slug": "vista-verifier-in-the-loop-agentic-rl-for-semantic-program-synthesis-in-quantum"
+        },
+        {
+          "title": "Robust Agent Compensation (RAC): Teaching AI Agents to Compensate",
+          "institutions": [
+            "University of Stuttgart",
+            "WSO2"
+          ],
+          "slug": "robust-agent-compensation-rac-teaching-ai-agents-to-compensate"
+        },
+        {
+          "title": "Dossier: Deep Research via Ledger-Driven Branching Search and Query Encoding Learning",
+          "institutions": [
+            "MIT",
+            "Notre Dame"
+          ],
+          "slug": "dossier-deep-research-via-ledger-driven-branching-search-and-query-encoding-lear"
+        },
+        {
+          "title": "Learning from Supervision with Semantic and Episodic Memory: A Reflective Approach to Agent Adaptation",
+          "institutions": [
+            "Megagon Labs"
+          ],
+          "slug": "learning-from-supervision-with-semantic-and-episodic-memory-a-reflective-approac"
+        },
+        {
+          "title": "FORGE: Self-Evolving Agent Memory With No Weight Updates via Population Broadcast",
+          "institutions": [
+            "Carleton University",
+            "Cistel",
+            "Defence R&D Canada"
+          ],
+          "slug": "forge-self-evolving-agent-memory-with-no-weight-updates-via-population-broadcast"
+        },
+        {
+          "title": "How to Steer Your Multi-Agent System: Human-LLM Collaborative Planning",
+          "institutions": [
+            "Megagon Labs",
+            "Penn State"
+          ],
+          "slug": "how-to-steer-your-multi-agent-system-human-llm-collaborative-planning"
+        },
+        {
+          "title": "Scideator: Human-LLM Compound System for Scientific Ideation through Facet Recombination and Novelty Evaluation",
+          "institutions": [
+            "Allen Institute for AI",
+            "Microsoft",
+            "University of Washington"
+          ],
+          "slug": "scideator-human-llm-compound-system-for-scientific-ideation-through-facet-recomb"
+        },
+        {
+          "title": "Do Agents Need to Plan Step-by-Step? Rethinking Planning Horizon in Data-Centric Tool Calling",
+          "institutions": [
+            "Megagon Labs"
+          ],
+          "slug": "do-agents-need-to-plan-step-by-step-rethinking-planning-horizon-in-data-centric"
+        },
+        {
+          "title": "Open Agent Specification: Enabling Cross-Framework Comparison of AI Agents",
+          "institutions": [
+            "Oracle"
+          ],
+          "slug": "open-agent-specification-a-unified-representation-for-ai-agents"
+        },
+        {
+          "title": "AI Realtor: Towards Grounded Persuasive Language Generation for Automated Copywriting",
+          "institutions": [
+            "Carnegie Mellon",
+            "Stanford",
+            "University of Chicago"
+          ],
+          "slug": "ai-realtor-towards-grounded-persuasive-language-generation-for-automated-copywri"
+        },
+        {
+          "title": "MARVIS: Modality Adaptive Reasoning over VISualizations",
+          "institutions": [
+            "NYU",
+            "Oumi",
+            "Prior Labs",
+            "Stanford"
+          ],
+          "slug": "marvis-modality-adaptive-reasoning-over-visualizations"
+        },
+        {
+          "title": "Equitable Ranking in Heterogeneous Marketplace Ecosystems: A Foundation Model Framework for Quality-Aware Fairness",
+          "institutions": [
+            "Independent Researcher"
+          ],
+          "slug": "equitable-ranking-in-heterogeneous-marketplace-ecosystems-a-foundation-model-fra"
+        },
+        {
+          "title": "Robust Batch-Level Query Routing for Large Language Models under Cost and Capacity Constraints",
+          "institutions": [
+            "LinkedIn"
+          ],
+          "slug": "robust-batch-level-query-routing-for-large-language-models-under-cost-and-capaci"
+        },
+        {
+          "title": "Scaling Textual Gradients via Sampling-Based Momentum",
+          "institutions": [
+            "Microsoft Research",
+            "Princeton",
+            "Santa Clara",
+            "SylphAI",
+            "UT Austin",
+            "University of Chicago"
+          ],
+          "slug": "scaling-textual-gradients-via-sampling-based-momentum"
+        },
+        {
+          "title": "FedMECA: Scalable Federated Learning via Memory-Efficient and Concurrent Aggregation",
+          "institutions": [
+            "UC Merced",
+            "University of Florida"
+          ],
+          "slug": "fedmeca-scalable-federated-learning-via-memory-efficient-and-concurrent-aggregat"
+        },
+        {
+          "title": "Echo: KV-Cache-Free Associative Recall with Spectral Koopman Operators",
+          "institutions": [
+            "Stanford"
+          ],
+          "slug": "constant-memory-retrieval-via-koopman-operator-estimation-for-mamba-3"
+        },
+        {
+          "title": "FLASC: Federated LoRA with Sparse Communication",
+          "institutions": [
+            "Carnegie Mellon"
+          ],
+          "slug": "flasc-federated-lora-with-sparse-communication"
+        },
+        {
+          "title": "XGrammar-2: Dynamic and Efficient Structured Generation Engine for Agentic LLMs",
+          "institutions": [
+            "Carnegie Mellon",
+            "Shanghai Jiao Tong"
+          ],
+          "slug": "xgrammar-dynamic-and-efficient-structured-generation-engine-for-agentic-llms"
+        },
+        {
+          "title": "CAMI: Practical Cost-Aware Agent-Guided Multi-Indexing for Semantic Retrieval",
+          "institutions": [
+            "IBM"
+          ],
+          "slug": "cami-cost-aware-agent-guided-multi-indexing-for-semantic-retrieval"
+        },
+        {
+          "title": "SwiftFusion: Scalable Sequence Parallelism for Distributed Inference of Diffusion Transformers on GPUs",
+          "institutions": [
+            "Amazon",
+            "University of Toronto"
+          ],
+          "slug": "swiftfusion-scalable-sequence-parallelism-for-distributed-inference-of-diffusion"
+        },
+        {
+          "title": "AgentStop: Terminating Local AI Agents Early to Save Energy in Consumer Devices",
+          "institutions": [
+            "Brave",
+            "Imperial College London",
+            "UMass Amherst"
+          ],
+          "slug": "agentstop-terminating-local-ai-agents-early-to-save-energy-in-consumer-devices"
+        },
+        {
+          "title": "Understanding and Improving Communication Performance in Multi-node LLM Inference",
+          "institutions": [
+            "Lawrence Livermore",
+            "University of Maryland"
+          ],
+          "slug": "dissecting-and-improving-communication-performance-in-multi-node-llm-inference"
+        },
+        {
+          "title": "SEAR: Schema-Based Evaluation and Routing for LLM Gateways",
+          "institutions": [
+            "Infron.AI",
+            "Strukto.AI"
+          ],
+          "slug": "sear-schema-based-evaluation-and-routing-for-llm-gateways"
+        },
+        {
+          "title": "Supervisory Control Theory for LLM Revision",
+          "institutions": [
+            "Clemson"
+          ],
+          "slug": "supervisory-control-theory-for-llm-revision"
+        },
+        {
+          "title": "TraceFix: Repairing Agent Coordination Protocols with TLA+ Counterexamples",
+          "institutions": [
+            "Rutgers University"
+          ],
+          "crossRef": "#secure",
+          "crossNote": "narrated in Secure"
+        }
+      ]
+    },
+    {
+      "id": "measure",
+      "label": "Measure",
+      "headline": "Before trusting the new tools, the field built the means to measure them, and pointed them at its hottest topic first.",
+      "framing": "Twelve papers, the second-largest group, are the field building its own rulers: benchmarks for vibe coding, tool use, persuasion, and domain agents, plus methods for catching agents in the act of failing. This is where the year’s most-discussed idea, vibe coding, gets held to an evaluation standard rather than taken on faith.",
+      "featured": [
+        {
+          "title": "ViBench: A Benchmark on Vibe Coding",
+          "authors": "Peter Zhong, Pashootan Vaezipoor, et al.",
+          "affiliation": "Replit, Georgian AI Lab, with Carnegie Mellon",
+          "stamp": "Industry Spotlight",
+          "tier": "spotlight",
+          "gloss": "Builds a benchmark for vibe coding from production traces across fifteen applications, turning the year’s most-hyped practice into a measured, pass-or-fail task.",
+          "slug": "vibench-a-benchmark-on-vibe-coding"
+        },
+        {
+          "title": "Willful Disobedience: Automatically Detecting Failures in Agentic Traces",
+          "authors": "Reshabh K Sharma, Shraddha Barke, Benjamin Zorn",
+          "affiliation": "University of Washington and Microsoft Research",
+          "stamp": "Industry Spotlight",
+          "tier": "spotlight",
+          "gloss": "A method for spotting where an agent went off the rails inside its own execution trace, so failures surface without a human reading every step.",
+          "slug": "willful-disobedience-automatically-detecting-failures-in-agentic-traces"
+        },
+        {
+          "title": "Reasoning-Intensive Regression",
+          "authors": "Diane Tchuindjo, Omar Khattab",
+          "affiliation": "MIT",
+          "stamp": "Industry Spotlight",
+          "tier": "spotlight",
+          "gloss": "Defines a class of prediction tasks that demand reasoning rather than pattern-matching, and shows where today’s models still break on them.",
+          "slug": "reasoning-intensive-regression"
+        }
+      ],
+      "also": [
+        {
+          "title": "Trace-Level Analysis of Information Contamination in Multi-Agent Systems",
+          "institutions": [
+            "Cornell",
+            "UIUC"
+          ],
+          "slug": "trace-level-analysis-of-information-contamination-in-multi-agent-systems"
+        },
+        {
+          "title": "Vibe Code Bench: Evaluating AI Models on End-to-End Web Application Development",
+          "institutions": [
+            "MIT",
+            "Vals AI"
+          ],
+          "slug": "vibe-code-bench-evaluating-ai-models-on-end-to-end-web-application-development"
+        },
+        {
+          "title": "Does Socialization Emerge in AI Agent Society? A Case Study of Moltbook",
+          "institutions": [
+            "University of Maryland"
+          ],
+          "slug": "does-socialization-emerge-in-ai-agent-society-a-case-study-of-moltbook"
+        },
+        {
+          "title": "Why Johnny Can’t Use Agents: Industry Aspirations vs. User Realities with AI Agents",
+          "institutions": [
+            "Carnegie Mellon"
+          ],
+          "slug": "why-johnny-cant-use-agents-industry-aspirations-vs-user-realities-with-ai-agents"
+        },
+        {
+          "title": "OpaqueToolsBench: Learning Nuances of Tool Behavior Through Interaction",
+          "institutions": [
+            "Samaya AI",
+            "USC"
+          ],
+          "slug": "opaquetoolsbench-learning-nuances-of-tool-behavior-through-interaction"
+        },
+        {
+          "title": "Generating Expressive and Customizable Evals for Timeseries Data Analysis Agents with AgentFuel",
+          "institutions": [
+            "Carnegie Mellon",
+            "Rockfish Data"
+          ],
+          "slug": "generating-expressive-and-customizable-evals-for-timeseries-data-analysis-agents"
+        },
+        {
+          "title": "DraftNEPABench: A Benchmark for Drafting NEPA Document Sections with Coding Agents",
+          "institutions": [
+            "OpenAI",
+            "PNNL"
+          ],
+          "slug": "draftnepabench-a-benchmark-for-drafting-nepa-document-sections-with-coding-agent"
+        },
+        {
+          "title": "Benchmarking Agents in Insurance Underwriting Environments",
+          "institutions": [
+            "Snorkel AI"
+          ],
+          "slug": "benchmarking-agents-in-insurance-underwriting-environments"
+        },
+        {
+          "title": "Persuade Me if You Can: A Framework for Evaluating Persuasion Effectiveness and Susceptibility Among Large Language Models",
+          "institutions": [
+            "UIUC"
+          ],
+          "slug": "persuade-me-if-you-can-a-framework-for-evaluating-persuasion-effectiveness-and-s"
+        }
+      ]
+    },
+    {
+      "id": "secure",
+      "label": "Secure",
+      "headline": "The work the field recognized most was the work that makes agents fail safely.",
+      "framing": "Eleven papers took up security and privacy directly. It is not the largest group, but it holds the year’s highest recognition: two of the three Outstanding Paper awards sit here, alongside a third Outstanding Solution Paper, filed under architecture, that proves multi-agent coordination correct. Read together, they mark a field turning its attention from whether agents work to whether they can be trusted to.",
+      "featured": [
+        {
+          "title": "Malice in Agentland: Down the Rabbit Hole of Backdoors in the AI Supply Chain",
+          "authors": "Léo Boisvert et al.",
+          "affiliation": "ServiceNow Research, Mila, Polytechnique Montréal",
+          "stamp": "Outstanding Problem Paper",
+          "tier": "outstanding",
+          "gloss": "Shows how a poisoned tool or environment can plant a backdoor that lies dormant until a trigger appears in context, turning the agent supply chain itself into an attack surface.",
+          "slug": "malice-in-agentland-down-the-rabbit-hole-of-backdoors-in-the-ai-supply-chain"
+        },
+        {
+          "title": "Securing Agents With Tracked Capabilities",
+          "authors": "Martin Odersky, Yaoyu Zhao, Yichen Xu, Oliver Bračevac, Cao Nguyen Pham",
+          "affiliation": "EPFL",
+          "stamp": "Outstanding Solution Paper",
+          "tier": "outstanding",
+          "gloss": "Brings capability tracking to agents, so that what a tool is permitted to touch is checked and bounded by construction rather than trusted by default.",
+          "slug": "securing-agents-with-tracked-capabilities"
+        },
+        {
+          "title": "TraceFix: Repairing Agent Coordination Protocols with TLA+ Counterexamples",
+          "authors": "Shuren Xia, Qiwei Li, Taqiya Ehsan, Jorge Ortiz",
+          "affiliation": "Rutgers University",
+          "stamp": "Outstanding Solution Paper",
+          "tier": "outstanding",
+          "stampNote": "listed under Architectural Patterns & Composition",
+          "gloss": "Uses formal model checking to catch multi-agent coordination failures such as deadlock and resource races, then repairs the protocol from the counterexample.",
+          "slug": "tracefix-repairing-agent-coordination-protocols-with-tla-counterexamples"
+        }
+      ],
+      "also": [
+        {
+          "title": "Does Safety Molt? Evaluating LLM Safety in Multi-Agent Social Environments",
+          "institutions": [
+            "Corvic AI",
+            "Foundation-AI"
+          ],
+          "slug": "does-safety-molt-evaluating-llm-safety-in-multi-agent-social-environments"
+        },
+        {
+          "title": "A HIPAA-Compliant Architecture for Agentic Clinical AI Systems",
+          "institutions": [
+            "Meharry Medical College",
+            "UTMB",
+            "University of Alabama"
+          ],
+          "slug": "a-hipaa-compliant-architecture-for-agentic-clinical-ai-systems"
+        },
+        {
+          "title": "SAPO: Secure Automated Prompt Optimization via Multi-Agent Collaboration",
+          "institutions": [
+            "Amazon",
+            "DoorDash",
+            "Microsoft"
+          ],
+          "slug": "sapo-secure-automated-prompt-optimization-via-multi-agent-collaboration"
+        },
+        {
+          "title": "The Verifier Tax: Horizon Dependent Safety–Success Tradeoffs in Tool Using LLM Agents",
+          "institutions": [
+            "Harrisburg University",
+            "Johns Hopkins",
+            "University of Utah"
+          ],
+          "slug": "the-verifier-tax-horizon-dependent-safety-success-tradeoffs-in-tool-using-llm-ag"
+        },
+        {
+          "title": "MoltGraph: A Longitudinal Temporal Graph Dataset of Moltbook for Coordinated-Agent Detection",
+          "institutions": [
+            "UCF",
+            "Virginia Tech"
+          ],
+          "slug": "moltgraph-a-longitudinal-temporal-graph-dataset-of-moltbook-for-coordinated-agen"
+        },
+        {
+          "title": "Exploring and Developing a Pre-Model Safeguard with Draft Models",
+          "institutions": [
+            "Florida International University",
+            "Purdue"
+          ],
+          "slug": "exploring-and-developing-a-pre-model-safeguard-with-draft-models"
+        },
+        {
+          "title": "Who Decides the Trade-off? Resolution Policy as Delegation Governance in Autonomous Agents",
+          "institutions": [
+            "DOCOMO Innovations"
+          ],
+          "slug": "who-decides-the-trade-off-resolution-policy-as-delegation-governance-in-autonomo"
+        },
+        {
+          "title": "Securing the Agent: Vendor-Neutral, Multitenant Enterprise Retrieval and Tool Use",
+          "institutions": [
+            "Red Hat"
+          ],
+          "slug": "securing-the-agent-vendor-neutral-multitenant-enterprise-retrieval-and-tool-use"
+        },
+        {
+          "title": "When Harmful Intent Dissolves into Technical Detail: How Safe Are Coding Agents Against Cyber Misuse?",
+          "institutions": [
+            "Purdue"
+          ],
+          "slug": "when-harmful-intent-dissolves-into-technical-detail-how-safe-are-coding-agents-a"
+        }
+      ]
+    }
+  ],
+  "winners": {
+    "intro": "Recognition at CAIS 2026 came from two bodies: the program committee named the Outstanding Papers and the Best Artifact through peer review, and the AI Engineer World Fair organizing team designated the Industry Spotlight selections.",
+    "outstanding": [
+      {
+        "title": "Malice in Agentland: Down the Rabbit Hole of Backdoors in the AI Supply Chain",
+        "authors": "Léo Boisvert et al.",
+        "affiliation": "ServiceNow Research, Mila, Polytechnique Montréal",
+        "award": "Outstanding Problem Paper",
+        "track": "Security & Privacy",
+        "tier": "outstanding",
+        "slug": "malice-in-agentland-down-the-rabbit-hole-of-backdoors-in-the-ai-supply-chain"
+      },
+      {
+        "title": "Securing Agents With Tracked Capabilities",
+        "authors": "Martin Odersky, Yaoyu Zhao, Yichen Xu, Oliver Bračevac, Cao Nguyen Pham",
+        "affiliation": "EPFL",
+        "award": "Outstanding Solution Paper",
+        "track": "Security & Privacy",
+        "tier": "outstanding",
+        "slug": "securing-agents-with-tracked-capabilities"
+      },
+      {
+        "title": "TraceFix: Repairing Agent Coordination Protocols with TLA+ Counterexamples",
+        "authors": "Shuren Xia, Qiwei Li, Taqiya Ehsan, Jorge Ortiz",
+        "affiliation": "Rutgers University",
+        "award": "Outstanding Solution Paper",
+        "track": "Architectural Patterns & Composition",
+        "tier": "outstanding",
+        "slug": "tracefix-repairing-agent-coordination-protocols-with-tla-counterexamples"
+      }
+    ],
+    "bestArtifact": [
+      {
+        "title": "How to Steer Your Multi-Agent System: Human-LLM Collaborative Planning",
+        "authors": "Zeyu He, Hannah Kim, Dan Zhang, Estevam Hruschka",
+        "affiliation": "Penn State University, Megagon Labs",
+        "award": "Best Artifact",
+        "track": "Architectural Patterns & Composition",
+        "tier": "outstanding",
+        "slug": "how-to-steer-your-multi-agent-system-human-llm-collaborative-planning"
+      }
+    ],
+    "spotlightPapersHeading": "Industry Spotlight, Papers",
+    "spotlightDemosHeading": "Industry Spotlight, Demos",
+    "spotlightAttribution": "designated by the AI Engineer World Fair organizing team",
+    "spotlightPapers": [
+      {
+        "title": "optimize_anything: Unified Text Optimization can Outperform Specialized Systems",
+        "authors": "Lakshya A Agrawal, Donghyun Lee, et al.",
+        "affiliation": "UC Berkeley",
+        "slug": "optany-unified-text-optimization-can-outperform-specialized-systems"
+      },
+      {
+        "title": "ViBench: A Benchmark on Vibe Coding",
+        "authors": "Peter Zhong, Pashootan Vaezipoor, et al.",
+        "affiliation": "Replit, Georgian AI Lab, Carnegie Mellon",
+        "slug": "vibench-a-benchmark-on-vibe-coding"
+      },
+      {
+        "title": "Vibe Code Bench: Evaluating AI Models on End-to-End Web Application Development",
+        "authors": "Hung Tran, Langston Nashold, et al.",
+        "affiliation": "Vals AI, MIT",
+        "slug": "vibe-code-bench-evaluating-ai-models-on-end-to-end-web-application-development"
+      },
+      {
+        "title": "Reasoning-Intensive Regression",
+        "authors": "Diane Tchuindjo, Omar Khattab",
+        "affiliation": "MIT",
+        "slug": "reasoning-intensive-regression"
+      },
+      {
+        "title": "Do Agents Need to Plan Step-by-Step? Rethinking Planning Horizon in Data-Centric Tool Calling",
+        "authors": "Naoki Otani, Nikita Bhutani, et al.",
+        "affiliation": "Megagon Labs",
+        "slug": "do-agents-need-to-plan-step-by-step-rethinking-planning-horizon-in-data-centric"
+      },
+      {
+        "title": "Improving Coherence and Persistence in Agentic AI for System Optimization",
+        "authors": "Pantea Karimi, Kimia Noorbakhsh, et al.",
+        "affiliation": "MIT",
+        "slug": "improving-coherence-and-persistence-in-agentic-ai-for-system-optimization"
+      },
+      {
+        "title": "Composing Policy Gradients and Prompt Optimization for Language Model Programs",
+        "authors": "Noah Ziems, Dilara Soylu, et al.",
+        "affiliation": "Notre Dame, Stanford",
+        "slug": "composing-policy-gradients-and-prompt-optimization-for-language-model-programs"
+      },
+      {
+        "title": "Willful Disobedience: Automatically Detecting Failures in Agentic Traces",
+        "authors": "Reshabh K Sharma, Shraddha Barke, Benjamin Zorn",
+        "affiliation": "University of Washington, Microsoft Research",
+        "slug": "willful-disobedience-automatically-detecting-failures-in-agentic-traces"
+      },
+      {
+        "title": "Dossier: Deep Research via Ledger-Driven Branching Search and Query Encoding Learning",
+        "authors": "Om Chabra, Noah Ziems, et al.",
+        "affiliation": "MIT, Notre Dame",
+        "slug": "dossier-deep-research-via-ledger-driven-branching-search-and-query-encoding-lear"
+      },
+      {
+        "title": "The Cost of Consensus: Isolated Self-Correction Prevails Over Unguided Homogeneous Multi-Agent Debate",
+        "authors": "Blaž Bertalanič, Carolina Fortuna",
+        "affiliation": "Jožef Stefan Institute",
+        "slug": "decomposing-sycophancy-fragility-consensus-collapse-and-cost-in-homogeneous-mult"
+      }
+    ],
+    "spotlightDemos": [
+      {
+        "title": "optimize_anything: A Universal API for Optimizing any Text Parameter",
+        "authors": "Lakshya A Agrawal, Donghyun Lee, et al.",
+        "affiliation": "UC Berkeley",
+        "slug": "optimize-anything"
+      },
+      {
+        "title": "Nexa: Automatically Surfacing Business Impacting Insights in E-commerce Applications",
+        "authors": "Smart Sun, Sayan Sinha, et al.",
+        "affiliation": "Conviva, Georgia Tech",
+        "slug": "nexa-ecommerce-insights"
+      },
+      {
+        "title": "TRACE: A Multi-Agent System for Natural Language-Driven Social Graph Investigation",
+        "authors": "Arunachaleshwar Ravichandran, Nicole Chen, et al.",
+        "affiliation": "Meta",
+        "slug": "trace-social-graph"
+      },
+      {
+        "title": "Agent 4: Teamwork and Collaboration for Vibe-Coding",
+        "authors": "Peter Zhong, Jacky Zhao, et al.",
+        "affiliation": "Replit, Carnegie Mellon",
+        "slug": "agent-4-vibe-coding"
+      },
+      {
+        "title": "Genflow Ad Studio: A Compound AI Architecture for Brand-Aligned, Self-Correcting Video Generation",
+        "authors": "Debanshu Das, Lavi Nigam, et al.",
+        "affiliation": "Google",
+        "slug": "genflow-ad-studio"
+      },
+      {
+        "title": "SkyDiscover: A Flexible, Adaptive Framework for AI-Driven Scientific and Algorithmic Discovery",
+        "authors": "Shu Liu, Mert Cemri, et al.",
+        "affiliation": "UC Berkeley",
+        "slug": "skydiscover"
+      },
+      {
+        "title": "Valkyrie: A Microservice-Based Framework for Scalable Evaluation of AI Agents",
+        "authors": "Jarett Forzano, Omar Almatov, et al.",
+        "affiliation": "Vals AI",
+        "slug": "valkyrie"
+      },
+      {
+        "title": "Hedwig: Dynamic Autonomy for Coding Agents Under Local Oversight",
+        "authors": "Tanjal Shukla, Kevin Feng, et al.",
+        "affiliation": "University of Washington",
+        "slug": "hedwig-dynamic-autonomy"
+      },
+      {
+        "title": "Automatically Learning Skills for Coding Agents",
+        "authors": "Shangyin Tan, Lakshya A Agrawal, et al.",
+        "affiliation": "UC Berkeley",
+        "slug": "learning-skills-coding-agents"
+      },
+      {
+        "title": "Context Viewer: Turning LLM Contexts into Analyzable Artifacts",
+        "authors": "Srihari Sriraman, Michael Isaac, et al.",
+        "affiliation": "nilenso, Carnegie Mellon",
+        "slug": "context-viewer"
+      }
+    ]
+  },
+  "voices": {
+    "heading": "The view from the room",
+    "quotes": []
+  },
+  "close": {
+    "line1": "CAIS returns in 2027.",
+    "line2": "Follow @CAISConf for the call for papers and dates.",
+    "handleUrl": "https://x.com/CAISConf"
+  }
+}
