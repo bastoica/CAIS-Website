@@ -1,32 +1,20 @@
 {
   "eyebrow": "ACM CAIS 2026 · San Jose, California · May 26 to 29, 2026",
-  "headline": "What CAIS 2026 built, and what it chose to recognize",
+  "headline": "The first CAIS sold out: 623 attendees, 106 papers and demos.",
   "standfirst": "Sixty papers converged on one project this year: composing AI systems out of many interacting parts. Most of the work was construction. The work the field named outstanding was the work that made those systems trustworthy.",
   "numbers": {
-    "label": "CAIS 2026, by the record",
+    "label": "",
     "stats": [
       {
         "value": "623",
         "label": "attendees"
       },
       {
-        "value": "116",
-        "label": "on the waitlist"
-      },
-      {
         "value": "106",
         "label": "papers and demos"
-      },
-      {
-        "value": "~35%",
-        "label": "paper acceptance rate"
-      },
-      {
-        "value": "12",
-        "label": "sponsors"
       }
     ],
-    "caption": "Final figures, June 2026. Registration reached capacity.",
+    "caption": "Sold out. Final figures, June 2026.",
     "composition": {
       "heading": "The program",
       "tracks": [
@@ -36,17 +24,35 @@
         { "name": "System Optimization & Efficiency", "count": "10" },
         { "name": "Engineering & Operations", "count": "2" }
       ],
-      "summary": "Sixty peer-reviewed papers ran across these five tracks, selected from 170 reviewed submissions. Alongside them: 46 system demonstrations (45 in the archival proceedings), 3 operational-experience talks, 5 workshops, and 1 tutorial."
+      "summary": "Sixty peer-reviewed papers ran across these five tracks, selected from 170 reviewed submissions. Alongside them: 46 system demonstrations, 3 operational-experience talks, 5 workshops, and 1 tutorial."
     }
   },
+  "showTestimonials": false,
+  "testimonials": [
+    {
+      "quote": "This work is so new that everyone is still learning it from first principles, and no one person has the answers yet. That's exactly why it needs a dedicated home: a place where the people actually building agentic systems can compare notes and learn from each other. CAIS was one of the few rooms I've been in where that was really happening.",
+      "name": "Thariq Shihipar",
+      "image": "thariq.png",
+      "attribution": "Member of Technical Staff, Claude Code · <a href=\"https://anthropic.com/\" target=\"_blank\" rel=\"noopener\">Anthropic</a>"
+    },
+    {
+      "quote": "Getting smart, driven people in the same room is where everything I've done that mattered started. CAIS does that for agentic and AI systems: open, in person, and community-run, with the people actually building these things hashing out the hard problems together instead of broadcasting past each other. That's where breakthroughs come from, and they only matter when you ship them.",
+      "name": "Andy Konwinski",
+      "image": "andy-konwinski.jpg",
+      "attribution": "Co-founder of <a href=\"https://www.databricks.com/\" target=\"_blank\" rel=\"noopener\">Databricks</a> and <a href=\"https://www.perplexity.ai/\" target=\"_blank\" rel=\"noopener\">Perplexity AI</a> · Founder of <a href=\"https://laude.institute/\" target=\"_blank\" rel=\"noopener\">Laude Institute</a>"
+    }
+  ],
   "institutionsHeading": "Research came from",
   "sponsorsHeading": "Supported by",
-  "orientationLabel": "How to read what follows",
-  "orientationSeam": "This recap groups the year's 60 papers into three movements, matching what the field spent 2026 doing: building agentic systems (Build), measuring whether they work (Measure), and making them safe to trust (Secure). Each movement features a few standout papers, and the full winners list is at the end.",
+  "fullRecord": {
+    "title": "All 60 papers, in full",
+    "intro": "Grouped by what the field spent the year building, measuring, and securing. Browse a section, or read straight through."
+  },
   "movements": [
     {
       "id": "build",
       "label": "Build",
+      "navline": "Most of the year's work was construction.",
       "headline": "Most of the year’s work was construction: assembling agents, models, and tools into systems that hold.",
       "framing": "Thirty-seven of the sixty papers, more than three in five, take up architecture and composition, plus the optimization and operations that make composed systems run. The volume is itself the finding. In 2026 the field’s main occupation was not a better single model but the discipline of putting many parts together into something dependable.",
       "featured": [
@@ -362,6 +368,7 @@
     {
       "id": "measure",
       "label": "Measure",
+      "navline": "Then the field built the means to measure it.",
       "headline": "Before trusting the new tools, the field built the means to measure them, and pointed them at its hottest topic first.",
       "framing": "Twelve papers, the second-largest group, are the field building its own rulers: benchmarks for vibe coding, tool use, persuasion, and domain agents, plus methods for catching agents in the act of failing. This is where the year’s most-discussed idea, vibe coding, gets held to an evaluation standard rather than taken on faith.",
       "featured": [
@@ -467,6 +474,7 @@
     {
       "id": "secure",
       "label": "Secure",
+      "navline": "The work it recognized most made agents fail safely.",
       "headline": "The work the field recognized most was the work that makes agents fail safely.",
       "framing": "Eleven papers took up security and privacy directly. It is not the largest group, but it holds the year’s highest recognition: two of the three Outstanding Paper awards sit here, alongside a third Outstanding Solution Paper, filed under architecture, that proves multi-agent coordination correct. Read together, they mark a field turning its attention from whether agents work to whether they can be trusted to.",
       "featured": [
@@ -617,8 +625,7 @@
         "slug": "how-to-steer-your-multi-agent-system-human-llm-collaborative-planning"
       }
     ],
-    "spotlightPapersHeading": "Industry Spotlight, Papers",
-    "spotlightDemosHeading": "Industry Spotlight, Demos",
+    "spotlightHeading": "Industry Spotlight Awards",
     "spotlightAttribution": "designated by the AI Engineer World Fair organizing team",
     "spotlightPapers": [
       {

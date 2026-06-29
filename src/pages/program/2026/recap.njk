@@ -1,11 +1,11 @@
 ---
 layout: base.njk
-title: What CAIS 2026 built, and what it chose to recognize
+title: "CAIS 2026 recap: sold out, 623 attendees, 106 papers and demos"
 description: The official recap of ACM CAIS 2026 in San Jose, California. 623 attendees, 106 papers and demos, research from 124 institutions across 14 countries.
 permalink: /program/2026/recap/
 noindex: true
 showOpenGraph: true
-ogTitle: What CAIS 2026 built, and what it chose to recognize
+ogTitle: "CAIS 2026 recap: sold out, 623 attendees, 106 papers and demos"
 ogDescription: Sixty papers converged on one project this year, composing AI systems out of many interacting parts. Most of the work was construction. The work the field named outstanding was the work that made those systems trustworthy.
 hideCapacityBanner: true
 hideSponsorStrip: true
@@ -40,8 +40,10 @@ extraStyles: |
         letter-spacing: 0.08em;
     }
     .recap-hero {
+        position: relative;
         padding: 5rem 0 4rem;
-        background: var(--seasalt);
+        background: linear-gradient(rgba(250, 250, 248, 0.6), rgba(250, 250, 248, 0.6)), url('/assets/images/hero ultralight gradient.png') center/cover no-repeat;
+        color: var(--eerie-black);
     }
     .recap-eyebrow {
         margin-bottom: 1.25rem;
@@ -81,16 +83,12 @@ extraStyles: |
         background: var(--eerie-black);
         border-radius: 4px;
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        padding: 2.75rem 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1.85rem 1.5rem;
         gap: 1.5rem 1rem;
     }
-    @media (max-width: 991px) {
-        .stat-band { grid-template-columns: repeat(3, 1fr); }
-    }
     @media (max-width: 575px) {
-        .stat-band { grid-template-columns: repeat(2, 1fr); padding: 2rem 1rem; }
-        .stat-band .stat:last-child { grid-column: 1 / -1; }
+        .stat-band { grid-template-columns: repeat(2, 1fr); padding: 1.5rem 1rem; }
     }
     .stat-band .stat {
         text-align: center;
@@ -101,9 +99,9 @@ extraStyles: |
         .stat-band .stat { border-left: none; }
     }
     .stat-band .stat .value {
-        font-size: clamp(2rem, 5vw, var(--fs-stat));
+        font-size: clamp(2.75rem, 6vw, 4.25rem);
         font-weight: 700;
-        line-height: 1.1;
+        line-height: 1;
         color: var(--seasalt);
         font-variant-numeric: tabular-nums;
     }
@@ -201,6 +199,64 @@ extraStyles: |
         font-size: var(--fs-sm);
         line-height: 1.55;
         color: var(--davys-gray);
+    }
+    /* Testimonials: two voices, side by side, between the program and the institutions wall */
+    .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    @media (max-width: 767px) {
+        .testimonial-grid { grid-template-columns: 1fr; }
+    }
+    .testimonial {
+        background: var(--seasalt);
+        border: 1px solid var(--silver);
+        border-top: 3px solid var(--terracotta-deep);
+        border-radius: 4px;
+        padding: 1.75rem;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .testimonial-quote {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: var(--fs-md);
+        line-height: 1.6;
+        color: var(--eerie-black);
+        margin: 0 0 1.25rem;
+    }
+    .testimonial-attrib {
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+        font-size: var(--fs-overline);
+        color: var(--davys-gray);
+        line-height: 1.5;
+        margin-top: auto;   /* pin attribution to the bottom so unequal-length cards align */
+    }
+    .testimonial-avatar {
+        flex: 0 0 auto;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 1px solid var(--silver);
+    }
+    .testimonial-attrib .name {
+        display: block;
+        font-size: var(--fs-sm);
+        font-weight: 700;
+        color: var(--eerie-black);
+        margin-bottom: 0.15rem;
+    }
+    .testimonial-attrib a {
+        color: var(--eerie-black);
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+    .testimonial-attrib a:hover {
+        color: var(--terracotta-deep);
     }
     /* Seams */
     .recap-seam-section {
@@ -359,25 +415,100 @@ extraStyles: |
     .winners-list li:last-child {
         border-bottom: none;
     }
-    .winners-list .w-title {
+    .winners-list .w-title,
+    .spotlight-list .w-title {
         font-weight: 600;
     }
-    .winners-list .w-title a {
+    .winners-list .w-title a,
+    .spotlight-list .w-title a {
         color: var(--eerie-black);
         text-decoration: none;
     }
-    .winners-list .w-title a:hover {
+    .winners-list .w-title a:hover,
+    .spotlight-list .w-title a:hover {
         color: var(--terracotta-deep);
         text-decoration: underline;
         text-underline-offset: 3px;
     }
-    .winners-list .w-meta {
+    .winners-list .w-meta,
+    .spotlight-list .w-meta {
         font-size: var(--fs-overline);
         color: var(--davys-gray);
     }
     .winners-list .stamp {
         margin-bottom: 0.35rem;
     }
+    /* Industry Spotlight Awards: one consolidated, filterable record */
+    .spotlight-heading .spotlight-subtitle {
+        display: block;                  /* line break under the title */
+        font-size: var(--fs-overline);   /* author/affiliation metadata register */
+        font-weight: 400;
+        color: var(--davys-gray);
+        text-transform: none;
+        letter-spacing: 0;
+        margin-top: 0.4rem;
+    }
+    .spotlight-filter {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin: 1.25rem 0 0.5rem;
+    }
+    .spotlight-filter-btn {
+        font-size: var(--fs-overline);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--davys-gray);
+        background: #fff;
+        border: 1px solid var(--silver);
+        border-radius: 3px;
+        padding: 0.4rem 0.85rem;
+        cursor: pointer;
+        transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+    }
+    .spotlight-filter-btn:hover {
+        border-color: var(--eerie-black);
+        color: var(--eerie-black);
+    }
+    .spotlight-filter-btn.is-active {
+        background: var(--eerie-black);
+        border-color: var(--eerie-black);
+        color: #fff;
+    }
+    .spotlight-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0 2.5rem;
+    }
+    @media (max-width: 767px) {
+        .spotlight-list { grid-template-columns: 1fr; }
+    }
+    .spotlight-list li {
+        padding: 0.85rem 0;
+        border-bottom: 1px solid var(--platinum);
+    }
+    .spotlight-list li[hidden] {
+        display: none;
+    }
+    .spotlight-tag {
+        display: inline-block;
+        font-size: calc(var(--fs-overline) * 0.7);  /* 30% smaller */
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        padding: 0.105rem 0.35rem;
+        border-radius: 3px;
+        margin-bottom: 0.5rem;
+        border: 1px solid var(--silver);
+        color: var(--davys-gray);
+        background: #fff;
+    }
+    .spotlight-tag--paper { border-color: var(--olive-moss); }
+    .spotlight-tag--demo { border-color: var(--terracotta-deep); }
     /* Voices */
     .voice-quote {
         font-family: Georgia, 'Times New Roman', serif;
@@ -434,6 +565,54 @@ extraStyles: |
     .anchor {
         scroll-margin-top: 84px;
     }
+    /* Full-record band: the seam between the executive summary and the browsable record */
+    .recap-fullrecord {
+        padding: var(--rhythm-section) 0;
+        background: var(--platinum);     /* distinct grey band, separates it from the winners section above */
+        border-top: 1px solid var(--silver);
+    }
+    /* Browse-by-theme nav: three doors into the program */
+    .movement-nav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+    @media (max-width: 767px) {
+        .movement-nav { grid-template-columns: 1fr; }
+    }
+    .movement-nav-card {
+        display: block;
+        padding: 1.5rem;
+        background: var(--seasalt);
+        border: 1px solid var(--silver);
+        border-radius: 4px;
+        text-decoration: none;
+        transition: border-color 0.15s ease;
+    }
+    .movement-nav-card:hover {
+        border-color: var(--eerie-black);
+    }
+    .movement-nav-card::before {
+        content: "";
+        display: block;
+        width: 2.25rem;
+        height: 3px;
+        background: var(--terracotta-deep);
+        margin-bottom: 0.85rem;
+    }
+    .movement-nav-label {
+        display: block;
+        font-size: var(--fs-md);
+        font-weight: 700;
+        color: var(--eerie-black);
+        margin-bottom: 0.35rem;
+    }
+    .movement-nav-line {
+        display: block;
+        font-size: var(--fs-sm);
+        line-height: 1.45;
+        color: var(--davys-gray);
+    }
 ---
 
 {# ============ 1. Top unit ============ #}
@@ -448,7 +627,7 @@ extraStyles: |
 {# ============ 2. Proof block ============ #}
 <section id="numbers" class="recap-section anchor" style="background:#fff;">
     <div class="container">
-        <h2 class="recap-band-title">{{ recap2026.numbers.label }}</h2>
+        {% if recap2026.numbers.label %}<h2 class="recap-band-title">{{ recap2026.numbers.label }}</h2>{% endif %}
 
         <div class="stat-band">
             {% for s in recap2026.numbers.stats %}
@@ -470,6 +649,23 @@ extraStyles: |
             </div>
             {% endfor %}
         </div>
+
+        {% if recap2026.showTestimonials and recap2026.testimonials.length %}
+        <div class="testimonial-grid mt-5">
+            {% for t in recap2026.testimonials %}
+            <figure class="testimonial">
+                <blockquote class="testimonial-quote">{{ t.quote }}</blockquote>
+                <figcaption class="testimonial-attrib">
+                    {% if t.image %}<img class="testimonial-avatar" src="/assets/images/{{ t.image }}" alt="{{ t.name }}" loading="lazy" />{% endif %}
+                    <div class="testimonial-byline">
+                        <span class="name">{{ t.name }}</span>
+                        {{ t.attribution | safe }}
+                    </div>
+                </figcaption>
+            </figure>
+            {% endfor %}
+        </div>
+        {% endif %}
 
         <h3 class="recap-section-label mt-5">{{ recap2026.institutionsHeading }}</h3>
         <div class="recap-wall">
@@ -493,66 +689,10 @@ extraStyles: |
     </div>
 </section>
 
-{# ============ 3. Orientation seam ============ #}
-<section class="recap-seam-section">
-    <div class="container">
-        <div class="row g-4 align-items-start">
-            <div class="col-lg-4">
-                <h2 class="recap-band-title mb-0">{{ recap2026.orientationLabel }}</h2>
-            </div>
-            <div class="col-lg-8">
-                <p class="recap-seam mb-0">{{ recap2026.orientationSeam }}</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-{# ============ 4 to 6. The three movements ============ #}
-{% for m in recap2026.movements %}
-<section id="{{ m.id }}" class="recap-section anchor"{% if loop.index is odd %} style="background:#fff;"{% endif %}>
-    <div class="container">
-        <p class="movement-label">{{ m.label }}</p>
-        <h2 class="h3 movement-headline">{{ m.headline }}</h2>
-        <p class="movement-framing">{{ m.framing }}</p>
-
-        <div class="row g-4">
-            {% for f in m.featured %}
-            <div class="col-lg-4">
-                <article class="featured-card">
-                    <div>
-                        <span class="stamp stamp-{{ f.tier }}">{{ f.stamp }}</span>
-                        {% if f.stampNote %}<span class="stamp-note">({{ f.stampNote }})</span>{% endif %}
-                    </div>
-                    <h3><a href="/program/2026/papers/{{ f.slug }}/">{{ f.title }}</a></h3>
-                    <p class="byline">{{ f.authors }} · {{ f.affiliation }}</p>
-                    <p class="gloss">{{ f.gloss }}</p>
-                </article>
-            </div>
-            {% endfor %}
-        </div>
-
-        <h3 class="also-heading">Also in this movement</h3>
-        <ul class="also-wall">
-            {% for w in m.also %}
-            <li>
-                {% if w.crossRef %}
-                <a href="{{ w.crossRef }}">{{ w.title }}</a>
-                <span class="inst">{{ w.institutions | join(' · ') }} ({{ w.crossNote }})</span>
-                {% else %}
-                <a href="/program/2026/papers/{{ w.slug }}/">{{ w.title }}</a>
-                <span class="inst">{{ w.institutions | join(' · ') }}</span>
-                {% endif %}
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
-</section>
-{% endfor %}
-
-{# ============ 7. Winners record ============ #}
+{# ============ 3. What CAIS 2026 recognized ============ #}
 <section id="winners" class="recap-section anchor">
     <div class="container">
-        <h2 class="recap-band-title">The official record</h2>
+        <h2 class="recap-band-title">What CAIS 2026 recognized</h2>
         <p style="max-width:44em;">{{ recap2026.winners.intro }}</p>
 
         <div class="row g-4">
@@ -582,32 +722,120 @@ extraStyles: |
             </div>
         </div>
 
-        <div class="row g-4">
-            <div class="col-lg-6">
-                <h3 class="winners-group-heading">{{ recap2026.winners.spotlightPapersHeading }} <span class="fw-normal text-muted">({{ recap2026.winners.spotlightAttribution }})</span></h3>
-                <ul class="winners-list">
-                    {% for w in recap2026.winners.spotlightPapers %}
-                    <li>
-                        <div class="w-title"><a href="/program/2026/papers/{{ w.slug }}/">{{ w.title }}</a></div>
-                        <div class="w-meta">{{ w.authors }} · {{ w.affiliation }}</div>
-                    </li>
-                    {% endfor %}
-                </ul>
+        <div class="spotlight-awards" id="spotlight-awards">
+            <h3 class="winners-group-heading spotlight-heading">
+                {{ recap2026.winners.spotlightHeading }}
+                <span class="spotlight-subtitle">({{ recap2026.winners.spotlightAttribution }})</span>
+            </h3>
+
+            <div class="spotlight-filter" role="group" aria-label="Filter spotlight awards by type">
+                <button type="button" class="spotlight-filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
+                <button type="button" class="spotlight-filter-btn" data-filter="paper" aria-pressed="false">Papers</button>
+                <button type="button" class="spotlight-filter-btn" data-filter="demo" aria-pressed="false">Demos</button>
             </div>
-            <div class="col-lg-6">
-                <h3 class="winners-group-heading">{{ recap2026.winners.spotlightDemosHeading }} <span class="fw-normal text-muted">({{ recap2026.winners.spotlightAttribution }})</span></h3>
-                <ul class="winners-list">
-                    {% for w in recap2026.winners.spotlightDemos %}
-                    <li>
-                        <div class="w-title"><a href="/program/2026/demos/{{ w.slug }}/">{{ w.title }}</a></div>
-                        <div class="w-meta">{{ w.authors }} · {{ w.affiliation }}</div>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
+
+            <ul class="spotlight-list">
+                {% for w in recap2026.winners.spotlightPapers %}
+                <li data-type="paper">
+                    <span class="spotlight-tag spotlight-tag--paper">Paper</span>
+                    <div class="w-title"><a href="/program/2026/papers/{{ w.slug }}/">{{ w.title }}</a></div>
+                    <div class="w-meta">{{ w.authors }} · {{ w.affiliation }}</div>
+                </li>
+                {% endfor %}
+                {% for w in recap2026.winners.spotlightDemos %}
+                <li data-type="demo">
+                    <span class="spotlight-tag spotlight-tag--demo">Demo</span>
+                    <div class="w-title"><a href="/program/2026/demos/{{ w.slug }}/">{{ w.title }}</a></div>
+                    <div class="w-meta">{{ w.authors }} · {{ w.affiliation }}</div>
+                </li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
 </section>
+
+<script>
+(function(){
+    var root = document.getElementById('spotlight-awards');
+    if(!root){ return; }
+    var buttons = root.querySelectorAll('.spotlight-filter-btn');
+    var items = root.querySelectorAll('.spotlight-list li');
+    function applyFilter(filter){
+        for(var i = 0; i < items.length; i++){
+            var type = items[i].getAttribute('data-type');
+            items[i].hidden = !(filter === 'all' || type === filter);
+        }
+        for(var j = 0; j < buttons.length; j++){
+            var active = buttons[j].getAttribute('data-filter') === filter;
+            buttons[j].classList.toggle('is-active', active);
+            buttons[j].setAttribute('aria-pressed', active ? 'true' : 'false');
+        }
+    }
+    for(var k = 0; k < buttons.length; k++){
+        buttons[k].addEventListener('click', function(e){
+            applyFilter(e.currentTarget.getAttribute('data-filter'));
+        });
+    }
+})();
+</script>
+
+{# ============ 4. The full record: zone seam + browse by theme ============ #}
+<section class="recap-fullrecord">
+    <div class="container">
+        <h2 class="recap-band-title">{{ recap2026.fullRecord.title }}</h2>
+        <p class="mb-4" style="max-width:44em;">{{ recap2026.fullRecord.intro }}</p>
+        <div class="movement-nav">
+            {% for m in recap2026.movements %}
+            <a class="movement-nav-card" href="#{{ m.id }}">
+                <span class="movement-nav-label">{{ m.label }}</span>
+                <span class="movement-nav-line">{{ m.navline }}</span>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{# ============ 4 to 6. The three movements ============ #}
+{% for m in recap2026.movements %}
+<section id="{{ m.id }}" class="recap-section anchor"{% if loop.index is odd %} style="background:#fff;"{% endif %}>
+    <div class="container">
+        <p class="movement-label">{{ m.label }}</p>
+        <h2 class="h3 movement-headline">{{ m.headline }}</h2>
+        <p class="movement-framing">{{ m.framing }}</p>
+
+        <div class="row g-4">
+            {% for f in m.featured %}
+            <div class="col-lg-4">
+                <article class="featured-card">
+                    <div>
+                        <span class="stamp stamp-{{ f.tier }}">{{ f.stamp }}</span>
+                        {% if f.stampNote %}<span class="stamp-note">({{ f.stampNote }})</span>{% endif %}
+                    </div>
+                    <h3><a href="/program/2026/papers/{{ f.slug }}/">{{ f.title }}</a></h3>
+                    <p class="byline">{{ f.authors }} · {{ f.affiliation }}</p>
+                    <p class="gloss">{{ f.gloss }}</p>
+                </article>
+            </div>
+            {% endfor %}
+        </div>
+
+        <h3 class="also-heading">More in {{ m.label }}</h3>
+        <ul class="also-wall">
+            {% for w in m.also %}
+            <li>
+                {% if w.crossRef %}
+                <a href="{{ w.crossRef }}">{{ w.title }}</a>
+                <span class="inst">{{ w.institutions | join(' · ') }} ({{ w.crossNote }})</span>
+                {% else %}
+                <a href="/program/2026/papers/{{ w.slug }}/">{{ w.title }}</a>
+                <span class="inst">{{ w.institutions | join(' · ') }}</span>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+{% endfor %}
 
 {# ============ 9. The view from the room ============ #}
 {% if recap2026.voices.quotes.length %}
