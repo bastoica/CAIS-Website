@@ -1,7 +1,7 @@
 {
   "eyebrow": "ACM CAIS 2026 · San Jose, California · May 26 to 29, 2026",
-  "headline": "The first CAIS sold out: 623 attendees, 106 papers and demos.",
-  "standfirst": "Sixty papers converged on one project this year: composing AI systems out of many interacting parts. Most of the work was construction. The work the field named outstanding was the work that made those systems trustworthy.",
+  "headline": "The first ACM CAIS sold out, and brought a fragmented field into one room.",
+  "standfirst": "Most of this year's research was about construction: composing many AI components into systems that hold together. The work the field singled out as outstanding pushed further, into what makes those systems trustworthy enough to deploy.",
   "numbers": {
     "label": "",
     "stats": [
